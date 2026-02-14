@@ -1,3 +1,5 @@
+import { AiFillAccountBook } from "react-icons/ai";
+
 export const TECH_STACK_INFINITE_BANNER = [
   "/tech/aws.svg",
   "/tech/docker.svg",
@@ -31,5 +33,56 @@ export const STATISTICS_CARD_INFO = [
   {
     title: "95 %",
     paragraph: "Client Retention.",
+  },
+];
+
+export const SERVICE_CARD_INFO = [
+  {
+    icon: AiFillAccountBook,
+    title: "NextGEN AI Counsuling1",
+    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    link: "",
+  },
+  {
+    icon: AiFillAccountBook,
+    title: "NextGEN AI Counsuling2",
+    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    link: "",
+  },
+  {
+    icon: AiFillAccountBook,
+    title: "NextGEN AI Counsuling3",
+    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    link: "",
+  },
+  {
+    icon: AiFillAccountBook,
+    title: "NextGEN AI Counsuling4",
+    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    link: "",
+  },
+  {
+    icon: AiFillAccountBook,
+    title: "NextGEN AI Counsuling5",
+    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    link: "",
+  },
+  {
+    icon: AiFillAccountBook,
+    title: "NextGEN AI Counsuling6",
+    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    link: "",
+  },
+  {
+    icon: AiFillAccountBook,
+    title: "NextGEN AI Counsuling7",
+    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    link: "",
+  },
+  {
+    icon: AiFillAccountBook,
+    title: "NextGEN AI Counsuling8",
+    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    link: "",
   },
 ];
