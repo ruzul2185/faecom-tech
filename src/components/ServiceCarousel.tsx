@@ -1,29 +1,74 @@
 import { SERVICE_CARD_INFO } from "../constants/HomePage";
 import ServiceCard from "./ServiceCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-type Props = {
-  imageIndex: number;
-};
+interface Props {
+  prevRef: React.RefObject<HTMLDivElement | null>;
+  nextRef: React.RefObject<HTMLDivElement | null>;
+}
 
-const ServiceCarousel = ({ imageIndex }: Props) => {
+const ServiceCarousel = ({ prevRef, nextRef }: Props) => {
   return (
-    <div className="flex overflow-hidden w-full">
-      <div
-        className="flex gap-12 transition-transform duration-500 ease-in-out"
-        style={{
-          transform: `translateX(-${imageIndex * 30}%)`,
+    <div className="relative serviceSwiper">
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        slidesPerView={1}
+        spaceBetween={50}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        pagination={{
+          el: ".custom-pagination",
+          clickable: true,
+        }}
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
+        onBeforeInit={(swiper) => {
+          // Fix for custom navigation refs
+          if (typeof swiper.params.navigation !== "boolean") {
+            swiper.params.navigation!.prevEl = prevRef.current;
+            swiper.params.navigation!.nextEl = nextRef.current;
+          }
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          730: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 3,
+          },
+          1440: {
+            slidesPerView: 4,
+          },
+          1800: {
+            slidesPerView: 5,
+          },
         }}
       >
         {SERVICE_CARD_INFO.map((item, index) => (
-          <ServiceCard
-            key={index}
-            title={item.title}
-            desc={item.desc}
-            link={item.link}
-            icon={item.icon}
-          />
+          <SwiperSlide key={index}>
+            <ServiceCard
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              desc={item.desc}
+              link={item.link}
+            />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
+      <div className="custom-pagination mt-6 flex justify-center"></div>
     </div>
   );
 };

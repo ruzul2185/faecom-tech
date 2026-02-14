@@ -11,7 +11,7 @@ interface ServiceProps {
 
 const ServiceCard = ({ icon: Icon, title, desc, link }: ServiceProps) => {
   return (
-    <div className="bg-[#EFEADF] p-7.5 rounded-2xl min-w-73.75 gap-5 flex flex-col">
+    <div className="bg-[#EFEADF] p-7.5 rounded-2xl min-w-73.75 gap-5 flex flex-col lg:max-w-82.5">
       <span className="inline-flex justify-center items-center size-18 bg-[#ff6041] rounded-full">
         <Icon className="size-8.5" color="white" />
       </span>

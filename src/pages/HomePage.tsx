@@ -1,13 +1,9 @@
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
 import InfiniteCarousel from "../components/InfiniteCarousel";
-import ServiceCard from "../components/ServiceCard";
-import ServiceCarousel from "../components/ServiceCarousel";
 import ServiceComponent from "../components/ServiceComponent";
 import StatCard from "../components/StatCard";
-import { SERVICE_CARD_INFO, STATISTICS_CARD_INFO } from "../constants/HomePage";
-import { FaGear } from "react-icons/fa6";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { STATISTICS_CARD_INFO } from "../constants/HomePage";
 
 const HomePage = () => {
   return (
