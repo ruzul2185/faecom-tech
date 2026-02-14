@@ -1,10 +1,11 @@
 import Bookmark from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
+import InfiniteCarousel from "../components/InfiniteCarousel";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center gap-25 mt-25">
-      <section className="max-w-5xl text-center flex flex-col gap-6.75 justify-center items-center">
+    <div className="flex flex-col items-stretch gap-25 mt-25">
+      <section className="max-w-5xl mx-auto text-center flex flex-col gap-6.75 justify-center items-center">
         <Bookmark
           iconSrc="Sparkles.svg"
           title="Leading Tech, Education and Soltions"
@@ -24,6 +25,9 @@ const HomePage = () => {
           <PrimaryButton title="Explore" />
           <SecondaryButton title="Let's talk" />
         </div>
+      </section>
+      <section className="bg mx-auto min-w-86.25 w-[93%] rounded-[50px] py-12.5 text-white">
+        <InfiniteCarousel />
       </section>
     </div>
   );
