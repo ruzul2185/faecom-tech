@@ -86,3 +86,13 @@ export const SERVICE_CARD_INFO = [
     link: "",
   },
 ];
+
+export const AFFILIATE_LOGOS = [
+  "/affiliation/android.svg",
+  "/affiliation/coliss.svg",
+  "/affiliation/creative.svg",
+  "/affiliation/de-beers.svg",
+  "/affiliation/spyres.svg",
+  "/affiliation/virustotal.svg",
+  "/affiliation/xataka.svg",
+];

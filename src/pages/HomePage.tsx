@@ -1,3 +1,4 @@
+import AffiliationBanner from "../components/AffiliationBanner";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
 import InfiniteCarousel from "../components/InfiniteCarousel";
@@ -93,6 +94,8 @@ const HomePage = () => {
       </section>
 
       <ServiceComponent />
+
+      <AffiliationBanner />
     </div>
   );
 };
