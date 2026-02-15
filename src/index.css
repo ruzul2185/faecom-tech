@@ -18,6 +18,10 @@ li:hover {
   background-image: url("/bg.jpg");
 }
 
+.hero-bg {
+  background-image: url("/hero-bg.jpg");
+}
+
 @keyframes infinite-scroll {
   0% {
     transform: translateX(0);
@@ -29,6 +33,10 @@ li:hover {
 
 .animate-infinite-scroll {
   animation: infinite-scroll 60s linear infinite;
+}
+
+.reverse {
+  animation-direction: reverse;
 }
 
 .edge-mask {
