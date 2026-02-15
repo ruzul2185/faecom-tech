@@ -96,3 +96,30 @@ export const AFFILIATE_LOGOS = [
   "/affiliation/virustotal.svg",
   "/affiliation/xataka.svg",
 ];
+
+export const TRAINING_INFO = [
+  {
+    title: "Web Development1",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development2",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development3",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development4",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+];

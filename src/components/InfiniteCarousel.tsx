@@ -1,6 +1,10 @@
 import { TECH_STACK_INFINITE_BANNER } from "../constants/HomePage";
 
-const InfiniteCarousel = () => {
+interface Props {
+  className: string;
+}
+
+const InfiniteCarousel = ({ className = "" }: Props) => {
   return (
     <div className="w-full overflow-hidden edge-mask">
       <div className="flex gap-6.25 animate-infinite-scroll w-max">
@@ -8,7 +12,7 @@ const InfiniteCarousel = () => {
           (value, index) => (
             <div
               key={index}
-              className="w-30 h-30 bg-[#d9d9d9]/13 rounded-[20px] flex items-center justify-center shrink-0"
+              className={`w-30 h-30 bg-[#d9d9d9]/13 rounded-[20px] flex items-center justify-center shrink-0 ${className}`}
             >
               <img src={value} alt={`tech-${index}`} className="size-13" />
             </div>

@@ -1,6 +1,7 @@
 import AffiliationBanner from "../components/AffiliationBanner";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
+import TrainingComponent from "../components/home/TrainingComponent";
 import InfiniteCarousel from "../components/InfiniteCarousel";
 import ServiceComponent from "../components/ServiceComponent";
 import StatCard from "../components/StatCard";
@@ -37,11 +38,13 @@ const HomePage = () => {
           <SecondaryButton title="Let's talk" classname="rounded-[25px]" />
         </div>
       </section>
+      <InfiniteCarousel className="bg-white" />
+      <ServiceComponent />
 
       {/* ================= SECOND SECTION (CAROUSEL + INFO) ================= */}
       <section className="bg mx-auto min-w-86.25 w-[93%] rounded-[50px] py-12.5 text-white flex flex-col gap-12.5 max-w-442.5">
         {/* Infinite scrolling carousel component */}
-        <InfiniteCarousel />
+        <InfiniteCarousel className="bg-[#d9d9d9]/13" />
         {/* -------- Business Integration Content -------- */}
         <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9 sm:flex-row sm:justify-around sm:items-center">
           {/* Text Content */}
@@ -93,9 +96,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      <ServiceComponent />
-
       <AffiliationBanner />
+
+      <TrainingComponent />
     </div>
   );
 };
