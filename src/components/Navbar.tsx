@@ -26,16 +26,19 @@ const Navbar = () => {
               <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <Link to={"/about"}>About Us</Link>
+              <Link to={"/services"}>Services</Link>
             </li>
             <li>
-              <Link to={"/services"}>Services</Link>
+              <Link to={"/trainings"}>Trainings</Link>
             </li>
             <li>
               <Link to={"blogs"}>Blogs</Link>
             </li>
+             <li>
+              <Link to={"/about"}>About</Link>
+            </li>
             <li>
-              <Link to={"contacts"}>Contact Us</Link>
+              <Link to={"contact"}>Contact</Link>
             </li>
           </ul>
         </div>
@@ -69,13 +72,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/about"} onClick={() => setIsOpen(false)}>
-              About Us
+            <Link to={"/services"} onClick={() => setIsOpen(false)}>
+              Services
             </Link>
           </li>
           <li>
-            <Link to={"/services"} onClick={() => setIsOpen(false)}>
-              Services
+            <Link to={"/trainings"} onClick={() => setIsOpen(false)}>
+              Trainings
             </Link>
           </li>
           <li>
@@ -84,8 +87,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/contacts"} onClick={() => setIsOpen(false)}>
-              Contact Us
+            <Link to={"/about"} onClick={() => setIsOpen(false)}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to={"/contact"} onClick={() => setIsOpen(false)}>
+              Contact
             </Link>
           </li>
         </ul>
