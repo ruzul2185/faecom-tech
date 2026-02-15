@@ -2,6 +2,7 @@ import AffiliationBanner from "../components/AffiliationBanner";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
 import KeywordBanner from "../components/home/KeywordBanner";
+import PortfolioComponent from "../components/home/PortfolioComponent";
 import TrainingComponent from "../components/home/TrainingComponent";
 import InfiniteCarousel from "../components/InfiniteCarousel";
 import ServiceComponent from "../components/ServiceComponent";
@@ -102,6 +103,8 @@ const HomePage = () => {
       <TrainingComponent />
 
       <KeywordBanner />
+
+      <PortfolioComponent />
     </div>
   );
 };
