@@ -160,3 +160,27 @@ export const PORTFOLIO_INFO = [
     link: "",
   },
 ];
+
+export const BLOGS_INFO = [
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    date: "02-02-2026",
+    image:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "/",
+  },
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    date: "02-02-2026",
+    image:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "/",
+  },
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    date: "02-02-2026",
+    image:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "/",
+  },
+];

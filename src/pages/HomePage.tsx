@@ -1,6 +1,7 @@
 import AffiliationBanner from "../components/AffiliationBanner";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
+import BlogComponent from "../components/home/BlogComponent";
 import KeywordBanner from "../components/home/KeywordBanner";
 import PortfolioComponent from "../components/home/PortfolioComponent";
 import TrainingComponent from "../components/home/TrainingComponent";
@@ -105,6 +106,8 @@ const HomePage = () => {
       <KeywordBanner />
 
       <PortfolioComponent />
+
+      <BlogComponent />
     </div>
   );
 };
