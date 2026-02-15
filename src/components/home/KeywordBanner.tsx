@@ -3,13 +3,15 @@ import { FaStarOfLife } from "react-icons/fa6";
 
 const KeywordBanner = () => {
   return (
-    <section>
-      {KEYWORD_LIST.map((item, index) => (
-        <div key={index} className="flex justify-center items-center">
-          <div className="text-[32px] font-medium text-white pb-2">{item}</div>
-          <FaStarOfLife color="white" size={30} />
-        </div>
-      ))}
+    <section className="w-full overflow-hidden bg-[#ff6041] py-5">
+      <div className="flex animate-infinite-scroll whitespace-nowrap items-center gap-8">
+        {[...KEYWORD_LIST, ...KEYWORD_LIST].map((item, index) => (
+          <div key={`${item}-${index}`} className="flex items-center gap-8">
+            <span className="text-[32px] font-medium text-white">{item}</span>
+            <FaStarOfLife className="text-white w-6 h-6" />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
