@@ -123,3 +123,13 @@ export const TRAINING_INFO = [
     link: "",
   },
 ];
+
+export const KEYWORD_LIST = [
+  "Networking",
+  "Technology",
+  "Software",
+  "Digital",
+  "Consultation",
+  "System Design",
+  "Operation Systems",
+];
