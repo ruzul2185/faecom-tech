@@ -39,7 +39,7 @@ const HomePage = () => {
       </section>
 
       {/* ================= SECOND SECTION (CAROUSEL + INFO) ================= */}
-      <section className="bg mx-auto min-w-86.25 w-[93%] rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
+      <section className="bg mx-auto min-w-86.25 w-[93%] rounded-[50px] py-12.5 text-white flex flex-col gap-12.5 max-w-442.5">
         {/* Infinite scrolling carousel component */}
         <InfiniteCarousel />
         {/* -------- Business Integration Content -------- */}

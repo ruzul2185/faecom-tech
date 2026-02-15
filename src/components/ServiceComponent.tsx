@@ -9,7 +9,7 @@ const ServiceComponent = () => {
   const nextRef = useRef<HTMLDivElement>(null);
   return (
     <section>
-      <div className="bg-white mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16">
+      <div className="bg-white mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5">
         <div>
           <div className="flex items-center justify-between sm:gap-5 rounded-[20px] p-1">
             <Bookmark

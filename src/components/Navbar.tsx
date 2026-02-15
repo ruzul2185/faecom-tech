@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="">
-        <div className="flex justify-between items-center h-18 py-2.5 sm:w-[93%] mx-auto bg-white lg:px-20 rounded-b-[20px]">
+        <div className="flex justify-between items-center h-18 py-2.5 sm:w-[93%] mx-auto bg-white lg:px-20 rounded-b-[20px] max-w-442.5">
           <Link to={"/"} className="m-3">
             <img src="logo.png" className="w-50 sm:w-78" />
           </Link>

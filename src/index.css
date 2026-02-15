@@ -31,6 +31,10 @@ li:hover {
   animation: infinite-scroll 60s linear infinite;
 }
 
+.reverse {
+  animation-direction: reverse;
+}
+
 .edge-mask {
   -webkit-mask-image: linear-gradient(
     to right,

@@ -32,7 +32,8 @@ const AboutUs = () => {
         "We combine technology, strategy, and creativity with our experienced team's expertise. Our approach focuses on understanding client needs, delivering cost-effective solutions, and providing ongoing support throughout the digital transformation journey.",
     },
     {
-      question: "What makes FaecomTech different from other IT service providers?",
+      question:
+        "What makes FaecomTech different from other IT service providers?",
       answer:
         "Our unique background in structural engineering through Faecom Engineering Pvt. Ltd. gives us deep understanding of engineering and B2B business needs. We bridge the gap between legacy industries and modern digital infrastructure with customized, scalable solutions.",
     },
@@ -83,7 +84,10 @@ const AboutUs = () => {
           {/* Center - Statistics */}
           <div className="flex flex-col gap-9 lg:w-[25%] text-center lg:text-left">
             <div className="text-[64px] sm:text-[80px] lg:text-[100px] font-bold text-[#ff6041] leading-none">
-              30<span className="text-[40px] sm:text-[50px] lg:text-[60px]">+</span>
+              30
+              <span className="text-[40px] sm:text-[50px] lg:text-[60px]">
+                +
+              </span>
             </div>
             <div className="text-[20px] sm:text-[24px] font-medium text-gray-800">
               <p>Personalization At Seems</p>
@@ -107,8 +111,8 @@ const AboutUs = () => {
                 <span className="underline font-medium text-gray-800">
                   IT solutions
                 </span>{" "}
-                that empower businesses to thrive in fast-changing digital world.
-                With over a decade of experience.
+                that empower businesses to thrive in fast-changing digital
+                world. With over a decade of experience.
               </p>
               <PrimaryButton
                 title="Know More Us ↗"
@@ -154,14 +158,17 @@ const AboutUs = () => {
           {/* Right - Content */}
           <div className="flex flex-col gap-9 lg:w-[50%]">
             <Bookmark
-              icon={<FaUsers className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
+              icon={
+                <FaUsers className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
+              }
               title="ABOUT COMPANY"
               className="bg-white w-fit"
             />
             <div className="text-[30px] font-medium sm:text-5xl">
               <p>Building Digital Excellence</p>
               <p>
-                Through <span className="text-[#ff6041]">Engineering Heritage</span>
+                Through{" "}
+                <span className="text-[#ff6041]">Engineering Heritage</span>
               </p>
             </div>
             <div className="text-[14px] sm:text-[16px] lg:text-xl leading-relaxed text-gray-200 space-y-4">
@@ -174,8 +181,8 @@ const AboutUs = () => {
               <p>
                 Backed by an experienced team, we partner with leading B2B
                 organizations worldwide to drive successful digital
-                transformation. With a presence across the US, Canada, the UK, the
-                Middle East, and beyond.
+                transformation. With a presence across the US, Canada, the UK,
+                the Middle East, and beyond.
               </p>
               <p className="text-[#ff6041] font-medium">
                 Our mission is to help our clients confidently embrace the
@@ -185,7 +192,9 @@ const AboutUs = () => {
             <div className="flex flex-wrap gap-3 sm:gap-4">
               <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
                 <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
-                <span className="text-xs sm:text-sm font-medium">US & Canada</span>
+                <span className="text-xs sm:text-sm font-medium">
+                  US & Canada
+                </span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
                 <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
@@ -193,7 +202,9 @@ const AboutUs = () => {
               </div>
               <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
                 <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
-                <span className="text-xs sm:text-sm font-medium">Middle East</span>
+                <span className="text-xs sm:text-sm font-medium">
+                  Middle East
+                </span>
               </div>
             </div>
           </div>
@@ -207,8 +218,11 @@ const AboutUs = () => {
           <div className="flex flex-col gap-9 lg:w-[40%] relative group">
             {/* Animated decorative elements */}
             <div className="absolute -top-8 -left-8 w-32 h-32 bg-[#ff6041]/20 rounded-full animate-pulse" />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#FFC2A7]/30 rounded-full animate-bounce" style={{ animationDuration: '3s' }} />
-            
+            <div
+              className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#FFC2A7]/30 rounded-full animate-bounce"
+              style={{ animationDuration: "3s" }}
+            />
+
             {/* Main image container with hover effect */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[350px] sm:h-[450px] group-hover:shadow-[0_20px_60px_-15px_rgba(255,96,65,0.3)] transition-all duration-700">
               <img
@@ -222,11 +236,13 @@ const AboutUs = () => {
               />
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-linear-to-t from-[#ff6041]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               {/* Floating quote badge */}
               <div className="absolute bottom-6 left-6 right-6 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
-                  <p className="text-[#ff6041] text-sm font-medium italic">"Knowledge meets opportunity"</p>
+                  <p className="text-[#ff6041] text-sm font-medium italic">
+                    "Knowledge meets opportunity"
+                  </p>
                 </div>
               </div>
             </div>
@@ -239,15 +255,18 @@ const AboutUs = () => {
           {/* Right - Founder Content with staggered animations */}
           <div className="flex flex-col gap-6 lg:w-[55%]">
             <Bookmark
-              icon={<span className="text-[#ff6041] font-bold text-sm">CEO</span>}
+              icon={
+                <span className="text-[#ff6041] font-bold text-sm">CEO</span>
+              }
               title="LEADERSHIP VISION"
               className="bg-[#EFEADF] w-fit animate-fade-in"
             />
-            
+
             <div className="text-[30px] font-medium sm:text-5xl animate-slide-up">
               <p>Bridging The Gap</p>
               <p>
-                Between <span className="text-[#ff6041]">Education</span> & <span className="text-[#FFC2A7]">Employability</span>
+                Between <span className="text-[#ff6041]">Education</span> &{" "}
+                <span className="text-[#FFC2A7]">Employability</span>
               </p>
             </div>
 
@@ -256,14 +275,27 @@ const AboutUs = () => {
               <div className="group p-4 rounded-2xl bg-white border border-[#EFEADF] shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#ff6041]/30">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-[#ff6041]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#ff6041] transition-colors duration-300">
-                    <svg className="w-6 h-6 text-[#ff6041] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <svg
+                      className="w-6 h-6 text-[#ff6041] group-hover:text-white transition-colors duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                      />
                     </svg>
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Our Vision</h4>
                     <p className="text-[14px] sm:text-[16px] text-gray-600 leading-relaxed">
-                      At FaecomTech, our vision is to create a platform where knowledge meets opportunity. As the IT industry evolves rapidly, we focus on developing professionals who are technically skilled, adaptable, and future ready.
+                      At FaecomTech, our vision is to create a platform where
+                      knowledge meets opportunity. As the IT industry evolves
+                      rapidly, we focus on developing professionals who are
+                      technically skilled, adaptable, and future ready.
                     </p>
                   </div>
                 </div>
@@ -272,14 +304,29 @@ const AboutUs = () => {
               <div className="group p-4 rounded-2xl bg-white border border-[#EFEADF] shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#ff6041]/30">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-[#ff6041]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#ff6041] transition-colors duration-300">
-                    <svg className="w-6 h-6 text-[#ff6041] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    <svg
+                      className="w-6 h-6 text-[#ff6041] group-hover:text-white transition-colors duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                      />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1">Leadership Experience</h4>
+                    <h4 className="font-bold text-lg mb-1">
+                      Leadership Experience
+                    </h4>
                     <p className="text-[14px] sm:text-[16px] text-gray-600 leading-relaxed">
-                      With extensive experience in technical training, ERP implementations, and web and app innovation, our leadership understands the impact of practical guidance and real-world exposure.
+                      With extensive experience in technical training, ERP
+                      implementations, and web and app innovation, our
+                      leadership understands the impact of practical guidance
+                      and real-world exposure.
                     </p>
                   </div>
                 </div>
@@ -289,15 +336,23 @@ const AboutUs = () => {
             {/* Animated stats */}
             <div className="flex flex-wrap gap-4 mt-4">
               <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
-                <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">10+</span>
+                <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
+                  10+
+                </span>
                 <span className="text-sm font-medium">Years Experience</span>
               </div>
               <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
-                <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">500+</span>
-                <span className="text-sm font-medium">Professionals Trained</span>
+                <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
+                  500+
+                </span>
+                <span className="text-sm font-medium">
+                  Professionals Trained
+                </span>
               </div>
               <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
-                <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">50+</span>
+                <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
+                  50+
+                </span>
                 <span className="text-sm font-medium">ERP Projects</span>
               </div>
             </div>
@@ -334,8 +389,8 @@ const AboutUs = () => {
                 Our Vision
               </h3>
               <p className="text-[14px] sm:text-[16px] lg:text-lg leading-relaxed text-white/90">
-                To be a global technology and digital leader, which companies can
-                count on to succeed in a fast-changing digital era through a
+                To be a global technology and digital leader, which companies
+                can count on to succeed in a fast-changing digital era through a
                 coming together of sector expertise, speed, and innovation.
               </p>
               <div className="mt-6 sm:mt-8 flex gap-2">
@@ -359,12 +414,12 @@ const AboutUs = () => {
                 Our Mission
               </h3>
               <p className="text-[14px] sm:text-[16px] lg:text-lg leading-relaxed text-gray-700">
-                We at FaecomTech are committed to empowering businesses especially
-                B2B and engineering-based businesses, with efficient,
+                We at FaecomTech are committed to empowering businesses
+                especially B2B and engineering-based businesses, with efficient,
                 cost-effective, and scalable IT solutions. We aim to close the
-                gap between legacy industries and emerging digital infrastructure
-                through customized service, global outreach, and cutting-edge
-                technology.
+                gap between legacy industries and emerging digital
+                infrastructure through customized service, global outreach, and
+                cutting-edge technology.
               </p>
               <div className="mt-6 sm:mt-8 flex gap-2">
                 <span className="inline-block w-3 h-3 bg-[#ff6041] rounded-full" />
@@ -389,7 +444,8 @@ const AboutUs = () => {
             />
             <div className="text-[30px] font-medium sm:text-5xl mt-6">
               <p>
-                Got Questions? <span className="text-[#ff6041]">We Have Answers</span>
+                Got Questions?{" "}
+                <span className="text-[#ff6041]">We Have Answers</span>
               </p>
             </div>
           </div>
@@ -437,10 +493,7 @@ const AboutUs = () => {
             <p className="text-white/60 text-[14px] sm:text-[16px] mb-4">
               Still have questions?
             </p>
-            <PrimaryButton
-              title="Contact Us"
-              classname="rounded-[25px]"
-            />
+            <PrimaryButton title="Contact Us" classname="rounded-[25px]" />
           </div>
         </div>
       </section>
