@@ -15,7 +15,7 @@ const HomePage = () => {
         {/* Top badge / label */}
         <Bookmark
           iconSrc="Sparkles.svg"
-          title="Leading Tech, Education and Soltions"
+          title="Leading Tech, Education and Solutions"
           className="bg-white"
         />
         {/* Main Heading */}
