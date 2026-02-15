@@ -4,6 +4,7 @@ import { PrimaryButton, SecondaryButton } from "../components/Button";
 import BlogComponent from "../components/home/BlogComponent";
 import KeywordBanner from "../components/home/KeywordBanner";
 import PortfolioComponent from "../components/home/PortfolioComponent";
+import TestimonialComponent from "../components/home/TestimonialComponent";
 import TrainingComponent from "../components/home/TrainingComponent";
 import InfiniteCarousel from "../components/InfiniteCarousel";
 import ServiceComponent from "../components/ServiceComponent";
@@ -108,6 +109,8 @@ const HomePage = () => {
       <PortfolioComponent />
 
       <BlogComponent />
+
+      <TestimonialComponent />
     </div>
   );
 };

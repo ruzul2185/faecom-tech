@@ -184,3 +184,36 @@ export const BLOGS_INFO = [
     link: "/",
   },
 ];
+
+export const REVIEW_INFO = [
+  {
+    name: "Aarav Sharma",
+    role: "Frontend Developer",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    review:
+      "Working with this team was an incredible experience. Their technical expertise and attention to detail truly exceeded our expectations.",
+  },
+  {
+    name: "Priya Mehta",
+    role: "Product Manager",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    review:
+      "They delivered our project on time with exceptional quality. The UI and performance optimization were top-notch.",
+  },
+  {
+    name: "Rohan Verma",
+    role: "CEO",
+
+    image: "https://randomuser.me/api/portraits/men/65.jpg",
+    review:
+      "Professional, reliable, and highly skilled. Our platform performance improved significantly after their implementation.",
+  },
+  {
+    name: "Sneha Kulkarni",
+    role: "UI/UX Designer",
+
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    review:
+      "Their design-to-development workflow is seamless. Communication was smooth and results were impressive.",
+  },
+];

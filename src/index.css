@@ -22,6 +22,14 @@ li:hover {
   background-image: url("/hero-bg.jpg");
 }
 
+.testimonial-bg {
+  background-image: url("/testimonial-bg.png");
+}
+
+.clip-path-triangle {
+  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 10% 90%, 0 50%, 0 0);
+}
+
 @keyframes infinite-scroll {
   0% {
     transform: translateX(0);
