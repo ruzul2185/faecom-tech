@@ -87,12 +87,12 @@ const Contact = () => {
       <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6 justify-center items-center">
         <Bookmark
           icon={<FaPaperPlane className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-          title="GET IN TOUCH"
+          title="Let’s Connect"
           className="bg-white"
         />
         <div className="text-4xl sm:text-[64px] font-medium">
           <p>
-            Submit Your <span className="text-[#ff6041]">Query</span>
+            Start Your  <span className="text-[#ff6041]">Tech Journey</span>
           </p>
         </div>
         <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-xl">
@@ -152,12 +152,12 @@ const Contact = () => {
           <div className="text-center mb-8 sm:mb-12">
             <Bookmark
               icon={<FaLocationDot className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-              title="GLOBAL PRESENCE"
+              title="Global Presence"
               className="bg-white mx-auto w-fit"
             />
             <div className="text-[30px] font-medium sm:text-5xl mt-6">
               <p>
-                Our <span className="text-[#ff6041]">Clients</span> Worldwide
+                Our <span className="text-[#ff6041]">Learning & Technology</span> Partners
               </p>
             </div>
           </div>

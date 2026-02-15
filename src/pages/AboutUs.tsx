@@ -46,22 +46,23 @@ const AboutUs = () => {
         {/* Top badge */}
         <Bookmark
           icon={<FaGlobe className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-          title="ABOUT OUR COMPANY"
+          title="Your Partner in Learning & Innovation"
           className="bg-white"
         />
 
         {/* Main heading */}
-        <div className="text-4xl sm:text-[64px] font-medium">
-          <p>Delivering Innovative</p>
-          <span className="text-[#ff6041]">IT Solutions</span>
-          <p>That Empower In Businesses To Grow</p>
-        </div>
+<div className="text-4xl sm:text-[64px] font-medium">
+  <p>Learn. Innovate. Grow.</p>
+  <span className="text-[#ff6041]">Your Trusted IT Partner</span>
+  <p>For Training & Technology Services</p>
+</div>
 
-        {/* Subheading */}
-        <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-226">
-          <p>Connect And Succeed In The Digital Era And Unwavering.</p>
-        </div>
-      </section>
+{/* Subheading */}
+<div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-226">
+  <p>Transforming skills into success and ideas into powerful digital solutions.</p>
+</div>
+
+      </section>  
 
       {/* ================= HERO CONTENT GRID ================= */}
       <section className="mx-auto w-[93%] flex flex-col gap-12.5">
@@ -161,8 +162,8 @@ const AboutUs = () => {
               icon={
                 <FaUsers className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
               }
-              title="ABOUT COMPANY"
-              className="bg-white w-fit"
+              title="Company Overview"
+              className="bg-white text-amber-950 w-fit"
             />
             <div className="text-[30px] font-medium sm:text-5xl">
               <p>Building Digital Excellence</p>
@@ -335,13 +336,13 @@ const AboutUs = () => {
 
             {/* Animated stats */}
             <div className="flex flex-wrap gap-4 mt-4">
-              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
+              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
                 <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
                   10+
                 </span>
                 <span className="text-sm font-medium">Years Experience</span>
               </div>
-              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
+              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
                 <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
                   500+
                 </span>
@@ -349,7 +350,7 @@ const AboutUs = () => {
                   Professionals Trained
                 </span>
               </div>
-              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
+              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
                 <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
                   50+
                 </span>
@@ -377,7 +378,7 @@ const AboutUs = () => {
       <section className="mx-auto w-[93%] flex flex-col gap-12.5">
         <div className="py-12.5 flex flex-col gap-9 sm:grid sm:grid-cols-2">
           {/* Vision Card */}
-          <div className="group relative overflow-hidden rounded-3xl bg-[#ff6041] p-6 sm:p-8 lg:p-10 text-white transition-all duration-500 hover:shadow-2xl">
+          <div className="group relative overflow-hidden rounded-3xl bg-[#ff6041] p-6 sm:p-8 lg:p-10 text-white transition-all duration-500 hover:shadow-2xl border border-white/20">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
@@ -402,7 +403,7 @@ const AboutUs = () => {
           </div>
 
           {/* Mission Card */}
-          <div className="group relative overflow-hidden rounded-3xl bg-[#EFEADF] p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-2xl">
+          <div className="group relative overflow-hidden rounded-3xl bg-[#EFEADF] p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-2xl border border-[#ff6041]/20">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff6041]/10 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#FFC2A7]/30 rounded-full translate-y-1/2 -translate-x-1/2" />
 
