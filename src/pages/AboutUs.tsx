@@ -101,7 +101,7 @@ const AboutUs = () => {
           <div className="flex flex-col gap-9 lg:w-[35%]">
             <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-[#EFEADF]">
               <p className="text-[14px] sm:text-[16px] text-gray-600 leading-relaxed mb-4">
-                IT solutions that empower businesses to thrive in fast-changing
+                IT solutions that empower businesses to thrive in fast changing
                 digital world. With{" "}
                 <span className="underline font-medium text-gray-800">
                   over a decade
@@ -175,7 +175,16 @@ const AboutUs = () => {
             </div>
             <div className="text-[14px] sm:text-[16px] lg:text-xl leading-relaxed text-gray-200 space-y-4">
               <p>
-                FaecomTech, an affiliate of Faecom Engineering Pvt. Ltd., builds
+                FaecomTech, an affiliate of {" "} 
+                <a href="https://www.faecom.com/" 
+                   target="_blank" 
+                   style={{
+                            color: "white",
+                            fontWeight: "bold",
+                            textDecoration: "underline",
+                            }}>
+                   Faecom Engineering Pvt. Ltd.
+                </a> , builds
                 on a strong global foundation in structural engineering to
                 deliver innovative, cost-effective IT services and business
                 solutions.
