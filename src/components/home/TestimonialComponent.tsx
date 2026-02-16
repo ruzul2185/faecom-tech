@@ -7,7 +7,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const TestimonialComponent = () => {
   return (
-    <section>
+    <section className="testimonialSwiper">
       <div className="testimonial-bg max-w-442.5 mx-auto rounded-[50px] flex flex-col items-center h-160 justify-evenly">
         <div className="text-2xl font-medium text-white flex items-center gap-4 ">
           <HiArrowLongLeft />
@@ -29,11 +29,15 @@ const TestimonialComponent = () => {
             <HiArrowLongLeft size={22} className="text-white" />
           </button>
           <Swiper
-            modules={[Autoplay, Navigation]}
+            modules={[Autoplay, Navigation, Pagination]}
             slidesPerView={1}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
+            }}
+            pagination={{
+              el: ".custom-pagination-testimonial",
+              clickable: true,
             }}
             loop={true}
             navigation={{
@@ -72,6 +76,7 @@ const TestimonialComponent = () => {
             <HiArrowLongRight size={22} />
           </button>
         </div>
+        <div className="custom-pagination-testimonial mt-6 flex justify-center"></div>
       </div>
     </section>
   );

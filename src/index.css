@@ -91,3 +91,17 @@ li:hover {
   transform: scale(1.2);
   box-shadow: 0 0 10px #ff6041;
 }
+
+.testimonialSwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: white;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.testimonialSwiper .swiper-pagination-bullet-active {
+  background: #ff6041;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #ff6041;
+}
