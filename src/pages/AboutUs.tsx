@@ -40,7 +40,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="flex flex-col items-stretch gap-30 mt-30">
+    <div className="flex flex-col items-stretch gap-10 mt-30">
       {/* ================= HERO SECTION ================= */}
       <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6.75 justify-center items-center">
         {/* Top badge */}
@@ -112,11 +112,11 @@ const AboutUs = () => {
                 <span className="underline font-medium text-gray-800">
                   IT solutions
                 </span>{" "}
-                that empower businesses to thrive in fast-changing digital
+                that empower businesses to thrive in fast changing digital
                 world. With over a decade of experience.
               </p>
               <PrimaryButton
-                title="Know More Us ↗"
+                title="Know More Us"
                 classname="rounded-[25px] w-full sm:w-auto"
               />
             </div>
@@ -206,6 +206,77 @@ const AboutUs = () => {
                 <span className="text-xs sm:text-sm font-medium">
                   Middle East
                 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= VISION & MISSION SECTION ================= */}
+      <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6.75 justify-center items-center">
+        <Bookmark
+          icon={<FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
+          title="OUR PURPOSE"
+          className="bg-[#EFEADF]"
+        />
+        <div className="text-4xl sm:text-[64px] font-medium">
+          <p>
+            What Drives Us <span className="text-[#ff6041]">Forward</span>
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto w-[93%] flex flex-col gap-12.5">
+        <div className="py-12.5 flex flex-col gap-9 sm:grid sm:grid-cols-2">
+          {/* Vision Card */}
+          <div className="group relative overflow-hidden rounded-3xl bg-[#ff6041] p-6 sm:p-8 lg:p-10 text-white transition-all duration-500 hover:shadow-2xl border border-white/20">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative z-10">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 backdrop-blur-sm">
+                <FaGlobe className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h3 className="text-[24px] sm:text-[30px] lg:text-4xl font-bold mb-3 sm:mb-4">
+                Our Vision
+              </h3>
+              <p className="text-[14px] sm:text-[16px] lg:text-lg leading-relaxed text-white/90">
+                To be a global technology and digital leader, which companies
+                can count on to succeed in a fast-changing digital era through a
+                coming together of sector expertise, speed, and innovation.
+              </p>
+              <div className="mt-6 sm:mt-8 flex gap-2">
+                <span className="inline-block w-3 h-3 bg-white rounded-full opacity-60" />
+                <span className="inline-block w-3 h-3 bg-white rounded-full opacity-40" />
+                <span className="inline-block w-3 h-3 bg-white rounded-full opacity-20" />
+              </div>
+            </div>
+          </div>
+
+          {/* Mission Card */}
+          <div className="group relative overflow-hidden rounded-3xl bg-[#EFEADF] p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-2xl border border-[#ff6041]/20">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff6041]/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#FFC2A7]/30 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative z-10">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff6041] rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                <FaRocket className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h3 className="text-[24px] sm:text-[30px] lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">
+                Our Mission
+              </h3>
+              <p className="text-[14px] sm:text-[16px] lg:text-lg leading-relaxed text-gray-700">
+                We at FaecomTech are committed to empowering businesses
+                especially B2B and engineering-based businesses, with efficient,
+                cost-effective, and scalable IT solutions. We aim to close the
+                gap between legacy industries and emerging digital
+                infrastructure through customized service, global outreach, and
+                cutting-edge technology.
+              </p>
+              <div className="mt-6 sm:mt-8 flex gap-2">
+                <span className="inline-block w-3 h-3 bg-[#ff6041] rounded-full" />
+                <span className="inline-block w-3 h-3 bg-[#ff6041]/60 rounded-full" />
+                <span className="inline-block w-3 h-3 bg-[#ff6041]/30 rounded-full" />
               </div>
             </div>
           </div>
@@ -355,77 +426,6 @@ const AboutUs = () => {
                   50+
                 </span>
                 <span className="text-sm font-medium">ERP Projects</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= VISION & MISSION SECTION ================= */}
-      <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6.75 justify-center items-center">
-        <Bookmark
-          icon={<FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-          title="OUR PURPOSE"
-          className="bg-[#EFEADF]"
-        />
-        <div className="text-4xl sm:text-[64px] font-medium">
-          <p>
-            What Drives Us <span className="text-[#ff6041]">Forward</span>
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto w-[93%] flex flex-col gap-12.5">
-        <div className="py-12.5 flex flex-col gap-9 sm:grid sm:grid-cols-2">
-          {/* Vision Card */}
-          <div className="group relative overflow-hidden rounded-3xl bg-[#ff6041] p-6 sm:p-8 lg:p-10 text-white transition-all duration-500 hover:shadow-2xl border border-white/20">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-
-            <div className="relative z-10">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 backdrop-blur-sm">
-                <FaGlobe className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-              </div>
-              <h3 className="text-[24px] sm:text-[30px] lg:text-4xl font-bold mb-3 sm:mb-4">
-                Our Vision
-              </h3>
-              <p className="text-[14px] sm:text-[16px] lg:text-lg leading-relaxed text-white/90">
-                To be a global technology and digital leader, which companies
-                can count on to succeed in a fast-changing digital era through a
-                coming together of sector expertise, speed, and innovation.
-              </p>
-              <div className="mt-6 sm:mt-8 flex gap-2">
-                <span className="inline-block w-3 h-3 bg-white rounded-full opacity-60" />
-                <span className="inline-block w-3 h-3 bg-white rounded-full opacity-40" />
-                <span className="inline-block w-3 h-3 bg-white rounded-full opacity-20" />
-              </div>
-            </div>
-          </div>
-
-          {/* Mission Card */}
-          <div className="group relative overflow-hidden rounded-3xl bg-[#EFEADF] p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-2xl border border-[#ff6041]/20">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff6041]/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#FFC2A7]/30 rounded-full translate-y-1/2 -translate-x-1/2" />
-
-            <div className="relative z-10">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff6041] rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <FaRocket className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-              </div>
-              <h3 className="text-[24px] sm:text-[30px] lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">
-                Our Mission
-              </h3>
-              <p className="text-[14px] sm:text-[16px] lg:text-lg leading-relaxed text-gray-700">
-                We at FaecomTech are committed to empowering businesses
-                especially B2B and engineering-based businesses, with efficient,
-                cost-effective, and scalable IT solutions. We aim to close the
-                gap between legacy industries and emerging digital
-                infrastructure through customized service, global outreach, and
-                cutting-edge technology.
-              </p>
-              <div className="mt-6 sm:mt-8 flex gap-2">
-                <span className="inline-block w-3 h-3 bg-[#ff6041] rounded-full" />
-                <span className="inline-block w-3 h-3 bg-[#ff6041]/60 rounded-full" />
-                <span className="inline-block w-3 h-3 bg-[#ff6041]/30 rounded-full" />
               </div>
             </div>
           </div>
