@@ -1,406 +1,448 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton } from "../components/Button";
-import { FaUser, FaCalendar, FaTag, FaStar, FaReply, FaQuoteRight, FaLightbulb, FaChartLine } from "react-icons/fa6";
+import {
+  FaUser,
+  FaCalendar,
+  FaTag,
+  FaStar,
+  FaReply,
+  FaQuoteRight,
+  FaLightbulb,
+  FaChartLine,
+} from "react-icons/fa6";
 
 const Blogs = () => {
   const [commentData, setCommentData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
-  const [showComments, setShowComments] = useState(false);
 
+  const [showComments, setShowComments] = useState(true);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  // ================= READING PROGRESS =================
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const progress =
+        (window.scrollY / totalHeight) * 100;
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // ================= DATA =================
   const blogPosts = [
     {
       id: 1,
       title: "Unlocking Business Growth With Innovative Solutions",
-      excerpt: "Discover how cutting-edge technology and strategic partnerships can transform your business operations and drive sustainable growth in today's competitive landscape.",
+      excerpt:
+        "Discover how cutting-edge technology and strategic partnerships can transform your business operations and drive sustainable growth.",
       author: "Admin",
       date: "18 Dec, 2025",
       category: "Corporate",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
-      content: `In today's rapidly evolving digital landscape, businesses face unprecedented challenges and opportunities. The key to sustainable growth lies in embracing innovative solutions that not only address current needs but also anticipate future trends.
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+      content: `In today's rapidly evolving digital landscape, businesses face unprecedented challenges and opportunities. The key to sustainable growth lies in embracing innovative solutions.
 
-      At FaecomTech, we understand that true business transformation goes beyond implementing new technologies. It requires a holistic approach that combines strategic planning, technical expertise, and a deep understanding of industry-specific requirements.
+At FaecomTech, we understand that true business transformation goes beyond implementing new technologies. It requires a holistic approach.
 
-      Our comprehensive suite of services is designed to empower businesses at every stage of their digital journey. From initial consultation to ongoing support, we partner with our clients to deliver solutions that drive efficiency, enhance productivity, and create lasting competitive advantages.
+The integration of emerging technologies such as artificial intelligence, cloud computing, and data analytics has revolutionized how businesses operate.
 
-      The integration of emerging technologies such as artificial intelligence, cloud computing, and data analytics has revolutionized how businesses operate. Organizations that leverage these technologies effectively are better positioned to adapt to market changes, meet customer expectations, and achieve their strategic objectives.
-
-      Success in the digital age requires more than just technological adoption – it demands a cultural shift towards continuous innovation and learning. By fostering a mindset of experimentation and adaptation, businesses can create an environment where new ideas flourish and transformation becomes a continuous process rather than a one-time event.`,
-      quote: "Innovation distinguishes between a leader and a follower. The future belongs to those who embrace change and turn challenges into opportunities.",
+Success in the digital age requires more than just technological adoption – it demands a cultural shift towards continuous innovation and learning.`,
+      quote:
+        "Innovation distinguishes between a leader and a follower. The future belongs to those who embrace change.",
       tags: ["News", "Business", "Marketing"],
       comments: [
         {
           id: 1,
           name: "Sohel Tanvir",
-          date: "March 20, 2024 at 2:37 pm",
+          date: "March 20, 2024",
           rating: 5,
-          avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face",
-          message: "This article provides excellent insights into business transformation strategies. The emphasis on holistic approach and cultural shift is particularly relevant for organizations looking to drive sustainable growth."
+          avatar:
+            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50",
+          message:
+            "This article provides excellent insights into business transformation strategies.",
         },
-        {
-          id: 2,
-          name: "Alex Flores",
-          date: "March 20, 2024 at 2:37 pm",
-          rating: 5,
-          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face",
-          message: "Great read! The points about AI integration and data analytics are spot on. Looking forward to implementing some of these strategies in our organization."
-        }
-      ]
-    }
+      ],
+    },
   ];
 
-  // Sample related articles
   const relatedArticles = [
     {
       id: 2,
-      title: "The Future of ERP Systems: Cloud-Based Solutions",
-      excerpt: "Explore how cloud-based ERP systems are revolutionizing business operations and why FaecomTech's ERP solutions are leading the digital transformation.",
-      author: "Tech Team",
+      title: "The Future of ERP Systems",
       date: "15 Dec, 2025",
-      category: "Technology",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop"
     },
     {
       id: 3,
-      title: "Bridging the Skills Gap: Modern IT Training Programs",
-      excerpt: "How FaecomTech's comprehensive training programs are preparing the next generation of IT professionals for the challenges of tomorrow's digital workplace.",
-      author: "Training Division",
+      title: "Bridging the Skills Gap",
       date: "12 Dec, 2025",
-      category: "Education",
-      image: "https://images.unsplash.com/photo-15172453868074-6c090a6d5f7b?w=800&h=400&fit=crop"
     },
-    {
-      id: 4,
-      title: "Digital Transformation Strategies for 2025",
-      excerpt: "Key trends and strategies businesses should adopt to stay competitive in the evolving digital landscape of 2025.",
-      author: "Strategy Team",
-      date: "10 Dec, 2025",
-      category: "Strategy",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop"
-    }
   ];
-
-  const handleCommentSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Comment submitted:", commentData);
-    setCommentData({ name: "", email: "", message: "" });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setCommentData(prev => ({ ...prev, [name]: value }));
-  };
 
   const currentPost = blogPosts[0];
 
+  const readTime = Math.ceil(
+    currentPost.content.split(" ").length / 200
+  );
+
+  const handleCommentSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(commentData);
+    setCommentData({ name: "", email: "", message: "" });
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setCommentData((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
-    <div className="flex flex-col items-stretch gap-30 mt-30">
-      {/* ================= HERO SECTION ================= */}
-      <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6 justify-center items-center">
-        <Bookmark
-          icon={<FaTag className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-          title="Industry Updates"
-          className="bg-white"
+    <div className="flex flex-col gap-24 mt-24">
+
+      {/* ================= READING PROGRESS BAR ================= */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+        <div
+          className="h-full bg-[#ff6041] transition-all duration-150"
+          style={{ width: `${scrollProgress}%` }}
         />
-        <div className="text-4xl sm:text-[64px] font-medium">
-          <p>
-            Stay Ahead With<span className="text-[#ff6041]">Expert Insights</span>
+      </div>
+
+      {/* ================= HERO ================= */}
+      <section className="max-w-4xl mx-auto text-center w-[93%] relative">
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#ff6041]/10 to-[#ff6041]/5 rounded-3xl blur-3xl"></div> */}
+        <div className="relative z-10">
+          <Bookmark
+            icon={<FaTag className="text-[#ff6041]" />}
+            title="Industry Insights"
+            className="bg-white mx-auto w-fit shadow-lg hover:shadow-xl transition-shadow duration-300"
+          />
+          <h1 className="text-4xl sm:text-5xl font-bold mt-6 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            Stay Ahead With{" "}
+            <span className="text-[#ff6041] relative">
+              Expert Knowledge
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#ff6041]/30 rounded-full"></span>
+            </span>
+          </h1>
+          <p className="text-gray-600 mt-6 text-lg leading-relaxed">
+            Insights, trends and strategies shaping the
+            <br className="hidden sm:block" />
+            future of digital transformation.
           </p>
-        </div>
-        <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-xl">
-          <p>Stay updated with the latest trends, insights, and innovations in technology and business transformation.</p>
-        </div>
-      </section>
-
-      {/* ================= BLOG READER ================= */}
-      <section className="max-w-5xl mx-auto w-[93%]">
-        {/* Book Container */}
-        <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl shadow-2xl overflow-hidden">
-          {/* Book Binding Effect */}
-          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-900 to-amber-700 shadow-lg" />
-          <div className="absolute right-8 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-900 to-amber-700 shadow-lg" />
-          
-          {/* Page Content */}
-          <div className="bg-white rounded-2xl mx-12 my-8 p-8 sm:p-12 lg:p-16 shadow-inner">
-            {/* Page Header */}
-            <div className="border-b-2 border-gray-200 pb-6 mb-8">
-              <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                <div className="flex items-center gap-2">
-                  <FaUser className="text-[#ff6041]" />
-                  <span>By {currentPost.author}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaCalendar className="text-[#ff6041]" />
-                  <span>{currentPost.date}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaTag className="text-[#ff6041]" />
-                  <span>{currentPost.category}</span>
-                </div>
-              </div>
+          <div className="mt-8 flex justify-center gap-4">
+            <div className="px-4 py-2 bg-white rounded-full shadow-sm border border-[#ff6041]/20">
+              <span className="text-sm font-medium text-[#ff6041]">{blogPosts.length} Articles</span>
             </div>
-
-            {/* Blog Title */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 text-gray-900 leading-tight text-center">
-              {currentPost.title}
-            </h1>
-
-            {/* Featured Image */}
-            <div className="relative h-48 sm:h-64 lg:h-80 overflow-hidden rounded-2xl mb-8 shadow-md">
-              <img
-                src={currentPost.image}
-                alt={currentPost.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
-            </div>
-
-            {/* Blog Excerpt */}
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed text-center italic">
-              {currentPost.excerpt}
-            </p>
-
-            {/* Blog Content */}
-            <div className="prose prose-lg max-w-none mb-8">
-              {currentPost.content.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-700 leading-relaxed mb-6 text-justify">
-                  {paragraph.trim()}
-                </p>
-              ))}
-            </div>
-
-            {/* Quote Block */}
-            <div className="relative bg-[#EFEADF] rounded-2xl p-6 my-8 border-l-4 border-[#ff6041]">
-              <blockquote className="text-lg italic text-gray-800 leading-relaxed">
-                {currentPost.quote}
-              </blockquote>
-              <div className="absolute bottom-2 right-2 text-[#ff6041]/20">
-                <FaQuoteRight className="w-12 h-12" />
-              </div>
-            </div>
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-3 justify-center mb-8">
-              {currentPost.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="bg-[#EFEADF] text-gray-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300 cursor-pointer"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            {/* Page Number */}
-            <div className="text-center text-sm text-gray-500 font-medium">
-              Page 1
+            <div className="px-4 py-2 bg-white rounded-full shadow-sm border border-[#ff6041]/20">
+              <span className="text-sm font-medium text-gray-700">Updated Daily</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Comments Toggle */}
-      <section className="max-w-5xl mx-auto w-[93%] mt-12">
-        <div className="text-center">
-          <button
-            onClick={() => setShowComments(!showComments)}
-            className="flex items-center gap-2 mx-auto px-6 py-3 bg-[#ff6041] text-white rounded-full hover:bg-[#e55030] transition-colors duration-300"
-          >
-            <FaReply className="w-4 h-4" />
-            {showComments ? 'Hide Comments' : 'Show Comments'} ({currentPost.comments.length})
-          </button>
-        </div>
+      {/* ================= BLOG CONTENT ================= */}
+      <section className="max-w-6xl mx-auto w-[93%]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
 
-        {/* Comments Section */}
-        {showComments && (
-          <div className="mt-8 bg-[#EFEADF] rounded-3xl p-8 sm:p-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 text-center">
-              {currentPost.comments.length.toString().padStart(2, '0')} Comments
+          {/* MAIN ARTICLE */}
+          <div className="lg:col-span-2">
+
+            <span className="bg-linear-to-r from-[#ff6041] to-[#ff8041] text-white px-4 py-1 rounded-full text-sm shadow-md">
+              {currentPost.category}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl font-bold mt-6 mb-4 leading-tight text-gray-900">
+              {currentPost.title}
             </h2>
 
-            {/* Comments List */}
-            <div className="space-y-6 mb-12">
-              {currentPost.comments.map((comment) => (
-                <div key={comment.id} className="bg-white rounded-2xl p-6 shadow-sm">
-                  <div className="flex gap-4">
-                    <img
-                      src={comment.avatar}
-                      alt={comment.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <div>
-                          <h4 className="font-semibold text-gray-900">{comment.name}</h4>
-                          <p className="text-sm text-gray-600">{comment.date}</p>
-                        </div>
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <FaStar
-                              key={i}
-                              className={`w-4 h-4 ${i < comment.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+            <div className="flex flex-wrap gap-6 text-sm text-gray-600 mb-8 pb-6 border-b border-gray-200">
+              <span className="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm">
+                <FaUser className="text-[#ff6041]" />
+                {currentPost.author}
+              </span>
+              <span className="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm">
+                <FaCalendar className="text-[#ff6041]" />
+                {currentPost.date}
+              </span>
+              <span className="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm">
+                <FaStar className="text-[#ff6041]" />
+                {readTime} min read
+              </span>
+            </div>
+
+            <div className="relative group">
+              <img
+                src={currentPost.image}
+                className="rounded-2xl w-full shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
+                alt=""
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-10">
+              <p className="text-xl text-gray-600 leading-relaxed italic">
+                {currentPost.excerpt}
+              </p>
+            </div>
+
+            <div className="space-y-8 text-gray-700 leading-relaxed text-justify">
+              {currentPost.content
+                .split("\n\n")
+                .map((p, i) => (
+                  <p key={i} className="hover:text-gray-900 transition-colors duration-200">{p}</p>
+                ))}
+            </div>
+
+            {/* QUOTE */}
+            <div className="relative my-16">
+              <div className="absolute inset-0 bg-linear-to-r from-[#ff6041]/10 to-[#ff8041]/10 rounded-2xl blur-xl"></div>
+              <div className="relative bg-white p-8 rounded-2xl border-l-4 border-[#ff6041] shadow-lg">
+                <FaQuoteRight className="absolute right-6 top-6 text-[#ff6041]/20 text-5xl" />
+                <p className="italic text-lg text-gray-800 font-medium">
+                  {currentPost.quote}
+                </p>
+                <div className="mt-4 text-sm text-[#ff6041] font-medium">
+                  — Inspiration
+                </div>
+              </div>
+            </div>
+
+            {/* COMMENTS */}
+            <div className="mt-16">
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Discussion ({currentPost.comments.length})
+                </h3>
+                <button
+                  onClick={() =>
+                    setShowComments(!showComments)
+                  }
+                  className="px-6 py-3 bg-linear-to-r from-[#ff6041] to-[#ff8041] text-white rounded-full hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+                >
+                  <FaReply className="text-sm" />
+                  {showComments
+                    ? "Hide Comments"
+                    : "Show Comments"}
+                </button>
+              </div>
+
+              {showComments && (
+                <div className="space-y-8">
+                  {currentPost.comments.map(
+                    (comment) => (
+                      <div
+                        key={comment.id}
+                        className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                      >
+                        <div className="flex gap-4">
+                          <div className="relative">
+                            <img
+                              src={comment.avatar}
+                              className="w-12 h-12 rounded-full ring-2 ring-[#ff6041]/20"
                             />
-                          ))}
+                            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#ff6041] rounded-full flex items-center justify-center">
+                              <FaStar className="text-white text-xs" />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between">
+                              <h4 className="font-semibold text-gray-900">
+                                {comment.name}
+                              </h4>
+                              <div className="flex items-center gap-1">
+                                {[...Array(comment.rating)].map((_, i) => (
+                                  <FaStar key={i} className="text-yellow-400 text-sm" />
+                                ))}
+                              </div>
+                            </div>
+                            <p className="text-sm text-gray-500 mt-1">
+                              {comment.date}
+                            </p>
+                            <p className="mt-3 text-gray-700 leading-relaxed">
+                              {comment.message}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <p className="text-gray-700 leading-relaxed">{comment.message}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+                    )
+                  )}
 
-            {/* Comment Form */}
-            <div className="bg-white rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900">Leave A Comment</h3>
-              <form onSubmit={handleCommentSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={commentData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#ff6041] focus:ring-2 focus:ring-[#ff6041]/20 transition-all duration-300"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Your Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={commentData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#ff6041] focus:ring-2 focus:ring-[#ff6041]/20 transition-all duration-300"
-                      placeholder="Enter your email"
-                    />
+                  {/* COMMENT FORM */}
+                  <div className="bg-linear-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                      Share Your Thoughts
+                    </h3>
+                    <p className="text-gray-600 mb-6">
+                      Join the discussion and share your perspective with our community.
+                    </p>
+                    
+                    <form
+                      onSubmit={handleCommentSubmit}
+                      className="space-y-6"
+                    >
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name"
+                          value={commentData.name}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-[#ff6041] focus:ring-2 focus:ring-[#ff6041]/20 transition-all duration-200"
+                        />
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Your Email"
+                          value={commentData.email}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-[#ff6041] focus:ring-2 focus:ring-[#ff6041]/20 transition-all duration-200"
+                        />
+                      </div>
+
+                      <textarea
+                        name="message"
+                        rows={4}
+                        placeholder="Share your thoughts..."
+                        value={commentData.message}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-[#ff6041] focus:ring-2 focus:ring-[#ff6041]/20 transition-all duration-200 resize-none"
+                      />
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <input type="checkbox" id="notify" className="rounded text-[#ff6041]" />
+                          <label htmlFor="notify" className="text-sm text-gray-600">
+                            Notify me of replies
+                          </label>
+                        </div>
+                        <PrimaryButton
+                          title="Post Comment"
+                          classname="rounded-full px-8 hover:shadow-lg transition-all duration-300"
+                        />
+                      </div>
+                    </form>
                   </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Write Message
-                  </label>
-                  <textarea
-                    name="message"
-                    value={commentData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#ff6041] focus:ring-2 focus:ring-[#ff6041]/20 transition-all duration-300 resize-none"
-                    placeholder="Share your thoughts..."
-                  />
-                </div>
-                <PrimaryButton
-                  title="Post Comment"
-                  classname="rounded-full px-8"
-                />
-              </form>
+              )}
             </div>
           </div>
-        )}
-      </section>
 
-      {/* ================= RELATED ARTICLES SECTION ================= */}
-      <section className="max-w-5xl mx-auto w-[93%]">
-        <div className="text-center mb-12">
-          <Bookmark
-            icon={<FaLightbulb className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-            title="RELATED INSIGHTS"
-            className="bg-white mx-auto w-fit"
-          />
-          <div className="text-3xl sm:text-4xl font-medium mt-6">
-            <p>Explore More <span className="text-[#ff6041]">Articles</span></p>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {relatedArticles.map((post) => (
-            <article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer">
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <span className="bg-[#ff6041] text-white text-xs px-3 py-1 rounded-full font-medium">
-                    {post.category}
+          {/* SIDEBAR */}
+          <div className="space-y-8 sticky top-24 h-fit">
+
+            {/* TAGS */}
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="font-bold mb-6 text-gray-900 flex items-center">
+                <FaTag className="inline mr-2 text-[#ff6041]" />
+                Popular Tags
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {currentPost.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-4 py-2 bg-linear-to-r from-[#ff6041]/10 to-[#ff8041]/10 text-[#ff6041] rounded-full text-sm font-medium hover:from-[#ff6041] hover:to-[#ff8041] hover:text-white transition-all duration-300 cursor-pointer border border-[#ff6041]/20"
+                  >
+                    {tag}
                   </span>
-                </div>
+                ))}
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-[#ff6041] transition-colors duration-300">
-                  {post.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between text-xs text-gray-500">
-                  <div className="flex items-center gap-2">
-                    <FaCalendar className="w-3 h-3" />
-                    <span>{post.date}</span>
+            </div>
+
+            {/* RELATED */}
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="font-bold mb-6 text-gray-900 flex items-center">
+                <FaLightbulb className="inline mr-2 text-[#ff6041]" />
+                Related Articles
+              </h3>
+              <div className="space-y-4">
+                {relatedArticles.map((post, index) => (
+                  <div
+                    key={post.id}
+                    className="group cursor-pointer"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-[#ff6041] rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="flex-1">
+                        <p className="font-medium text-gray-900 group-hover:text-[#ff6041] transition-colors duration-200">
+                          {post.title}
+                        </p>
+                        <div className="flex items-center gap-2 mt-1">
+                          <span className="text-sm text-gray-500">
+                            {post.date}
+                          </span>
+                          <span className="text-xs text-gray-400">•</span>
+                          <span className="text-xs text-[#ff6041] font-medium">
+                            {index + 1} min read
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    {index < relatedArticles.length - 1 && (
+                      <div className="ml-1 mt-4 border-l border-gray-200"></div>
+                    )}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <FaUser className="w-3 h-3" />
-                    <span>{post.author}</span>
-                  </div>
-                </div>
+                ))}
               </div>
-            </article>
-          ))}
+            </div>
+
+            {/* NEWSLETTER */}
+            <div className="bg-linear-to-br from-[#ff6041] to-[#ff8041] p-6 rounded-2xl text-white">
+              <h3 className="font-bold mb-4 flex items-center">
+                <FaChartLine className="inline mr-2" />
+                Stay Updated
+              </h3>
+              <p className="text-sm mb-4 text-white/90">
+                Get the latest insights delivered to your inbox weekly.
+              </p>
+              <div className="space-y-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:bg-white/30 focus:border-white transition-all duration-200"
+                />
+                <button className="w-full py-2 bg-white text-[#ff6041] rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+
+            {/* STATS */}
+            <div className="bg-white border border-[#ff6041]/20 p-6 rounded-2xl text-center">
+              <div className="w-16 h-16 bg-linear-to-r from-[#ff6041]/20 to-[#ff8041]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FaChartLine className="text-2xl text-[#ff6041]" />
+              </div>
+              <h4 className="font-bold text-lg text-gray-900">
+                98% Client Satisfaction
+              </h4>
+              <p className="text-sm text-gray-600 mt-2">
+                Delivering digital excellence through
+                innovation.
+              </p>
+              <div className="flex justify-center gap-1 mt-4">
+                {[...Array(5)].map((_, i) => (
+                  <FaStar key={i} className="text-yellow-400 text-sm" />
+                ))}
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
-
-      {/* ================= COMPANY STATS SECTION ================= */}
-      <section className="bg-[#EFEADF] py-16">
-        <div className="max-w-5xl mx-auto w-[93%]">
-          <div className="text-center mb-12">
-            <Bookmark
-              icon={<FaChartLine className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-              title="Our Impact"
-              className="bg-white mx-auto w-fit"
-            />
-            <div className="text-3xl sm:text-4xl font-medium mt-6">
-              <p>Driving <span className="text-[#ff6041]">Digital Excellence</span></p>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl p-6 text-center border border-[#ff6041]/20">
-              <div className="text-4xl font-bold text-[#ff6041] mb-2">500+</div>
-              <p className="text-gray-700 font-medium">Professionals Trained</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 text-center border border-[#ff6041]/20">
-              <div className="text-4xl font-bold text-[#ff6041] mb-2">50+</div>
-              <p className="text-gray-700 font-medium">ERP Implementations</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 text-center border border-[#ff6041]/20">
-              <div className="text-4xl font-bold text-[#ff6041] mb-2">10+</div>
-              <p className="text-gray-700 font-medium">Years Experience</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 text-center border border-[#ff6041]/20">
-              <div className="text-4xl font-bold text-[#ff6041] mb-2">98%</div>
-              <p className="text-gray-700 font-medium">Client Satisfaction</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-        
-      </div>
-    );
+    </div>
+  );
 };
 
 export default Blogs;
