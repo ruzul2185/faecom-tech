@@ -9,7 +9,7 @@ export const PrimaryButton = ({ title, classname = "" }: ButtonProps) => {
       className={`relative overflow-hidden font-medium text-white bg-[#ff6041] w-61 h-14.5 flex justify-center items-center cursor-pointer group/button ${classname}`}
     >
       <span className="absolute inset-0 flex justify-center items-center pointer-events-none">
-        <span className="w-40 h-40 bg-black rounded-full scale-0 transition-transform duration-500 ease-out group-hover/button:scale-150"></span>
+        <span className="w-50 h-40 bg-black rounded-full scale-0 transition-transform duration-500 ease-out group-hover/button:scale-150"></span>
       </span>
 
       <span className="relative z-10">{title}</span>
@@ -23,7 +23,7 @@ export const SecondaryButton = ({ title, classname = "" }: ButtonProps) => {
       className={`relative overflow-hidden font-medium text-black bg-white w-61 h-14.5 flex justify-center items-center cursor-pointer group/button hover:text-white ${classname}`}
     >
       <span className="absolute inset-0 flex justify-center items-center pointer-events-none">
-        <span className="w-40 h-40 bg-[#ff6041] rounded-full scale-0 transition-transform duration-500 ease-out group-hover/button:scale-150"></span>
+        <span className="w-50 h-40 bg-[#ff6041] rounded-full scale-0 transition-transform duration-500 ease-out group-hover/button:scale-150"></span>
       </span>
 
       <span className="relative z-10 group-hover/button:text-white">
@@ -39,7 +39,7 @@ export const TernaryButton = ({ title, classname = "" }: ButtonProps) => {
       className={`relative overflow-hidden font-medium text-black bg-white w-61 h-14.5 flex justify-center items-center cursor-pointer group/button hover:text-white ${classname}`}
     >
       <span className="absolute inset-0 flex justify-center items-center pointer-events-none">
-        <span className="w-40 h-40 bg-black rounded-full scale-0 transition-transform duration-500 ease-out group-hover/button:scale-150"></span>
+        <span className="w-50 h-40 bg-black rounded-full scale-0 transition-transform duration-500 ease-out group-hover/button:scale-150"></span>
       </span>
 
       <span className="relative z-10 group-hover/button:text-white">

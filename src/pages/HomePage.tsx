@@ -1,4 +1,4 @@
-import AffiliationBanner from "../components/AffiliationBanner";
+import AffiliationBanner from "../components/home/AffiliationBanner";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
 import BlogComponent from "../components/home/BlogComponent";

@@ -1,4 +1,4 @@
-import { AFFILIATE_LOGOS } from "../constants/HomePage";
+import { AFFILIATE_LOGOS } from "../../constants/HomePage";
 
 const AffiliationBanner = () => {
   return (

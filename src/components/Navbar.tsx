@@ -1,12 +1,17 @@
 import { Link } from "react-router";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Prevent background scroll when sidebar is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
   return (
     <>
-      <nav className="">
+      <nav className="sticky top-0 z-50">
         <div className="flex justify-between items-center h-18 py-2.5 sm:w-[93%] mx-auto bg-white lg:px-20 rounded-b-[20px] max-w-442.5">
           <Link to={"/"} className="m-3">
             <img src="logo.png" className="w-50 sm:w-78" />
@@ -23,22 +28,22 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <ul className="hidden md:flex justify-between text-[20px] font-medium lg:px-12.5 lg:py-2.5 xl:gap-10">
             <li>
-              <Link to={"/"}>Home</Link>
+              <a href={"/"}>Home</a>
             </li>
             <li>
-              <Link to={"/services"}>Services</Link>
+              <a href={"/services"}>Services</a>
             </li>
-            <li>
+            {/* <li>
               <Link to={"/trainings"}>Trainings</Link>
+            </li> */}
+            <li>
+              <a href={"blogs"}>Blogs</a>
             </li>
             <li>
-              <Link to={"blogs"}>Blogs</Link>
-            </li>
-             <li>
-              <Link to={"/about"}>About</Link>
+              <a href={"/about"}>About</a>
             </li>
             <li>
-              <Link to={"contact"}>Contact</Link>
+              <a href={"contact"}>Contact</a>
             </li>
           </ul>
         </div>
