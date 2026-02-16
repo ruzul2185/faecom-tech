@@ -30,30 +30,56 @@ const Footer = () => {
           />
 
           {/* Affiliation */}
-          <FooterColumn
-            title="Affiliation"
-            links={[
-              "Faecom Engineering",
-              "FAQ",
-              "Terms & Conditions",
-              "Privacy Policy",
-            ]}
-          />
+          {/* Affiliation & Legal */}
+          <div className="flex flex-col">
+            {/* Affiliation */}
+            <FooterColumn title="Affiliation" links={["Faecom Engineering"]} />
+
+            {/* Legal Highlighted Section */}
+            <div className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-3">
+                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300">
+                  FAQ
+                </li>
+                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300">
+                  Terms & Conditions
+                </li>
+                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300">
+                  Privacy Policy
+                </li>
+              </ul>
+            </div>
+          </div>
 
           {/* Contact */}
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-[20px]">Get in Touch</h3>
+
             <p className="text-gray-300 text-sm">
               Email: support@yourcompany.com
             </p>
+
             <p className="text-gray-300 text-sm">Phone: +91 98765 43210</p>
-            <p className="text-gray-300 text-sm">Location: India</p>
+
+            <div className="text-gray-300 text-sm flex flex-col gap-3">
+              <p className="font-medium text-white">Coorporate Address:</p>
+              <p>
+                Chandra Trading Complex, 2nd Floor, Near NIT Garden, IT Park
+                Road, Trimurti Nagar, Nagpur, Maharashtra 440022
+              </p>
+
+              <p className="font-medium text-white mt-2">Registered Address:</p>
+              <p>
+                Plot No. 15, Pathan Layout, Datta Mandir Road, Rana Pratap
+                Nagar, Nagpur - 440022, Maharashtra, India
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Divider */}
         <div className="border-t border-gray-600 mt-12 pt-6 text-left text-sm text-gray-400">
-          © {new Date().getFullYear()} Your Company. All rights reserved.
+          © {new Date().getFullYear()} Faecom Tech. All rights reserved.
         </div>
       </div>
     </footer>
