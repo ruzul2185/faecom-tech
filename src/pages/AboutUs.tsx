@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton } from "../components/Button";
 import { FaGlobe, FaUsers, FaRocket, FaChevronDown } from "react-icons/fa6";
+import AffiliationBanner from "../components/home/AffiliationBanner";
 
 const AboutUs = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -40,7 +41,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="flex flex-col items-stretch gap-10 mt-30">
+    <div className="flex flex-col items-stretch gap-15 mt-30">
       {/* ================= HERO SECTION ================= */}
       <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6.75 justify-center items-center">
         {/* Top badge */}
@@ -149,7 +150,7 @@ const AboutUs = () => {
                   <FaGlobe className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-bold text-base sm:text-lg">Global</p>
+                  <p className="font-bold text-orange-500 sm:text-lg">Global</p>
                   <p className="text-xs sm:text-sm text-gray-600">Presence</p>
                 </div>
               </div>
@@ -217,7 +218,7 @@ const AboutUs = () => {
         <Bookmark
           icon={<FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
           title="OUR PURPOSE"
-          className="bg-[#EFEADF]"
+          className="bg-white"
         />
         <div className="text-4xl sm:text-[64px] font-medium">
           <p>
@@ -331,7 +332,7 @@ const AboutUs = () => {
                 <span className="text-[#ff6041] font-bold text-sm">CEO</span>
               }
               title="LEADERSHIP VISION"
-              className="bg-[#EFEADF] w-fit animate-fade-in"
+              className="bg-white w-fit animate-fade-in"
             />
 
             <div className="text-[30px] font-medium sm:text-5xl animate-slide-up">
@@ -498,6 +499,8 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      <AffiliationBanner /> 
     </div>
   );
 };
