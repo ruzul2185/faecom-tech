@@ -96,3 +96,124 @@ export const AFFILIATE_LOGOS = [
   "/affiliation/virustotal.svg",
   "/affiliation/xataka.svg",
 ];
+
+export const TRAINING_INFO = [
+  {
+    title: "Web Development1",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development2",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development3",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development4",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+];
+
+export const KEYWORD_LIST = [
+  "Networking",
+  "Technology",
+  "Software",
+  "Digital",
+  "Consultation",
+  "System Design",
+  "Operation Systems",
+];
+
+export const PORTFOLIO_INFO = [
+  {
+    title: "Web Development1",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development2",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development3",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+  {
+    title: "Web Development4",
+    backgroundImage:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "",
+  },
+];
+
+export const BLOGS_INFO = [
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    date: "02-02-2026",
+    image:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "/",
+  },
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    date: "02-02-2026",
+    image:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "/",
+  },
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    date: "02-02-2026",
+    image:
+      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    link: "/",
+  },
+];
+
+export const REVIEW_INFO = [
+  {
+    name: "Aarav Sharma",
+    role: "Frontend Developer",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    review:
+      "Working with this team was an incredible experience. Their technical expertise and attention to detail truly exceeded our expectations.",
+  },
+  {
+    name: "Priya Mehta",
+    role: "Product Manager",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    review:
+      "They delivered our project on time with exceptional quality. The UI and performance optimization were top-notch.",
+  },
+  {
+    name: "Rohan Verma",
+    role: "CEO",
+
+    image: "https://randomuser.me/api/portraits/men/65.jpg",
+    review:
+      "Professional, reliable, and highly skilled. Our platform performance improved significantly after their implementation.",
+  },
+  {
+    name: "Sneha Kulkarni",
+    role: "UI/UX Designer",
+
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    review:
+      "Their design-to-development workflow is seamless. Communication was smooth and results were impressive.",
+  },
+];

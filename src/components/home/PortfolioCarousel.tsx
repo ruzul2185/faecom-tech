@@ -1,19 +1,16 @@
-import { SERVICE_CARD_INFO } from "../constants/HomePage";
-import ServiceCard from "./ServiceCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import PortfolioCard from "./PortfolioCard";
+import { PORTFOLIO_INFO } from "../../constants/HomePage";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
-interface Props {
+interface PortfolioCarouselProps {
   prevRef: React.RefObject<HTMLDivElement | null>;
   nextRef: React.RefObject<HTMLDivElement | null>;
 }
 
-const ServiceCarousel = ({ prevRef, nextRef }: Props) => {
+const PortfolioCarousel = ({ prevRef, nextRef }: PortfolioCarouselProps) => {
   return (
-    <div className="relative serviceSwiper">
+    <div className="portfolioSwiper">
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
         slidesPerView={1}
@@ -24,7 +21,7 @@ const ServiceCarousel = ({ prevRef, nextRef }: Props) => {
         }}
         loop={true}
         pagination={{
-          el: ".custom-pagination-service",
+          el: ".custom-pagination-portfolio",
           clickable: true,
         }}
         navigation={{
@@ -51,26 +48,23 @@ const ServiceCarousel = ({ prevRef, nextRef }: Props) => {
           1440: {
             slidesPerView: 4,
           },
-          1800: {
-            slidesPerView: 5,
-          },
         }}
       >
-        {SERVICE_CARD_INFO.map((item, index) => (
-          <SwiperSlide key={index}>
-            <ServiceCard
-              key={index}
-              icon={item.icon}
-              title={item.title}
-              desc={item.desc}
-              link={item.link}
-            />
-          </SwiperSlide>
-        ))}
+        {[...PORTFOLIO_INFO, ...PORTFOLIO_INFO, ...PORTFOLIO_INFO].map(
+          (item, index) => (
+            <SwiperSlide key={index}>
+              <PortfolioCard
+                title={item.title}
+                backgroundImage={item.backgroundImage}
+                link={item.link}
+              />
+            </SwiperSlide>
+          ),
+        )}
       </Swiper>
-      <div className="custom-pagination-service mt-6 flex justify-center"></div>
+      <div className="custom-pagination-portfolio mt-6 flex justify-center"></div>
     </div>
   );
 };
 
-export default ServiceCarousel;
+export default PortfolioCarousel;
