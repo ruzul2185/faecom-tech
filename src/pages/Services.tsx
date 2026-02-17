@@ -204,9 +204,89 @@ const Services = () => {
                 <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3">{facility.title}</h3>
                 <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{facility.description}</p>
                 {/* Interactive hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#ff6041]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-[#ff6041]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section className="bg-gray-900 py-16 lg:py-20">
+        <div className="bg-white mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left - Contact Info */}
+            <div className="text-gray-900">
+              <div className="flex items-center gap-2 mb-6">
+                <Bookmark
+                  icon={<FaHandshake />}
+                  title="GET IN TOUCH"
+                  className="bg-[#d9d9d9] text-[#ff6041] w-fit"
+                />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                Secure Your Business—Reach Out To Our Team Member.
+              </h2>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+                <div>
+                  <h3 className="text-xl font-bold mb-3">Corporate Address</h3>
+                  <p className="text-gray-700">Chandra Trading Complex, 2nd Floor,</p>
+                  <p className="text-gray-700">Near NIT Garden, IT Park Road, Trimurti</p>
+                  <p className="text-gray-700">Nagar, Nagpur, Maharashtra 440022</p>
+                  <p className="text-gray-700 mt-2">support@faecomtech.com</p>
+                  <p className="text-[#ff6041] font-medium">+91 98765 43210</p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3">Registered Address</h3>
+                  <p className="text-gray-700">Plot No. 15, Pathan Layout, Datta Mandir</p>
+                  <p className="text-gray-700">Road, Rana Pratap Nagar, Nagpur -</p>
+                  <p className="text-gray-700">440022, Maharashtra, India</p>
+                  <p className="text-gray-700 mt-2">info@faecomtech.com</p>
+                  <p className="text-[#ff6041] font-medium">+91 98765 43210</p>
+                </div>
+              </div>
+
+              <p className="text-gray-700 mb-6">
+                We are a results-driven IT consulting team helping businesses unlock efficiency.
+              </p>
+              <a href="/contact" className="inline-flex items-center text-[#ff6041] font-semibold group">
+                Contact us
+                <IoArrowRedoSharp size={18} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
+            </div>
+
+            {/* Right - Contact Form */}
+            <div className="bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl">
+              <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <input 
+                  type="text" 
+                  placeholder="First Name*" 
+                  className="col-span-1 bg-gray-700 text-white placeholder-gray-400 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6041] transition-all duration-300" 
+                />
+                <input 
+                  type="text" 
+                  placeholder="Last Name*" 
+                  className="col-span-1 bg-gray-700 text-white placeholder-gray-400 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6041] transition-all duration-300" 
+                />
+                <input 
+                  type="email" 
+                  placeholder="Email Address*" 
+                  className="col-span-1 sm:col-span-2 bg-gray-700 text-white placeholder-gray-400 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6041] transition-all duration-300" 
+                />
+                <textarea 
+                  placeholder="Message*" 
+                  rows={4}
+                  className="col-span-1 sm:col-span-2 bg-gray-700 text-white placeholder-gray-400 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6041] transition-all duration-300 resize-none"
+                />
+                <button 
+                  type="submit"
+                  className="col-span-1 sm:col-span-2 bg-[#ff6041] hover:bg-black text-white font-semibold py-4 rounded-lg transition-colors duration-300 transform hover:scale-105"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
