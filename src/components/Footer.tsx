@@ -9,7 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
           {/* Logo + Description */}
           <div className="flex flex-col gap-6 items-center md:items-start">
-            <img src="/logo.png" alt="logo" className="max-w-[220px]" />
+            <img
+              src="/faecom-logo.svg"
+              alt="logo"
+              className="max-w-55 bg-white p-3 rounded-2xl"
+            />
 
             <p className="text-[15px] text-gray-300 leading-relaxed">
               Delivering innovative IT solutions and training programs to
