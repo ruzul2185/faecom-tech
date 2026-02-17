@@ -1,5 +1,3 @@
-import { AiFillAccountBook } from "react-icons/ai";
-
 export const TECH_STACK_INFINITE_BANNER = [
   "/tech/aws.svg",
   "/tech/docker.svg",
