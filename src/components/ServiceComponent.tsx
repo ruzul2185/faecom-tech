@@ -15,17 +15,20 @@ const ServiceComponent = () => {
             <Bookmark
               icon={<FaGear />}
               title="Explore Our Services"
-              className="bg-[#d9d9d9] text-[#ff6041]"
+              className="bg-[#efeadf] text-[#ff6041]"
             />
           </div>
           <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-center sm:mt-5">
             <p className="text-[30px] font-medium sm:text-5xl/normal max-w-135.5">
-              From Thought to Technology
+              Transforming Vision Into Digital Systems
             </p>
-            <p className="text-[14px] text-[#534f5a] font-medium sm:text-xl/relaxed max-w-lg">
-              Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              elusmod.
+            <p className="text-[14px] text-[#534f5a] font-medium sm:text-xl/loose max-w-2xl">
+              Beyond delivering enterprise-grade digital solutions, we empower
+              teams with the knowledge and technical training needed to sustain
+              innovation, ensuring long-term technological independence and
+              growth.
             </p>
+
             <div className="flex gap-5">
               <div
                 ref={prevRef}

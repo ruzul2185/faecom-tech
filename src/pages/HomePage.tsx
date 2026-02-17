@@ -26,21 +26,27 @@ const HomePage = () => {
         />
         {/* Main Heading */}
         <div className="text-4xl sm:text-[64px] font-medium">
-          <p>Tranforming Ideas into</p>{" "}
-          <span className="text-[#ff6041]">Intellegent</span>{" "}
-          <span className="text-[#FFC2A7]">Product</span>
+          <p>Engineering Reliable Software</p> <span>Delivering</span>{" "}
+          <span className="text-[#ff6041]">Global</span>{" "}
+          <span className="text-[#ffa077]">Trust</span>
         </div>
         {/* Subheading / Description */}
         <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] line max-w-226">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            We transform complex challenges into reliable digital
+            infrastructures while delivering practical, industry-aligned
+            training that equips individuals and teams to innovate with
+            confidence.
           </p>
         </div>
         {/* Call-To-Action Buttons */}
         <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-16.75">
-          <PrimaryButton title="Explore" classname="rounded-[25px]" />
-          <SecondaryButton title="Let's talk" classname="rounded-[25px]" />
+          <a href="/services">
+            <PrimaryButton title="Explore" classname="rounded-[25px]" />
+          </a>
+          <a href="/contact">
+            <SecondaryButton title="Let's talk" classname="rounded-[25px]" />
+          </a>
         </div>
       </section>
       <InfiniteCarousel className="bg-white" />

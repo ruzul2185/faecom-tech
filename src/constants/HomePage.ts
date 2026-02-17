@@ -38,52 +38,52 @@ export const STATISTICS_CARD_INFO = [
 
 export const SERVICE_CARD_INFO = [
   {
-    icon: AiFillAccountBook,
-    title: "NextGEN AI Counsuling1",
-    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    title: "SAP Solutions",
+    desc: "Empower your enterprise with integrated SAP solutions that streamline operations, improve efficiency, and drive data-driven decision-making across finance, supply chain, HR, and more.",
     link: "",
+    svgLink: "/sap-w.svg",
   },
   {
-    icon: AiFillAccountBook,
-    title: "NextGEN AI Counsuling2",
-    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    title: "Amazon Web Services",
+    desc: "Leverage the power of AWS to build secure, scalable, and high-performance cloud infrastructure. From deployment to DevOps automation, we design cost-efficient cloud architectures tailored to your business needs.",
     link: "",
+    svgLink: "/aws-w.svg",
   },
   {
-    icon: AiFillAccountBook,
-    title: "NextGEN AI Counsuling3",
-    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    title: "Salesforce CRM Solutions",
+    desc: "We deliver powerful Salesforce CRM solutions to streamline your sales, automate workflows, and enhance customer engagement. From implementation to customization and integration, we help businesses unlock the full potential of Salesforce.",
     link: "",
+    svgLink: "/salesforce-w.svg",
   },
   {
-    icon: AiFillAccountBook,
-    title: "NextGEN AI Counsuling4",
-    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    title: "Zoho Business Solutions",
+    desc: "An all-in-one cloud platform offering smart tools for CRM, accounting, HR, email, and project management—helping businesses automate workflows and boost productivity.",
     link: "",
+    svgLink: "/zoho.png",
   },
   {
-    icon: AiFillAccountBook,
-    title: "NextGEN AI Counsuling5",
-    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    title: "Unity Game Development",
+    desc: "A robust real-time rendering and game development engine supporting C# scripting, advanced physics, animation systems, and multi-platform publishing for mobile, PC, console, AR, and VR applications.",
     link: "",
+    svgLink: "/unity-w.svg",
   },
   {
-    icon: AiFillAccountBook,
-    title: "NextGEN AI Counsuling6",
-    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    title: "Digital Marketing Solutions",
+    desc: "Comprehensive digital marketing strategies designed to increase brand visibility, generate qualified leads, and drive measurable growth. From SEO and paid advertising to social media and content marketing, we help businesses build a strong and scalable online presence.",
     link: "",
+    svgLink: "/dm.svg",
   },
   {
-    icon: AiFillAccountBook,
-    title: "NextGEN AI Counsuling7",
-    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    title: "Modern Web Development",
+    desc: "We build secure, scalable, and high-performance websites tailored to your business goals. From responsive corporate websites to complex web applications, our solutions combine clean architecture, modern frameworks, and seamless user experience.",
     link: "",
+    svgLink: "/web.svg",
   },
   {
-    icon: AiFillAccountBook,
-    title: "NextGEN AI Counsuling8",
-    desc: "Businesses to thrive in changing digital world. With over a decade systems that drive growth an efficiency. From IT consulting.",
+    title: "Software Development",
+    desc: "We design and develop secure, scalable, and high-performance software tailored to your business needs. From enterprise systems to automation tools, our solutions streamline operations and drive digital transformation.",
     link: "",
+    svgLink: "/software.svg",
   },
 ];
 
@@ -99,27 +99,23 @@ export const AFFILIATE_LOGOS = [
 
 export const TRAINING_INFO = [
   {
-    title: "Web Development1",
-    backgroundImage:
-      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    title: "Systems, Applications, and Products (SAP)",
+    backgroundImage: "/sap-bg.jpg",
     link: "",
   },
   {
-    title: "Web Development2",
-    backgroundImage:
-      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    title: "Amazon Web Services (AWS)",
+    backgroundImage: "/aws-bg.png",
     link: "",
   },
   {
-    title: "Web Development3",
-    backgroundImage:
-      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    title: "Zoho",
+    backgroundImage: "/zoho-bg.jpg",
     link: "",
   },
   {
-    title: "Web Development4",
-    backgroundImage:
-      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+    title: "Salesforce",
+    backgroundImage: "/salesforce-bg.webp",
     link: "",
   },
 ];

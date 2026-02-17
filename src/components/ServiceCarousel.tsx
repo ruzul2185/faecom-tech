@@ -60,10 +60,10 @@ const ServiceCarousel = ({ prevRef, nextRef }: Props) => {
           <SwiperSlide key={index}>
             <ServiceCard
               key={index}
-              icon={item.icon}
               title={item.title}
               desc={item.desc}
               link={item.link}
+              svgLink={item.svgLink}
             />
           </SwiperSlide>
         ))}
