@@ -2,6 +2,9 @@ import { useState, type FormEventHandler } from "react";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton } from "../components/Button";
 import { FaLocationDot, FaPhone, FaClock, FaPaperPlane } from "react-icons/fa6";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -162,62 +165,83 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            <img
-              src="https://faecomtech.com/wp-content/uploads/2024/10/Blue-Minimalist-World-Map-Instagram-Post-e1731622431653-768x482.png"
-              alt="World Map with Client Locations"
-              className="w-full h-auto object-cover"
-            />
-            
-            {/* Location markers overlay */}
-            <div className="absolute inset-0">
-              {/* Los Angeles */}
-              <div className="absolute top-[35%] left-[12%] group">
-                <div className="w-4 h-4 sm:w-6 sm:h-6 bg-[#ff6041] rounded-full animate-pulse relative">
-                  <div className="absolute -inset-2 bg-[#ff6041]/30 rounded-full animate-ping" />
-                </div>
-                <div className="absolute left-6 top-0 bg-white rounded-xl p-2 sm:p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                  <p className="font-bold text-sm sm:text-base">Los Angeles</p>
-                  <p className="text-xs sm:text-sm text-gray-600">USA</p>
-                </div>
-              </div>
-              
-              {/* Leidschendam (Netherlands) */}
-              <div className="absolute top-[22%] left-[48%] group">
-                <div className="w-4 h-4 sm:w-6 sm:h-6 bg-[#ff6041] rounded-full animate-pulse relative">
-                  <div className="absolute -inset-2 bg-[#ff6041]/30 rounded-full animate-ping" />
-                </div>
-                <div className="absolute left-6 top-0 bg-white rounded-xl p-2 sm:p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                  <p className="font-bold text-sm sm:text-base">Leidschendam</p>
-                  <p className="text-xs sm:text-sm text-gray-600">Netherlands</p>
-                </div>
-              </div>
-              
-              {/* Mumbai */}
-              <div className="absolute top-[45%] left-[65%] group">
-                <div className="w-4 h-4 sm:w-6 sm:h-6 bg-[#ff6041] rounded-full animate-pulse relative">
-                  <div className="absolute -inset-2 bg-[#ff6041]/30 rounded-full animate-ping" />
-                </div>
-                <div className="absolute left-6 top-0 bg-white rounded-xl p-2 sm:p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                  <p className="font-bold text-sm sm:text-base">Mumbai</p>
-                  <p className="text-xs sm:text-sm text-gray-600">India</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Client locations list */}
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
-            {clientLocations.map((location, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-300"
+          {/* Leaflet Map Container */}
+          <div className="relative bg-white rounded-3xl p-6 sm:p-8 shadow-lg">
+            <div className="relative w-full h-[400px] sm:h-[500px] overflow-hidden rounded-2xl">
+              <MapContainer
+                center={[20, 0]} // Center of the world map
+                zoom={2}
+                style={{ height: "100%", width: "100%" }}
+                className="rounded-2xl"
               >
-                <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
-                <span className="font-medium text-sm sm:text-base">{location.name}</span>
-                <span className="text-gray-500 text-sm">({location.country})</span>
-              </div>
-            ))}
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                {clientLocations.map((location, index) => (
+                  <Marker
+                    key={index}
+                    position={[location.lat, location.lng]}
+                    icon={L.divIcon({
+                      html: `
+                        <div style="
+                          background-color: #ff6041;
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          border: 3px solid white;
+                          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        ">
+                          <div style="
+                            background-color: white;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                          "></div>
+                        </div>
+                      `,
+                      className: "custom-marker",
+                      iconSize: [24, 24],
+                      iconAnchor: [12, 12],
+                    })}
+                  >
+                    <Popup>
+                      <div style={{ padding: "8px", fontFamily: "system-ui" }}>
+                        <h3 style={{ margin: "0 0 4px 0", color: "#ff6041", fontWeight: "bold" }}>
+                          {location.name}
+                        </h3>
+                        <p style={{ margin: 0, color: "#666" }}>{location.country}</p>
+                      </div>
+                    </Popup>
+                  </Marker>
+                ))}
+              </MapContainer>
+            </div>
+            
+            {/* Location Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+              {clientLocations.map((location, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-4 border border-gray-100 hover:shadow-md transition-all duration-300 hover:border-[#ff6041]/30 cursor-pointer group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-[#ff6041]/10 rounded-full flex items-center justify-center group-hover:bg-[#ff6041]/20 transition-colors">
+                      <FaLocationDot className="w-5 h-5 text-[#ff6041]" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 group-hover:text-[#ff6041] transition-colors">
+                        {location.name}
+                      </h4>
+                      <p className="text-sm text-gray-500">{location.country}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
