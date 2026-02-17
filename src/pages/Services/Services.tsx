@@ -1,5 +1,5 @@
-import { PARTNER_SERVICES, CORE_SERVICES, KEY_FACILITIES } from "../constants/Services";
-import { Bookmark } from "../components/Bookmark";
+import { PARTNER_SERVICES, CORE_SERVICES, KEY_FACILITIES } from "../../constants/Services";
+import { Bookmark } from "../../components/Bookmark";
 import { FaGear, FaHandshake } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
