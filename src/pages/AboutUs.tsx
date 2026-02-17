@@ -52,25 +52,27 @@ const AboutUs = () => {
         />
 
         {/* Main heading */}
-<div className="text-4xl sm:text-[64px] font-medium">
-  <p>Learn. Innovate. Grow.</p>
-  <span className="text-[#ff6041]">Your Trusted IT Partner</span>
-  <p>For Training & Technology Services</p>
-</div>
+        <div className="text-4xl sm:text-[64px] font-medium">
+          <p>Learn. Innovate. Grow.</p>
+          <span className="text-[#ff6041]">Your Trusted IT Partner</span>
+          <p>For Training & Technology Services</p>
+        </div>
 
-{/* Subheading */}
-<div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-226">
-  <p>Transforming skills into success and ideas into powerful digital solutions.</p>
-</div>
-
-      </section>  
+        {/* Subheading */}
+        <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-226">
+          <p>
+            Transforming skills into success and ideas into powerful digital
+            solutions.
+          </p>
+        </div>
+      </section>
 
       {/* ================= HERO CONTENT GRID ================= */}
-      <section className="mx-auto w-[93%] flex flex-col gap-12.5">
+      <section className="mx-auto w-[93%] flex flex-col gap-12.5 max-w-442.5">
         <div className="py-12.5 flex flex-col gap-9 lg:flex-row lg:justify-around lg:items-center">
           {/* Left - Image */}
           <div className="flex flex-col gap-9 lg:w-[35%]">
-            <div className="rounded-3xl overflow-hidden shadow-2xl h-[300px] sm:h-[400px]">
+            <div className="rounded-3xl overflow-hidden shadow-2xl h-75 sm:h-100">
               <img
                 src="/about-hero.jpg"
                 alt="Team working"
@@ -126,13 +128,13 @@ const AboutUs = () => {
       </section>
 
       {/* ================= ABOUT COMPANY SECTION ================= */}
-      <section className="bg mx-auto min-w-86.25 w-[93%] rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
+      <section className="bg mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
         <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9 lg:flex-row lg:justify-around lg:items-center">
           {/* Left - Image with decorative elements */}
           <div className="flex flex-col gap-9 lg:w-[45%] relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#ff6041]/10 rounded-full" />
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#FFC2A7]/20 rounded-full" />
-            <div className="relative rounded-3xl overflow-hidden shadow-xl h-[300px] sm:h-[400px]">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl h-75 sm:h-100">
               <img
                 src="/about-company.jpg"
                 alt="Our company"
@@ -175,18 +177,20 @@ const AboutUs = () => {
             </div>
             <div className="text-[14px] sm:text-[16px] lg:text-xl leading-relaxed text-gray-200 space-y-4">
               <p>
-                FaecomTech, an affiliate of {" "} 
-                <a href="https://www.faecom.com/" 
-                   target="_blank" 
-                   style={{
-                            color: "white",
-                            fontWeight: "bold",
-                            textDecoration: "underline",
-                            }}>
-                   Faecom Engineering Pvt. Ltd.
-                </a> , builds
-                on a strong global foundation in structural engineering to
-                deliver innovative, cost-effective IT services and business
+                FaecomTech, an affiliate of{" "}
+                <a
+                  href="https://www.faecom.com/"
+                  target="_blank"
+                  style={{
+                    color: "white",
+                    fontWeight: "bold",
+                    textDecoration: "underline",
+                  }}
+                >
+                  Faecom Engineering Pvt. Ltd.
+                </a>{" "}
+                , builds on a strong global foundation in structural engineering
+                to deliver innovative, cost-effective IT services and business
                 solutions.
               </p>
               <p>
@@ -223,7 +227,7 @@ const AboutUs = () => {
       </section>
 
       {/* ================= VISION & MISSION SECTION ================= */}
-      <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6.75 justify-center items-center">
+      <section className="max-w-442.5 mx-auto w-[93%]  text-center flex flex-col gap-6.75 justify-center items-center">
         <Bookmark
           icon={<FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
           title="OUR PURPOSE"
@@ -236,7 +240,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="mx-auto w-[93%] flex flex-col gap-12.5">
+      <section className="mx-auto w-[93%] max-w-442.5 flex flex-col gap-12.5">
         <div className="py-12.5 flex flex-col gap-9 sm:grid sm:grid-cols-2">
           {/* Vision Card */}
           <div className="group relative overflow-hidden rounded-3xl bg-[#ff6041] p-6 sm:p-8 lg:p-10 text-white transition-all duration-500 hover:shadow-2xl border border-white/20">
@@ -294,7 +298,7 @@ const AboutUs = () => {
       </section>
 
       {/* ================= FOUNDER / LEADERSHIP SECTION ================= */}
-      <section className="mx-auto w-[93%] flex flex-col gap-12.5">
+      <section className="mx-auto w-[93%] max-w-442.5 flex flex-col gap-12.5">
         <div className="py-12.5 flex flex-col gap-9 lg:flex-row lg:justify-around lg:items-center">
           {/* Left - Founder Image with animations */}
           <div className="flex flex-col gap-9 lg:w-[40%] relative group">
@@ -306,7 +310,7 @@ const AboutUs = () => {
             />
 
             {/* Main image container with hover effect */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[350px] sm:h-[450px] group-hover:shadow-[0_20px_60px_-15px_rgba(255,96,65,0.3)] transition-all duration-700">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-87.5 sm:h-112.5 group-hover:shadow-[0_20px_60px_-15px_rgba(255,96,65,0.3)] transition-all duration-700">
               <img
                 src="/founder.jpg"
                 alt="Founder"
@@ -335,7 +339,7 @@ const AboutUs = () => {
           </div>
 
           {/* Right - Founder Content with staggered animations */}
-          <div className="flex flex-col gap-6 lg:w-[55%]">
+          <div className="flex flex-col gap-6 lg:w-[55%] ">
             <Bookmark
               icon={
                 <span className="text-[#ff6041] font-bold text-sm">CEO</span>
@@ -443,7 +447,7 @@ const AboutUs = () => {
       </section>
 
       {/* ================= FAQ SECTION ================= */}
-      <section className="bg mx-auto min-w-86.25 w-[93%] rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
+      <section className="bg mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
         <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9">
           <div className="text-center">
             <Bookmark
@@ -509,7 +513,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <AffiliationBanner /> 
+      <AffiliationBanner />
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Navbar = () => {
   }, [isOpen]);
   return (
     <>
-      <nav className="sticky top-0 z-50">
+      <nav className="sticky top-0 z-500">
         <div className="flex justify-between items-center h-18 py-2.5 sm:w-[93%] mx-auto bg-white lg:px-20 rounded-b-[20px] max-w-442.5">
           <Link to={"/"} className="m-3">
             <img src="/faecom-logo.svg" className="w-50 sm:w-70" />
@@ -57,7 +57,7 @@ const Navbar = () => {
       )}
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-501 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
