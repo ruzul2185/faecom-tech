@@ -49,6 +49,7 @@ const HomePage = () => {
           </a>
         </div>
       </section>
+
       <InfiniteCarousel className="bg-white" />
       <ServiceComponent />
 
@@ -61,21 +62,21 @@ const HomePage = () => {
           {/* Text Content */}
           <div className="flex flex-col gap-9 md:w-[60%]">
             <div className="text-[30px] font-medium sm:text-5xl">
-              <p>Innovate, Integrate and Scale</p>
-              <p>your business</p>
+              <p>Build, Optimize & Accelerate</p>
+              <p>your Growth</p>
             </div>
             <div className="text-[14px] sm:text-2xl font-medium">
               <p>
-                Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                elusmod.Lorem Ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do elusmod
+                We design smart digital solutions that streamline operations,
+                enhance performance, and drive measurable business growth
+                through cutting-edge technology.
               </p>
             </div>
           </div>
           {/* CTA Button */}
-          <div>
+          <a href="/contact">
             <PrimaryButton title="Integrate now" classname="rounded-[25px]" />
-          </div>
+          </a>
         </div>
 
         {/* -------- Statistics + Supporting Content -------- */}
@@ -93,14 +94,13 @@ const HomePage = () => {
           {/* Right-side Text Content */}
           <div className="flex flex-col gap-9 md:w-[60%] text-right">
             <div className="text-[30px] font-medium sm:text-5xl">
-              <p>Innovate, Integrate and Scale</p>
-              <p>your business</p>
+              <p>Code Innovation. Create Impact.</p>
+              <p>Deliver Results.</p>
             </div>
             <div className="text-[14px] sm:text-2xl font-medium">
               <p>
-                Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                elusmod.Lorem Ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do elusmod
+                Leverage modern technology, automation, and intelligent systems
+                to future-proof your business and stay ahead of the competition.
               </p>
             </div>
           </div>

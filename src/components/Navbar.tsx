@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import Dropdown from "./Dropdown";
@@ -15,9 +14,9 @@ const Navbar: React.FC = () => {
     <>
       <nav className="sticky top-0 z-50">
         <div className="flex justify-between items-center h-18 py-2.5 sm:w-[93%] mx-auto bg-white lg:px-20 rounded-b-[20px] max-w-442.5">
-          <Link to="/" className="m-3">
+          <a href="/" className="m-3">
             <img src="/faecom-logo.svg" className="w-40 sm:w-52" />
-          </Link>
+          </a>
 
           {/* Mobile Icon */}
           <div className="md:hidden">
@@ -30,20 +29,20 @@ const Navbar: React.FC = () => {
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center text-[18px] font-medium gap-8">
             <li>
-              <Link to="/">Home</Link>
+              <a href="/">Home</a>
             </li>
 
             <Dropdown label="Services" path="/services" items={SERVICES} />
             
             <Dropdown label="Trainings" path="/trainings" items={TRAININGS} />
             <li>
-              <Link to="/blogs">Blogs</Link>
+              <a href="/blogs">Blogs</a>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <a href="/about">About</a>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -73,9 +72,9 @@ const Navbar: React.FC = () => {
 
         <ul className="flex flex-col gap-6 text-lg font-medium px-6">
           <li>
-            <Link to="/" onClick={() => setIsOpen(false)}>
+            <a href="/" onClick={() => setIsOpen(false)}>
               Home
-            </Link>
+            </a>
           </li>
 
           <Dropdown
@@ -95,19 +94,19 @@ const Navbar: React.FC = () => {
           />
 
           <li>
-            <Link to="/blogs" onClick={() => setIsOpen(false)}>
+            <a href="/blogs" onClick={() => setIsOpen(false)}>
               Blogs
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/about" onClick={() => setIsOpen(false)}>
+            <a href="/about" onClick={() => setIsOpen(false)}>
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/contact" onClick={() => setIsOpen(false)}>
+            <a href="/contact" onClick={() => setIsOpen(false)}>
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

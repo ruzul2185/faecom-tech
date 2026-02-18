@@ -18,7 +18,7 @@ const TrainingCard = ({
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Default Dark Gradient */}
-      <div className="absolute inset-0 rounded-[20px] bg-linear-to-t from-[#16182B] via-[#16182B]/75 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
+      <div className="absolute inset-0 rounded-[20px] bg-linear-to-t from-[#16182B] via-[#16182B]/25 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
 
       {/* Orange Hover Gradient */}
       <div className="absolute inset-0 rounded-[20px] bg-linear-to-t from-[#ff6041] via-[#ff6041]/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

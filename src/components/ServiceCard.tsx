@@ -17,7 +17,7 @@ const ServiceCard = ({
   svgLink,
 }: ServiceProps) => {
   return (
-    <div className="relative overflow-hidden p-7.5 rounded-2xl min-w-73.75 gap-5 flex flex-col lg:max-w-82.5 group/card bg-[#EFEADF] text-black transition-colors duration-500">
+    <div className="relative overflow-hidden p-7.5 rounded-2xl min-w-73.75 gap-5 h-106 flex flex-col lg:max-w-82.5 group/card bg-[#EFEADF] text-black transition-colors duration-500">
       {/* Animated radial background */}
       <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <span className="w-0 h-0 bg-[#ff6041] rounded-full transition-all duration-500 ease-out group-hover/card:w-[200%] group-hover/card:h-[200%]" />
