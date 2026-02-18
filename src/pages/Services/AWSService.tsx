@@ -11,24 +11,24 @@ const AWSService = () => {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
-          {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10"></div>
-          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-orange-500 to-red-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full filter blur-2xl opacity-10 animate-bounce"></div> */}
+          {/* <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-blue-600/10 via-transparent to-purple-600/10"></div> */}
+          {/* <div className="absolute top-20 left-20 w-72 h-72 bg-linear-to-br from-orange-500 to-red-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div> */}
+          {/* <div className="absolute bottom-20 right-20 w-96 h-96 bg-linear-to-br from-blue-500 to-purple-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div> */}
+          {/* <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-linear-to-br from-purple-500 to-pink-500 rounded-full filter blur-2xl opacity-10 animate-bounce"></div> */}
           {/* Floating elements */}
-          <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-linear-to-br from-cyan-500 to-blue-500 rounded-full filter blur-xl opacity-15 animate-pulse"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-48 h-48 bg-linear-to-br from-green-500 to-teal-500 rounded-full filter blur-2xl opacity-10 animate-bounce"></div>
+          {/* <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-linear-to-br from-cyan-500 to-blue-500 rounded-full filter blur-xl opacity-15 animate-pulse"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-48 h-48 bg-linear-to-br from-green-500 to-teal-500 rounded-full filter blur-2xl opacity-10 animate-bounce"></div> */}
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center gap-4 mb-8">
-              <div className="relative">
+              {/* <div className="relative">
                 <div className="absolute -inset-1 bg-linear-to-br from-orange-500 to-red-500 rounded-2xl blur-lg opacity-50 animate-pulse"></div>
                 <div className="relative w-20 h-20 bg-linear-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center shadow-2xl transform hover:scale-110 transition-all duration-500">
                   <FaAws className="w-10 h-10 text-white animate-pulse" />
                 </div>
-              </div>
+              </div> */}
               <div className="text-left">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-linear-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-3">
                   {AWS_SERVICE_DATA.hero.title}

@@ -11,6 +11,8 @@ import {
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { SAP_SERVICE_DATA } from "../../constants/ServicesDetails/SAPConstants";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import { BiSolidBusiness } from "react-icons/bi";
+import { GrTechnology } from "react-icons/gr";
 
 const SAPService = () => {
   const getIcon = (iconName: string) => {
@@ -76,7 +78,7 @@ const SAPService = () => {
                 alt="SAP ERP Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
-              <div className="absolute bottom-6 left-6 bg-[#ff6041] rounded-2xl p-6 text-white max-w-xs shadow-xl">
+              {/* <div className="absolute bottom-6 left-6 bg-[#ff6041] rounded-2xl p-6 text-white max-w-xs shadow-xl">
                 <div className="flex items-center mb-3">
                   <FaCheckCircle className="w-5 h-5 mr-2" />
                   <h4 className="font-bold text-lg">SAP Expertise</h4>
@@ -85,7 +87,7 @@ const SAPService = () => {
                   Transform your business with our cutting-edge SAP ERP
                   solutions and expert guidance.
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Right - Content */}
@@ -249,7 +251,7 @@ const SAPService = () => {
                 <img
                   src="/sap-erp.png"
                   alt="SAP ERP Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
                 />
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   ERP
@@ -281,7 +283,7 @@ const SAPService = () => {
                 <img
                   src="/sap-analytics.jpg"
                   alt="SAP Analytics"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
                 />
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Analytics
@@ -374,11 +376,16 @@ const SAPService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              {/* <div className="w-12 h-0.5 bg-[#ff6041]"></div>
               <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
                 Business Benefits
               </span>
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
+              <Bookmark
+                title="Business Benefits"
+                icon={<BiSolidBusiness color="#ff6041" />}
+                className="text-[#ff6041] bg-white border"
+              />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Transform Your Business with SAP
@@ -407,11 +414,16 @@ const SAPService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              {/* <div className="w-12 h-0.5 bg-[#ff6041]"></div>
               <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
                 Technologies
               </span>
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
+              <Bookmark
+                title="Technologies"
+                icon={<GrTechnology color="#ff6041" />}
+                className="text-[#ff6041] bg-white border"
+              />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               SAP Technologies We Work With

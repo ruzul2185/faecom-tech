@@ -78,7 +78,7 @@ const SalesforceService = () => {
                 alt="Salesforce CRM Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
-              <div className="absolute bottom-6 left-6 bg-[#ff6041] rounded-2xl p-6 text-white max-w-xs shadow-xl">
+              {/* <div className="absolute bottom-6 left-6 bg-[#ff6041] rounded-2xl p-6 text-white max-w-xs shadow-xl">
                 <div className="flex items-center mb-3">
                   <FaCheckCircle className="w-5 h-5 mr-2" />
                   <h4 className="font-bold text-lg">Salesforce Expertise</h4>
@@ -87,7 +87,7 @@ const SalesforceService = () => {
                   Transform your business with our cutting-edge Salesforce CRM
                   solutions and expert guidance.
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Right - Content */}
