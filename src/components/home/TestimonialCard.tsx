@@ -18,7 +18,7 @@ const TestimonialCard = ({
 
       {/* Card */}
       <div className="bg-[#EFEADF] p-8 relative z-20 clip-path-triangle flex flex-col items-center justify-between h-80.5">
-        <p className="text-[#666666] text-base leading-relaxed mb-6">
+        <p className="text-[#666666] text-base leading-relaxed mb-6 line-clamp-6">
           “{review}”
         </p>
 

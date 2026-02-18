@@ -130,28 +130,49 @@ export const KEYWORD_LIST = [
 
 export const PORTFOLIO_INFO = [
   {
-    title: "Web Development1",
+    title: "Sky Sportswear",
+    sevice: "Zoho Inventory",
+    location: "Los Angeles, USA",
+    overview:
+      "Customized Zoho Inventory setup to automate stock tracking,streamline warehouse operations, and improve order processing.",
+    result: "Faster inventory workflow and real-time stock visibility.",
     backgroundImage:
       "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
-    link: "",
+    link: "skysportswear.com",
   },
   {
-    title: "Web Development2",
+    title: "ShopGooro",
+    sevice: "Branding & Website Design",
+    location: "Netherlands",
+    overview:
+      "Delivered a complete brand identity and eCommerce website solution — covering brand strategy, logo design, visual language, and responsive UI/UX development.",
+    result:
+      "Strong digital presence and a seamless online shopping experience for global customers.",
     backgroundImage:
       "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
-    link: "",
+    link: "shopgooro.com",
   },
   {
-    title: "Web Development3",
+    title: "InnerMost Shift Coaching",
+    sevice: "Website Design & Development",
+    location: "Los Angeles, USA",
+    overview:
+      "We created a responsive, easy-to-use website for InnerMost Shift Coaching, featuring their ICF-accredited training programs. The layout ensures effortless navigation, mobile-friendliness, and improved engagement ",
+    result: "strengthening their digital presence and client reach.",
     backgroundImage:
       "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
-    link: "",
+    link: "skysportswear.com",
   },
   {
-    title: "Web Development4",
+    title: "Priority Herbals",
+    sevice: "Ayurvedic Product Website",
+    location: "Los Angeles, USA",
+    overview:
+      "We designed a clean, responsive website for Priority Herbals to showcase their Ayurvedic products.",
+    result: "boost credibility and online sales.",
     backgroundImage:
       "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
-    link: "",
+    link: "skysportswear.com",
   },
 ];
 
@@ -185,29 +206,27 @@ export const REVIEW_INFO = [
     role: "Frontend Developer",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     review:
-      "Working with this team was an incredible experience. Their technical expertise and attention to detail truly exceeded our expectations.",
+      "Working with this team was an incredible experience from start to finish. Their technical expertise, attention to detail, and deep understanding of modern frontend architecture truly exceeded our expectations. They not only delivered clean, maintainable code but also ensured optimal performance and scalability. Communication was consistent throughout the project, and they were always proactive in suggesting improvements that added real value.",
   },
   {
     name: "Priya Mehta",
     role: "Product Manager",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     review:
-      "They delivered our project on time with exceptional quality. The UI and performance optimization were top-notch.",
+      "They delivered our project on time with exceptional quality and professionalism. From initial planning to final deployment, every milestone was handled with clarity and precision. The UI was intuitive, visually appealing, and aligned perfectly with our product vision. Their performance optimization efforts significantly improved load times and user engagement metrics. I highly recommend them to any team looking for reliable and skilled developers.",
   },
   {
     name: "Rohan Verma",
     role: "CEO",
-
     image: "https://randomuser.me/api/portraits/men/65.jpg",
     review:
-      "Professional, reliable, and highly skilled. Our platform performance improved significantly after their implementation.",
+      "Professional, reliable, and highly skilled — this team transformed our platform. They conducted a thorough technical audit, identified performance bottlenecks, and implemented scalable solutions that dramatically improved speed and stability. Beyond the technical execution, they demonstrated strong strategic thinking and business awareness. The collaboration felt like working with an in-house team rather than an external partner.",
   },
   {
     name: "Sneha Kulkarni",
     role: "UI/UX Designer",
-
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     review:
-      "Their design-to-development workflow is seamless. Communication was smooth and results were impressive.",
+      "Their design-to-development workflow is seamless and highly efficient. Every design detail was translated into pixel-perfect implementation without compromising responsiveness or performance. Communication was smooth, feedback cycles were quick, and they were always open to creative discussions. The final product not only looked stunning but also provided an exceptional user experience across devices.",
   },
 ];

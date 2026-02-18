@@ -50,17 +50,19 @@ const PortfolioCarousel = ({ prevRef, nextRef }: PortfolioCarouselProps) => {
           },
         }}
       >
-        {[...PORTFOLIO_INFO, ...PORTFOLIO_INFO, ...PORTFOLIO_INFO].map(
-          (item, index) => (
-            <SwiperSlide key={index}>
-              <PortfolioCard
-                title={item.title}
-                backgroundImage={item.backgroundImage}
-                link={item.link}
-              />
-            </SwiperSlide>
-          ),
-        )}
+        {[...PORTFOLIO_INFO, ...PORTFOLIO_INFO].map((item, index) => (
+          <SwiperSlide key={index}>
+            <PortfolioCard
+              title={item.title}
+              backgroundImage={item.backgroundImage}
+              link={item.link}
+              service={item.sevice}
+              location={item.location}
+              overview={item.overview}
+              result={item.result}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
       <div className="custom-pagination-portfolio mt-6 flex justify-center"></div>
     </div>

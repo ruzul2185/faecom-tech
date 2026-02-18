@@ -1,33 +1,57 @@
-import { Link } from "react-router";
+import React from "react";
 
 interface PortfolioCardProps {
-  backgroundImage?: string;
   title: string;
-  link?: string;
+  service: string;
+  location: string;
+  overview: string;
+  result: string;
+  backgroundImage: string;
+  link: string;
 }
 
-const PortfolioCard = ({
+const PortfolioCard: React.FC<PortfolioCardProps> = ({
   title,
-  backgroundImage = "",
-  link = "/",
-}: PortfolioCardProps) => {
+  service,
+  location,
+  overview,
+  result,
+  backgroundImage,
+  link,
+}) => {
   return (
-    <Link
-      to={link}
-      className="bg-white rounded-2xl overflow-hidden shadow-md group block"
-    >
-      <div className="h-55 w-full overflow-hidden">
-        <img
-          src={backgroundImage}
-          alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-      </div>
+    <div className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:shadow-2xl">
+      {/* Background Image */}
+      <div
+        className="h-[420px] w-full bg-cover bg-center transform transition-transform duration-700 group-hover:scale-110"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
 
-      <div className="bg-[#211F38] p-5 flex items-center justify-center h-45">
-        <p className="text-white font-medium text-2xl text-center">{title}</p>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/75 transition duration-500" />
+
+      {/* Content */}
+      <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+        <p className="text-sm text-gray-300">{location}</p>
+        <h3 className="text-2xl font-bold mt-1">{title}</h3>
+        <p className="text-sm text-indigo-400 mt-1">{service}</p>
+
+        {/* Hidden Content on Hover */}
+        <div className="max-h-0 overflow-hidden group-hover:max-h-96 transition-all duration-500">
+          <p className="text-sm mt-4 text-gray-200">{overview}</p>
+          <p className="text-sm mt-2 font-semibold text-green-400">{result}</p>
+
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 text-sm font-medium text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
+          >
+            Visit Project →
+          </a>
+        </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
