@@ -1,23 +1,31 @@
 import { Link } from "react-router";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
+import Dropdown, { type DropdownItem } from "./Dropdown";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  // Prevent background scroll when sidebar is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
+
+  const services: DropdownItem[] = [
+    { name: "Web Development", path: "/web-development" },
+    { name: "Software Development", path: "/software-development" },
+    { name: "Digital Marketing", path: "/digital-marketing" },
+    { name: "Zoho Services", path: "/zoho-services" },
+  ];
+
   return (
     <>
-      <nav className="sticky top-0 z-500">
+      <nav className="sticky top-0 z-50">
         <div className="flex justify-between items-center h-18 py-2.5 sm:w-[93%] mx-auto bg-white lg:px-20 rounded-b-[20px] max-w-442.5">
-          <Link to={"/"} className="m-3">
-            <img src="/faecom-logo.svg" className="w-50 sm:w-70" />
+          <Link to="/" className="m-3">
+            <img src="/faecom-logo.svg" className="w-40 sm:w-52" />
           </Link>
 
-          {/* Mobile Menu Icon */}
+          {/* Mobile Icon */}
           <div className="md:hidden">
             <RiMenu3Line
               className="size-8 m-3 cursor-pointer"
@@ -26,28 +34,26 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex justify-between text-[20px] font-medium lg:px-12.5 lg:py-2.5 xl:gap-10">
+          <ul className="hidden md:flex items-center text-[18px] font-medium gap-8">
             <li>
-              <a href={"/"}>Home</a>
+              <Link to="/">Home</Link>
+            </li>
+
+            <Dropdown label="Services" items={services} />
+
+            <li>
+              <Link to="/blogs">Blogs</Link>
             </li>
             <li>
-              <a href={"/services"}>Services</a>
-            </li>
-            {/* <li>
-              <Link to={"/trainings"}>Trainings</Link>
-            </li> */}
-            <li>
-              <a href={"blogs"}>Blogs</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href={"/about"}>About</a>
-            </li>
-            <li>
-              <a href={"contact"}>Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
       </nav>
+
       {/* Overlay */}
       {isOpen && (
         <div
@@ -55,13 +61,13 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
         />
       )}
+
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-501 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Close Icon */}
         <div className="flex justify-end p-4">
           <RiCloseLine
             className="size-7 cursor-pointer"
@@ -69,35 +75,32 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Mobile Links */}
         <ul className="flex flex-col gap-6 text-lg font-medium px-6">
           <li>
-            <Link to={"/"} onClick={() => setIsOpen(false)}>
+            <Link to="/" onClick={() => setIsOpen(false)}>
               Home
             </Link>
           </li>
+
+          <Dropdown
+            label="Services"
+            items={services}
+            isMobile
+            closeSidebar={() => setIsOpen(false)}
+          />
+
           <li>
-            <Link to={"/services"} onClick={() => setIsOpen(false)}>
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link to={"/trainings"} onClick={() => setIsOpen(false)}>
-              Trainings
-            </Link>
-          </li>
-          <li>
-            <Link to={"/blogs"} onClick={() => setIsOpen(false)}>
+            <Link to="/blogs" onClick={() => setIsOpen(false)}>
               Blogs
             </Link>
           </li>
           <li>
-            <Link to={"/about"} onClick={() => setIsOpen(false)}>
+            <Link to="/about" onClick={() => setIsOpen(false)}>
               About
             </Link>
           </li>
           <li>
-            <Link to={"/contact"} onClick={() => setIsOpen(false)}>
+            <Link to="/contact" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </li>
