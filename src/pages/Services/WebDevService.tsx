@@ -1,19 +1,22 @@
-import { FaCode, FaRocket, FaServer, FaCheckCircle, FaCogs, FaCloud, FaDatabase, FaShieldAlt, FaMobileAlt, FaChartLine } from "react-icons/fa";
+import { FaCode, FaDesktop, FaServer, FaCheckCircle, FaCogs, FaMobileAlt, FaDatabase, FaShieldAlt, FaRocket, FaPaintBrush, FaChartLine, FaLock, FaGlobe } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { Link } from "react-router";
-import { CUSTOM_SERVICE_DATA } from "../../constants/ServicesDetails/CustomConstants";
+import { WEBDEV_SERVICE_DATA } from "../../constants/ServicesDetails/WebDevConstants";
 
-const CustomService = () => {
+const WebDevService = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'cog': return <FaCogs />;
-      case 'rocket': return <FaRocket />;
+      case 'desktop': return <FaDesktop />;
       case 'server': return <FaServer />;
-      case 'cloud': return <FaCloud />;
+      case 'cogs': return <FaCogs />;
+      case 'mobile': return <FaMobileAlt />;
       case 'database': return <FaDatabase />;
       case 'shield': return <FaShieldAlt />;
-      case 'mobile': return <FaMobileAlt />;
-      case 'chart-line': return <FaChartLine />;
+      case 'rocket': return <FaRocket />;
+      case 'paint': return <FaPaintBrush />;
+      case 'chart': return <FaChartLine />;
+      case 'lock': return <FaLock />;
+      case 'globe': return <FaGlobe />;
       default: return <FaCode />;
     }
   };
@@ -25,13 +28,13 @@ const CustomService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
-              {CUSTOM_SERVICE_DATA.hero.title}
+              {WEBDEV_SERVICE_DATA.hero.title}
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
-              {CUSTOM_SERVICE_DATA.hero.subtitle}
+              {WEBDEV_SERVICE_DATA.hero.subtitle}
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
-              {CUSTOM_SERVICE_DATA.hero.description}
+              {WEBDEV_SERVICE_DATA.hero.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -47,7 +50,7 @@ const CustomService = () => {
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-20 left-20 w-72 h-72 bg-[#ff6041] rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-green-500 rounded-full filter blur-3xl"></div>
         </div>
       </section>
 
@@ -58,8 +61,8 @@ const CustomService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-14617462833-9d22-8d18-4f79-8e8c0d7a4?auto=format&fit=crop&w=800&q=80"
-                alt="Custom Software Development"
+                src="https://images.unsplash.com/photo-1467232180-8d18-4f79-8e8c0d7a4?auto=format&fit=crop&w=800&q=80"
+                alt="Web Development Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
               />
             </div>
@@ -68,35 +71,35 @@ const CustomService = () => {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-12 h-0.5 bg-[#ff6041]"></div>
-                <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Custom Development</span>
+                <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Web Development</span>
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                Transform Your Ideas into Powerful Software Solutions
+                Build Powerful Digital Experiences That Drive Growth
               </h2>
 
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our custom software development approach combines innovative thinking with technical excellence
-                to deliver solutions that drive business growth and competitive advantage.
+                Our web development expertise combines creative design with technical excellence
+                to deliver fast, secure, and scalable websites that engage users and achieve business goals.
               </p>
 
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                From MVP development for startups to enterprise-scale applications, we build software that
-                perfectly aligns with your business processes and growth objectives.
+                From corporate websites to complex web applications, we build digital solutions
+                that provide exceptional user experiences and support your business growth.
               </p>
 
               <div className="space-y-4">
                 {[
-                  "Tailored software solutions for unique business requirements",
-                  "Rapid MVP development for quick market validation",
+                  "Custom web applications tailored to your business needs",
+                  "Responsive design that works perfectly on all devices",
+                  "High-performance websites optimized for speed and SEO",
+                  "Secure development with industry best practices",
                   "Scalable architecture that grows with your business",
-                  "Modern technology stack for optimal performance",
-                  "Agile development methodology for flexibility",
-                  "Comprehensive testing and quality assurance",
-                  "Cloud-native development for maximum scalability",
-                  "API-first approach for seamless integrations",
-                  "Security-first development practices",
-                  "Ongoing support and maintenance services"
+                  "Modern frontend frameworks for engaging user interfaces",
+                  "Robust backend systems for reliable functionality",
+                  "E-commerce solutions with payment integration",
+                  "Progressive Web Apps for mobile-like experiences",
+                  "Ongoing maintenance and support services"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
@@ -119,16 +122,16 @@ const CustomService = () => {
               <div className="w-12 h-0.5 bg-[#ff6041]"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Your Partner in Digital Transformation
+              Your Partner in Digital Excellence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our custom development services go beyond traditional software building—offering innovative,
-              scalable, and tailored solutions to drive your business forward.
+              Our web development services go beyond traditional website building—offering innovative,
+              scalable, and tailored solutions to drive your digital transformation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {CUSTOM_SERVICE_DATA.coreFeatures.map((feature, index) => (
+            {WEBDEV_SERVICE_DATA.coreFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="w-16 h-16 bg-[#ff6041] rounded-full flex items-center justify-center text-white text-2xl mb-6">
                   {getIcon(feature.icon)}
@@ -156,12 +159,12 @@ const CustomService = () => {
               Comprehensive Development Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide end-to-end custom software development services covering all aspects of the development lifecycle.
+              We provide end-to-end web development services covering all aspects of modern web applications.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {CUSTOM_SERVICE_DATA.servicesFeatures.map((feature, index) => (
+            {WEBDEV_SERVICE_DATA.servicesFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
@@ -176,32 +179,17 @@ const CustomService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Additional Development Capabilities
+              Advanced Web Capabilities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Beyond our core services, we offer specialized development solutions to meet all your software needs.
+              Beyond core development, we offer specialized services to enhance your web presence.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <div className="relative mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cb1d15d?auto=format&fit=crop&w=600&q=80"
-                  alt="Enterprise Software Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                />
-                <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
-                  Enterprise
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#ff6041] rounded-lg flex items-center justify-center">
-                  <FaServer className="w-4 h-4 text-white" />
-                </div>
-                Enterprise Solutions
-              </h3>
-              {CUSTOM_SERVICE_DATA.additionalCapabilities.slice(0, 3).map((capability, index) => (
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">E-Commerce & CMS</h3>
+              {WEBDEV_SERVICE_DATA.additionalCapabilities.slice(0, 3).map((capability, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
                   <span className="text-gray-700 leading-relaxed">{capability}</span>
@@ -210,23 +198,8 @@ const CustomService = () => {
             </div>
 
             <div className="space-y-8">
-              <div className="relative mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cb1d15d?auto=format&fit=crop&w=600&q=80"
-                  alt="Advanced Development Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                />
-                <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
-                  Advanced
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#ff6041] rounded-lg flex items-center justify-center">
-                  <FaCode className="w-4 h-4 text-white" />
-                </div>
-                Advanced Development
-              </h3>
-              {CUSTOM_SERVICE_DATA.additionalCapabilities.slice(3).map((capability, index) => (
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Optimization & Security</h3>
+              {WEBDEV_SERVICE_DATA.additionalCapabilities.slice(3).map((capability, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
                   <span className="text-gray-700 leading-relaxed">{capability}</span>
@@ -245,12 +218,12 @@ const CustomService = () => {
               Our Development Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We follow a structured agile approach to ensure successful software delivery and client satisfaction.
+              We follow a structured approach to ensure successful web development and deployment.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CUSTOM_SERVICE_DATA.processSteps.map((item, index) => (
+            {WEBDEV_SERVICE_DATA.processSteps.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-[#ff6041] rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                   {item.step}
@@ -273,15 +246,15 @@ const CustomService = () => {
               <div className="w-12 h-0.5 bg-[#ff6041]"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Technologies We Work With
+              Web Development Technologies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies and frameworks to build robust, scalable, and modern software solutions.
+              We leverage cutting-edge technologies and frameworks to build modern, scalable web applications.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            {CUSTOM_SERVICE_DATA.technologies.map((tech, index) => (
+            {WEBDEV_SERVICE_DATA.technologies.map((tech, index) => (
               <span key={index} className="px-6 py-3 bg-gray-100 text-gray-800 rounded-full font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300">
                 {tech}
               </span>
@@ -298,12 +271,12 @@ const CustomService = () => {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Partner with us to accelerate your digital transformation and achieve sustainable business growth.
+              Partner with us to build a powerful online presence that drives business success.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CUSTOM_SERVICE_DATA.businessBenefits.map((benefit, index) => (
+            {WEBDEV_SERVICE_DATA.businessBenefits.map((benefit, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="flex items-center gap-3">
                   <FaCheckCircle className="w-5 h-5 text-[#ff6041] shrink-0" />
@@ -320,18 +293,18 @@ const CustomService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Your Custom Software Solution?
+              Ready to Build Your Digital Presence?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Let's discuss how we can help you transform your ideas into powerful software solutions
-              that drive business growth and competitive advantage.
+              Let's discuss how we can help you create a powerful web application
+              that engages users and drives your business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-[#ff6041] hover:bg-[#e55a3d] text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-300 inline-flex items-center justify-center gap-2"
               >
-                Start Your Project
+                Start Your Web Project
                 <IoArrowRedoSharp size={20} />
               </Link>
               <Link
@@ -348,4 +321,4 @@ const CustomService = () => {
   );
 };
 
-export default CustomService;
+export default WebDevService;

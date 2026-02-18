@@ -178,6 +178,85 @@ const SAPService = () => {
         </div>
       </section>
 
+      {/* Comprehensive Solutions Section */}
+      <section className="py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Comprehensive SAP Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide end-to-end SAP services covering all aspects of ERP implementation and optimization.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="relative mb-6">
+                <img
+                  src="https://images.unsplash.com/photo-1556738-8d18-4f79-8e8c0d7a4?auto=format&fit=crop&w=600&q=80"
+                  alt="SAP ERP Solutions"
+                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                />
+                <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
+                  ERP
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <div className="w-8 h-8 bg-[#ff6041] rounded-lg flex items-center justify-center">
+                  <FaServer className="w-4 h-4 text-white" />
+                </div>
+                ERP Implementation
+              </h3>
+              {[
+                "SAP S/4HANA implementation and migration",
+                "SAP Business One setup and customization",
+                "SAP SuccessFactors integration",
+                "Custom SAP module development",
+                "Data migration and integration services",
+                "Process optimization and automation"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-8">
+              <div className="relative mb-6">
+                <img
+                  src="https://images.unsplash.com/photo-1460925705-8d18-4f79-8e8c0d7a4?auto=format&fit=crop&w=600&q=80"
+                  alt="SAP Analytics"
+                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                />
+                <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
+                  Analytics
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <div className="w-8 h-8 bg-[#ff6041] rounded-lg flex items-center justify-center">
+                  <FaChartLine className="w-4 h-4 text-white" />
+                </div>
+                Analytics & Optimization
+              </h3>
+              {[
+                "Custom dashboard development",
+                "Performance monitoring and optimization",
+                "Data-driven insights and reporting",
+                "Predictive analytics implementation",
+                "ROI measurement and improvement"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tech Stack Section */}
       <section className="bg-gray-900 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

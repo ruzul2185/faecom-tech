@@ -1,20 +1,24 @@
-import { FaCode, FaRocket, FaServer, FaCheckCircle, FaCogs, FaCloud, FaDatabase, FaShieldAlt, FaMobileAlt, FaChartLine } from "react-icons/fa";
+import { FaGamepad, FaCode, FaCube, FaCheckCircle, FaRocket, FaMobileAlt, FaDesktop, FaVrCardboard, FaPaintBrush, FaTrophy, FaChartLine, FaUsers, FaStar } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { Link } from "react-router";
-import { CUSTOM_SERVICE_DATA } from "../../constants/ServicesDetails/CustomConstants";
+import { UNITY_SERVICE_DATA } from "../../constants/ServicesDetails/UnityConstants";
 
-const CustomService = () => {
+const UnityService = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'cog': return <FaCogs />;
+      case 'cube': return <FaCube />;
+      case 'code': return <FaCode />;
+      case 'gamepad': return <FaGamepad />;
       case 'rocket': return <FaRocket />;
-      case 'server': return <FaServer />;
-      case 'cloud': return <FaCloud />;
-      case 'database': return <FaDatabase />;
-      case 'shield': return <FaShieldAlt />;
       case 'mobile': return <FaMobileAlt />;
-      case 'chart-line': return <FaChartLine />;
-      default: return <FaCode />;
+      case 'desktop': return <FaDesktop />;
+      case 'vr': return <FaVrCardboard />;
+      case 'paint': return <FaPaintBrush />;
+      case 'trophy': return <FaTrophy />;
+      case 'chart': return <FaChartLine />;
+      case 'users': return <FaUsers />;
+      case 'star': return <FaStar />;
+      default: return <FaGamepad />;
     }
   };
 
@@ -25,13 +29,13 @@ const CustomService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
-              {CUSTOM_SERVICE_DATA.hero.title}
+              {UNITY_SERVICE_DATA.hero.title}
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
-              {CUSTOM_SERVICE_DATA.hero.subtitle}
+              {UNITY_SERVICE_DATA.hero.subtitle}
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
-              {CUSTOM_SERVICE_DATA.hero.description}
+              {UNITY_SERVICE_DATA.hero.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -47,7 +51,7 @@ const CustomService = () => {
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-20 left-20 w-72 h-72 bg-[#ff6041] rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
         </div>
       </section>
 
@@ -58,8 +62,8 @@ const CustomService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-14617462833-9d22-8d18-4f79-8e8c0d7a4?auto=format&fit=crop&w=800&q=80"
-                alt="Custom Software Development"
+                src="https://images.unsplash.com/photo-1537485550-7537-4f79-8e8c0d7a4?auto=format&fit=crop&w=800&q=80"
+                alt="Unity Game Development"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
               />
             </div>
@@ -68,35 +72,35 @@ const CustomService = () => {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-12 h-0.5 bg-[#ff6041]"></div>
-                <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Custom Development</span>
+                <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Unity Development</span>
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                Transform Your Ideas into Powerful Software Solutions
+                Create Immersive Gaming Experiences with Unity
               </h2>
 
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our custom software development approach combines innovative thinking with technical excellence
-                to deliver solutions that drive business growth and competitive advantage.
+                Our Unity game development expertise combines creative vision with technical excellence
+                to deliver engaging games that captivate players across all platforms.
               </p>
 
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                From MVP development for startups to enterprise-scale applications, we build software that
-                perfectly aligns with your business processes and growth objectives.
+                From casual mobile games to complex multiplayer experiences, we build games that
+                stand out in the competitive gaming market with stunning visuals and smooth gameplay.
               </p>
 
               <div className="space-y-4">
                 {[
-                  "Tailored software solutions for unique business requirements",
-                  "Rapid MVP development for quick market validation",
-                  "Scalable architecture that grows with your business",
-                  "Modern technology stack for optimal performance",
-                  "Agile development methodology for flexibility",
-                  "Comprehensive testing and quality assurance",
-                  "Cloud-native development for maximum scalability",
-                  "API-first approach for seamless integrations",
-                  "Security-first development practices",
-                  "Ongoing support and maintenance services"
+                  "Cross-platform game development for mobile, web, and desktop",
+                  "Advanced 3D modeling and animation integration",
+                  "Multiplayer networking and real-time gameplay",
+                  "AR/VR immersive gaming experiences",
+                  "Optimized performance for all device types",
+                  "Monetization strategies with ads and in-app purchases",
+                  "Comprehensive game testing and quality assurance",
+                  "App Store and Play Store publishing support",
+                  "Post-launch updates and feature expansion",
+                  "Analytics integration for player behavior insights"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
@@ -119,16 +123,16 @@ const CustomService = () => {
               <div className="w-12 h-0.5 bg-[#ff6041]"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Your Partner in Digital Transformation
+              Your Partner in Game Development Excellence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our custom development services go beyond traditional software building—offering innovative,
-              scalable, and tailored solutions to drive your business forward.
+              Our Unity development services go beyond traditional game building—offering innovative,
+              immersive, and high-performance gaming experiences that engage and retain players.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {CUSTOM_SERVICE_DATA.coreFeatures.map((feature, index) => (
+            {UNITY_SERVICE_DATA.coreFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="w-16 h-16 bg-[#ff6041] rounded-full flex items-center justify-center text-white text-2xl mb-6">
                   {getIcon(feature.icon)}
@@ -148,20 +152,59 @@ const CustomService = () => {
         </div>
       </section>
 
-      {/* Services Features */}
+      {/* Visual Effects Showcase */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="flex items-center gap-2 mb-6 justify-center">
+              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Visual Effects</span>
+              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Comprehensive Development Solutions
+              Stunning 3D Effects & Visual Excellence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide end-to-end custom software development services covering all aspects of the development lifecycle.
+              We create breathtaking visual effects that bring your games to life with cutting-edge Unity 3D capabilities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="relative">
+              <img
+                src="/tech/unity-3d-effects.svg"
+                alt="Unity 3D Visual Effects"
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
+            </div>
+
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Advanced Visual Capabilities</h3>
+              {UNITY_SERVICE_DATA.visualEffects.map((effect, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <FaStar className="w-5 h-5 text-[#ff6041] shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed">{effect}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Features */}
+      <section className="bg-gray-50 py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Comprehensive Game Development Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide end-to-end Unity game development services covering all aspects of game creation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {CUSTOM_SERVICE_DATA.servicesFeatures.map((feature, index) => (
+            {UNITY_SERVICE_DATA.servicesFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
@@ -172,36 +215,21 @@ const CustomService = () => {
       </section>
 
       {/* Additional Capabilities */}
-      <section className="bg-gray-50 py-20 lg:py-32">
+      <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Additional Development Capabilities
+              Advanced Gaming Capabilities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Beyond our core services, we offer specialized development solutions to meet all your software needs.
+              Beyond core development, we offer specialized gaming features to enhance player experience.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <div className="relative mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cb1d15d?auto=format&fit=crop&w=600&q=80"
-                  alt="Enterprise Software Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                />
-                <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
-                  Enterprise
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#ff6041] rounded-lg flex items-center justify-center">
-                  <FaServer className="w-4 h-4 text-white" />
-                </div>
-                Enterprise Solutions
-              </h3>
-              {CUSTOM_SERVICE_DATA.additionalCapabilities.slice(0, 3).map((capability, index) => (
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Multiplayer Systems</h3>
+              {UNITY_SERVICE_DATA.additionalCapabilities.slice(0, 3).map((capability, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
                   <span className="text-gray-700 leading-relaxed">{capability}</span>
@@ -210,23 +238,8 @@ const CustomService = () => {
             </div>
 
             <div className="space-y-8">
-              <div className="relative mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cb1d15d?auto=format&fit=crop&w=600&q=80"
-                  alt="Advanced Development Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                />
-                <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
-                  Advanced
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#ff6041] rounded-lg flex items-center justify-center">
-                  <FaCode className="w-4 h-4 text-white" />
-                </div>
-                Advanced Development
-              </h3>
-              {CUSTOM_SERVICE_DATA.additionalCapabilities.slice(3).map((capability, index) => (
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Monetization & Analytics</h3>
+              {UNITY_SERVICE_DATA.additionalCapabilities.slice(3).map((capability, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
                   <span className="text-gray-700 leading-relaxed">{capability}</span>
@@ -242,15 +255,15 @@ const CustomService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Our Development Process
+              Our Game Development Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We follow a structured agile approach to ensure successful software delivery and client satisfaction.
+              We follow a structured approach to ensure successful game development and launch.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CUSTOM_SERVICE_DATA.processSteps.map((item, index) => (
+            {UNITY_SERVICE_DATA.processSteps.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-[#ff6041] rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                   {item.step}
@@ -273,15 +286,15 @@ const CustomService = () => {
               <div className="w-12 h-0.5 bg-[#ff6041]"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Technologies We Work With
+              Game Development Technologies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies and frameworks to build robust, scalable, and modern software solutions.
+              We leverage industry-leading Unity technologies and tools to create exceptional gaming experiences.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            {CUSTOM_SERVICE_DATA.technologies.map((tech, index) => (
+            {UNITY_SERVICE_DATA.technologies.map((tech, index) => (
               <span key={index} className="px-6 py-3 bg-gray-100 text-gray-800 rounded-full font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300">
                 {tech}
               </span>
@@ -298,12 +311,12 @@ const CustomService = () => {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Partner with us to accelerate your digital transformation and achieve sustainable business growth.
+              Partner with us to create successful games that drive engagement and revenue.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CUSTOM_SERVICE_DATA.businessBenefits.map((benefit, index) => (
+            {UNITY_SERVICE_DATA.businessBenefits.map((benefit, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="flex items-center gap-3">
                   <FaCheckCircle className="w-5 h-5 text-[#ff6041] shrink-0" />
@@ -320,18 +333,18 @@ const CustomService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Your Custom Software Solution?
+              Ready to Create Your Next Game Hit?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Let's discuss how we can help you transform your ideas into powerful software solutions
-              that drive business growth and competitive advantage.
+              Let's discuss how we can help you turn your gaming vision into an immersive
+              and successful Unity game that captivates players worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-[#ff6041] hover:bg-[#e55a3d] text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-300 inline-flex items-center justify-center gap-2"
               >
-                Start Your Project
+                Start Your Game Project
                 <IoArrowRedoSharp size={20} />
               </Link>
               <Link
@@ -348,4 +361,4 @@ const CustomService = () => {
   );
 };
 
-export default CustomService;
+export default UnityService;
