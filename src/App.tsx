@@ -10,6 +10,11 @@ import AWSService from "./pages/Services/AWSService";
 import SalesforceService from "./pages/Services/SalesforceService";
 import SAPService from "./pages/Services/SAPService";
 import ZohoService from "./pages/Services/ZohoService";
+import QAService from "./pages/Services/QAService";
+import CustomService from "./pages/Services/CustomService";
+import UnityService from "./pages/Services/UnityService";
+import WebDevService from "./pages/Services/WebDevService";
+import DigitalMarketingService from "./pages/Services/DigitalMarketingService";
 
 const App = () => {
   return (
@@ -26,6 +31,11 @@ const App = () => {
           <Route path="/services/salesforce" element={<SalesforceService/>} />
           <Route path="/services/sap" element={<SAPService/>} />
           <Route path="/services/zoho" element={<ZohoService/>} />
+          <Route path="/services/qa" element={<QAService/>} />
+          <Route path="/services/custom" element={<CustomService/>} />
+          <Route path="/services/unity" element={<UnityService/>} />
+          <Route path="/services/web-dev" element={<WebDevService/>} />
+          <Route path="/services/digital-marketing" element={<DigitalMarketingService/>} />
         </Route>
       </Routes>
     </BrowserRouter>
