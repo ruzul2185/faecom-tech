@@ -23,7 +23,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
     <div className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:shadow-2xl">
       {/* Background Image */}
       <div
-        className="h-[420px] w-full bg-cover bg-center transform transition-transform duration-700 group-hover:scale-110"
+        className="h-105 w-full bg-cover bg-center transform transition-transform duration-700 group-hover:scale-110"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
 
