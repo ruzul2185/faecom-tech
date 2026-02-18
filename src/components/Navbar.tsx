@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import Dropdown from "./Dropdown";
-import { SERVICES } from "../constants/Navbar";
+import { SERVICES, TRAININGS } from "../constants/Navbar";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -34,7 +34,8 @@ const Navbar: React.FC = () => {
             </li>
 
             <Dropdown label="Services" path="/services" items={SERVICES} />
-
+            
+            <Dropdown label="Trainings" path="/trainings" items={TRAININGS} />
             <li>
               <Link to="/blogs">Blogs</Link>
             </li>
@@ -81,6 +82,14 @@ const Navbar: React.FC = () => {
             label="Services"
             path="/services"
             items={SERVICES}
+            isMobile
+            closeSidebar={() => setIsOpen(false)}
+          />
+
+          <Dropdown
+            label="Trainings"
+            path="/trainings"
+            items={TRAININGS}
             isMobile
             closeSidebar={() => setIsOpen(false)}
           />

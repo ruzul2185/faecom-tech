@@ -13,6 +13,7 @@ import { SAP_SERVICE_DATA } from "../../constants/ServicesDetails/SAPConstants";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { BiSolidBusiness } from "react-icons/bi";
 import { GrTechnology } from "react-icons/gr";
+import { PrimaryButton } from "../../components/Button";
 
 const SAPService = () => {
   const getIcon = (iconName: string) => {
@@ -37,34 +38,26 @@ const SAPService = () => {
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className=" py-20 lg:py-32 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
-              {SAP_SERVICE_DATA.hero.title}
-            </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6">
-              {SAP_SERVICE_DATA.hero.subtitle}
-            </p>
-            <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-8">
-              {SAP_SERVICE_DATA.hero.description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-[#ff6041] hover:bg-[#e55a3d] text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-300 inline-flex items-center justify-center gap-2"
-              >
-                Get Started
-                <IoArrowRedoSharp size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-[#ff6041] rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
-        </div>
+      <section className="mx-auto min-w-86.25 w-full items-center rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5  my-20">
+        
+          <Bookmark
+            icon={<BiSolidBusiness />}
+            title="SAP Services"
+            className="bg-white text-[#ff6041] mx-auto w-fit"
+          />
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6">
+            {SAP_SERVICE_DATA.hero.title}
+          </h1>
+          <p className="text-xl text-gray-600 max-w-442.5 mx-auto">
+            {SAP_SERVICE_DATA.hero.subtitle}
+          </p>
+          <p className="text-xl text-gray-600 max-w-442.5 mx-auto">
+            {SAP_SERVICE_DATA.hero.description}
+          </p>
+          <a href="/contact" >
+            <PrimaryButton title="Get Started" classname="rounded-[25px]" />
+          </a>
+      
       </section>
 
       {/* Main Content Section */}

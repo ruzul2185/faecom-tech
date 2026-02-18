@@ -115,7 +115,7 @@ const HomePage = () => {
 
       <PortfolioComponent />
 
-      <BlogComponent />
+      {/* <BlogComponent /> */}
 
       <TestimonialComponent />
 

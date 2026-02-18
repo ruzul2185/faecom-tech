@@ -24,9 +24,10 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services/>} />
-          <Route path="/trainings" element={<Trainings/>} />
           <Route path="/blogs" element={<Blogs/>} />
+
+          {/* Services */}
+          <Route path="/services" element={<Services/>} />
           <Route path="/services/aws" element={<AWSService/>} />
           <Route path="/services/salesforce" element={<SalesforceService/>} />
           <Route path="/services/sap" element={<SAPService/>} />
@@ -36,6 +37,9 @@ const App = () => {
           <Route path="/services/unity" element={<UnityService/>} />
           <Route path="/services/web-dev" element={<WebDevService/>} />
           <Route path="/services/digital-marketing" element={<DigitalMarketingService/>} />
+
+          {/* Trainings */}
+          <Route path="/trainings" element={<Trainings/>} />
         </Route>
       </Routes>
     </BrowserRouter>

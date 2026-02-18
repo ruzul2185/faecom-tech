@@ -9,3 +9,10 @@ export const SERVICES = [
   { name: "Software Development", path: "/services/custom" },
   { name: "QA Services", path: "/services/qa" },
 ];
+
+export const TRAININGS = [
+  { name: "SAP", path: "/trainings/sap" },
+  { name: "AWS", path: "/trainings/aws" },
+  { name: "Zoho Services", path: "/trainings/zoho" },
+  { name: "Salesforce", path: "/trainings/salesforce" },
+];
