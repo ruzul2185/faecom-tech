@@ -1,24 +1,41 @@
 import { Bookmark } from "../../components/Bookmark";
-import { FaCloud, FaServer, FaCogs, FaRocket, FaShieldAlt, FaCheckCircle, FaChartLine } from "react-icons/fa";
+import {
+  FaCloud,
+  FaServer,
+  FaCogs,
+  FaRocket,
+  FaShieldAlt,
+  FaCheckCircle,
+  FaChartLine,
+} from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
-import { Link } from "react-router";
 import { ZOHO_SERVICE_DATA } from "../../constants/ServicesDetails/ZohoConstants";
+import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import { BiSolidBusiness } from "react-icons/bi";
+import { GrTechnology } from "react-icons/gr";
 
 const ZohoService = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'cloud': return <FaCloud />;
-      case 'server': return <FaServer />;
-      case 'cogs': return <FaCogs />;
-      case 'rocket': return <FaRocket />;
-      case 'shield': return <FaShieldAlt />;
-      case 'chart-line': return <FaChartLine />;
-      default: return <FaCloud />;
+      case "cloud":
+        return <FaCloud />;
+      case "server":
+        return <FaServer />;
+      case "cogs":
+        return <FaCogs />;
+      case "rocket":
+        return <FaRocket />;
+      case "shield":
+        return <FaShieldAlt />;
+      case "chart-line":
+        return <FaChartLine />;
+      default:
+        return <FaCloud />;
     }
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className=" py-20 lg:py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,13 +50,13 @@ const ZohoService = () => {
               {ZOHO_SERVICE_DATA.hero.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
                 className="bg-[#ff6041] hover:bg-[#e55a3d] text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-300 inline-flex items-center justify-center gap-2"
               >
                 Get Started
                 <IoArrowRedoSharp size={20} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -57,7 +74,7 @@ const ZohoService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
-                src="/tech/zoho.svg"
+                src="/zoho-bg.png"
                 alt="Zoho Business Automation Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
@@ -66,15 +83,25 @@ const ZohoService = () => {
                   <FaCheckCircle className="w-5 h-5 mr-2" />
                   <h4 className="font-bold text-lg">Zoho Expertise</h4>
                 </div>
-                <p className="text-sm leading-relaxed">Transform your business with our cutting-edge Zoho automation solutions and expert guidance.</p>
+                <p className="text-sm leading-relaxed">
+                  Transform your business with our cutting-edge Zoho automation
+                  solutions and expert guidance.
+                </p>
               </div>
             </div>
 
             {/* Right - Content */}
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-12 h-0.5 bg-[#ff6041]"></div>
-                <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Zoho Services</span>
+                {/* <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+                <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
+                  Zoho Services
+                </span> */}
+                <Bookmark
+                  title="Zoho Services"
+                  icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
+                  className="bg-white text-[#ff6041]"
+                />
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
@@ -82,13 +109,17 @@ const ZohoService = () => {
               </h2>
 
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                This approach encompasses Zoho setup, implementation, and business automation, offering customized solutions
-                to drive impactful results and long-term success in business process optimization.
+                This approach encompasses Zoho setup, implementation, and
+                business automation, offering customized solutions to drive
+                impactful results and long-term success in business process
+                optimization.
               </p>
 
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                A full suite of services designed to enhance business operations, boost productivity, and implement
-                creative strategies tailored to meet the unique needs of your organization.
+                A full suite of services designed to enhance business
+                operations, boost productivity, and implement creative
+                strategies tailored to meet the unique needs of your
+                organization.
               </p>
 
               <div className="space-y-4">
@@ -103,11 +134,13 @@ const ZohoService = () => {
                   "Lead & deal pipeline management",
                   "Automated lead assignment & follow-ups",
                   "Sales automation workflows",
-                  "Custom sales dashboards"
+                  "Custom sales dashboards",
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
-                    <span className="text-gray-700 leading-relaxed">{feature}</span>
+                    <span className="text-gray-700 leading-relaxed">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -121,24 +154,39 @@ const ZohoService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
-              <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Services Core Features</span>
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              {/* <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
+                Services Core Features
+              </span>
+              <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
+              <Bookmark
+                title="Services Core Features"
+                icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
+                className="text-[#ff6041] bg-white border"
+              />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Your Partner in Business Automation Success
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our services go beyond traditional business solutions—offering innovative, data-driven, and tailored strategies
-              to help your business thrive in the digital automation landscape.
+              Our services go beyond traditional business solutions—offering
+              innovative, data-driven, and tailored strategies to help your
+              business thrive in the digital automation landscape.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {ZOHO_SERVICE_DATA.servicesFeatures.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -153,17 +201,25 @@ const ZohoService = () => {
               Comprehensive Zoho Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide end-to-end Zoho services covering all aspects of business automation and optimization.
+              We provide end-to-end Zoho services covering all aspects of
+              business automation and optimization.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ZOHO_SERVICE_DATA.coreFeatures.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
                 <div className="w-16 h-16 bg-[#ff6041] rounded-xl flex items-center justify-center mb-6">
-                  <div className="text-white text-2xl">{getIcon(feature.icon)}</div>
+                  <div className="text-white text-2xl">
+                    {getIcon(feature.icon)}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
                 <ul className="space-y-2">
                   {feature.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start gap-2">
@@ -186,7 +242,8 @@ const ZohoService = () => {
               Comprehensive Zoho Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide end-to-end Zoho services covering all aspects of business automation and optimization.
+              We provide end-to-end Zoho services covering all aspects of
+              business automation and optimization.
             </p>
           </div>
 
@@ -194,9 +251,9 @@ const ZohoService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1556738-8d18-4f79-8e8c0d7a4?auto=format&fit=crop&w=600&q=80"
+                  src="/zoho-business.png"
                   alt="Zoho Business Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
                 />
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Business
@@ -213,7 +270,7 @@ const ZohoService = () => {
                 "Workflow automation and optimization",
                 "Sales force management and tracking",
                 "Inventory management systems",
-                "Customer support ticketing solutions"
+                "Customer support ticketing solutions",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
@@ -225,9 +282,9 @@ const ZohoService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1460925705-8d18-4f79-8e8c0d7a4?auto=format&fit=crop&w=600&q=80"
+                  src="/zoho-analytics.png"
                   alt="Zoho Analytics"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
                 />
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Analytics
@@ -244,7 +301,7 @@ const ZohoService = () => {
                 "Performance monitoring and optimization",
                 "Data-driven insights and reporting",
                 "Predictive analytics implementation",
-                "ROI measurement and improvement"
+                "ROI measurement and improvement",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
@@ -264,16 +321,21 @@ const ZohoService = () => {
               Zoho Products Covered
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage the full power of Zoho ecosystem to deliver comprehensive business automation solutions.
+              We leverage the full power of Zoho ecosystem to deliver
+              comprehensive business automation solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {ZOHO_SERVICE_DATA.techStack.map((tech, index) => (
-              <div key={index} className="bg-gray-800 rounded-xl p-6 text-white">
+              <div
+                key={index}
+                className="bg-gray-800 rounded-xl p-6 text-white"
+              >
                 <h3 className="text-lg font-bold mb-3">{tech}</h3>
                 <p className="text-gray-300 text-sm">
-                  Expert implementation and optimization for maximum performance and ROI.
+                  Expert implementation and optimization for maximum performance
+                  and ROI.
                 </p>
               </div>
             ))}
@@ -289,7 +351,8 @@ const ZohoService = () => {
               Our Implementation Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a structured approach to ensure successful Zoho implementation and automation.
+              We follow a structured approach to ensure successful Zoho
+              implementation and automation.
             </p>
           </div>
 
@@ -299,7 +362,9 @@ const ZohoService = () => {
                 <div className="w-20 h-20 bg-[#ff6041] rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {item.title}
+                </h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
@@ -312,21 +377,32 @@ const ZohoService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
-              <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Business Benefits</span>
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              {/* <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
+                Business Benefits
+              </span>
+              <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
+              <Bookmark
+                title="Business Benefits"
+                icon={<BiSolidBusiness color="#ff6041" />}
+                className="text-[#ff6041] bg-white border"
+              />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Transform Your Business with Zoho
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Drive growth and efficiency with our comprehensive Zoho automation solutions.
+              Drive growth and efficiency with our comprehensive Zoho automation
+              solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ZOHO_SERVICE_DATA.businessBenefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div
+                key={index}
+                className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
                 <FaCheckCircle className="w-5 h-5 text-[#ff6041] shrink-0" />
                 <span className="text-gray-800 font-medium">{benefit}</span>
               </div>
@@ -340,21 +416,32 @@ const ZohoService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
-              <span className="text-[#ff6041] text-lg font-semibold tracking-wide">Technologies</span>
-              <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              {/* <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+              <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
+                Technologies
+              </span>
+              <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
+              <Bookmark
+                title="Technologies"
+                icon={<GrTechnology color="#ff6041" />}
+                className="text-[#ff6041] bg-white border"
+              />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Zoho Technologies We Work With
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage the full power of Zoho ecosystem to deliver comprehensive business automation solutions.
+              We leverage the full power of Zoho ecosystem to deliver
+              comprehensive business automation solutions.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
             {ZOHO_SERVICE_DATA.technologies.map((tech, index) => (
-              <span key={index} className="px-6 py-3 bg-gray-100 text-gray-800 rounded-full font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300">
+              <span
+                key={index}
+                className="px-6 py-3 bg-gray-100 text-gray-800 rounded-full font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300"
+              >
                 {tech}
               </span>
             ))}
@@ -370,23 +457,24 @@ const ZohoService = () => {
               Ready to Transform Your Business with Zoho?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Let's discuss how we can help you leverage the power of Zoho to accelerate your business growth
-              and achieve your automation objectives.
+              Let's discuss how we can help you leverage the power of Zoho to
+              accelerate your business growth and achieve your automation
+              objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
                 className="bg-[#ff6041] hover:bg-[#e55a3d] text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-300 inline-flex items-center justify-center gap-2"
               >
                 Start Your Zoho Journey
                 <IoArrowRedoSharp size={20} />
-              </Link>
-              <Link
-                to="/services"
+              </a>
+              <a
+                href="/services"
                 className="border-2 border-[#ff6041] text-[#ff6041] hover:bg-[#ff6041] hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center"
               >
                 View All Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

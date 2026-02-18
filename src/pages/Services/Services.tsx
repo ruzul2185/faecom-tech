@@ -7,7 +7,6 @@ import { Bookmark } from "../../components/Bookmark";
 import { FaGear, FaHandshake } from "react-icons/fa6";
 import { FaBalanceScale, FaCheckCircle } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
-import { Link } from "react-router";
 import { MdDesignServices } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
 import { GrTechnology } from "react-icons/gr";
@@ -78,11 +77,11 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-              <Link to="#">
+              <a href={partner.link}>
                 <div className="absolute md:bottom-4 top-4 right-4 bg-[#ff6041] size-12.5 rounded-full flex justify-center items-center cursor-pointer group-hover:bg-black transition-colors duration-300">
                   <IoArrowRedoSharp size={24} className="text-white" />
                 </div>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -103,7 +102,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {CORE_SERVICES.map((service, index) => (
             <a
-              href="#"
+              href={service.link}
               key={index}
               className="relative group overflow-hidden bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >

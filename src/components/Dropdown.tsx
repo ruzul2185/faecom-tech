@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useState } from "react";
 
@@ -9,6 +8,7 @@ export interface DropdownItem {
 
 interface DropdownProps {
   label: string;
+  path: string; // main clickable path
   items: DropdownItem[];
   isMobile?: boolean;
   closeSidebar?: () => void;
@@ -16,28 +16,34 @@ interface DropdownProps {
 
 const Dropdown: React.FC<DropdownProps> = ({
   label,
+  path,
   items,
   isMobile = false,
   closeSidebar,
 }) => {
   const [open, setOpen] = useState<boolean>(false);
 
+  // ================= MOBILE VERSION =================
   if (isMobile) {
     return (
       <li>
-        <button
-          onClick={() => setOpen((prev) => !prev)}
-          className="flex items-center justify-between w-full"
-          type="button"
-        >
-          {label}
-          <RiArrowDownSLine
-            className={`transition-transform duration-300 ${
-              open ? "rotate-180" : ""
-            }`}
-          />
-        </button>
+        <div className="flex items-center justify-between w-full">
+          {/* Main Clickable Label */}
+          <a href={path} onClick={closeSidebar} className="flex-1 text-left">
+            {label}
+          </a>
 
+          {/* Toggle Button */}
+          <button onClick={() => setOpen((prev) => !prev)} type="button">
+            <RiArrowDownSLine
+              className={`transition-transform duration-300 ${
+                open ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+        </div>
+
+        {/* Dropdown Items */}
         <ul
           className={`transition-all duration-300 ${
             open ? "max-h-screen mt-3" : "max-h-0 overflow-hidden"
@@ -45,9 +51,9 @@ const Dropdown: React.FC<DropdownProps> = ({
         >
           {items.map((item) => (
             <li key={item.path} className="ml-4 py-2">
-              <Link to={item.path} onClick={closeSidebar}>
+              <a href={item.path} onClick={closeSidebar}>
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -55,22 +61,34 @@ const Dropdown: React.FC<DropdownProps> = ({
     );
   }
 
-  // Desktop Version
+  // ================= DESKTOP VERSION =================
   return (
     <li
       className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <button type="button" className="flex items-center gap-1">
-        {label}
-        <RiArrowDownSLine
-          className={`transition-transform duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
-        />
-      </button>
+      <div className="flex items-center gap-1">
+        {/* Main Clickable Label */}
+        <a href={path}>{label}</a>
 
+        {/* Toggle Arrow */}
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            setOpen((prev) => !prev);
+          }}
+        >
+          <RiArrowDownSLine
+            className={`transition-transform duration-300 ${
+              open ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Dropdown Menu */}
       <ul
         className={`absolute left-0 mt-4 w-56 bg-white shadow-xl rounded-xl py-3 text-base transition-all duration-300 ${
           open
@@ -80,7 +98,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       >
         {items.map((item) => (
           <li key={item.path} className="px-5 py-2 hover:bg-gray-100">
-            <Link to={item.path}>{item.name}</Link>
+            <a href={item.path}>{item.name}</a>
           </li>
         ))}
       </ul>

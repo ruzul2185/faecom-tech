@@ -1,6 +1,6 @@
-import { 
-  FaAws, 
-  FaSalesforce, 
+import {
+  FaAws,
+  FaSalesforce,
   FaCloud,
   FaCode,
   FaChartLine,
@@ -11,7 +11,7 @@ import {
   FaServer,
   FaUserTie,
   FaCertificate,
-  FaBriefcase
+  FaBriefcase,
 } from "react-icons/fa";
 
 export const PARTNER_SERVICES = [
@@ -20,23 +20,24 @@ export const PARTNER_SERVICES = [
     logo: "/tech/sap.svg", // You'll need to add this logo
     services: [
       "S/4HANA - ERP Suite",
-      "FICO - Finance & Control", 
+      "FICO - Finance & Control",
       "SD - Sales & Distribution",
       "MM - Material Management",
       "PP - Production Planning",
       "ABAP - SAP Programming",
       "BASIS - System Administration",
       "HCM - HR Management",
-      "EWM - Warehouse Management"
+      "EWM - Warehouse Management",
     ],
-    icon: FaLaptopCode
+    icon: FaLaptopCode,
+    link: "/services/sap",
   },
   {
     name: "AWS",
     logo: "/tech/aws.svg",
     services: [
       "Deployment",
-      "Migration", 
+      "Migration",
       "DevOps",
       "EC2 Servers",
       "S3 Storage",
@@ -45,9 +46,10 @@ export const PARTNER_SERVICES = [
       "CI/CD Pipeline",
       "IAM Roles",
       "Cloud Security",
-      "Cloud Monitoring"
+      "Cloud Monitoring",
     ],
-    icon: FaAws
+    icon: FaAws,
+    link: "/services/aws",
   },
   {
     name: "Zoho",
@@ -57,9 +59,10 @@ export const PARTNER_SERVICES = [
       "Zoho One Setup",
       "Zoho Analytics",
       "Custom Flows & Integrations",
-      "Zoho Books & Payroll"
+      "Zoho Books & Payroll",
     ],
-    icon: FaCloud
+    icon: FaCloud,
+    link: "/services/zoho",
   },
   {
     name: "Salesforce",
@@ -72,42 +75,48 @@ export const PARTNER_SERVICES = [
       "Experience Cloud Portals",
       "Tableau CRM Insights",
       "Commerce Cloud Solutions",
-      "Agentforce Support Systems"
+      "Agentforce Support Systems",
     ],
-    icon: FaSalesforce
-  }
+    icon: FaSalesforce,
+    link: "/services/salesforce",
+  },
 ];
 
 export const CORE_SERVICES = [
   {
     title: "Digital Marketing Services",
-    description: "Comprehensive digital marketing solutions to boost your online presence and drive business growth through targeted campaigns and data-driven strategies.",
+    description:
+      "Comprehensive digital marketing solutions to boost your online presence and drive business growth through targeted campaigns and data-driven strategies.",
     icon: FaChartLine,
     features: [
       "SEO Optimization",
-      "Social Media Marketing", 
+      "Social Media Marketing",
       "PPC Campaigns",
       "Content Marketing",
       "Email Marketing",
-      "Analytics & Reporting"
-    ]
+      "Analytics & Reporting",
+    ],
+    link: "/services/digital-marketing",
   },
   {
     title: "Web Development",
-    description: "Custom web development services creating responsive, fast, and secure websites tailored to your business needs using modern technologies.",
+    description:
+      "Custom web development services creating responsive, fast, and secure websites tailored to your business needs using modern technologies.",
     icon: FaCode,
     features: [
       "Frontend Development",
-      "Backend Development", 
+      "Backend Development",
       "Full-Stack Solutions",
       "E-commerce Platforms",
       "Progressive Web Apps",
-      "API Development"
-    ]
+      "API Development",
+    ],
+    link: "/services/web-dev",
   },
   {
     title: "Mobile & Web Game Development (Unity)",
-    description: "Engaging and immersive game development for mobile and web platforms using Unity engine with stunning graphics and smooth gameplay.",
+    description:
+      "Engaging and immersive game development for mobile and web platforms using Unity engine with stunning graphics and smooth gameplay.",
     icon: FaGamepad,
     features: [
       "2D & 3D Game Development",
@@ -115,12 +124,14 @@ export const CORE_SERVICES = [
       "Game UI/UX Design",
       "Multiplayer Integration",
       "Game Optimization",
-      "Cross-Platform Deployment"
-    ]
+      "Cross-Platform Deployment",
+    ],
+    link: "/services/unity",
   },
   {
     title: "Custom Software Development & MVP Development",
-    description: "Tailored software solutions and rapid MVP development to bring your innovative ideas to life with scalable and robust architecture.",
+    description:
+      "Tailored software solutions and rapid MVP development to bring your innovative ideas to life with scalable and robust architecture.",
     icon: FaLaptopCode,
     features: [
       "Custom Business Applications",
@@ -128,12 +139,14 @@ export const CORE_SERVICES = [
       "Software Architecture Design",
       "Database Design",
       "Integration Services",
-      "Maintenance & Support"
-    ]
+      "Maintenance & Support",
+    ],
+    link: "/services/custom",
   },
   {
     title: "Quality Assurance (QA) Services",
-    description: "Comprehensive QA services ensuring your software meets the highest standards of quality, performance, and reliability.",
+    description:
+      "Comprehensive QA services ensuring your software meets the highest standards of quality, performance, and reliability.",
     icon: FaShieldAlt,
     features: [
       "Manual Testing",
@@ -141,40 +154,47 @@ export const CORE_SERVICES = [
       "Performance Testing",
       "Security Testing",
       "Compatibility Testing",
-      "QA Consulting"
-    ]
-  }
+      "QA Consulting",
+    ],
+    link: "/services/qa",
+  },
 ];
 
 export const KEY_FACILITIES = [
   {
     title: "Online & Practical Hands-On Training",
     icon: FaLaptopCode,
-    description: "Interactive online training sessions with real-world projects and practical implementation."
+    description:
+      "Interactive online training sessions with real-world projects and practical implementation.",
   },
   {
     title: "Global Curriculum",
     icon: FaGlobe,
-    description: "Internationally recognized curriculum designed to meet industry standards worldwide."
+    description:
+      "Internationally recognized curriculum designed to meet industry standards worldwide.",
   },
   {
     title: "Server Access",
     icon: FaServer,
-    description: "Dedicated server access for practical training and development exercises."
+    description:
+      "Dedicated server access for practical training and development exercises.",
   },
   {
     title: "Experienced Trainers",
     icon: FaUserTie,
-    description: "Industry experts with years of hands-on experience in their respective domains."
+    description:
+      "Industry experts with years of hands-on experience in their respective domains.",
   },
   {
     title: "Certification Guidance",
     icon: FaCertificate,
-    description: "Complete guidance for industry-recognized certifications to boost your career."
+    description:
+      "Complete guidance for industry-recognized certifications to boost your career.",
   },
   {
     title: "Placement Assistance",
     icon: FaBriefcase,
-    description: "Career support and placement assistance to help you land your dream job."
-  }
+    description:
+      "Career support and placement assistance to help you land your dream job.",
+  },
 ];

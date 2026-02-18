@@ -1,7 +1,8 @@
 import { Link } from "react-router";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
-import Dropdown, { type DropdownItem } from "./Dropdown";
+import Dropdown from "./Dropdown";
+import { SERVICES } from "../constants/Navbar";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -9,13 +10,6 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
-
-  const services: DropdownItem[] = [
-    { name: "Web Development", path: "/web-development" },
-    { name: "Software Development", path: "/software-development" },
-    { name: "Digital Marketing", path: "/digital-marketing" },
-    { name: "Zoho Services", path: "/zoho-services" },
-  ];
 
   return (
     <>
@@ -39,7 +33,7 @@ const Navbar: React.FC = () => {
               <Link to="/">Home</Link>
             </li>
 
-            <Dropdown label="Services" items={services} />
+            <Dropdown label="Services" path="/services" items={SERVICES} />
 
             <li>
               <Link to="/blogs">Blogs</Link>
@@ -64,9 +58,10 @@ const Navbar: React.FC = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 
+  transform transition-transform duration-300 overflow-y-auto ${
+    isOpen ? "translate-x-0" : "translate-x-full"
+  }`}
       >
         <div className="flex justify-end p-4">
           <RiCloseLine
@@ -84,7 +79,8 @@ const Navbar: React.FC = () => {
 
           <Dropdown
             label="Services"
-            items={services}
+            path="/services"
+            items={SERVICES}
             isMobile
             closeSidebar={() => setIsOpen(false)}
           />
