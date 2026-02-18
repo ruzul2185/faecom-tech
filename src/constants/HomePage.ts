@@ -13,6 +13,9 @@ export const TECH_STACK_INFINITE_BANNER = [
   "/tech/s3.svg",
   "/tech/swift.svg",
   "/tech/wordpress.svg",
+  "/ZOHO_logo_2023.svg",
+  "/SAP_BIG.svg",
+  "/Salesforce.com_logo.svg",
 ];
 
 export const STATISTICS_CARD_INFO = [
@@ -38,49 +41,49 @@ export const SERVICE_CARD_INFO = [
   {
     title: "SAP Solutions",
     desc: "Empower your enterprise with integrated SAP solutions that streamline operations, improve efficiency, and drive data-driven decision-making across finance, supply chain, HR, and more.",
-    link: "",
+    link: "/services/sap",
     svgLink: "/sap-w.svg",
   },
   {
     title: "Amazon Web Services",
     desc: "Leverage the power of AWS to build secure, scalable, and high-performance cloud infrastructure. From deployment to DevOps automation, we design cost-efficient cloud architectures tailored to your business needs.",
-    link: "",
+    link: "/services/aws",
     svgLink: "/aws-w.svg",
   },
   {
     title: "Salesforce CRM Solutions",
     desc: "We deliver powerful Salesforce CRM solutions to streamline your sales, automate workflows, and enhance customer engagement. From implementation to customization and integration, we help businesses unlock the full potential of Salesforce.",
-    link: "",
+    link: "/services/salesforce",
     svgLink: "/salesforce-w.svg",
   },
   {
     title: "Zoho Business Solutions",
-    desc: "An all-in-one cloud platform offering smart tools for CRM, accounting, HR, email, and project management—helping businesses automate workflows and boost productivity.",
-    link: "",
+    desc: "An all-in-one cloud platform offering smart tools for CRM, accounting, HR, email, and project management helping businesses automate workflows and boost productivity.",
+    link: "/services/zoho",
     svgLink: "/zoho.png",
   },
   {
     title: "Unity Game Development",
     desc: "A robust real-time rendering and game development engine supporting C# scripting, advanced physics, animation systems, and multi-platform publishing for mobile, PC, console, AR, and VR applications.",
-    link: "",
+    link: "/services/unity",
     svgLink: "/unity-w.svg",
   },
   {
     title: "Digital Marketing Solutions",
     desc: "Comprehensive digital marketing strategies designed to increase brand visibility, generate qualified leads, and drive measurable growth. From SEO and paid advertising to social media and content marketing, we help businesses build a strong and scalable online presence.",
-    link: "",
+    link: "/services/digital-marketing",
     svgLink: "/dm.svg",
   },
   {
     title: "Modern Web Development",
     desc: "We build secure, scalable, and high-performance websites tailored to your business goals. From responsive corporate websites to complex web applications, our solutions combine clean architecture, modern frameworks, and seamless user experience.",
-    link: "",
+    link: "/services/web-dev",
     svgLink: "/web.svg",
   },
   {
     title: "Software Development",
     desc: "We design and develop secure, scalable, and high-performance software tailored to your business needs. From enterprise systems to automation tools, our solutions streamline operations and drive digital transformation.",
-    link: "",
+    link: "/services/custom",
     svgLink: "/software.svg",
   },
 ];
@@ -99,22 +102,22 @@ export const TRAINING_INFO = [
   {
     title: "Systems, Applications, and Products (SAP)",
     backgroundImage: "/sap-bg.jpg",
-    link: "",
+    link: "/services/sap",
   },
   {
     title: "Amazon Web Services (AWS)",
     backgroundImage: "/aws-bg.png",
-    link: "",
+    link: "/services/aws",
   },
   {
     title: "Zoho",
     backgroundImage: "/zoho-bg.jpg",
-    link: "",
+    link: "/services/zoho",
   },
   {
     title: "Salesforce",
     backgroundImage: "/salesforce-bg.webp",
-    link: "",
+    link: "/services/salesforce",
   },
 ];
 
