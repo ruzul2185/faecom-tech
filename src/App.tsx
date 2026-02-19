@@ -15,6 +15,10 @@ import CustomService from "./pages/Services/CustomService";
 import UnityService from "./pages/Services/UnityService";
 import WebDevService from "./pages/Services/WebDevService";
 import DigitalMarketingService from "./pages/Services/DigitalMarketingService";
+import AWSTraining from "./pages/Trainings/AWSTraining";
+import SAPTraining from "./pages/Trainings/SAPTraining";
+import ZohoTraining from "./pages/Trainings/ZohoTraining";
+import SalesforceTraining from "./pages/Trainings/SalesforceTraining";
 
 const App = () => {
   return (
@@ -40,6 +44,10 @@ const App = () => {
 
           {/* Trainings */}
           <Route path="/trainings" element={<Trainings/>} />
+          <Route path="/trainings/aws-training" element={<AWSTraining/>}/>
+          <Route path="/trainings/salesforce-training" element={<SalesforceTraining/>}/>
+          <Route path="/trainings/sap-training" element={<SAPTraining/>}/>
+          <Route path="/trainings/zoho-training" element={<ZohoTraining/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
