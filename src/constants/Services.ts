@@ -13,6 +13,7 @@ import {
   FaCertificate,
   FaBriefcase,
 } from "react-icons/fa";
+import { SiSap, SiZoho } from "react-icons/si";
 
 export const PARTNER_SERVICES = [
   {
@@ -29,7 +30,7 @@ export const PARTNER_SERVICES = [
       "HCM - HR Management",
       "EWM - Warehouse Management",
     ],
-    icon: FaLaptopCode,
+    icon: SiSap,
     link: "/services/sap",
   },
   {
@@ -61,7 +62,7 @@ export const PARTNER_SERVICES = [
       "Custom Flows & Integrations",
       "Zoho Books & Payroll",
     ],
-    icon: FaCloud,
+    icon: SiZoho,
     link: "/services/zoho",
   },
   {

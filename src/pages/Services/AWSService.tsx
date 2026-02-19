@@ -13,7 +13,7 @@ const AWSService = () => {
         <Bookmark
           icon={<FaAws />}
           title="AWS Services"
-          className="bg-white text-[#ff6041] mx-auto w-fit"
+          className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
         />
         <h1 className="text-4xl text-center md:text-6xl font-bold text-gray-900 mt-8 mb-6">
           {AWS_SERVICE_DATA.hero.title}
@@ -59,7 +59,7 @@ const AWSService = () => {
                 <Bookmark
                   title="AWS Services"
                   icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                  className="text-[#ff6041] bg-white"
+                  className="text-[#ff6041] bg-white gap-3"
                 />
               </div>
 
@@ -119,7 +119,7 @@ const AWSService = () => {
               <Bookmark
                 title="Services Core Features"
                 icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                className="text-[#ff6041] bg-white border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -271,7 +271,7 @@ const AWSService = () => {
               <Bookmark
                 title="Technologies"
                 icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                className="text-[#ff6041] bg-white"
+                className="text-[#ff6041] bg-white gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

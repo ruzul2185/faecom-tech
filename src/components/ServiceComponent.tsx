@@ -15,19 +15,21 @@ const ServiceComponent = () => {
             <Bookmark
               icon={<FaGear />}
               title="Explore Our Services"
-              className="bg-[#efeadf] text-[#ff6041]"
+              className="bg-[#efeadf] text-[#ff6041] gap-3"
             />
           </div>
           <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-center sm:mt-5">
-            <p className="text-[30px] font-medium sm:text-5xl/normal max-w-135.5">
-              Transforming Vision Into Digital Systems
-            </p>
-            <p className="text-[14px] text-[#534f5a] font-medium sm:text-xl/loose max-w-2xl">
-              Beyond delivering enterprise-grade digital solutions, we empower
-              teams with the knowledge and technical training needed to sustain
-              innovation, ensuring long-term technological independence and
-              growth.
-            </p>
+            <div className="flex flex-col xl:flex-row">
+              <p className="text-[30px] font-bold sm:text-5xl/normal max-w-135.5">
+                Transforming Vision Into Digital Systems
+              </p>
+              <p className="text-[16px] text-[#534f5a] font-medium sm:text-xl/relaxed max-w-2xl mt-4">
+                Beyond delivering enterprise-grade digital solutions, we empower
+                teams with the knowledge and technical training needed to
+                sustain innovation, ensuring long-term technological
+                independence and growth.
+              </p>
+            </div>
 
             <div className="flex gap-5">
               <div

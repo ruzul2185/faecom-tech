@@ -12,7 +12,7 @@ const SalesforceTraining = () => {
         <Bookmark
           icon={<GrTechnology />}
           title="Salesforce Training Program"
-          className="bg-white text-[#ff6041] mx-auto w-fit"
+          className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
         />
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6 text-center">
           {salesforceTrainingDetails.title}
@@ -171,7 +171,7 @@ const SalesforceTraining = () => {
               <Bookmark
                 title="Technologies"
                 icon={<GrTechnology color="#ff6041" />}
-                className="text-[#ff6041] bg-gray-200 border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -314,7 +314,7 @@ const SalesforceTraining = () => {
           Join thousands of professionals who have transformed their careers
           with our industry-leading Salesforce training program.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <PrimaryButton
             title="Start Your Salesforce Journey"
             classname="rounded-[25px]"

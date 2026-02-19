@@ -46,7 +46,7 @@ const Blogs = () => {
       excerpt:
         "Discover how cutting-edge technology and strategic partnerships can transform your business operations and drive sustainable growth.",
       author: "Admin",
-      date: "18 Dec, 2025",
+      date: "20 Feb, 2026",
       category: "Corporate",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
@@ -122,7 +122,7 @@ Success in the digital age requires more than just technological adoption – it
           <Bookmark
             icon={<FaTag className="text-[#ff6041]" />}
             title="Industry Insights"
-            className="bg-white mx-auto w-fit shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-white mx-auto w-fit shadow-lg hover:shadow-xl transition-shadow duration-300 gap-3"
           />
           <h1 className="text-4xl sm:text-5xl font-bold mt-6 bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
             Stay Ahead With{" "}

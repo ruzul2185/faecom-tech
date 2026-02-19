@@ -73,7 +73,6 @@ const Contact = () => {
       icon: <FaLocationDot className="w-6 h-6 sm:w-7 sm:h-7 text-white" />,
       title: "Our Address",
       content: [
-        "Faecom Tech Pvt. Ltd.",
         "Office Address: 2nd Floor, Chandra Building IT Park Road, Nagpur 440022",
         "Maharashtra, India",
       ],
@@ -115,8 +114,8 @@ const Contact = () => {
           icon={
             <FaPaperPlane className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
           }
-          title="Let’s Connect"
-          className="bg-white"
+          title="Let's Connect"
+          className="bg-white gap-3"
         />
         <div className="text-4xl sm:text-[64px] font-medium">
           <p>
@@ -192,14 +191,14 @@ const Contact = () => {
 
       {/* ================= WORLD MAP SECTION ================= */}
       <section className="mx-auto w-[93%] max-w-442.5">
-        <div className="bg-[#EFEADF] rounded-[50px] p-8 sm:p-12 lg:py-16 lg:px-0">
+        <div className="bg-[#EFEADF] rounded-[50px] sm:p-12 lg:py-16 lg:px-0">
           <div className="text-center mb-8 sm:mb-12">
             <Bookmark
               icon={
-                <FaLocationDot className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
+                <FaLocationDot className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041] gap-3" />
               }
               title="Global Presence"
-              className="bg-white mx-auto w-fit"
+              className="bg-white mx-auto w-fit gap-3"
             />
             <div className="text-[30px] font-medium sm:text-5xl mt-6">
               <p>
@@ -316,7 +315,7 @@ const Contact = () => {
                   <FaLocationDot className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
                 }
                 title="VISIT US"
-                className="bg-white/10 w-fit border border-white/20"
+                className="bg-white/10 w-fit border border-white/20 gap-3"
               />
               <div className="text-[28px] font-semibold sm:text-4xl mt-4">
                 <p>
@@ -324,7 +323,7 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-2xl h-[300px] sm:h-[400px] border-4 border-white/10">
+            <div className="rounded-3xl overflow-hidden shadow-2xl h-75 sm:h-100 border-4 border-white/10">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.9858670113013!2d79.04166713478348!3d21.11312962225544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf0048a8052d%3A0x5a8bd0db52fb9ec2!2sFAECOM%20ENGINEERING%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1771153043227!5m2!1sen!2sin"
                 width="100%"
@@ -346,7 +345,7 @@ const Contact = () => {
                   <FaPaperPlane className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
                 }
                 title="SEND MESSAGE"
-                className="bg-white/10 w-fit border border-white/20"
+                className="bg-white/10 w-fit border border-white/20 gap-3"
               />
               <div className="text-[28px] font-semibold sm:text-4xl mt-4">
                 <p>
@@ -412,21 +411,56 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:bg-white/10 focus:border-[#ff6041] transition-all duration-300 appearance-none cursor-pointer"
                   >
-                    <option value="" className="bg-[#1a1a1a]">
-                      Select a service
+                    <option value="" className="bg-[#1a1a1a]" disabled>
+                      Select a Service
                     </option>
-                    <option value="it-consulting" className="bg-[#1a1a1a]">
-                      IT Consulting
+
+                    <option value="aws-services" className="bg-[#1a1a1a]">
+                      AWS Services/Training
                     </option>
-                    <option value="software-dev" className="bg-[#1a1a1a]">
+
+                    <option value="sap-services" className="bg-[#1a1a1a]">
+                      SAP Services/Training
+                    </option>
+
+                    <option value="zoho-services" className="bg-[#1a1a1a]">
+                      Zoho Services/Training
+                    </option>
+
+                    <option
+                      value="salesforce-services"
+                      className="bg-[#1a1a1a]"
+                    >
+                      Salesforce Services/Training
+                    </option>
+
+                    <option
+                      value="software-development"
+                      className="bg-[#1a1a1a]"
+                    >
                       Software Development
                     </option>
-                    <option value="erp-solutions" className="bg-[#1a1a1a]">
-                      ERP Solutions
+
+                    <option value="web-development" className="bg-[#1a1a1a]">
+                      Web Development
                     </option>
-                    <option value="training" className="bg-[#1a1a1a]">
-                      Training Programs
+
+                    <option value="game-development" className="bg-[#1a1a1a]">
+                      Game Development
                     </option>
+
+                    <option value="digital-marketing" className="bg-[#1a1a1a]">
+                      Digital Marketing
+                    </option>
+
+                    <option value="quality-analysis" className="bg-[#1a1a1a]">
+                      Quality Analysis & Testing
+                    </option>
+
+                    <option value="training-programs" className="bg-[#1a1a1a]">
+                      Professional Training Programs
+                    </option>
+
                     <option value="other" className="bg-[#1a1a1a]">
                       Other
                     </option>

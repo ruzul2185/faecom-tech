@@ -22,7 +22,7 @@ const Trainings = () => {
         <Bookmark
           iconSrc="Sparkles.svg"
           title=" Professional IT Training & Services"
-          className="bg-white"
+          className="bg-white gap-3"
         />
         <div className="text-4xl sm:text-[64px] font-medium">
           <p>Industry-Oriented</p>
@@ -77,11 +77,11 @@ const Trainings = () => {
           </div>
 
           {/* Content Side */}
-          <div className="p-10 sm:p-16 flex flex-col items-start justify-center">
+          <div className="p-10 sm:px-16 flex flex-col items-start justify-center gap-4 lg:gap-3">
             <Bookmark
               icon={<GrTechnology />}
               title="Collaboration with SKILS.in"
-              className="bg-[#efeadf] text-[#ff6041]"
+              className="bg-[#efeadf] text-[#ff6041] gap-3"
             />
 
             <p className="text-gray-600 mb-6 leading-relaxed">

@@ -12,7 +12,7 @@ const SAPTraining = () => {
         <Bookmark
           icon={<GrTechnology />}
           title="SAP Training Program"
-          className="bg-white text-[#ff6041] mx-auto w-fit"
+          className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
         />
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6 text-center">
           {sapTrainingDetails.title}
@@ -44,14 +44,20 @@ const SAPTraining = () => {
             In Collaboration With
           </h2>
           <div className="flex justify-center items-center gap-8 mb-8">
-            <img
-              src={sapTrainingDetails.collaboration.logo}
-              alt={sapTrainingDetails.collaboration.partner}
-              className="h-16"
-            />
-            <span className="text-2xl font-semibold">
+            <a
+              href={"https://skils.in/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={sapTrainingDetails.collaboration.logo}
+                alt={sapTrainingDetails.collaboration.partner}
+                className="h-16"
+              />
+            </a>
+            {/* <span className="text-2xl font-semibold">
               {sapTrainingDetails.collaboration.partner}
-            </span>
+            </span> */}
           </div>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             {sapTrainingDetails.collaboration.description}
@@ -184,14 +190,14 @@ const SAPTraining = () => {
       </section>
 
       {/* ================= TECH STACK SECTION ================= */}
-      <section className="py-20 lg:py-32 bg-black">
+      <section className="py-20 lg:py-32 hero-bg">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
               <Bookmark
                 title="Technologies"
                 icon={<GrTechnology color="#ff6041" />}
-                className="text-[#ff6041] bg-gray-200 border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -332,7 +338,7 @@ const SAPTraining = () => {
           Join thousands of professionals who have transformed their careers
           with our industry-leading SAP training program.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <PrimaryButton
             title="Start Your SAP Journey"
             classname="rounded-[25px]"

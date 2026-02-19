@@ -10,7 +10,7 @@ const NewsLetterComponent = () => {
           <Bookmark
             title="Subscribe"
             icon={<MdUnsubscribe size={30} color="#ff6041" />}
-            className="bg-[#d9d9d9]"
+            className="bg-white"
           />
         </div>
         <div className=" self-center flex flex-col gap-6 md:gap-12 w-full items-center">
@@ -20,10 +20,11 @@ const NewsLetterComponent = () => {
           </div>
           <div className="md:max-w-250 text-center text-[16px] font-medium">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Stay informed with expert insights, industry trends, product
+              updates, and practical resources designed to help you grow. Our
+              newsletter delivers carefully curated content straight to your
+              inbox; no clutter, just meaningful updates that keep you ahead of
+              the curve.
             </p>
           </div>
           <div className="flex flex-col md:flex-row items-center w-full justify-between gap-10 max-w-200">

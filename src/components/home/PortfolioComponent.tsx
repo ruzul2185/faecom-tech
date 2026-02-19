@@ -18,7 +18,7 @@ const PortfolioComponent = () => {
             <Bookmark
               title="Portfolio"
               icon={<FaGear color="#ff6041" />}
-              className="text-[#ff6041] bg-[#d6d6d6]"
+              className="text-[#ff6041] bg-[#efeadf]"
             />
             <p className="font-medium text-3xl">
               Explore our Recent{" "}

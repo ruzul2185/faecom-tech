@@ -20,7 +20,7 @@ const Services = () => {
           <Bookmark
             icon={<FaGear />}
             title="Our Services"
-            className="bg-white text-[#ff6041] mx-auto w-fit"
+            className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
           />
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6">
             Comprehensive Technology Solutions
@@ -39,7 +39,7 @@ const Services = () => {
           <Bookmark
             icon={<FaHandshake className="mr-2 md:mr-0" />}
             title="Certified Solutions & Training Specialist"
-            className="bg-[#ff6041] text-white mx-auto w-fit"
+            className="bg-[#ff6041] text-white mx-auto w-fit text-2xl"
           />
           <h2 className="text-3xl md:text-4xl font-bold text-black mt-6 mb-4">
             for SAP, AWS, Zoho and Salesforce
@@ -187,7 +187,7 @@ const Services = () => {
                 <Bookmark
                   title="Services Features"
                   icon={<MdDesignServices color="#ff6041" size={30} />}
-                  className="bg-white text-[#ff6041]"
+                  className="bg-white text-[#ff6041] gap-3"
                 />
               </div>
 
@@ -299,7 +299,7 @@ const Services = () => {
                 <Bookmark
                   icon={<FaHandshake />}
                   title="Get In Touch"
-                  className="bg-[#ff6041] text-white w-fit"
+                  className="bg-[#ff6041] text-white w-fit gap-3"
                 />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">

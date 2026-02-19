@@ -42,15 +42,15 @@ const SAPService = () => {
         <Bookmark
           icon={<BiSolidBusiness />}
           title="SAP Services"
-          className="bg-white text-[#ff6041] mx-auto w-fit"
+          className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
         />
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6 text-center">
           {SAP_SERVICE_DATA.hero.title}
         </h1>
-        <p className="text-xl text-gray-600 max-w-442.5 mx-auto">
+        <p className="text-xl text-gray-600 max-w-442.5 mx-auto text-center">
           {SAP_SERVICE_DATA.hero.subtitle}
         </p>
-        <p className="text-xl text-gray-600 max-w-442.5 mx-auto">
+        <p className="text-xl text-gray-600 max-w-442.5 mx-auto text-center">
           {SAP_SERVICE_DATA.hero.description}
         </p>
         <a href="/contact">
@@ -91,7 +91,7 @@ const SAPService = () => {
                 <Bookmark
                   title="SAP Services"
                   icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                  className="text-[#ff6041] bg-white"
+                  className="text-[#ff6041] bg-white gap-3"
                 />
               </div>
 
@@ -151,7 +151,7 @@ const SAPService = () => {
               <Bookmark
                 title="Services Core Features"
                 icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                className="text-[#ff6041] bg-white border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -375,7 +375,7 @@ const SAPService = () => {
               <Bookmark
                 title="Business Benefits"
                 icon={<BiSolidBusiness color="#ff6041" />}
-                className="text-[#ff6041] bg-white border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -413,7 +413,7 @@ const SAPService = () => {
               <Bookmark
                 title="Technologies"
                 icon={<GrTechnology color="#ff6041" />}
-                className="text-[#ff6041] bg-white border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

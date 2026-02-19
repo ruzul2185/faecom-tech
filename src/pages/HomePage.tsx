@@ -21,7 +21,7 @@ const HomePage = () => {
         <Bookmark
           iconSrc="Sparkles.svg"
           title="Leading Tech, Education and Solutions"
-          className="bg-white"
+          className="bg-white gap-3"
         />
         {/* Main Heading */}
         <div className="text-4xl sm:text-[64px] font-medium">
@@ -30,7 +30,7 @@ const HomePage = () => {
           <span className="text-[#ffa077]">Trust</span>
         </div>
         {/* Subheading / Description */}
-        <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] line max-w-226">
+        <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] line max-w-226 w-[93%]">
           <p>
             We transform complex challenges into reliable digital
             infrastructures while delivering practical, industry-aligned
