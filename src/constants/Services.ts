@@ -1,7 +1,6 @@
 import {
   FaAws,
   FaSalesforce,
-  FaCloud,
   FaCode,
   FaChartLine,
   FaShieldAlt,
