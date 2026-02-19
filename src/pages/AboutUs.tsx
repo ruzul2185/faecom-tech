@@ -48,7 +48,7 @@ const AboutUs = () => {
         <Bookmark
           icon={<FaGlobe className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
           title="Your Partner in Learning & Innovation"
-          className="bg-white"
+          className="bg-white gap-3"
         />
 
         {/* Main heading */}
@@ -166,7 +166,7 @@ const AboutUs = () => {
                 <FaUsers className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
               }
               title="Company Overview"
-              className="bg-white text-amber-950 w-fit"
+              className="bg-white text-amber-950 w-fit gap-3"
             />
             <div className="text-[30px] font-medium sm:text-5xl">
               <p>Building Digital Excellence</p>
@@ -231,7 +231,7 @@ const AboutUs = () => {
         <Bookmark
           icon={<FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
           title="OUR PURPOSE"
-          className="bg-white"
+          className="bg-white gap-3"
         />
         <div className="text-4xl sm:text-[64px] font-medium">
           <p>
@@ -312,7 +312,7 @@ const AboutUs = () => {
             {/* Main image container with hover effect */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-87.5 sm:h-112.5 group-hover:shadow-[0_20px_60px_-15px_rgba(255,96,65,0.3)] transition-all duration-700">
               <img
-                src="/founder.jpg"
+                src="/ceo.png"
                 alt="Founder"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => {
@@ -345,7 +345,7 @@ const AboutUs = () => {
                 <span className="text-[#ff6041] font-bold text-sm">CEO</span>
               }
               title="LEADERSHIP VISION"
-              className="bg-white w-fit animate-fade-in"
+              className="bg-white w-fit animate-fade-in gap-3"
             />
 
             <div className="text-[30px] font-medium sm:text-5xl animate-slide-up">
@@ -455,7 +455,7 @@ const AboutUs = () => {
                 <span className="text-[#ff6041] font-bold text-sm">FAQ</span>
               }
               title="FREQUENTLY ASKED QUESTIONS"
-              className="bg-white/10 mx-auto w-fit border border-white/20"
+              className="bg-white/10 mx-auto w-fit border border-white/20 gap-3"
             />
             <div className="text-[30px] font-medium sm:text-5xl mt-6">
               <p>
@@ -508,7 +508,10 @@ const AboutUs = () => {
             <p className="text-white/60 text-[14px] sm:text-[16px] mb-4">
               Still have questions?
             </p>
-            <PrimaryButton title="Contact Us" classname="rounded-[25px]" />
+            <PrimaryButton
+              title="Contact Us"
+              classname="rounded-[25px] mx-auto"
+            />
           </div>
         </div>
       </section>

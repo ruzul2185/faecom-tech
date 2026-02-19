@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton } from "../components/Button";
 import {
@@ -20,23 +20,23 @@ const Blogs = () => {
   });
 
   const [showComments, setShowComments] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  // const [scrollProgress, setScrollProgress] = useState(0);
 
   // ================= READING PROGRESS =================
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const progress =
-        (window.scrollY / totalHeight) * 100;
-      setScrollProgress(progress);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const totalHeight =
+  //       document.documentElement.scrollHeight -
+  //       document.documentElement.clientHeight;
+  //     const progress =
+  //       (window.scrollY / totalHeight) * 100;
+  //     setScrollProgress(progress);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () =>
+  //     window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   // ================= DATA =================
   const blogPosts = [
@@ -46,7 +46,7 @@ const Blogs = () => {
       excerpt:
         "Discover how cutting-edge technology and strategic partnerships can transform your business operations and drive sustainable growth.",
       author: "Admin",
-      date: "18 Dec, 2025",
+      date: "20 Feb, 2026",
       category: "Corporate",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
@@ -90,9 +90,7 @@ Success in the digital age requires more than just technological adoption – it
 
   const currentPost = blogPosts[0];
 
-  const readTime = Math.ceil(
-    currentPost.content.split(" ").length / 200
-  );
+  const readTime = Math.ceil(currentPost.content.split(" ").length / 200);
 
   const handleCommentSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -101,7 +99,7 @@ Success in the digital age requires more than just technological adoption – it
   };
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setCommentData((prev) => ({ ...prev, [name]: value }));
@@ -109,14 +107,13 @@ Success in the digital age requires more than just technological adoption – it
 
   return (
     <div className="flex flex-col gap-24 mt-24">
-
       {/* ================= READING PROGRESS BAR ================= */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+      {/* <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
         <div
           className="h-full bg-[#ff6041] transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
         />
-      </div>
+      </div> */}
 
       {/* ================= HERO ================= */}
       <section className="max-w-4xl mx-auto text-center w-[93%] relative">
@@ -125,9 +122,9 @@ Success in the digital age requires more than just technological adoption – it
           <Bookmark
             icon={<FaTag className="text-[#ff6041]" />}
             title="Industry Insights"
-            className="bg-white mx-auto w-fit shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-white mx-auto w-fit shadow-lg hover:shadow-xl transition-shadow duration-300 gap-3"
           />
-          <h1 className="text-4xl sm:text-5xl font-bold mt-6 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-bold mt-6 bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
             Stay Ahead With{" "}
             <span className="text-[#ff6041] relative">
               Expert Knowledge
@@ -141,10 +138,14 @@ Success in the digital age requires more than just technological adoption – it
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <div className="px-4 py-2 bg-white rounded-full shadow-sm border border-[#ff6041]/20">
-              <span className="text-sm font-medium text-[#ff6041]">{blogPosts.length} Articles</span>
+              <span className="text-sm font-medium text-[#ff6041]">
+                {blogPosts.length} Articles
+              </span>
             </div>
             <div className="px-4 py-2 bg-white rounded-full shadow-sm border border-[#ff6041]/20">
-              <span className="text-sm font-medium text-gray-700">Updated Daily</span>
+              <span className="text-sm font-medium text-gray-700">
+                Updated Daily
+              </span>
             </div>
           </div>
         </div>
@@ -153,10 +154,8 @@ Success in the digital age requires more than just technological adoption – it
       {/* ================= BLOG CONTENT ================= */}
       <section className="max-w-6xl mx-auto w-[93%]">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-
           {/* MAIN ARTICLE */}
           <div className="lg:col-span-2">
-
             <span className="bg-linear-to-r from-[#ff6041] to-[#ff8041] text-white px-4 py-1 rounded-full text-sm shadow-md">
               {currentPost.category}
             </span>
@@ -196,11 +195,14 @@ Success in the digital age requires more than just technological adoption – it
             </div>
 
             <div className="space-y-8 text-gray-700 leading-relaxed text-justify">
-              {currentPost.content
-                .split("\n\n")
-                .map((p, i) => (
-                  <p key={i} className="hover:text-gray-900 transition-colors duration-200">{p}</p>
-                ))}
+              {currentPost.content.split("\n\n").map((p, i) => (
+                <p
+                  key={i}
+                  className="hover:text-gray-900 transition-colors duration-200"
+                >
+                  {p}
+                </p>
+              ))}
             </div>
 
             {/* QUOTE */}
@@ -224,58 +226,55 @@ Success in the digital age requires more than just technological adoption – it
                   Discussion ({currentPost.comments.length})
                 </h3>
                 <button
-                  onClick={() =>
-                    setShowComments(!showComments)
-                  }
+                  onClick={() => setShowComments(!showComments)}
                   className="px-6 py-3 bg-linear-to-r from-[#ff6041] to-[#ff8041] text-white rounded-full hover:shadow-lg transition-all duration-300 flex items-center gap-2"
                 >
                   <FaReply className="text-sm" />
-                  {showComments
-                    ? "Hide Comments"
-                    : "Show Comments"}
+                  {showComments ? "Hide Comments" : "Show Comments"}
                 </button>
               </div>
 
               {showComments && (
                 <div className="space-y-8">
-                  {currentPost.comments.map(
-                    (comment) => (
-                      <div
-                        key={comment.id}
-                        className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
-                      >
-                        <div className="flex gap-4">
-                          <div className="relative">
-                            <img
-                              src={comment.avatar}
-                              className="w-12 h-12 rounded-full ring-2 ring-[#ff6041]/20"
-                            />
-                            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#ff6041] rounded-full flex items-center justify-center">
-                              <FaStar className="text-white text-xs" />
-                            </div>
-                          </div>
-                          <div className="flex-1">
-                            <div className="flex items-center justify-between">
-                              <h4 className="font-semibold text-gray-900">
-                                {comment.name}
-                              </h4>
-                              <div className="flex items-center gap-1">
-                                {[...Array(comment.rating)].map((_, i) => (
-                                  <FaStar key={i} className="text-yellow-400 text-sm" />
-                                ))}
-                              </div>
-                            </div>
-                            <p className="text-sm text-gray-500 mt-1">
-                              {comment.date}
-                            </p>
-                            <p className="mt-3 text-gray-700 leading-relaxed">
-                              {comment.message}
-                            </p>
+                  {currentPost.comments.map((comment) => (
+                    <div
+                      key={comment.id}
+                      className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                    >
+                      <div className="flex gap-4">
+                        <div className="relative">
+                          <img
+                            src={comment.avatar}
+                            className="w-12 h-12 rounded-full ring-2 ring-[#ff6041]/20"
+                          />
+                          <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#ff6041] rounded-full flex items-center justify-center">
+                            <FaStar className="text-white text-xs" />
                           </div>
                         </div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between">
+                            <h4 className="font-semibold text-gray-900">
+                              {comment.name}
+                            </h4>
+                            <div className="flex items-center gap-1">
+                              {[...Array(comment.rating)].map((_, i) => (
+                                <FaStar
+                                  key={i}
+                                  className="text-yellow-400 text-sm"
+                                />
+                              ))}
+                            </div>
+                          </div>
+                          <p className="text-sm text-gray-500 mt-1">
+                            {comment.date}
+                          </p>
+                          <p className="mt-3 text-gray-700 leading-relaxed">
+                            {comment.message}
+                          </p>
+                        </div>
                       </div>
-                    )
-                  )}
+                    </div>
+                  ))}
 
                   {/* COMMENT FORM */}
                   <div className="bg-linear-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
@@ -283,13 +282,11 @@ Success in the digital age requires more than just technological adoption – it
                       Share Your Thoughts
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      Join the discussion and share your perspective with our community.
+                      Join the discussion and share your perspective with our
+                      community.
                     </p>
-                    
-                    <form
-                      onSubmit={handleCommentSubmit}
-                      className="space-y-6"
-                    >
+
+                    <form onSubmit={handleCommentSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <input
                           type="text"
@@ -323,8 +320,15 @@ Success in the digital age requires more than just technological adoption – it
 
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <input type="checkbox" id="notify" className="rounded text-[#ff6041]" />
-                          <label htmlFor="notify" className="text-sm text-gray-600">
+                          <input
+                            type="checkbox"
+                            id="notify"
+                            className="rounded text-[#ff6041]"
+                          />
+                          <label
+                            htmlFor="notify"
+                            className="text-sm text-gray-600"
+                          >
                             Notify me of replies
                           </label>
                         </div>
@@ -342,7 +346,6 @@ Success in the digital age requires more than just technological adoption – it
 
           {/* SIDEBAR */}
           <div className="space-y-8 sticky top-24 h-fit">
-
             {/* TAGS */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
               <h3 className="font-bold mb-6 text-gray-900 flex items-center">
@@ -369,12 +372,9 @@ Success in the digital age requires more than just technological adoption – it
               </h3>
               <div className="space-y-4">
                 {relatedArticles.map((post, index) => (
-                  <div
-                    key={post.id}
-                    className="group cursor-pointer"
-                  >
+                  <div key={post.id} className="group cursor-pointer">
                     <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-[#ff6041] rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#ff6041] rounded-full mt-2 shrink-0"></div>
                       <div className="flex-1">
                         <p className="font-medium text-gray-900 group-hover:text-[#ff6041] transition-colors duration-200">
                           {post.title}
@@ -428,8 +428,7 @@ Success in the digital age requires more than just technological adoption – it
                 98% Client Satisfaction
               </h4>
               <p className="text-sm text-gray-600 mt-2">
-                Delivering digital excellence through
-                innovation.
+                Delivering digital excellence through innovation.
               </p>
               <div className="flex justify-center gap-1 mt-4">
                 {[...Array(5)].map((_, i) => (
@@ -437,7 +436,6 @@ Success in the digital age requires more than just technological adoption – it
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </section>

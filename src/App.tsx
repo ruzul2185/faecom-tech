@@ -15,6 +15,11 @@ import CustomService from "./pages/Services/CustomService";
 import UnityService from "./pages/Services/UnityService";
 import WebDevService from "./pages/Services/WebDevService";
 import DigitalMarketingService from "./pages/Services/DigitalMarketingService";
+import AWSTraining from "./pages/Trainings/AWSTraining";
+import SAPTraining from "./pages/Trainings/SAPTraining";
+import ZohoTraining from "./pages/Trainings/ZohoTraining";
+import SalesforceTraining from "./pages/Trainings/SalesforceTraining";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -24,22 +29,35 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/blogs" element={<Blogs />} />
 
           {/* Services */}
-          <Route path="/services" element={<Services/>} />
-          <Route path="/services/aws" element={<AWSService/>} />
-          <Route path="/services/salesforce" element={<SalesforceService/>} />
-          <Route path="/services/sap" element={<SAPService/>} />
-          <Route path="/services/zoho" element={<ZohoService/>} />
-          <Route path="/services/qa" element={<QAService/>} />
-          <Route path="/services/custom" element={<CustomService/>} />
-          <Route path="/services/unity" element={<UnityService/>} />
-          <Route path="/services/web-dev" element={<WebDevService/>} />
-          <Route path="/services/digital-marketing" element={<DigitalMarketingService/>} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/aws" element={<AWSService />} />
+          <Route path="/services/salesforce" element={<SalesforceService />} />
+          <Route path="/services/sap" element={<SAPService />} />
+          <Route path="/services/zoho" element={<ZohoService />} />
+          <Route path="/services/qa" element={<QAService />} />
+          <Route path="/services/custom" element={<CustomService />} />
+          <Route path="/services/unity" element={<UnityService />} />
+          <Route path="/services/web-dev" element={<WebDevService />} />
+          <Route
+            path="/services/digital-marketing"
+            element={<DigitalMarketingService />}
+          />
 
           {/* Trainings */}
-          <Route path="/trainings" element={<Trainings/>} />
+          <Route path="/trainings" element={<Trainings />} />
+          <Route path="/trainings/aws-training" element={<AWSTraining />} />
+          <Route
+            path="/trainings/salesforce-training"
+            element={<SalesforceTraining />}
+          />
+          <Route path="/trainings/sap-training" element={<SAPTraining />} />
+          <Route path="/trainings/zoho-training" element={<ZohoTraining />} />
+          {/* <Route path="/trainings" element={<Trainings />} /> */}
+
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

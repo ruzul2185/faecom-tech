@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
       <nav className="sticky top-0 z-50">
         <div className="flex justify-between items-center h-18 py-2.5 sm:w-[93%] mx-auto bg-white lg:px-20 rounded-b-[20px] max-w-442.5">
           <a href="/" className="m-3">
-            <img src="/faecom-logo.svg" className="w-40 sm:w-52" />
+            <img src="/logo.png" className="w-40 sm:w-52" />
           </a>
 
           {/* Mobile Icon */}
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             </li>
 
             <Dropdown label="Services" path="/services" items={SERVICES} />
-            
+
             <Dropdown label="Trainings" path="/trainings" items={TRAININGS} />
             <li>
               <a href="/blogs">Blogs</a>

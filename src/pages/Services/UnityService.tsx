@@ -12,6 +12,7 @@ import {
   FaChartLine,
   FaUsers,
   FaStar,
+  FaUnity,
 } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { UNITY_SERVICE_DATA } from "../../constants/ServicesDetails/UnityConstants";
@@ -57,23 +58,23 @@ const UnityService = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 items-center my-20">
-          <Bookmark
-            icon={<FaGamepad />}
-            title="Unity Game Development"
-            className="bg-white text-[#ff6041] mx-auto w-fit"
-          />
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6">
-            {UNITY_SERVICE_DATA.hero.title}
-          </h1>
-          <p className="text-xl text-gray-600 text-center max-w-442.5 mx-auto">
-            {UNITY_SERVICE_DATA.hero.subtitle}
-          </p>
-          <p className="text-xl text-gray-600 text-center max-w-442.5 mx-auto">
-            {UNITY_SERVICE_DATA.hero.description}
-          </p>
-          <a href="/contact" >
-            <PrimaryButton title="Get Started" classname="rounded-[25px]" />
-          </a>
+        <Bookmark
+          icon={<FaGamepad />}
+          title="Unity Game Development"
+          className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
+        />
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6">
+          {UNITY_SERVICE_DATA.hero.title}
+        </h1>
+        <p className="text-xl text-gray-600 text-center max-w-442.5 mx-auto">
+          {UNITY_SERVICE_DATA.hero.subtitle}
+        </p>
+        <p className="text-xl text-gray-600 text-center max-w-442.5 mx-auto">
+          {UNITY_SERVICE_DATA.hero.description}
+        </p>
+        <a href="/contact">
+          <PrimaryButton title="Get Started" classname="rounded-[25px]" />
+        </a>
       </section>
 
       {/* Main Content Section */}
@@ -92,10 +93,15 @@ const UnityService = () => {
             {/* Right - Content */}
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-12 h-0.5 bg-[#ff6041]"></div>
+                {/* <div className="w-12 h-0.5 bg-[#ff6041]"></div>
                 <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
                   Unity Development
-                </span>
+                </span> */}
+                <Bookmark
+                  icon={<FaUnity />}
+                  title="Unity Development"
+                  className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
+                />
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
@@ -153,7 +159,7 @@ const UnityService = () => {
               <Bookmark
                 title="Core Features"
                 icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                className="text-[#ff6041] bg-white border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -205,7 +211,7 @@ const UnityService = () => {
               <Bookmark
                 title="Visual Effects"
                 icon={<BsStars color="#ff6041" />}
-                className="text-[#ff6041] bg-white border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -365,7 +371,7 @@ const UnityService = () => {
               <Bookmark
                 title="Technologies"
                 icon={<GrTechnology color="#ff6041" />}
-                className="text-[#ff6041] bg-white border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

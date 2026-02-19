@@ -10,25 +10,23 @@ const AWSService = () => {
     <div className="min-h-screen ">
       {/* Hero Section */}
       <section className="mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 items-center my-20">
-       
-          <Bookmark
-            icon={<FaAws />}
-            title="AWS Services"
-            className="bg-white text-[#ff6041] mx-auto w-fit"
-          />
-          <h1 className="text-4xl text-center md:text-6xl font-bold text-gray-900 mt-8 mb-6">
-            {AWS_SERVICE_DATA.hero.title}
-          </h1>
-          <p className="text-xl   text-center text-gray-600 max-w-442.5 mx-auto">
-            {AWS_SERVICE_DATA.hero.subtitle}
-          </p>
-          <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
-            {AWS_SERVICE_DATA.hero.description}
-          </p>
-          <a href="/contact" >
-            <PrimaryButton title="Get Started" classname="rounded-[25px]" />
-          </a>
-        
+        <Bookmark
+          icon={<FaAws />}
+          title="AWS Services"
+          className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
+        />
+        <h1 className="text-4xl text-center md:text-6xl font-bold text-gray-900 mt-8 mb-6">
+          {AWS_SERVICE_DATA.hero.title}
+        </h1>
+        <p className="text-xl   text-center text-gray-600 max-w-442.5 mx-auto">
+          {AWS_SERVICE_DATA.hero.subtitle}
+        </p>
+        <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
+          {AWS_SERVICE_DATA.hero.description}
+        </p>
+        <a href="/contact">
+          <PrimaryButton title="Get Started" classname="rounded-[25px]" />
+        </a>
       </section>
 
       {/* Main Content Section */}
@@ -38,7 +36,7 @@ const AWSService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
-                src="/aws-bg.png"
+                src="/aws-service.png"
                 alt="AWS Cloud Services"
                 className="relative z-10 rounded-3xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
               />
@@ -61,7 +59,7 @@ const AWSService = () => {
                 <Bookmark
                   title="AWS Services"
                   icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                  className="text-[#ff6041] bg-white"
+                  className="text-[#ff6041] bg-white gap-3"
                 />
               </div>
 
@@ -121,7 +119,7 @@ const AWSService = () => {
               <Bookmark
                 title="Services Core Features"
                 icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                className="text-[#ff6041] bg-white border"
+                className="text-[#ff6041] bg-white border gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -273,7 +271,7 @@ const AWSService = () => {
               <Bookmark
                 title="Technologies"
                 icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                className="text-[#ff6041] bg-white"
+                className="text-[#ff6041] bg-white gap-3"
               />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

@@ -10,9 +10,9 @@ const Footer = () => {
           {/* Logo + Description */}
           <div className="flex flex-col gap-6 items-center md:items-start">
             <img
-              src="/faecom-logo.svg"
+              src="/logo.png"
               alt="logo"
-              className="max-w-55 bg-white p-3 rounded-2xl"
+              className="max-w-55 bg-white p-3 rounded-lg"
             />
 
             <p className="text-[15px] text-gray-300 leading-relaxed">
@@ -30,14 +30,26 @@ const Footer = () => {
           {/* Company */}
           <FooterColumn
             title="Company"
-            links={["Contact", "Team", "Blogs", "About Us"]}
+            links={[
+              { title: "Contact", link: "/contact" },
+              { title: "Blogs", link: "/blogs" },
+              { title: "About Us", link: "/about" },
+            ]}
           />
 
           {/* Affiliation */}
           {/* Affiliation & Legal */}
           <div className="flex flex-col">
             {/* Affiliation */}
-            <FooterColumn title="Affiliation" links={["Faecom Engineering"]} />
+            <FooterColumn
+              title="Affiliation"
+              links={[
+                {
+                  title: "Faecom Engineering",
+                  link: "https://www.faecom.com/",
+                },
+              ]}
+            />
 
             {/* Legal Highlighted Section */}
             <div className="flex flex-col gap-4">
@@ -59,21 +71,23 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-[20px]">Get in Touch</h3>
 
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-sm px-3.75">
               Email: support@yourcompany.com
             </p>
 
-            <p className="text-gray-300 text-sm">Phone: +91 98765 43210</p>
+            <p className="text-gray-300 text-sm px-3.75">
+              Phone: +91 98765 43210
+            </p>
 
             <div className="text-gray-300 text-sm flex flex-col gap-3">
               <p className="font-medium text-white">Coorporate Address:</p>
-              <p>
+              <p className="px-3.75">
                 Chandra Trading Complex, 2nd Floor, Near NIT Garden, IT Park
                 Road, Trimurti Nagar, Nagpur, Maharashtra 440022
               </p>
 
               <p className="font-medium text-white mt-2">Registered Address:</p>
-              <p>
+              <p className="px-3.75">
                 Plot No. 15, Pathan Layout, Datta Mandir Road, Rana Pratap
                 Nagar, Nagpur - 440022, Maharashtra, India
               </p>
@@ -112,7 +126,10 @@ const SocialIcon = ({ Icon, link }: SocialIconProps) => {
 
 interface FooterColumnProps {
   title: string;
-  links: string[];
+  links: {
+    title: string;
+    link: string;
+  }[];
 }
 
 const FooterColumn = ({ title, links }: FooterColumnProps) => {
@@ -121,12 +138,13 @@ const FooterColumn = ({ title, links }: FooterColumnProps) => {
       <h3 className="font-semibold text-[20px]">{title}</h3>
       <ul className="flex flex-col gap-2 text-gray-300 text-sm">
         {links.map((link, index) => (
-          <li
+          <a
             key={index}
-            className="cursor-pointer hover:text-white transition-colors duration-300"
+            href={link.link}
+            className="cursor-pointer hover:text-white transition-colors duration-300 p-3.75"
           >
-            {link}
-          </li>
+            {link.title}
+          </a>
         ))}
       </ul>
     </div>

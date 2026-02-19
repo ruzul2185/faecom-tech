@@ -69,13 +69,13 @@ export const SERVICE_CARD_INFO = [
     svgLink: "/unity-w.svg",
   },
   {
-    title: "Digital Marketing Solutions",
+    title: "Digital Marketing",
     desc: "Comprehensive digital marketing strategies designed to increase brand visibility, generate qualified leads, and drive measurable growth. From SEO and paid advertising to social media and content marketing, we help businesses build a strong and scalable online presence.",
     link: "/services/digital-marketing",
     svgLink: "/dm.svg",
   },
   {
-    title: "Modern Web Development",
+    title: "Web Development",
     desc: "We build secure, scalable, and high-performance websites tailored to your business goals. From responsive corporate websites to complex web applications, our solutions combine clean architecture, modern frameworks, and seamless user experience.",
     link: "/services/web-dev",
     svgLink: "/web.svg",
@@ -141,7 +141,7 @@ export const PORTFOLIO_INFO = [
     result: "Faster inventory workflow and real-time stock visibility.",
     backgroundImage:
       "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
-    link: "skysportswear.com",
+    link: "https://skysportswear.com",
   },
   {
     title: "ShopGooro",
@@ -153,7 +153,7 @@ export const PORTFOLIO_INFO = [
       "Strong digital presence and a seamless online shopping experience for global customers.",
     backgroundImage:
       "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
-    link: "shopgooro.com",
+    link: "https://shopgooro.com",
   },
   {
     title: "InnerMost Shift Coaching",
@@ -164,7 +164,7 @@ export const PORTFOLIO_INFO = [
     result: "strengthening their digital presence and client reach.",
     backgroundImage:
       "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
-    link: "skysportswear.com",
+    link: "https://skysportswear.com",
   },
   {
     title: "Priority Herbals",
@@ -175,7 +175,7 @@ export const PORTFOLIO_INFO = [
     result: "boost credibility and online sales.",
     backgroundImage:
       "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
-    link: "skysportswear.com",
+    link: "https://skysportswear.com",
   },
 ];
 
