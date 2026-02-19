@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             </li>
 
             <Dropdown label="Services" path="/services" items={SERVICES} />
-            
+
             <Dropdown label="Trainings" path="/trainings" items={TRAININGS} />
             <li>
               <a href="/blogs">Blogs</a>

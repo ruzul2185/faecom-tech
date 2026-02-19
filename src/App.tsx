@@ -47,12 +47,15 @@ const App = () => {
           />
 
           {/* Trainings */}
-          <Route path="/trainings" element={<Trainings/>} />
-          <Route path="/trainings/aws-training" element={<AWSTraining/>}/>
-          <Route path="/trainings/salesforce-training" element={<SalesforceTraining/>}/>
-          <Route path="/trainings/sap-training" element={<SAPTraining/>}/>
-          <Route path="/trainings/zoho-training" element={<ZohoTraining/>}/>
           <Route path="/trainings" element={<Trainings />} />
+          <Route path="/trainings/aws-training" element={<AWSTraining />} />
+          <Route
+            path="/trainings/salesforce-training"
+            element={<SalesforceTraining />}
+          />
+          <Route path="/trainings/sap-training" element={<SAPTraining />} />
+          <Route path="/trainings/zoho-training" element={<ZohoTraining />} />
+          {/* <Route path="/trainings" element={<Trainings />} /> */}
 
           <Route path="*" element={<NotFound />} />
         </Route>

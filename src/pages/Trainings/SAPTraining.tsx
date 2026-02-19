@@ -1,34 +1,32 @@
-import { GrTechnology } from 'react-icons/gr';
-import { HiOutlineLightningBolt } from 'react-icons/hi';
-import { Bookmark } from '../../components/Bookmark';
-import { PrimaryButton, SecondaryButton } from '../../components/Button';
-import { sapTrainingDetails } from '../../constants/TrainingDetails/SAPTrainingDetails';
+import { GrTechnology } from "react-icons/gr";
+import { HiOutlineLightningBolt } from "react-icons/hi";
+import { Bookmark } from "../../components/Bookmark";
+import { PrimaryButton, SecondaryButton } from "../../components/Button";
+import { sapTrainingDetails } from "../../constants/TrainingDetails/SAPTrainingDetails";
 
 const SAPTraining = () => {
   return (
     <div className="flex flex-col gap-24 mt-30 mb-30">
       {/* ================= HERO SECTION ================= */}
       <section className="mx-auto min-w-86.25 w-full items-center rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 ">
-              
-                <Bookmark
-                  icon={<GrTechnology />}
-                  title="SAP Training Program"
-                  className="bg-white text-[#ff6041] mx-auto w-fit"
-                />
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6">
-                  {sapTrainingDetails.title}
-                </h1>
-                <p className="text-xl text-gray-600 max-w-442.5 mx-auto">
-                  {sapTrainingDetails.subtitle}
-                </p>
-                <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
-                     {sapTrainingDetails.description}
-                </p>
-                <a href="/contact" >
-                  <PrimaryButton title="Get Started" classname="rounded-[25px]" />
-                </a>
-            
-            </section>
+        <Bookmark
+          icon={<GrTechnology />}
+          title="SAP Training Program"
+          className="bg-white text-[#ff6041] mx-auto w-fit"
+        />
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6 text-center">
+          {sapTrainingDetails.title}
+        </h1>
+        <p className="text-xl text-gray-600 max-w-442.5 mx-auto text-center">
+          {sapTrainingDetails.subtitle}
+        </p>
+        <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
+          {sapTrainingDetails.description}
+        </p>
+        <a href="/contact">
+          <PrimaryButton title="Get Started" classname="rounded-[25px]" />
+        </a>
+      </section>
 
       {/* ================= HERO IMAGE SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 ">
@@ -42,12 +40,22 @@ const SAPTraining = () => {
       {/* ================= COLLABORATION SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 py-16 bg-linear-to-r from-blue-50 to-indigo-50 rounded-[40px]">
         <div className="text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8">In Collaboration With</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+            In Collaboration With
+          </h2>
           <div className="flex justify-center items-center gap-8 mb-8">
-            <img src={sapTrainingDetails.collaboration.logo} alt={sapTrainingDetails.collaboration.partner} className="h-16" />
-            <span className="text-2xl font-semibold">{sapTrainingDetails.collaboration.partner}</span>
+            <img
+              src={sapTrainingDetails.collaboration.logo}
+              alt={sapTrainingDetails.collaboration.partner}
+              className="h-16"
+            />
+            <span className="text-2xl font-semibold">
+              {sapTrainingDetails.collaboration.partner}
+            </span>
           </div>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto">{sapTrainingDetails.collaboration.description}</p>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+            {sapTrainingDetails.collaboration.description}
+          </p>
         </div>
       </section>
 
@@ -80,12 +88,13 @@ const SAPTraining = () => {
                 SAP Training Overview
               </h2>
               <div className="text-gray-600 text-lg leading-relaxed space-y-4">
-                {sapTrainingDetails.overview.split('\n\n').map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
+                {sapTrainingDetails.overview
+                  .split("\n\n")
+                  .map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
               </div>
             </div>
-            
           </div>
         </div>
       </section>
@@ -99,7 +108,8 @@ const SAPTraining = () => {
                 What Students Will Actually Learn
               </h2>
               <p className="text-gray-600 text-lg mb-6">
-                This makes the training practical, job-ready, and industry-relevant.
+                This makes the training practical, job-ready, and
+                industry-relevant.
               </p>
               <p className="text-gray-600 text-lg mb-6">
                 By the end of this training, participants will be able to:
@@ -146,7 +156,10 @@ const SAPTraining = () => {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sapTrainingDetails.serviceAreas.map((area, index) => (
-            <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+            >
               <div className="flex items-center gap-3 mb-4">
                 <HiOutlineLightningBolt className="text-[#ff6041] text-2xl" />
                 <h3 className="text-xl font-semibold">{area.title}</h3>
@@ -155,7 +168,10 @@ const SAPTraining = () => {
               <h4 className="font-semibold mb-2">Topics include:</h4>
               <ul className=" mb-4">
                 {area.topics.map((topic, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-gray-600">
+                  <li
+                    key={idx}
+                    className="flex items-center gap-2 text-gray-600"
+                  >
                     <div className="w-1.5 h-1.5 bg-[#ff6041] rounded-full"></div>
                     {topic}
                   </li>
@@ -167,41 +183,40 @@ const SAPTraining = () => {
         </div>
       </section>
 
-    {/* ================= TECH STACK SECTION ================= */}
-<section className="py-20 lg:py-32 bg-black">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <div className="flex items-center gap-2 mb-6 justify-center">
-        <Bookmark
-          title="Technologies"
-          icon={<GrTechnology color="#ff6041" />}
-          className="text-[#ff6041] bg-gray-200 border"
-        />
-      </div>
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-        Tech Stack Covered in Training
-      </h2>
-      <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-        Hands-on experience with the following technologies:
-      </p>
-    </div>
+      {/* ================= TECH STACK SECTION ================= */}
+      <section className="py-20 lg:py-32 bg-black">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex items-center gap-2 mb-6 justify-center">
+              <Bookmark
+                title="Technologies"
+                icon={<GrTechnology color="#ff6041" />}
+                className="text-[#ff6041] bg-gray-200 border"
+              />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Tech Stack Covered in Training
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Hands-on experience with the following technologies:
+            </p>
+          </div>
 
-    <div className="flex flex-wrap gap-4 justify-center">
-      {sapTrainingDetails.techStack.map((tech, index) => (
-        <span
-          key={index}
-          className="px-6 py-3 bg-gray-400 text-white rounded-full font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300"
-        >
-          {tech}
-        </span>
-      ))}
-    </div>
-  </div>
-</section>
-
+          <div className="flex flex-wrap gap-4 justify-center">
+            {sapTrainingDetails.techStack.map((tech, index) => (
+              <span
+                key={index}
+                className="px-6 py-3 bg-gray-400 text-white rounded-full font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ================= SEPARATOR ================= */}
-      <section >
+      <section>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-center">
             <div className="h-px bg-linear-to-r from-transparent via-[#ff6041] to-transparent flex-1"></div>
@@ -224,14 +239,16 @@ const SAPTraining = () => {
               {sapTrainingDetails.practicalApproach.description}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              {sapTrainingDetails.practicalApproach.methodologies.map((method, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 text-sm">✓</span>
+              {sapTrainingDetails.practicalApproach.methodologies.map(
+                (method, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                      <span className="text-green-600 text-sm">✓</span>
+                    </div>
+                    <span className="text-gray-700">{method}</span>
                   </div>
-                  <span className="text-gray-700">{method}</span>
-                </div>
-              ))}
+                ),
+              )}
             </div>
             <p className="text-gray-600 text-lg">
               {sapTrainingDetails.practicalApproach.conclusion}
@@ -275,36 +292,36 @@ const SAPTraining = () => {
               ))}
             </div>
           </div>
-          
         </div>
       </section>
 
       {/* ================= WHY CHOOSE US SECTION (Modern on Solid Orange) ================= */}
-<section className="max-w-7xl mx-auto px-6 py-16 bg-[#ff6041] rounded-[40px]">
-  <div className="text-center text-white mb-12">
-    <h2 className="text-3xl lg:text-4xl font-extrabold">
-      Why Choose Our SAP Training?
-    </h2>
-    <p className="mt-4 text-lg opacity-90">
-      Expert-led, hands-on learning to boost your SAP career.
-    </p>
-  </div>
-
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {sapTrainingDetails.whyChooseUs.map((reason, index) => (
-      <div
-        key={index}
-        className="flex items-start gap-4 p-6 rounded-2xl bg-[#ff6041] border border-white border-opacity-20 transition-transform transform hover:scale-105 cursor-pointer"
-      >
-        <div className="w-12 h-12 shrink-0 rounded-full bg-white flex items-center justify-center text-[#ff6041] font-bold text-xl transition-transform duration-300 group-hover:scale-110">
-          ✓
+      <section className="max-w-7xl mx-auto px-6 py-16 bg-[#ff6041] rounded-[40px]">
+        <div className="text-center text-white mb-12">
+          <h2 className="text-3xl lg:text-4xl font-extrabold">
+            Why Choose Our SAP Training?
+          </h2>
+          <p className="mt-4 text-lg opacity-90">
+            Expert-led, hands-on learning to boost your SAP career.
+          </p>
         </div>
-        <p className="text-white text-lg leading-relaxed hover:underline">{reason}</p>
-      </div>
-    ))}
-  </div>
-</section>
 
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sapTrainingDetails.whyChooseUs.map((reason, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-4 p-6 rounded-2xl bg-[#ff6041] border border-white border-opacity-20 transition-transform transform hover:scale-105 cursor-pointer"
+            >
+              <div className="w-12 h-12 shrink-0 rounded-full bg-white flex items-center justify-center text-[#ff6041] font-bold text-xl transition-transform duration-300 group-hover:scale-110">
+                ✓
+              </div>
+              <p className="text-white text-lg leading-relaxed hover:underline">
+                {reason}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* ================= CALL TO ACTION SECTION ================= */}
       <section className="max-w-5xl mx-auto px-6 text-center">
@@ -312,11 +329,18 @@ const SAPTraining = () => {
           Ready to Master SAP?
         </h2>
         <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
-          Join thousands of professionals who have transformed their careers with our industry-leading SAP training program.
+          Join thousands of professionals who have transformed their careers
+          with our industry-leading SAP training program.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <PrimaryButton title="Start Your SAP Journey"  classname="rounded-[25px]" />
-          <SecondaryButton title="Contact Our Experts" classname="rounded-[25px]" />
+          <PrimaryButton
+            title="Start Your SAP Journey"
+            classname="rounded-[25px]"
+          />
+          <SecondaryButton
+            title="Contact Our Experts"
+            classname="rounded-[25px]"
+          />
         </div>
       </section>
     </div>

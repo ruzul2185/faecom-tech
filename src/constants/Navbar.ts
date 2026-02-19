@@ -11,8 +11,8 @@ export const SERVICES = [
 ];
 
 export const TRAININGS = [
-  { name: "SAP", path: "/trainings/sap" },
-  { name: "AWS", path: "/trainings/aws" },
-  { name: "Zoho Services", path: "/trainings/zoho" },
-  { name: "Salesforce", path: "/trainings/salesforce" },
+  { name: "SAP", path: "/trainings/sap-training" },
+  { name: "AWS", path: "/trainings/aws-training" },
+  { name: "Zoho Services", path: "/trainings/zoho-training" },
+  { name: "Salesforce", path: "/trainings/salesforce-training" },
 ];
