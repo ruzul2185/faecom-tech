@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import PortfolioCard from "./PortfolioCard";
 import { PORTFOLIO_INFO } from "../../constants/HomePage";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { useEffect, useRef } from "react";
+import type { Swiper as SwiperType } from "swiper";
 
 interface PortfolioCarouselProps {
   prevRef: React.RefObject<HTMLDivElement | null>;
@@ -9,6 +11,16 @@ interface PortfolioCarouselProps {
 }
 
 const PortfolioCarousel = ({ prevRef, nextRef }: PortfolioCarouselProps) => {
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  useEffect(() => {
+    if (swiperRef.current && prevRef.current && nextRef.current) {
+      swiperRef.current.navigation.prevEl = prevRef.current;
+      swiperRef.current.navigation.nextEl = nextRef.current;
+      swiperRef.current.navigation.update();
+    }
+  }, [prevRef, nextRef]);
+
   return (
     <div className="portfolioSwiper">
       <Swiper
@@ -24,9 +36,8 @@ const PortfolioCarousel = ({ prevRef, nextRef }: PortfolioCarouselProps) => {
           el: ".custom-pagination-portfolio",
           clickable: true,
         }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
         }}
         onBeforeInit={(swiper) => {
           // Fix for custom navigation refs
