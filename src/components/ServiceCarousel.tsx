@@ -5,6 +5,8 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useEffect, useRef } from "react";
+import type { Swiper as SwiperType } from "swiper";
 
 interface Props {
   prevRef: React.RefObject<HTMLDivElement | null>;
@@ -12,6 +14,16 @@ interface Props {
 }
 
 const ServiceCarousel = ({ prevRef, nextRef }: Props) => {
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  useEffect(() => {
+    if (swiperRef.current && prevRef.current && nextRef.current) {
+      swiperRef.current.navigation.prevEl = prevRef.current;
+      swiperRef.current.navigation.nextEl = nextRef.current;
+      swiperRef.current.navigation.update();
+    }
+  }, [prevRef, nextRef]);
+
   return (
     <div className="relative serviceSwiper">
       <Swiper
@@ -27,9 +39,8 @@ const ServiceCarousel = ({ prevRef, nextRef }: Props) => {
           el: ".custom-pagination-service",
           clickable: true,
         }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
         }}
         onBeforeInit={(swiper) => {
           // Fix for custom navigation refs

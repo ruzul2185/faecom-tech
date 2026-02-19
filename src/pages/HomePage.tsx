@@ -1,7 +1,6 @@
 import AffiliationBanner from "../components/home/AffiliationBanner";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
-import BlogComponent from "../components/home/BlogComponent";
 import KeywordBanner from "../components/home/KeywordBanner";
 import NewsLetterComponent from "../components/home/NewsLetterComponent";
 import PortfolioComponent from "../components/home/PortfolioComponent";
