@@ -3,10 +3,6 @@ import { PrimaryButton, SecondaryButton } from "../components/Button";
 const NotFound = () => {
   return (
     <div className="min-h-screen  text-white flex items-center justify-center relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute w-125 h-125 bg-blue-500/20 blur-[120px] rounded-full -top-25 -left-25" />
-      <div className="absolute w-100 h-100 bg-purple-500/20 blur-[120px] rounded-full -bottom-25 -right-25" />
-
       <div className="text-center z-10 px-6">
         {/* 404 Animated Text */}
         <h1 className="text-8xl md:text-9xl font-extrabold bg-linear-to-r from-gray-500 to-black text-transparent bg-clip-text animate-pulse">

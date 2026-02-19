@@ -39,25 +39,23 @@ const ZohoService = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 items-center my-20">
-     
-          <Bookmark
-            icon={<BiSolidBusiness />}
-            title="Zoho Services"
-            className="bg-white text-[#ff6041] mx-auto w-fit"
-          />
-          <h1 className="text-4xl text-center md:text-6xl font-bold text-gray-900 mt-8 mb-6">
-            {ZOHO_SERVICE_DATA.hero.title}
-          </h1>
-          <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
-            {ZOHO_SERVICE_DATA.hero.subtitle}
-          </p>
-          <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
-            {ZOHO_SERVICE_DATA.hero.description}
-          </p>
-         <a href="/contact" >
-            <PrimaryButton title="Get Started" classname="rounded-[25px]" />
-          </a>
-        
+        <Bookmark
+          icon={<BiSolidBusiness />}
+          title="Zoho Services"
+          className="bg-white text-[#ff6041] mx-auto w-fit"
+        />
+        <h1 className="text-4xl text-center md:text-6xl font-bold text-gray-900 mt-8 mb-6">
+          {ZOHO_SERVICE_DATA.hero.title}
+        </h1>
+        <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
+          {ZOHO_SERVICE_DATA.hero.subtitle}
+        </p>
+        <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
+          {ZOHO_SERVICE_DATA.hero.description}
+        </p>
+        <a href="/contact">
+          <PrimaryButton title="Get Started" classname="rounded-[25px]" />
+        </a>
       </section>
 
       {/* Main Content Section */}
@@ -67,7 +65,7 @@ const ZohoService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
-                src="/zoho-bg.png"
+                src="/zoho-service.png"
                 alt="Zoho Business Automation Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
