@@ -34,7 +34,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
       <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
         <p className="text-sm text-gray-300">{location}</p>
         <h3 className="text-2xl font-bold mt-1">{title}</h3>
-        <p className="text-sm text-indigo-400 mt-1">{service}</p>
+        <p className="text-sm text-[#ff6041] mt-1">{service}</p>
 
         {/* Hidden Content on Hover */}
         <div className="max-h-0 overflow-hidden group-hover:max-h-96 transition-all duration-500">
