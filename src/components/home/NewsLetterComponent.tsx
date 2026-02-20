@@ -10,7 +10,7 @@ const NewsLetterComponent = () => {
           <Bookmark
             title="Subscribe"
             icon={<MdUnsubscribe size={30} color="#ff6041" />}
-            className="bg-white"
+            className="bg-white gap-3"
           />
         </div>
         <div className=" self-center flex flex-col gap-6 md:gap-12 w-full items-center">
