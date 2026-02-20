@@ -82,11 +82,22 @@ const DigitalMarketingService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <img
-                src="/dm-bg.webp"
-                alt="Digital Marketing Services"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500 aspect-video"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568951/digital_marketing_npihno.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568958/digital_marketing_klmu54.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568957/digital_marketing_edv5eq.png"
+                  alt="Digital Marketing Services"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
+                />
+              </picture>
             </div>
 
             {/* Right - Content */}

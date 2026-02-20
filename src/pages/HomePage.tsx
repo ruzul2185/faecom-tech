@@ -10,6 +10,7 @@ import InfiniteCarousel from "../components/InfiniteCarousel";
 import ServiceComponent from "../components/ServiceComponent";
 import StatCard from "../components/StatCard";
 import { STATISTICS_CARD_INFO } from "../constants/HomePage";
+import GalleryComponent from "../components/home/GalleryComponent";
 
 const HomePage = () => {
   return (
@@ -117,6 +118,8 @@ const HomePage = () => {
       {/* <BlogComponent /> */}
 
       <TestimonialComponent />
+
+      <GalleryComponent />
 
       <NewsLetterComponent />
     </div>

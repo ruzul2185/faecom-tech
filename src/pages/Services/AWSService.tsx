@@ -35,11 +35,22 @@ const AWSService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <img
-                src="/aws-service.png"
-                alt="AWS Cloud Services"
-                className="relative z-10 rounded-3xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568377/aws_g5is6d.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568379/aws_qlhjhe.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568379/aws_orzg4c.png"
+                  alt="AWS Cloud Services"
+                  className="relative z-10 rounded-3xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
+                />
+              </picture>
               {/* <div className="absolute bottom-6 left-6 bg-[#ff6041] rounded-2xl p-6 text-white max-w-xs shadow-xl">
                 <div className="flex items-center mb-3">
                   <FaCheckCircle className="w-5 h-5 mr-2" />
@@ -167,6 +178,7 @@ const AWSService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/aws-global.png"
                   alt="AWS Infrastructure"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover"
@@ -198,6 +210,7 @@ const AWSService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/aws-cloud.png"
                   alt="AWS Cloud Campaigns"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover"

@@ -80,6 +80,7 @@ const WebDevService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/web-bg.jpg"
                 alt="Web Development Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"

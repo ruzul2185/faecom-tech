@@ -65,6 +65,7 @@ const SAPService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/sap-service.png"
                 alt="SAP ERP Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
@@ -240,6 +241,7 @@ const SAPService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/sap-erp.png"
                   alt="SAP ERP Solutions"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
@@ -272,6 +274,7 @@ const SAPService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/sap-analytics.jpg"
                   alt="SAP Analytics"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"

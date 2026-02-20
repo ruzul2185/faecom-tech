@@ -33,6 +33,7 @@ const ServiceCard = ({
                 src={svgLink}
                 alt={title}
                 className="size-10 object-contain"
+                loading="lazy"
               />
             ) : Icon ? (
               <Icon className="size-8.5" color="white" />

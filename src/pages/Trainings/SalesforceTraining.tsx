@@ -31,6 +31,7 @@ const SalesforceTraining = () => {
       {/* ================= HERO IMAGE SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 ">
         <img
+          loading="lazy"
           src={salesforceTrainingDetails.images.hero}
           alt="Salesforce CRM Systems"
           className="w-full h-full rounded-[25px] object-cover hover:scale-105 hover:rotate-2 transition-transform duration-300"
@@ -56,6 +57,7 @@ const SalesforceTraining = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
+                loading="lazy"
                 src={salesforceTrainingDetails.images.overview}
                 alt="Salesforce CRM Overview"
                 className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
@@ -107,6 +109,7 @@ const SalesforceTraining = () => {
             </div>
             <div className="relative">
               <img
+                loading="lazy"
                 src={salesforceTrainingDetails.images.learningOutcomes}
                 alt="Learning Outcomes"
                 className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
@@ -236,6 +239,7 @@ const SalesforceTraining = () => {
           </div>
           <div className="relative">
             <img
+              loading="lazy"
               src={salesforceTrainingDetails.images.practicalApproach}
               alt="Practical Training Approach"
               className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
@@ -249,6 +253,7 @@ const SalesforceTraining = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img
+              loading="lazy"
               src={salesforceTrainingDetails.images.benefits}
               alt="Business Benefits"
               className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"

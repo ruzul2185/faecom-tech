@@ -31,6 +31,7 @@ const AWSTraining = () => {
       {/* ================= HERO IMAGE SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 ">
         <img
+          loading="lazy"
           src={awsTrainingDetails.images.hero}
           alt="AWS Cloud Computing"
           className="w-full h-full rounded-[25px] object-cover hover:scale-105 hover:rotate-2 transition-transform duration-300"
@@ -56,6 +57,7 @@ const AWSTraining = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
+                loading="lazy"
                 src={awsTrainingDetails.images.overview}
                 alt="AWS Cloud Overview"
                 className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
@@ -105,6 +107,7 @@ const AWSTraining = () => {
             </div>
             <div className="relative">
               <img
+                loading="lazy"
                 src={awsTrainingDetails.images.learningOutcomes}
                 alt="Learning Outcomes"
                 className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
@@ -234,6 +237,7 @@ const AWSTraining = () => {
           </div>
           <div className="relative">
             <img
+              loading="lazy"
               src={awsTrainingDetails.images.practicalApproach}
               alt="Practical Training Approach"
               className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
@@ -247,6 +251,7 @@ const AWSTraining = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img
+              loading="lazy"
               src={awsTrainingDetails.images.benefits}
               alt="Business Benefits"
               className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"

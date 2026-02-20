@@ -181,6 +181,7 @@ Success in the digital age requires more than just technological adoption – it
 
             <div className="relative group">
               <img
+                loading="lazy"
                 src={currentPost.image}
                 className="rounded-2xl w-full shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
                 alt=""
@@ -244,6 +245,7 @@ Success in the digital age requires more than just technological adoption – it
                       <div className="flex gap-4">
                         <div className="relative">
                           <img
+                            loading="lazy"
                             src={comment.avatar}
                             className="w-12 h-12 rounded-full ring-2 ring-[#ff6041]/20"
                           />

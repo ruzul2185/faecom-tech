@@ -24,6 +24,7 @@ const TestimonialCard = ({
 
         <div className="flex items-center gap-4">
           <img
+            loading="lazy"
             src={image}
             alt={name}
             className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm"

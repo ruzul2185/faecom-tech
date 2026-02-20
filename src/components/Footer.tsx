@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Logo + Description */}
           <div className="flex flex-col gap-6 items-center md:items-start">
             <img
-              src="/logo.png"
-              alt="logo"
+              src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771563480/faecom-tech-logo_nllapz.svg"
+              alt="faecom-tech-logo"
               className="max-w-55 bg-white p-3 rounded-lg"
             />
 

@@ -161,6 +161,7 @@ const Services = () => {
             {/* Left - Image with Overlay */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/bussiness_service.jpg"
                 alt="Professional IT Services"
                 className="rounded-3xl shadow-2xl w-full h-auto object-cover"

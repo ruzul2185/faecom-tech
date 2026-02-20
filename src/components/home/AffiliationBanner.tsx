@@ -23,7 +23,7 @@ interface AffiliationCardProps {
 const AffiliationCard = ({ url }: AffiliationCardProps) => {
   return (
     <div className="bg-white w-50 rounded-lg">
-      <img src={url} alt={url} className="size-25 mx-auto" />
+      <img src={url} alt={url} className="size-25 mx-auto" loading="lazy" />
     </div>
   );
 };

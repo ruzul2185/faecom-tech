@@ -84,6 +84,7 @@ const UnityService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/unity-bg.png"
                 alt="Unity Game Development"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
@@ -226,6 +227,7 @@ const UnityService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="relative">
               <img
+                loading="lazy"
                 src="/unity-particle.avif"
                 alt="Unity 3D Visual Effects"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"

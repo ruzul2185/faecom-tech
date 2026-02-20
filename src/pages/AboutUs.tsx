@@ -74,6 +74,7 @@ const AboutUs = () => {
           <div className="flex flex-col gap-9 lg:w-[35%]">
             <div className="rounded-3xl overflow-hidden shadow-2xl h-75 sm:h-100">
               <img
+                loading="lazy"
                 src="/about-hero.jpg"
                 alt="Team working"
                 className="w-full h-full object-cover"
@@ -136,6 +137,7 @@ const AboutUs = () => {
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#FFC2A7]/20 rounded-full" />
             <div className="relative rounded-3xl overflow-hidden shadow-xl h-75 sm:h-100">
               <img
+                loading="lazy"
                 src="/about-company.jpg"
                 alt="Our company"
                 className="w-full h-full object-cover"
@@ -312,6 +314,7 @@ const AboutUs = () => {
             {/* Main image container with hover effect */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-87.5 sm:h-112.5 group-hover:shadow-[0_20px_60px_-15px_rgba(255,96,65,0.3)] transition-all duration-700">
               <img
+                loading="lazy"
                 src="/ceo.png"
                 alt="Founder"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
