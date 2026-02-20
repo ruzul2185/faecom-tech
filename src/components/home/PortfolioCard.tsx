@@ -22,11 +22,12 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   return (
     <div className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:shadow-2xl">
       {/* Background Image */}
-      <div
-        className="h-105 w-full bg-cover bg-center transform transition-transform duration-700 group-hover:scale-110"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+      <img
+        src={backgroundImage}
+        alt=""
+        loading="lazy"
+        className="h-105 w-full object-cover transform transition-transform duration-700 group-hover:scale-110"
       />
-
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60 group-hover:bg-black/75 transition duration-500" />
 

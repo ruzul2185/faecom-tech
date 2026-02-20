@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 
 const images = [
@@ -36,7 +34,7 @@ const GalleryComponent = () => {
               src={src}
               alt={`Office ${index + 1}`}
               loading="lazy"
-              className="w-full h-[260px] object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-65 object-cover transition-transform duration-500 group-hover:scale-110"
             />
 
             {/* Overlay */}
@@ -52,6 +50,7 @@ const GalleryComponent = () => {
           onClick={() => setSelectedImage(null)}
         >
           <img
+            loading="lazy"
             src={selectedImage}
             alt="Preview"
             className="max-h-[90vh] max-w-[95vw] rounded-xl shadow-2xl"

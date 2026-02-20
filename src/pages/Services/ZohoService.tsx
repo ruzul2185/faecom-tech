@@ -65,6 +65,7 @@ const ZohoService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/zoho-service.png"
                 alt="Zoho Business Automation Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
@@ -242,6 +243,7 @@ const ZohoService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/zoho-business.png"
                   alt="Zoho Business Solutions"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
@@ -273,6 +275,7 @@ const ZohoService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/zoho-analytics.png"
                   alt="Zoho Analytics"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"

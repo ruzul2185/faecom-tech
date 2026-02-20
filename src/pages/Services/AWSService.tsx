@@ -36,6 +36,7 @@ const AWSService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/aws-service.png"
                 alt="AWS Cloud Services"
                 className="relative z-10 rounded-3xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
@@ -167,6 +168,7 @@ const AWSService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/aws-global.png"
                   alt="AWS Infrastructure"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover"
@@ -198,6 +200,7 @@ const AWSService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/aws-cloud.png"
                   alt="AWS Cloud Campaigns"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover"

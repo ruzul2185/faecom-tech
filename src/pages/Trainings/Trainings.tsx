@@ -64,6 +64,7 @@ const Trainings = () => {
           {/* Image Side */}
           <div className="relative  lg:h-auto">
             <img
+              loading="lazy"
               src="/FaecomTechcollab.png"
               alt="SAP Training Collaboration"
               className="w-full h-full object-contain"
@@ -127,6 +128,7 @@ const Trainings = () => {
           {/* ================= SAP ================= */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <img
+              loading="lazy"
               src="/SAP_BIG.svg"
               alt="SAP Training"
               className="rounded-b-[30px] shadow-xl"
@@ -255,6 +257,7 @@ const Trainings = () => {
             </div>
 
             <img
+              loading="lazy"
               src="/tech/aws.svg"
               alt="AWS Cloud Training"
               className="rounded-[30px] shadow-xl order-1 lg:order-2"
@@ -264,6 +267,7 @@ const Trainings = () => {
           {/* ================= ZOHO ================= */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <img
+              loading="lazy"
               src="/ZOHO_logo_2023.svg"
               alt="Zoho Training"
               className="rounded-[30px] shadow-xl"
@@ -352,6 +356,7 @@ const Trainings = () => {
             </div>
 
             <img
+              loading="lazy"
               src="/Salesforce.com_logo.svg"
               alt="Salesforce Training"
               className="rounded-[30px] shadow-xl order-1 lg:order-2"

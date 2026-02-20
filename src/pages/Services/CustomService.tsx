@@ -71,6 +71,7 @@ const CustomService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/custom-bg.webp"
                 alt="Custom Software Development"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
@@ -233,6 +234,7 @@ const CustomService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/custom-solution.png"
                   alt="Enterprise Software Solutions"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover"
@@ -262,6 +264,7 @@ const CustomService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/custom-adv.jfif"
                   alt="Advanced Development Solutions"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"

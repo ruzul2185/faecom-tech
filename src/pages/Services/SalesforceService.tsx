@@ -65,6 +65,7 @@ const SalesforceService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/salesforce-service.png"
                 alt="Salesforce CRM Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
@@ -241,6 +242,7 @@ const SalesforceService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/salesforce-crm.webp"
                   alt="Salesforce CRM Solutions"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
@@ -273,6 +275,7 @@ const SalesforceService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/salesforce-analytics.webp"
                   alt="Salesforce Analytics"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"

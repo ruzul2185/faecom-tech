@@ -14,7 +14,12 @@ const InfiniteCarousel = ({ className = "" }: Props) => {
               key={index}
               className={`w-30 h-30 bg-[#d9d9d9]/13 rounded-[20px] flex items-center justify-center shrink-0 ${className}`}
             >
-              <img src={value} alt={`tech-${index}`} className="size-13" />
+              <img
+                src={value}
+                alt={`tech-${index}`}
+                className="size-13"
+                loading="lazy"
+              />
             </div>
           ),
         )}

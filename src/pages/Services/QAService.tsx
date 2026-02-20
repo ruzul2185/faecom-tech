@@ -71,6 +71,7 @@ const QAService = () => {
             {/* Left - Image */}
             <div className="relative">
               <img
+                loading="lazy"
                 src="/qa-bg.jpg"
                 alt="Quality Assurance Services"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
@@ -234,6 +235,7 @@ const QAService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/qa-testing.jpg"
                   alt="QA Testing Process"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
@@ -263,6 +265,7 @@ const QAService = () => {
             <div className="space-y-8">
               <div className="relative mb-6">
                 <img
+                  loading="lazy"
                   src="/qa-adv.jfif"
                   alt="Advanced QA Solutions"
                   className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
