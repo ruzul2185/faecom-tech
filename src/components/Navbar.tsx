@@ -15,7 +15,11 @@ const Navbar: React.FC = () => {
       <nav className="sticky top-0 z-50">
         <div className="flex justify-between items-center h-18 py-2.5 sm:w-[93%] mx-auto bg-white lg:px-20 rounded-b-[20px] max-w-442.5">
           <a href="/" className="m-3">
-            <img src="/logo.png" className="w-40 sm:w-52" />
+            <img
+              src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771563480/faecom-tech-logo_nllapz.svg"
+              className="w-40 sm:w-52"
+              alt="faecom-tech-logo"
+            />
           </a>
 
           {/* Mobile Icon */}

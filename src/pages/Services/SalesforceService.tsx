@@ -64,12 +64,22 @@ const SalesforceService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <img
-                loading="lazy"
-                src="/salesforce-service.png"
-                alt="Salesforce CRM Services"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771569341/salesforce_v06hj0.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771569345/salesforce_peqfgg.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771569344/salesforce_e9sgib.png"
+                  alt="Salesforce CRM Services"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                />
+              </picture>
               {/* <div className="absolute bottom-6 left-6 bg-[#ff6041] rounded-2xl p-6 text-white max-w-xs shadow-xl">
                 <div className="flex items-center mb-3">
                   <FaCheckCircle className="w-5 h-5 mr-2" />

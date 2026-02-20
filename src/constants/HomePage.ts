@@ -1,21 +1,21 @@
 export const TECH_STACK_INFINITE_BANNER = [
-  "/tech/aws.svg",
-  "/tech/docker.svg",
-  "/tech/ec2.svg",
-  "/tech/firebase.svg",
-  "/tech/flutter.svg",
-  "/tech/kotlin.svg",
-  "/tech/laravel.svg",
-  "/tech/NET.svg",
-  "/tech/node.svg",
-  "/tech/python.svg",
-  "/tech/react.svg",
-  "/tech/s3.svg",
-  "/tech/swift.svg",
-  "/tech/wordpress.svg",
-  "/ZOHO_logo_2023.svg",
-  "/SAP_BIG.svg",
-  "/Salesforce.com_logo.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565365/aws_bypdhj.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565366/docker_y6frjf.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565367/ec2_unmlb4.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565368/firebase_h1unwd.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565369/flutter_afogpj.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565371/kotlin_upmelw.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565373/laravel_gtvrba.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565374/NET_szkjlo.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565375/node_qipxfv.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565376/python_zp8kav.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565378/react_nw5ed9.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565379/s3_hjxbuj.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565380/swift_o9jw0c.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565383/wordpress_xe13vh.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565638/zoho_yupr3h.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565670/sap_hwiczb.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565698/salesforce_jk3hjj.svg",
 ];
 
 export const STATISTICS_CARD_INFO = [
@@ -89,13 +89,13 @@ export const SERVICE_CARD_INFO = [
 ];
 
 export const AFFILIATE_LOGOS = [
-  "/affiliation/android.svg",
-  "/affiliation/coliss.svg",
-  "/affiliation/creative.svg",
-  "/affiliation/de-beers.svg",
-  "/affiliation/spyres.svg",
-  "/affiliation/virustotal.svg",
-  "/affiliation/xataka.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771566055/android_dc7man.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771566296/coliss_lprec5.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771566298/creative_uvwofu.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771566299/de-beers_kastkz.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771566301/spyres_eag7jl.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771566303/virustotal_rvn296.svg",
+  "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771566304/xataka_msvbdk.svg",
 ];
 
 export const TRAINING_INFO = [
