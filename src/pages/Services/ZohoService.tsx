@@ -7,6 +7,7 @@ import {
   FaShieldAlt,
   FaCheckCircle,
   FaChartLine,
+  FaHandshake
 } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { ZOHO_SERVICE_DATA } from "../../constants/ServicesDetails/ZohoConstants";
@@ -147,6 +148,27 @@ const ZohoService = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Partner Section */}
+      <section className="bg-linear-to-br from-gray-50 to-white py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center flex flex-col items-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3 justify-center">
+              <FaHandshake className="text-[#ff6041]" />
+              Our Implementation Partner
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              We proudly partner with Zoho Corp, a leading business automation platform, to deliver world-class Zoho implementations. Their comprehensive suite of tools and global expertise ensure seamless integration and optimal performance for your business processes.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+              Together, we combine Zoho Corp's innovative solutions with our specialized consulting to provide comprehensive, end-to-end business automation services that drive productivity and innovation.
+            </p>
+            <a href="https://www.zohocorp.com/" target="_blank" rel="noopener noreferrer">
+              <PrimaryButton title="Visit Zoho Corp" classname="rounded-[25px]" />
+            </a>
           </div>
         </div>
       </section>

@@ -304,7 +304,7 @@ const Services = () => {
                 />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-                Secure Your Business—Reach Out To Our Team Member.
+                Secure Your Business. Reach Out To Our Team Member.
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
