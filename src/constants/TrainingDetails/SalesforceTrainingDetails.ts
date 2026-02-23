@@ -144,8 +144,12 @@ Learners gain experience with Salesforce modules, admin tools, automation featur
   ],
   images: {
     hero: "/salesforce-bg.webp", // Salesforce CRM image
+    overviewAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873343/Salesforce_Training_Overview_rdvlbj.avif",
+    overviewWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873344/Salesforce_Training_Overview_omsjwi.webp",
     overview:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center", // CRM systems
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873344/Salesforce_Training_Overview_iqz7nn.png", // CRM systems
     learningOutcomes:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center", // Learning and students
     practicalApproach:

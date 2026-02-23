@@ -56,12 +56,22 @@ const ZohoTraining = () => {
         <div className="bg-linear-to-r from-gray-50 to-white rounded-3xl p-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img
-                loading="lazy"
-                src={zohoTrainingDetails.images.overview}
-                alt="Zoho Business Overview"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
-              />
+              <picture>
+                <source
+                  srcSet={zohoTrainingDetails.images.overviewAvif}
+                  type="image/avif"
+                />
+                <source
+                  srcSet={zohoTrainingDetails.images.overviewWebp}
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src={zohoTrainingDetails.images.overview} // fallback (jpg/png)
+                  alt="Zoho Business Overview"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                />
+              </picture>
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-8">

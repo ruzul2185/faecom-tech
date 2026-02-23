@@ -118,8 +118,12 @@ The training is designed to mirror real-world business scenarios, enabling learn
   ],
   images: {
     hero: "/zoho-business.png", // Zoho CRM image
+    overviewAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771872391/Zoho_Training_Overview_xos79n.avif",
+    overviewWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771872392/Zoho_Training_Overview_wqutln.webp",
     overview:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center", // Business automation
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771872393/Zoho_Training_Overview_moxgky.png", // Business automation
     learningOutcomes:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center", // Learning and students
     practicalApproach:
