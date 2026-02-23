@@ -1,13 +1,13 @@
 export const SERVICES = [
-  { name: "SAP", path: "/services/sap" },
+  { name: "Custom Software Development/MVP", path: "/services/custom" },
+  { name: "Game Development & Testing", path: "/services/unity" },
+  { name: "Web Design & Development", path: "/services/web-dev" },
+  { name: "Digital Marketing", path: "/services/digital-marketing" },
+  { name: "QA Services", path: "/services/qa" },
   { name: "AWS", path: "/services/aws" },
   { name: "Zoho Services", path: "/services/zoho" },
   { name: "Salesforce", path: "/services/salesforce" },
-  { name: "Digital Marketing", path: "/services/digital-marketing" },
-  { name: "Web Development", path: "/services/web-dev" },
-  { name: "Game Development", path: "/services/unity" },
-  { name: "Software Development", path: "/services/custom" },
-  { name: "QA Services", path: "/services/qa" },
+  // { name: "SAP", path: "/services/sap" },
 ];
 
 export const TRAININGS = [
