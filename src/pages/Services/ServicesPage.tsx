@@ -160,12 +160,22 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left - Image with Overlay */}
             <div className="relative">
-              <img
-                loading="lazy"
-                src="/bussiness_service.jpg"
-                alt="Professional IT Services"
-                className="rounded-3xl shadow-2xl w-full h-auto object-cover"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771877512/Supercharge_Your_Business_Growth_with_Our_Cutting_Edge_IT_Solutions_izgkr9.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771877513/Supercharge_Your_Business_Growth_with_Our_Cutting_Edge_IT_Solutions_ftjyws.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771877513/Supercharge_Your_Business_Growth_with_Our_Cutting_Edge_IT_Solutions_ynrvao.png" // fallback
+                  alt="Professional IT Services"
+                  className="rounded-3xl shadow-2xl w-full h-auto object-cover"
+                />
+              </picture>
               <div className="absolute bottom-6 left-6 bg-[#ff6041] rounded-2xl p-6 text-white max-w-xs shadow-xl">
                 <div className="flex items-center mb-3">
                   <FaCheckCircle className="w-5 h-5 mr-2" />

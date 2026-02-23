@@ -79,12 +79,22 @@ const WebDevService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <img
-                loading="lazy"
-                src="/web-bg.jpg"
-                alt="Web Development Services"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879315/web_development_iyhdrc.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879318/web_development_sogyq3.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879317/web_development_bs3fhu.png" // fallback
+                  alt="Web Development Services"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
+                />
+              </picture>
             </div>
 
             {/* Right - Content */}

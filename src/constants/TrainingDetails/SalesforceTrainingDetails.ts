@@ -143,18 +143,34 @@ Learners gain experience with Salesforce modules, admin tools, automation featur
     "Career guidance & enterprise-ready skills",
   ],
   images: {
-    hero: "/salesforce-bg.webp", // Salesforce CRM image
+    heroAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771877162/Salesforce_fskdhs.avif",
+    heroWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771877229/Salesforce_kkc33p.webp",
+    hero: "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771877228/Salesforce_rcsace.png", // Salesforce CRM image
     overviewAvif:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873343/Salesforce_Training_Overview_rdvlbj.avif",
     overviewWebp:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873344/Salesforce_Training_Overview_omsjwi.webp",
     overview:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873344/Salesforce_Training_Overview_iqz7nn.png", // CRM systems
+    learningOutcomesAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873957/What_Students_Will_Actually_Learn_bishxx.avif",
+    learningOutcomesWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873958/What_Students_Will_Actually_Learn_d87cxq.webp",
     learningOutcomes:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center", // Learning and students
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873958/What_Students_Will_Actually_Learn_nddoos.png", // Learning and students
+    practicalApproachAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875784/Practical_Training_Approach_ts9qnt.avif",
+    practicalApproachWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875847/Practical_Training_Approach_bqkxzo.webp",
     practicalApproach:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop&crop=center", // Hands-on training
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875787/Practical_Training_Approach_xkwnsj.png", // Hands-on training
+    benefitsAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875165/Business_Benefits_of_Salesforce_Training_op6m4i.avif",
+    benefitsWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875166/Business_Benefits_of_Salesforce_Training_xkvlfq.webp",
     benefits:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center", // Business benefits
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875166/Business_Benefits_of_Salesforce_Training_c09m9p.png", // Business benefits
   },
 };

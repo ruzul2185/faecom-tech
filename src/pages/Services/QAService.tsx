@@ -70,12 +70,22 @@ const QAService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <img
-                loading="lazy"
-                src="/qa-bg.jpg"
-                alt="Quality Assurance Services"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880906/Comprehensive_Quality_Assurance_for_Software_Excellence_oubiv5.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880910/Comprehensive_Quality_Assurance_for_Software_Excellence_hc2gm5.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880908/Comprehensive_Quality_Assurance_for_Software_Excellence_cgfwvz.png" // fallback
+                  alt="Quality Assurance Services"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
+                />
+              </picture>
             </div>
 
             {/* Right - Content */}
@@ -234,12 +244,22 @@ const QAService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/qa-testing.jpg"
-                  alt="QA Testing Process"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882086/Specialized_Testing_QA_rex62j.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882092/Specialized_Testing_QA_nhzjv8.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882090/Specialized_Testing_QA_kythuo.png" // fallback
+                    alt="QA Testing Process"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Testing
                 </div>
@@ -264,12 +284,22 @@ const QAService = () => {
 
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/qa-adv.jfif"
-                  alt="Advanced QA Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881954/Advanced_QA_Solutions_QA_kyveok.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881959/Advanced_QA_Solutions_QA_bjfihh.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881958/Advanced_QA_Solutions_QA_rnjret.png" // fallback
+                    alt="Advanced QA Solutions"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Advanced QA
                 </div>

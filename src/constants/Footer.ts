@@ -1,16 +1,17 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaInstagram } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export const SOCIAL_LINKS = [
   {
-    Icon: FaGithub,
-    link: "https://github.com/ruzul",
+    Icon: FaInstagram,
+    link: "https://www.instagram.com/faecomtech?igsh=a3Vsb3B4anVrdG91",
   },
   {
     Icon: FaLinkedin,
-    link: "https://linkedin.com/in/ruzul",
+    link: "https://www.linkedin.com/company/faecomtech/",
   },
   {
-    Icon: FaTwitter,
-    link: "https://twitter.com/ruzul",
+    Icon: FaFacebookSquare,
+    link: "https://www.facebook.com/people/FaecomTech-Solutions/61573773928183/",
   },
 ];
