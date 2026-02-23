@@ -84,51 +84,6 @@ export const PARTNER_SERVICES = [
 
 export const CORE_SERVICES = [
   {
-    title: "Digital Marketing Services",
-    description:
-      "Comprehensive digital marketing solutions to boost your online presence and drive business growth through targeted campaigns and data-driven strategies.",
-    icon: FaChartLine,
-    features: [
-      "SEO Optimization",
-      "Social Media Marketing",
-      "PPC Campaigns",
-      "Content Marketing",
-      "Email Marketing",
-      "Analytics & Reporting",
-    ],
-    link: "/services/digital-marketing",
-  },
-  {
-    title: "Web Development",
-    description:
-      "Custom web development services creating responsive, fast, and secure websites tailored to your business needs using modern technologies.",
-    icon: FaCode,
-    features: [
-      "Frontend Development",
-      "Backend Development",
-      "Full-Stack Solutions",
-      "E-commerce Platforms",
-      "Progressive Web Apps",
-      "API Development",
-    ],
-    link: "/services/web-dev",
-  },
-  {
-    title: "Mobile & Web Game Development (Unity)",
-    description:
-      "Engaging and immersive game development for mobile and web platforms using Unity engine with stunning graphics and smooth gameplay.",
-    icon: FaGamepad,
-    features: [
-      "2D & 3D Game Development",
-      "Unity Programming",
-      "Game UI/UX Design",
-      "Multiplayer Integration",
-      "Game Optimization",
-      "Cross-Platform Deployment",
-    ],
-    link: "/services/unity",
-  },
-  {
     title: "Custom Software Development & MVP Development",
     description:
       "Tailored software solutions and rapid MVP development to bring your innovative ideas to life with scalable and robust architecture.",
@@ -158,6 +113,52 @@ export const CORE_SERVICES = [
     ],
     link: "/services/qa",
   },
+  {
+    title: "Mobile & Web Game Development (Unity)",
+    description:
+      "Engaging and immersive game development for mobile and web platforms using Unity engine with stunning graphics and smooth gameplay.",
+    icon: FaGamepad,
+    features: [
+      "2D & 3D Game Development",
+      "Unity Programming",
+      "Game UI/UX Design",
+      "Multiplayer Integration",
+      "Game Optimization",
+      "Cross-Platform Deployment",
+    ],
+    link: "/services/unity",
+  },
+  {
+    title: "Digital Marketing Services",
+    description:
+      "Comprehensive digital marketing solutions to boost your online presence and drive business growth through targeted campaigns and data-driven strategies.",
+    icon: FaChartLine,
+    features: [
+      "SEO Optimization",
+      "Social Media Marketing",
+      "PPC Campaigns",
+      "Content Marketing",
+      "Email Marketing",
+      "Analytics & Reporting",
+    ],
+    link: "/services/digital-marketing",
+  },
+  {
+    title: "Web Development",
+    description:
+      "Custom web development services creating responsive, fast, and secure websites tailored to your business needs using modern technologies.",
+    icon: FaCode,
+    features: [
+      "Frontend Development",
+      "Backend Development",
+      "Full-Stack Solutions",
+      "E-commerce Platforms",
+      "Progressive Web Apps",
+      "API Development",
+    ],
+    link: "/services/web-dev",
+  }
+  
 ];
 
 export const KEY_FACILITIES = [

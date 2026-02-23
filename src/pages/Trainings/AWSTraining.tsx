@@ -38,6 +38,30 @@ const AWSTraining = () => {
         />
       </section>
 
+      {/* ================= AUTHORIZED TRAINING PARTNER SECTION ================= */}
+      <section className="bg-[#ff6041] py-16">
+        <div className="max-w-7xl mx-auto px-6 text-center flex flex-col items-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Authorized Training Partner
+          </h2>
+          <p className="text-xl text-white max-w-3xl mx-auto mb-8">
+            Our company is an authorized training partner of{" "}
+            <a
+              href="https://redingtongroup.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-semibold hover:text-gray-200 transition-colors"
+            >
+              Redington Group
+            </a>
+            , ensuring you receive industry-recognized certifications and expert-led training.
+          </p>
+          <a href="https://redingtongroup.com/" target="_blank" rel="noopener noreferrer">
+            <PrimaryButton title="Visit Redington Group" classname="rounded-[25px] border border-black text-black hover:bg-gray-100" />
+          </a>
+        </div>
+      </section>
+
       {/* ================= SEPARATOR ================= */}
       <section className="py-2">
         <div className="max-w-7xl mx-auto px-6">
