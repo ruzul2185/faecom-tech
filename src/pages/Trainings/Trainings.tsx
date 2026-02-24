@@ -20,7 +20,7 @@ const Trainings = () => {
       {/* ================= HERO SECTION ================= */}
       <section className="max-w-5xl mx-auto text-center flex flex-col gap-6.75 justify-center items-center">
         <Bookmark
-          iconSrc="Sparkles.svg"
+          iconSrc="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953301/Sparkles_dlnthx.svg"
           title=" Professional IT Training & Services"
           className="bg-white gap-3"
         />
@@ -63,12 +63,22 @@ const Trainings = () => {
         <div className="bg-white rounded-[40px] shadow-xl overflow-hidden grid lg:grid-cols-2">
           {/* Image Side */}
           <div className="relative  lg:h-auto">
-            <img
-              loading="lazy"
-              src="/FaecomTechcollab.png"
-              alt="SAP Training Collaboration"
-              className="w-full h-full object-contain"
-            />
+            <picture className="w-full h-full">
+              <source
+                srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771955380/FaecomTechcollab_l9s4qm.avif"
+                type="image/avif"
+              />
+              <source
+                srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771955381/FaecomTechcollab_jnqrpk.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771955383/FaecomTechcollab_bwbrsi.png"
+                alt="SAP Training Collaboration"
+                className="w-full h-full object-contain"
+              />
+            </picture>
             <div className="absolute inset-0 bg-linear-to-r from-black/10 to-transparent"></div>
             <div className="absolute bottom-10 left-10 text-white">
               <h2 className="text-3xl sm:text-4xl font-bold">
@@ -129,7 +139,7 @@ const Trainings = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <img
               loading="lazy"
-              src="/SAP_BIG.svg"
+              src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771955621/SAP_BIG_wi70od.svg"
               alt="SAP Training"
               className="rounded-b-[30px] shadow-xl"
             />
@@ -258,7 +268,7 @@ const Trainings = () => {
 
             <img
               loading="lazy"
-              src="/tech/aws.svg"
+              src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771565365/aws_bypdhj.svg"
               alt="AWS Cloud Training"
               className="rounded-[30px] shadow-xl order-1 lg:order-2"
             />
@@ -268,7 +278,7 @@ const Trainings = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <img
               loading="lazy"
-              src="/ZOHO_logo_2023.svg"
+              src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771955703/ZOHO_logo_2023_duqnss.svg"
               alt="Zoho Training"
               className="rounded-[30px] shadow-xl"
             />
@@ -357,7 +367,7 @@ const Trainings = () => {
 
             <img
               loading="lazy"
-              src="/Salesforce.com_logo.svg"
+              src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771955742/Salesforce.com_logo_detryl.svg"
               alt="Salesforce Training"
               className="rounded-[30px] shadow-xl order-1 lg:order-2"
             />

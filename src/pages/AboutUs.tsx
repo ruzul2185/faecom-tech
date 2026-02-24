@@ -75,12 +75,12 @@ const AboutUs = () => {
             <div className="rounded-3xl overflow-hidden shadow-2xl h-75 sm:h-100">
               <img
                 loading="lazy"
-                src="/about-hero.jpg"
+                src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956080/photo-1522071820081-009f0129c71c_fmsdbf.avif"
                 alt="Team working"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
-                    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60";
+                    "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956080/photo-1522071820081-009f0129c71c_fmsdbf.avif";
                 }}
               />
             </div>
@@ -129,8 +129,24 @@ const AboutUs = () => {
       </section>
 
       {/* ================= ABOUT COMPANY SECTION ================= */}
-      <section className="bg mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
+      <section className="relative mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
         <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9 lg:flex-row lg:justify-around lg:items-center">
+          {/* Background image with AVIF/WebP/PNG fallback */}
+          <picture className="absolute inset-0 -z-10 w-full h-full">
+            <source
+              srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952313/hero-bg_jykw27.avif"
+              type="image/avif"
+            />
+            <source
+              srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952315/hero-bg_s8ctrj.webp"
+              type="image/webp"
+            />
+            <img
+              src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952314/hero-bg_ktb0ge.png"
+              alt="Hero Background"
+              className="w-full h-full object-cover rounded-[20px]"
+            />
+          </picture>
           {/* Left - Image with decorative elements */}
           <div className="flex flex-col gap-9 lg:w-[45%] relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#ff6041]/10 rounded-full" />
@@ -138,12 +154,12 @@ const AboutUs = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-xl h-75 sm:h-100">
               <img
                 loading="lazy"
-                src="/about-company.jpg"
+                src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956222/photo-1600880292203-757bb62b4baf_zhuz6b.avif"
                 alt="Our company"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
-                    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop&q=60";
+                    "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956222/photo-1600880292203-757bb62b4baf_zhuz6b.avif";
                 }}
               />
             </div>
@@ -313,16 +329,26 @@ const AboutUs = () => {
 
             {/* Main image container with hover effect */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-87.5 sm:h-112.5 group-hover:shadow-[0_20px_60px_-15px_rgba(255,96,65,0.3)] transition-all duration-700">
-              <img
-                loading="lazy"
-                src="/ceo.png"
-                alt="Founder"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format&fit=crop&q=60";
-                }}
-              />
+              <picture className="w-full h-full group">
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956383/ceo_wrs43f.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956386/ceo_edre9r.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956384/ceo_ppyi7h.png"
+                  alt="Founder"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src =
+                      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956288/photo-1560250097-0b93528c311a_gvxb3p.avif";
+                  }}
+                />
+              </picture>
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-linear-to-t from-[#ff6041]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -450,8 +476,24 @@ const AboutUs = () => {
       </section>
 
       {/* ================= FAQ SECTION ================= */}
-      <section className="bg mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
+      <section className="relative mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
         <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9">
+          {/* Background image using <picture> for AVIF/WebP/PNG */}
+          <picture className="absolute inset-0 -z-10 w-full h-full">
+            <source
+              srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951641/bg_nqb1al.avif"
+              type="image/avif"
+            />
+            <source
+              srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951642/bg_j4qvnl.webp"
+              type="image/webp"
+            />
+            <img
+              src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952156/bg_d1vgqz.png"
+              alt="Background"
+              className="w-full h-full object-cover"
+            />
+          </picture>
           <div className="text-center">
             <Bookmark
               icon={

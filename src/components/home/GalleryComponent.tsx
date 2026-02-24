@@ -67,6 +67,7 @@ const GalleryComponent = ({ galleryConfig }: GalleryComponentProps) => {
       bgColor: "transparent",
       carouselOffset: 10,
       navigation: "always",
+      showTitles: true,
       thumbnailProps: {
         mediaSymbolSize: 42,
         spacing: 20,

@@ -17,7 +17,6 @@ import { SiSap, SiZoho } from "react-icons/si";
 export const PARTNER_SERVICES = [
   {
     name: "SAP",
-    logo: "/tech/sap.svg", // You'll need to add this logo
     services: [
       "S/4HANA - ERP Suite",
       "FICO - Finance & Control",
@@ -34,7 +33,6 @@ export const PARTNER_SERVICES = [
   },
   {
     name: "AWS",
-    logo: "/tech/aws.svg",
     services: [
       "Deployment",
       "Migration",
@@ -53,7 +51,6 @@ export const PARTNER_SERVICES = [
   },
   {
     name: "Zoho",
-    logo: "/tech/zoho.svg", // You'll need to add this logo
     services: [
       "Zoho CRM & Custom Dashboards",
       "Zoho One Setup",
@@ -66,7 +63,6 @@ export const PARTNER_SERVICES = [
   },
   {
     name: "Salesforce",
-    logo: "/tech/salesforce.svg", // You'll need to add this logo
     services: [
       "Data Cloud & Analytics",
       "Einstein AI Solutions",
@@ -157,8 +153,7 @@ export const CORE_SERVICES = [
       "API Development",
     ],
     link: "/services/web-dev",
-  }
-  
+  },
 ];
 
 export const KEY_FACILITIES = [

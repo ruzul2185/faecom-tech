@@ -40,7 +40,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         />
       </picture>
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/75 transition duration-500" />
+      <div className="absolute inset-0 bg-black/25 group-hover:bg-black/75 transition duration-500" />
 
       {/* Content */}
       <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">

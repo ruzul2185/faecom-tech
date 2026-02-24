@@ -49,7 +49,7 @@ const Blogs = () => {
       date: "20 Feb, 2026",
       category: "Corporate",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+        "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771955937/photo-1460925895917-afdab827c52f_lrtqht.jpg",
       content: `In today's rapidly evolving digital landscape, businesses face unprecedented challenges and opportunities. The key to sustainable growth lies in embracing innovative solutions.
 
 At FaecomTech, we understand that true business transformation goes beyond implementing new technologies. It requires a holistic approach.

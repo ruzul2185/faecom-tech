@@ -4,9 +4,26 @@ import { SOCIAL_LINKS } from "../constants/Footer";
 const Footer = () => {
   return (
     <footer className="mt-24">
-      <div className="bg max-w-442.5 mx-auto rounded-t-[25px] py-16 px-6 md:px-16 text-white w-[93%]">
+      <div className="relative w-[93%] max-w-442.5 mx-auto rounded-t-[25px] py-16 px-6 md:px-16 text-white overflow-hidden">
+        {/* Background image with AVIF/WebP/PNG fallback */}
+        <picture className="absolute inset-0 -z-10 w-full h-full">
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952313/hero-bg_jykw27.avif"
+            type="image/avif"
+          />
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952315/hero-bg_s8ctrj.webp"
+            type="image/webp"
+          />
+          <img
+            src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952314/hero-bg_ktb0ge.png"
+            alt="Footer Background"
+            className="w-full h-full object-cover rounded-t-[25px]"
+          />
+        </picture>
+
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left relative z-10">
           {/* Logo + Description */}
           <div className="flex flex-col gap-6 items-center md:items-start">
             <img
@@ -37,10 +54,8 @@ const Footer = () => {
             ]}
           />
 
-          {/* Affiliation */}
           {/* Affiliation & Legal */}
-          <div className="flex flex-col">
-            {/* Affiliation */}
+          <div className="flex flex-col gap-6">
             <FooterColumn
               title="Affiliation"
               links={[
@@ -51,20 +66,17 @@ const Footer = () => {
               ]}
             />
 
-            {/* Legal Highlighted Section */}
-            <div className="flex flex-col gap-4">
-              <ul className="flex flex-col gap-3 ">
-                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 px-0! text-[20px]">
-                  FAQ
-                </li>
-                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 px-0! text-[20px]">
-                  Terms & Conditions
-                </li>
-                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 px-0! text-[20px]">
-                  Privacy Policy
-                </li>
-              </ul>
-            </div>
+            <ul className="flex flex-col gap-3">
+              <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px]">
+                FAQ
+              </li>
+              <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px]">
+                Terms & Conditions
+              </li>
+              <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px]">
+                Privacy Policy
+              </li>
+            </ul>
           </div>
 
           {/* Contact */}
@@ -96,7 +108,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-600 mt-12 pt-6 text-left text-sm text-gray-100">
+        <div className="border-t border-gray-600 mt-12 pt-6 text-left text-sm text-gray-100 relative z-10">
           © {new Date().getFullYear()} Faecom Tech. All rights reserved.
         </div>
       </div>

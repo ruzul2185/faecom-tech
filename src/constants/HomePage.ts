@@ -42,49 +42,57 @@ export const SERVICE_CARD_INFO = [
     title: "SAP Solutions",
     desc: "Empower your enterprise with integrated SAP solutions that streamline operations, improve efficiency, and drive data-driven decision-making across finance, supply chain, HR, and more.",
     link: "/services/sap",
-    svgLink: "/sap-w.svg",
+    svgLink:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953528/sap-w_ybbe08.svg",
   },
   {
     title: "Amazon Web Services",
     desc: "Leverage the power of AWS to build secure, scalable, and high-performance cloud infrastructure. From deployment to DevOps automation, we design cost-efficient cloud architectures tailored to your business needs.",
     link: "/services/aws",
-    svgLink: "/aws-w.svg",
+    svgLink:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953526/aws-w_bbkz8d.svg",
   },
   {
     title: "Salesforce CRM Solutions",
     desc: "We deliver powerful Salesforce CRM solutions to streamline your sales, automate workflows, and enhance customer engagement. From implementation to customization and integration, we help businesses unlock the full potential of Salesforce.",
     link: "/services/salesforce",
-    svgLink: "/salesforce-w.svg",
+    svgLink:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953527/salesforce-w_gvzpdo.svg",
   },
   {
     title: "Zoho Business Solutions",
     desc: "An all-in-one cloud platform offering smart tools for CRM, accounting, HR, email, and project management helping businesses automate workflows and boost productivity.",
     link: "/services/zoho",
-    svgLink: "/zoho.png",
+    svgLink:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953529/zoho_fdk3gs.png",
   },
   {
     title: "Unity Game Development",
     desc: "A robust real-time rendering and game development engine supporting C# scripting, advanced physics, animation systems, and multi-platform publishing for mobile, PC, console, AR, and VR applications.",
     link: "/services/unity",
-    svgLink: "/unity-w.svg",
+    svgLink:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953528/unity-w_xjkl0f.svg",
   },
   {
     title: "Digital Marketing",
     desc: "Comprehensive digital marketing strategies designed to increase brand visibility, generate qualified leads, and drive measurable growth. From SEO and paid advertising to social media and content marketing, we help businesses build a strong and scalable online presence.",
     link: "/services/digital-marketing",
-    svgLink: "/dm.svg",
+    svgLink:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953527/dm_vireq3.svg",
   },
   {
     title: "Web Development",
     desc: "We build secure, scalable, and high-performance websites tailored to your business goals. From responsive corporate websites to complex web applications, our solutions combine clean architecture, modern frameworks, and seamless user experience.",
     link: "/services/web-dev",
-    svgLink: "/web.svg",
+    svgLink:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953529/web_mfaoer.svg",
   },
   {
     title: "Software Development",
     desc: "We design and develop secure, scalable, and high-performance software tailored to your business needs. From enterprise systems to automation tools, our solutions streamline operations and drive digital transformation.",
     link: "/services/custom",
-    svgLink: "/software.svg",
+    svgLink:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953528/software_vdkgfr.svg",
   },
 ];
 
@@ -111,17 +119,23 @@ export const TRAINING_INFO = [
   },
   {
     title: "Amazon Web Services (AWS)",
-    backgroundImage: "/aws-bg.png",
-    backgroundImageWebp: "",
-    backgroundImageAvif: "",
+    backgroundImage:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950938/aws_training_pyhaex.png",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950938/aws_training_xhqg8y.webp",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950938/aws_training_tfvjga.avif",
     link: "/services/aws",
   },
   {
     title: "Zoho",
-    backgroundImage: "/zoho-bg.jpg",
+    backgroundImage:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950856/zoho_training_wgksff.png",
     link: "/services/zoho",
-    backgroundImageWebp: "",
-    backgroundImageAvif: "",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950855/zoho_training_lr37ml.webp",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950854/zoho_training_f7t4pb.avif",
   },
   {
     title: "Salesforce",
@@ -216,11 +230,11 @@ export const PORTFOLIO_INFO = [
     result:
       "Delivered a scalable platform that boosted learner engagement, streamlined course management, and enabled secure payments.",
     backgroundImageAvif:
-      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945622/priority_herbals_rrh0zz.avif",
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951230/Emphasis_Engineering_vlbl1t.avif",
     backgroundImageWebp:
-      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945623/priority_herbals_b8bypf.webp",
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951231/Emphasis_Engineering_mbrqii.webp",
     backgroundImage:
-      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945623/priority_herbals_cfim5w.png",
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951231/Emphasis_Engineering_wqbkle.png",
     link: "https://emphasisengineering.com/",
   },
 ];
@@ -253,28 +267,32 @@ export const REVIEW_INFO = [
   {
     name: "Aarav Sharma",
     role: "Frontend Developer",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771957477/profile_default_aaaodp.avif",
     review:
       "Working with this team was an incredible experience from start to finish. Their technical expertise, attention to detail, and deep understanding of modern frontend architecture truly exceeded our expectations. They not only delivered clean, maintainable code but also ensured optimal performance and scalability. Communication was consistent throughout the project, and they were always proactive in suggesting improvements that added real value.",
   },
   {
     name: "Priya Mehta",
     role: "Product Manager",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771957477/profile_default_aaaodp.avif",
     review:
       "They delivered our project on time with exceptional quality and professionalism. From initial planning to final deployment, every milestone was handled with clarity and precision. The UI was intuitive, visually appealing, and aligned perfectly with our product vision. Their performance optimization efforts significantly improved load times and user engagement metrics. I highly recommend them to any team looking for reliable and skilled developers.",
   },
   {
     name: "Rohan Verma",
     role: "CEO",
-    image: "https://randomuser.me/api/portraits/men/65.jpg",
+    image:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771957477/profile_default_aaaodp.avif",
     review:
       "Professional, reliable, and highly skilled — this team transformed our platform. They conducted a thorough technical audit, identified performance bottlenecks, and implemented scalable solutions that dramatically improved speed and stability. Beyond the technical execution, they demonstrated strong strategic thinking and business awareness. The collaboration felt like working with an in-house team rather than an external partner.",
   },
   {
     name: "Sneha Kulkarni",
     role: "UI/UX Designer",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    image:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771957477/profile_default_aaaodp.avif",
     review:
       "Their design-to-development workflow is seamless and highly efficient. Every design detail was translated into pixel-perfect implementation without compromising responsiveness or performance. Communication was smooth, feedback cycles were quick, and they were always open to creative discussions. The final product not only looked stunning but also provided an exceptional user experience across devices.",
   },
