@@ -41,14 +41,6 @@ const Services = () => {
 
   useGSAP(
     () => {
-      // Set initial states for animation elements
-      gsap.set(
-        ".partner-bookmark, .partner-heading, .partner-card, .core-heading, .core-subtext, .core-service-card, .features-left, .features-right, .features-bookmark, .features-heading, .features-item, .facilities-heading, .facilities-subtext, .facility-card, .contact-bookmark, .contact-heading, .contact-left, .contact-form",
-        {
-          opacity: 0,
-        },
-      );
-
       // ================= HERO TIMELINE =================
       const tl = gsap.timeline();
 
@@ -80,316 +72,231 @@ const Services = () => {
         );
 
       // ================= PARTNER SERVICES SECTION =================
-      gsap.fromTo(
-        ".partner-bookmark",
-        { opacity: 0, y: -30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: partnerRef.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".partner-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".partner-heading",
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: partnerRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".partner-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".partner-card",
-        { opacity: 0, y: 60 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.2,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: partnerRef.current,
-            start: "top 75%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".partner-card", {
+        opacity: 0,
+        y: 60,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
       // ================= CORE SERVICES SECTION =================
-      gsap.fromTo(
-        ".core-heading",
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: coreRef.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".core-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".core-subtext",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: coreRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".core-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".core-service-card",
-        { opacity: 0, scale: 0.9, y: 60 },
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          stagger: 0.15,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: coreRef.current,
-            start: "top 70%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".core-service-card", {
+        opacity: 0,
+        scale: 0.9,
+        y: 60,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
       // ================= FEATURES SECTION =================
-      gsap.fromTo(
-        ".features-left",
-        { opacity: 0, x: -100 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: featuresRef.current,
-            start: "top 75%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".features-left", {
+        opacity: 0,
+        x: -100,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".features-right",
-        { opacity: 0, x: 100 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: featuresRef.current,
-            start: "top 75%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".features-right", {
+        opacity: 0,
+        x: 100,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".features-bookmark",
-        { opacity: 0, y: -30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: featuresRef.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".features-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".features-heading",
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: featuresRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".features-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".features-item",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.1,
-          duration: 0.6,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: featuresRef.current,
-            start: "top 70%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".features-item", {
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
       // ================= FACILITIES SECTION =================
-      gsap.fromTo(
-        ".facilities-heading",
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: facilitiesRef.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".facilities-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: facilitiesRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".facilities-subtext",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: facilitiesRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".facilities-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: facilitiesRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".facility-card",
-        { opacity: 0, scale: 0.8, y: 60 },
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          stagger: 0.1,
-          duration: 0.6,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: facilitiesRef.current,
-            start: "top 75%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".facility-card", {
+        opacity: 0,
+        scale: 0.8,
+        y: 60,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: facilitiesRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
       // ================= CONTACT SECTION =================
-      gsap.fromTo(
-        ".contact-bookmark",
-        { opacity: 0, y: -30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: contactRef.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".contact-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".contact-heading",
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: contactRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".contact-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".contact-left",
-        { opacity: 0, x: -80 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: contactRef.current,
-            start: "top 75%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".contact-left", {
+        opacity: 0,
+        x: -80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
         },
-      );
+      });
 
-      gsap.fromTo(
-        ".contact-form",
-        { opacity: 0, x: 80 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: contactRef.current,
-            start: "top 75%",
-            toggleActions: "play none none none",
-          },
+      gsap.from(".contact-form", {
+        opacity: 0,
+        x: 80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
         },
-      );
-
-      // Fallback: Ensure content is visible after 3 seconds even if animations fail
-      setTimeout(() => {
-        gsap.set(
-          ".partner-bookmark, .partner-heading, .partner-card, .core-heading, .core-subtext, .core-service-card, .features-left, .features-right, .features-bookmark, .features-heading, .features-item, .facilities-heading, .facilities-subtext, .facility-card, .contact-bookmark, .contact-heading, .contact-left, .contact-form",
-          {
-            opacity: 1,
-            y: 0,
-            x: 0,
-            scale: 1,
-          },
-        );
-      }, 3000);
+      });
     },
     { scope: container },
   );
