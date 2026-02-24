@@ -5,8 +5,20 @@ import { FaLocationDot, FaPhone, FaClock, FaPaperPlane } from "react-icons/fa6";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const infoCardsRef = useRef<HTMLDivElement>(null);
+  const worldMapRef = useRef<HTMLDivElement>(null);
+  const contactFormRef = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>(null);
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -18,6 +30,189 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+
+  useGSAP(
+    () => {
+      // ================= HERO TIMELINE =================
+      const tl = gsap.timeline();
+
+      tl.from(".hero-bookmark", {
+        y: -40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      })
+        .from(
+          ".hero-title",
+          {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.4",
+        )
+        .from(
+          ".hero-description",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        );
+
+      // ================= INFO CARDS SECTION =================
+      // Test animation without scroll trigger first
+
+      gsap.to(".info-card", {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        stagger: 0.1,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.5,
+      });
+      // ================= WORLD MAP SECTION =================
+      gsap.from(".world-map-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: worldMapRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".world-map-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: worldMapRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".world-map-container", {
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: worldMapRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".location-card", {
+        opacity: 0,
+        y: 30,
+        // stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: worldMapRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= CONTACT FORM SECTION =================
+      gsap.from(".contact-map-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactFormRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-map-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactFormRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-map-iframe", {
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactFormRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-form-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactFormRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-form-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactFormRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".form-field", {
+        opacity: 0,
+        y: 30,
+        // stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactFormRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".form-button", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactFormRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+    },
+    { scope: container },
+  );
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -100,22 +295,27 @@ const Contact = () => {
   ];
 
   return (
-    <div className="flex flex-col items-stretch gap-30 mt-30">
+    <div ref={container} className="flex flex-col items-stretch gap-30 mt-30">
       {/* ================= HERO SECTION ================= */}
-      <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6 justify-center items-center">
-        <Bookmark
-          icon={
-            <FaPaperPlane className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
-          }
-          title="Let's Connect"
-          className="bg-white gap-3"
-        />
-        <div className="text-4xl sm:text-[64px] font-medium">
+      <section
+        ref={heroRef}
+        className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6 justify-center items-center"
+      >
+        <div className="hero-bookmark">
+          <Bookmark
+            icon={
+              <FaPaperPlane className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
+            }
+            title="Let's Connect"
+            className="bg-white gap-3"
+          />
+        </div>
+        <div className="hero-title text-4xl sm:text-[64px] font-medium">
           <p>
             Start Your <span className="text-[#ff6041]">Tech Journey</span>
           </p>
         </div>
-        <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-xl">
+        <div className="hero-description text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-xl">
           <p>
             We would love to hear from you. Reach out to us for any inquiries or
             collaboration opportunities.
@@ -124,12 +324,12 @@ const Contact = () => {
       </section>
 
       {/* ================= INFO CARDS SECTION ================= */}
-      <section className="mx-auto w-[93%] max-w-442.5">
+      <section ref={infoCardsRef} className="mx-auto w-[93%] max-w-442.5">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {infoCards.map((card, index) => (
             <div
               key={index}
-              className={`group/card relative overflow-hidden rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-500 ${
+              className={`info-card opacity-0 group/card relative overflow-hidden rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-500 ${
                 card.isOrange
                   ? "bg-[#ff6041] text-white"
                   : "bg-white text-gray-800"
@@ -183,17 +383,19 @@ const Contact = () => {
       </section>
 
       {/* ================= WORLD MAP SECTION ================= */}
-      <section className="mx-auto w-[93%] max-w-442.5">
+      <section ref={worldMapRef} className="mx-auto w-[93%] max-w-442.5">
         <div className="bg-[#EFEADF] rounded-[50px] sm:p-12 lg:py-16 lg:px-0">
           <div className="text-center mb-8 sm:mb-12">
-            <Bookmark
-              icon={
-                <FaLocationDot className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041] gap-3" />
-              }
-              title="Global Presence"
-              className="bg-white mx-auto w-fit gap-3"
-            />
-            <div className="text-[30px] font-medium sm:text-5xl mt-6">
+            <div className="world-map-bookmark">
+              <Bookmark
+                icon={
+                  <FaLocationDot className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041] gap-3" />
+                }
+                title="Global Presence"
+                className="bg-white mx-auto w-fit gap-3"
+              />
+            </div>
+            <div className="world-map-heading text-[30px] font-medium sm:text-5xl mt-6">
               <p>
                 Our{" "}
                 <span className="text-[#ff6041]">Learning & Technology</span>{" "}
@@ -203,7 +405,7 @@ const Contact = () => {
           </div>
 
           {/* Leaflet Map Container */}
-          <div className="relative bg-white rounded-3xl p-6 sm:p-8 shadow-lg">
+          <div className="world-map-container relative bg-white rounded-3xl p-6 sm:p-8 shadow-lg">
             <div className="relative w-full h-100 sm:h-125 overflow-hidden rounded-2xl">
               <MapContainer
                 center={[20, 0]} // Center of the world map
@@ -271,7 +473,7 @@ const Contact = () => {
               {clientLocations.map((location, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-4 border border-gray-100 hover:shadow-md transition-all duration-300 hover:border-[#ff6041]/30 cursor-pointer group"
+                  className="location-card bg-white rounded-2xl p-4 border border-gray-100 hover:shadow-md transition-all duration-300 hover:border-[#ff6041]/30 cursor-pointer group"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-[#ff6041]/10 rounded-full flex items-center justify-center group-hover:bg-[#ff6041]/20 transition-colors">
@@ -294,7 +496,10 @@ const Contact = () => {
       </section>
 
       {/* ================= CONTACT FORM & MAP SECTION ================= */}
-      <section className="mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-16 text-white overflow-hidden relative">
+      <section
+        ref={contactFormRef}
+        className="mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-16 text-white overflow-hidden relative"
+      >
         {/* Background image with AVIF/WebP/PNG fallback */}
         <picture className="absolute inset-0 -z-10 w-full h-full">
           <source
@@ -319,20 +524,22 @@ const Contact = () => {
           {/* Left - Google Map */}
           <div className="flex flex-col gap-6 lg:w-[42%]">
             <div className="mb-4">
-              <Bookmark
-                icon={
-                  <FaLocationDot className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
-                }
-                title="VISIT US"
-                className="bg-white/10 w-fit border border-white/20 gap-3"
-              />
-              <div className="text-[28px] font-semibold sm:text-4xl mt-4">
+              <div className="contact-map-bookmark">
+                <Bookmark
+                  icon={
+                    <FaLocationDot className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
+                  }
+                  title="VISIT US"
+                  className="bg-white/10 w-fit border border-white/20 gap-3"
+                />
+              </div>
+              <div className="contact-map-heading text-[28px] font-semibold sm:text-4xl mt-4">
                 <p>
                   Find Us On <span className="text-[#ff6041]">Map</span>
                 </p>
               </div>
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-2xl h-75 sm:h-100 border-4 border-white/10">
+            <div className="contact-map-iframe rounded-3xl overflow-hidden shadow-2xl h-75 sm:h-100 border-4 border-white/10">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.9858670113013!2d79.04166713478348!3d21.11312962225544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf0048a8052d%3A0x5a8bd0db52fb9ec2!2sFAECOM%20ENGINEERING%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1771153043227!5m2!1sen!2sin"
                 width="100%"
@@ -349,14 +556,16 @@ const Contact = () => {
           {/* Right - Contact Form */}
           <div className="flex flex-col gap-6 lg:w-[52%]">
             <div>
-              <Bookmark
-                icon={
-                  <FaPaperPlane className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
-                }
-                title="SEND MESSAGE"
-                className="bg-white/10 w-fit border border-white/20 gap-3"
-              />
-              <div className="text-[28px] font-semibold sm:text-4xl mt-4">
+              <div className="contact-form-bookmark">
+                <Bookmark
+                  icon={
+                    <FaPaperPlane className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
+                  }
+                  title="SEND MESSAGE"
+                  className="bg-white/10 w-fit border border-white/20 gap-3"
+                />
+              </div>
+              <div className="contact-form-heading text-[28px] font-semibold sm:text-4xl mt-4">
                 <p>
                   Get In <span className="text-[#ff6041]">Touch</span>
                 </p>
@@ -364,7 +573,7 @@ const Contact = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="form-field grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="group">
                   <label className="block text-sm font-medium mb-2 text-white/80 group-focus-within:text-[#ff6041] transition-colors">
                     Full Name <span className="text-[#ff6041]">*</span>
@@ -395,7 +604,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="form-field grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="group">
                   <label className="block text-sm font-medium mb-2 text-white/80 group-focus-within:text-[#ff6041] transition-colors">
                     Phone Number <span className="text-[#ff6041]">*</span>
@@ -477,7 +686,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="group">
+              <div className="form-field group">
                 <label className="block text-sm font-medium mb-2 text-white/80 group-focus-within:text-[#ff6041] transition-colors">
                   Your Message
                 </label>
@@ -504,10 +713,12 @@ const Contact = () => {
                 </div>
               )}
 
-              <PrimaryButton
-                title={isSubmitting ? "Sending..." : "Send Message"}
-                classname="rounded-full w-full sm:w-auto px-10"
-              />
+              <div className="form-button">
+                <PrimaryButton
+                  title={isSubmitting ? "Sending..." : "Send Message"}
+                  classname="rounded-full w-full sm:w-auto px-10"
+                />
+              </div>
             </form>
           </div>
         </div>

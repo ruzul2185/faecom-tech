@@ -11,8 +11,19 @@ import {
   FaLightbulb,
   FaChartLine,
 } from "react-icons/fa6";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Blogs = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const blogContentRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>(null);
+
   const [commentData, setCommentData] = useState({
     name: "",
     email: "",
@@ -21,6 +32,222 @@ const Blogs = () => {
 
   const [showComments, setShowComments] = useState(true);
   // const [scrollProgress, setScrollProgress] = useState(0);
+
+  useGSAP(
+    () => {
+      // ================= HERO TIMELINE =================
+      const tl = gsap.timeline();
+
+      tl.from(".hero-bookmark", {
+        y: -40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      })
+        .from(
+          ".hero-title",
+          {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.4",
+        )
+        .from(
+          ".hero-description",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        )
+        .from(
+          ".hero-stats",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        );
+
+      // ================= BLOG CONTENT SECTION =================
+      gsap.from(".blog-category", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".blog-title", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".blog-meta", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".blog-image", {
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".blog-excerpt", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".blog-content", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".blog-quote", {
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".comments-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".comment-item", {
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".comment-form", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: blogContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= SIDEBAR SECTION =================
+      gsap.from(".sidebar-tags", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sidebarRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".sidebar-related", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sidebarRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".sidebar-newsletter", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sidebarRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".sidebar-stats", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sidebarRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+    },
+    { scope: container },
+  );
 
   // ================= READING PROGRESS =================
   // useEffect(() => {
@@ -106,7 +333,7 @@ Success in the digital age requires more than just technological adoption – it
   };
 
   return (
-    <div className="flex flex-col gap-24 mt-24">
+    <div ref={container} className="flex flex-col gap-24 mt-24">
       {/* ================= READING PROGRESS BAR ================= */}
       {/* <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
         <div
@@ -116,27 +343,32 @@ Success in the digital age requires more than just technological adoption – it
       </div> */}
 
       {/* ================= HERO ================= */}
-      <section className="max-w-4xl mx-auto text-center w-[93%] relative">
+      <section
+        ref={heroRef}
+        className="max-w-4xl mx-auto text-center w-[93%] relative"
+      >
         {/* <div className="absolute inset-0 bg-gradient-to-r from-[#ff6041]/10 to-[#ff6041]/5 rounded-3xl blur-3xl"></div> */}
         <div className="relative z-10">
-          <Bookmark
-            icon={<FaTag className="text-[#ff6041]" />}
-            title="Industry Insights"
-            className="bg-white mx-auto w-fit shadow-lg hover:shadow-xl transition-shadow duration-300 gap-3"
-          />
-          <h1 className="text-4xl sm:text-5xl font-bold mt-6 bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+          <div className="hero-bookmark">
+            <Bookmark
+              icon={<FaTag className="text-[#ff6041]" />}
+              title="Industry Insights"
+              className="bg-white mx-auto w-fit shadow-lg hover:shadow-xl transition-shadow duration-300 gap-3"
+            />
+          </div>
+          <h1 className="hero-title text-4xl sm:text-5xl font-bold mt-6 bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
             Stay Ahead With{" "}
             <span className="text-[#ff6041] relative">
               Expert Knowledge
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#ff6041]/30 rounded-full"></span>
             </span>
           </h1>
-          <p className="text-gray-600 mt-6 text-lg leading-relaxed">
+          <p className="hero-description text-gray-600 mt-6 text-lg leading-relaxed">
             Insights, trends and strategies shaping the
             <br className="hidden sm:block" />
             future of digital transformation.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
+          <div className="hero-stats mt-8 flex justify-center gap-4">
             <div className="px-4 py-2 bg-white rounded-full shadow-sm border border-[#ff6041]/20">
               <span className="text-sm font-medium text-[#ff6041]">
                 {blogPosts.length} Articles
@@ -152,19 +384,19 @@ Success in the digital age requires more than just technological adoption – it
       </section>
 
       {/* ================= BLOG CONTENT ================= */}
-      <section className="max-w-6xl mx-auto w-[93%]">
+      <section ref={blogContentRef} className="max-w-6xl mx-auto w-[93%]">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* MAIN ARTICLE */}
           <div className="lg:col-span-2">
-            <span className="bg-linear-to-r from-[#ff6041] to-[#ff8041] text-white px-4 py-1 rounded-full text-sm shadow-md">
+            <span className="blog-category bg-linear-to-r from-[#ff6041] to-[#ff8041] text-white px-4 py-1 rounded-full text-sm shadow-md">
               {currentPost.category}
             </span>
 
-            <h2 className="text-3xl sm:text-4xl font-bold mt-6 mb-4 leading-tight text-gray-900">
+            <h2 className="blog-title text-3xl sm:text-4xl font-bold mt-6 mb-4 leading-tight text-gray-900">
               {currentPost.title}
             </h2>
 
-            <div className="flex flex-wrap gap-6 text-sm text-gray-600 mb-8 pb-6 border-b border-gray-200">
+            <div className="blog-meta flex flex-wrap gap-6 text-sm text-gray-600 mb-8 pb-6 border-b border-gray-200">
               <span className="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm">
                 <FaUser className="text-[#ff6041]" />
                 {currentPost.author}
@@ -179,7 +411,7 @@ Success in the digital age requires more than just technological adoption – it
               </span>
             </div>
 
-            <div className="relative group">
+            <div className="blog-image relative group">
               <img
                 loading="lazy"
                 src={currentPost.image}
@@ -189,13 +421,13 @@ Success in the digital age requires more than just technological adoption – it
               <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-10">
+            <div className="blog-excerpt bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-10">
               <p className="text-xl text-gray-600 leading-relaxed italic">
                 {currentPost.excerpt}
               </p>
             </div>
 
-            <div className="space-y-8 text-gray-700 leading-relaxed text-justify">
+            <div className="blog-content space-y-8 text-gray-700 leading-relaxed text-justify">
               {currentPost.content.split("\n\n").map((p, i) => (
                 <p
                   key={i}
@@ -207,7 +439,7 @@ Success in the digital age requires more than just technological adoption – it
             </div>
 
             {/* QUOTE */}
-            <div className="relative my-16">
+            <div className="blog-quote relative my-16">
               <div className="absolute inset-0 bg-linear-to-r from-[#ff6041]/10 to-[#ff8041]/10 rounded-2xl blur-xl"></div>
               <div className="relative bg-white p-8 rounded-2xl border-l-4 border-[#ff6041] shadow-lg">
                 <FaQuoteRight className="absolute right-6 top-6 text-[#ff6041]/20 text-5xl" />
@@ -223,7 +455,7 @@ Success in the digital age requires more than just technological adoption – it
             {/* COMMENTS */}
             <div className="mt-16">
               <div className="flex items-center justify-between mb-8">
-                <h3 className="text-2xl font-bold text-gray-900">
+                <h3 className="comments-heading text-2xl font-bold text-gray-900">
                   Discussion ({currentPost.comments.length})
                 </h3>
                 <button
@@ -240,7 +472,7 @@ Success in the digital age requires more than just technological adoption – it
                   {currentPost.comments.map((comment) => (
                     <div
                       key={comment.id}
-                      className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                      className="comment-item bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
                     >
                       <div className="flex gap-4">
                         <div className="relative">
@@ -279,7 +511,7 @@ Success in the digital age requires more than just technological adoption – it
                   ))}
 
                   {/* COMMENT FORM */}
-                  <div className="bg-linear-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
+                  <div className="comment-form bg-linear-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
                     <h3 className="text-2xl font-bold text-gray-900 mb-6">
                       Share Your Thoughts
                     </h3>
@@ -347,9 +579,9 @@ Success in the digital age requires more than just technological adoption – it
           </div>
 
           {/* SIDEBAR */}
-          <div className="space-y-8 sticky top-24 h-fit">
+          <div ref={sidebarRef} className="space-y-8 sticky top-24 h-fit">
             {/* TAGS */}
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <div className="sidebar-tags bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
               <h3 className="font-bold mb-6 text-gray-900 flex items-center">
                 <FaTag className="inline mr-2 text-[#ff6041]" />
                 Popular Tags
@@ -367,7 +599,7 @@ Success in the digital age requires more than just technological adoption – it
             </div>
 
             {/* RELATED */}
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <div className="sidebar-related bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
               <h3 className="font-bold mb-6 text-gray-900 flex items-center">
                 <FaLightbulb className="inline mr-2 text-[#ff6041]" />
                 Related Articles
@@ -401,7 +633,7 @@ Success in the digital age requires more than just technological adoption – it
             </div>
 
             {/* NEWSLETTER */}
-            <div className="bg-linear-to-br from-[#ff6041] to-[#ff8041] p-6 rounded-2xl text-white">
+            <div className="sidebar-newsletter bg-linear-to-br from-[#ff6041] to-[#ff8041] p-6 rounded-2xl text-white">
               <h3 className="font-bold mb-4 flex items-center">
                 <FaChartLine className="inline mr-2" />
                 Stay Updated
@@ -422,7 +654,7 @@ Success in the digital age requires more than just technological adoption – it
             </div>
 
             {/* STATS */}
-            <div className="bg-white border border-[#ff6041]/20 p-6 rounded-2xl text-center">
+            <div className="sidebar-stats bg-white border border-[#ff6041]/20 p-6 rounded-2xl text-center">
               <div className="w-16 h-16 bg-linear-to-r from-[#ff6041]/20 to-[#ff8041]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaChartLine className="text-2xl text-[#ff6041]" />
               </div>

@@ -3,13 +3,325 @@ import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton } from "../components/Button";
 import { FaGlobe, FaUsers, FaRocket, FaChevronDown } from "react-icons/fa6";
 import AffiliationBanner from "../components/home/AffiliationBanner";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const heroContentRef = useRef<HTMLDivElement>(null);
+  const companyRef = useRef<HTMLDivElement>(null);
+  const visionRef = useRef<HTMLDivElement>(null);
+  const leadershipRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>(null);
+
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+  useGSAP(
+    () => {
+      // ================= HERO TIMELINE =================
+      const tl = gsap.timeline();
+
+      tl.from(".hero-bookmark", {
+        y: -40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      })
+        .from(
+          ".hero-title",
+          {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.4",
+        )
+        .from(
+          ".hero-description",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        );
+
+      // ================= HERO CONTENT SECTION =================
+      gsap.from(".hero-image", {
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: heroContentRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".hero-stat", {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: heroContentRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".hero-card", {
+        opacity: 0,
+        y: 60,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: heroContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= COMPANY SECTION =================
+      gsap.from(".company-image", {
+        opacity: 0,
+        x: -100,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: companyRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".company-badge", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: companyRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".company-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: companyRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".company-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: companyRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".company-text", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: companyRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".company-tag", {
+        opacity: 0,
+        scale: 0.8,
+        // stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: companyRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= VISION & MISSION SECTION =================
+      gsap.from(".vision-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: visionRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".vision-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: visionRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".vision-card", {
+        opacity: 0,
+        scale: 0.9,
+        y: 60,
+        // stagger: 0.2,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: visionRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= LEADERSHIP SECTION =================
+      gsap.from(".leadership-image", {
+        opacity: 0,
+        x: -100,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: leadershipRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".leadership-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: leadershipRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".leadership-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: leadershipRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".leadership-content", {
+        opacity: 0,
+        y: 30,
+        // stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: leadershipRef.current,
+          start: "top 50%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".leadership-stat", {
+        opacity: 0,
+        scale: 0.8,
+        // stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: leadershipRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= FAQ SECTION =================
+      gsap.from(".faq-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: faqRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".faq-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: faqRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".faq-item", {
+        opacity: 0,
+        y: 30,
+        // stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: faqRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".faq-cta", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: faqRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+    },
+    { scope: container },
+  );
 
   const faqs = [
     {
@@ -41,25 +353,30 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="flex flex-col items-stretch gap-15 mt-30">
+    <div ref={container} className="flex flex-col items-stretch gap-15 mt-30">
       {/* ================= HERO SECTION ================= */}
-      <section className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6.75 justify-center items-center">
+      <section
+        ref={heroRef}
+        className="max-w-5xl mx-auto w-[93%] text-center flex flex-col gap-6.75 justify-center items-center"
+      >
         {/* Top badge */}
-        <Bookmark
-          icon={<FaGlobe className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-          title="Your Partner in Learning & Innovation"
-          className="bg-white gap-3"
-        />
+        <div className="hero-bookmark">
+          <Bookmark
+            icon={<FaGlobe className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
+            title="Your Partner in Learning & Innovation"
+            className="bg-white gap-3"
+          />
+        </div>
 
         {/* Main heading */}
-        <div className="text-4xl sm:text-[64px] font-medium">
+        <div className="hero-title text-4xl sm:text-[64px] font-medium">
           <p>Learn. Innovate. Grow.</p>
           <span className="text-[#ff6041]">Your Trusted IT Partner</span>
           <p>For Training & Technology Services</p>
         </div>
 
         {/* Subheading */}
-        <div className="text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-226">
+        <div className="hero-description text-[14px] sm:text-[20px]/[40px] font-medium text-[#7e7e7e] max-w-226">
           <p>
             Transforming skills into success and ideas into powerful digital
             solutions.
@@ -68,11 +385,14 @@ const AboutUs = () => {
       </section>
 
       {/* ================= HERO CONTENT GRID ================= */}
-      <section className="mx-auto w-[93%] flex flex-col gap-12.5 max-w-442.5">
+      <section
+        ref={heroContentRef}
+        className="mx-auto w-[93%] flex flex-col gap-12.5 max-w-442.5"
+      >
         <div className="py-12.5 flex flex-col gap-9 lg:flex-row lg:justify-around lg:items-center">
           {/* Left - Image */}
           <div className="flex flex-col gap-9 lg:w-[35%]">
-            <div className="rounded-3xl overflow-hidden shadow-2xl h-75 sm:h-100">
+            <div className="hero-image rounded-3xl overflow-hidden shadow-2xl h-75 sm:h-100">
               <img
                 loading="lazy"
                 src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956080/photo-1522071820081-009f0129c71c_fmsdbf.avif"
@@ -87,7 +407,7 @@ const AboutUs = () => {
           </div>
 
           {/* Center - Statistics */}
-          <div className="flex flex-col gap-9 lg:w-[25%] text-center lg:text-left">
+          <div className="hero-stat flex flex-col gap-9 lg:w-[25%] text-center lg:text-left">
             <div className="text-[64px] sm:text-[80px] lg:text-[100px] font-bold text-[#ff6041] leading-none">
               30
               <span className="text-[40px] sm:text-[50px] lg:text-[60px]">
@@ -102,10 +422,10 @@ const AboutUs = () => {
 
           {/* Right - Content Card */}
           <div className="flex flex-col gap-9 lg:w-[35%]">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-[#EFEADF]">
+            <div className="hero-card bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-[#EFEADF]">
               <p className="text-[14px] sm:text-[16px] text-gray-600 leading-relaxed mb-4">
                 IT solutions that empower businesses to thrive in fast changing
-                digital world. With{" "}
+                digital world.{" "}
                 <span className="underline font-medium text-gray-800">
                   over a decade
                 </span>{" "}
@@ -129,7 +449,10 @@ const AboutUs = () => {
       </section>
 
       {/* ================= ABOUT COMPANY SECTION ================= */}
-      <section className="relative mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
+      <section
+        ref={companyRef}
+        className="relative mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5"
+      >
         <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9 lg:flex-row lg:justify-around lg:items-center">
           {/* Background image with AVIF/WebP/PNG fallback */}
           <picture className="absolute inset-0 -z-10 w-full h-full">
@@ -151,7 +474,7 @@ const AboutUs = () => {
           <div className="flex flex-col gap-9 lg:w-[45%] relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#ff6041]/10 rounded-full" />
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#FFC2A7]/20 rounded-full" />
-            <div className="relative rounded-3xl overflow-hidden shadow-xl h-75 sm:h-100">
+            <div className="company-image relative rounded-3xl overflow-hidden shadow-xl h-75 sm:h-100">
               <img
                 loading="lazy"
                 src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956222/photo-1600880292203-757bb62b4baf_zhuz6b.avif"
@@ -164,7 +487,7 @@ const AboutUs = () => {
               />
             </div>
             {/* Floating badge */}
-            <div className="absolute -bottom-4 right-4 sm:right-8 bg-white rounded-2xl p-4 shadow-lg">
+            <div className="company-badge absolute -bottom-4 right-4 sm:right-8 bg-white rounded-2xl p-4 shadow-lg">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#ff6041] rounded-full flex items-center justify-center">
                   <FaGlobe className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -179,21 +502,23 @@ const AboutUs = () => {
 
           {/* Right - Content */}
           <div className="flex flex-col gap-9 lg:w-[50%]">
-            <Bookmark
-              icon={
-                <FaUsers className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
-              }
-              title="Company Overview"
-              className="bg-white text-amber-950 w-fit gap-3"
-            />
-            <div className="text-[30px] font-medium sm:text-5xl">
+            <div className="company-bookmark">
+              <Bookmark
+                icon={
+                  <FaUsers className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />
+                }
+                title="Company Overview"
+                className="bg-white text-amber-950 w-fit gap-3"
+              />
+            </div>
+            <div className="company-heading text-[30px] font-medium sm:text-5xl">
               <p>Building Digital Excellence</p>
               <p>
                 Through{" "}
                 <span className="text-[#ff6041]">Engineering Heritage</span>
               </p>
             </div>
-            <div className="text-[14px] sm:text-[16px] lg:text-xl leading-relaxed text-gray-200 space-y-4">
+            <div className="company-text text-[14px] sm:text-[16px] lg:text-xl leading-relaxed text-gray-200 space-y-4">
               <p>
                 FaecomTech, an affiliate of{" "}
                 <a
@@ -223,17 +548,17 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 sm:gap-4">
-              <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
+              <div className="company-tag flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
                 <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
                 <span className="text-xs sm:text-sm font-medium">
                   US & Canada
                 </span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
+              <div className="company-tag flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
                 <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
                 <span className="text-xs sm:text-sm font-medium">UK</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
+              <div className="company-tag flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
                 <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
                 <span className="text-xs sm:text-sm font-medium">
                   Middle East
@@ -245,13 +570,18 @@ const AboutUs = () => {
       </section>
 
       {/* ================= VISION & MISSION SECTION ================= */}
-      <section className="max-w-442.5 mx-auto w-[93%]  text-center flex flex-col gap-6.75 justify-center items-center">
-        <Bookmark
-          icon={<FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
-          title="OUR PURPOSE"
-          className="bg-white gap-3"
-        />
-        <div className="text-4xl sm:text-[64px] font-medium">
+      <section
+        ref={visionRef}
+        className="max-w-442.5 mx-auto w-[93%]  text-center flex flex-col gap-6.75 justify-center items-center"
+      >
+        <div className="vision-bookmark">
+          <Bookmark
+            icon={<FaRocket className="w-5 h-5 sm:w-6 sm:h-6 text-[#ff6041]" />}
+            title="OUR PURPOSE"
+            className="bg-white gap-3"
+          />
+        </div>
+        <div className="vision-heading text-4xl sm:text-[64px] font-medium">
           <p>
             What Drives Us <span className="text-[#ff6041]">Forward</span>
           </p>
@@ -261,7 +591,7 @@ const AboutUs = () => {
       <section className="mx-auto w-[93%] max-w-442.5 flex flex-col gap-12.5">
         <div className="py-12.5 flex flex-col gap-9 sm:grid sm:grid-cols-2">
           {/* Vision Card */}
-          <div className="group relative overflow-hidden rounded-3xl bg-[#ff6041] p-6 sm:p-8 lg:p-10 text-white transition-all duration-500 hover:shadow-2xl border border-white/20">
+          <div className="vision-card group relative overflow-hidden rounded-3xl bg-[#ff6041] p-6 sm:p-8 lg:p-10 text-white transition-all duration-500 hover:shadow-2xl border border-white/20">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
@@ -286,7 +616,7 @@ const AboutUs = () => {
           </div>
 
           {/* Mission Card */}
-          <div className="group relative overflow-hidden rounded-3xl bg-[#EFEADF] p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-2xl border border-[#ff6041]/20">
+          <div className="vision-card group relative overflow-hidden rounded-3xl bg-[#EFEADF] p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-2xl border border-[#ff6041]/20">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff6041]/10 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#FFC2A7]/30 rounded-full translate-y-1/2 -translate-x-1/2" />
 
@@ -316,7 +646,10 @@ const AboutUs = () => {
       </section>
 
       {/* ================= FOUNDER / LEADERSHIP SECTION ================= */}
-      <section className="mx-auto w-[93%] max-w-442.5 flex flex-col gap-12.5">
+      <section
+        ref={leadershipRef}
+        className="mx-auto w-[93%] max-w-442.5 flex flex-col gap-12.5"
+      >
         <div className="py-12.5 flex flex-col gap-9 lg:flex-row lg:justify-around lg:items-center">
           {/* Left - Founder Image with animations */}
           <div className="flex flex-col gap-9 lg:w-[40%] relative group">
@@ -328,7 +661,7 @@ const AboutUs = () => {
             />
 
             {/* Main image container with hover effect */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-87.5 sm:h-112.5 group-hover:shadow-[0_20px_60px_-15px_rgba(255,96,65,0.3)] transition-all duration-700">
+            <div className="leadership-image relative rounded-3xl overflow-hidden shadow-2xl h-87.5 sm:h-112.5 group-hover:shadow-[0_20px_60px_-15px_rgba(255,96,65,0.3)] transition-all duration-700">
               <picture className="w-full h-full group">
                 <source
                   srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771956383/ceo_wrs43f.avif"
@@ -369,15 +702,17 @@ const AboutUs = () => {
 
           {/* Right - Founder Content with staggered animations */}
           <div className="flex flex-col gap-6 lg:w-[55%] ">
-            <Bookmark
-              icon={
-                <span className="text-[#ff6041] font-bold text-sm">CEO</span>
-              }
-              title="LEADERSHIP VISION"
-              className="bg-white w-fit animate-fade-in gap-3"
-            />
+            <div className="leadership-bookmark">
+              <Bookmark
+                icon={
+                  <span className="text-[#ff6041] font-bold text-sm">CEO</span>
+                }
+                title="LEADERSHIP VISION"
+                className="bg-white w-fit animate-fade-in gap-3"
+              />
+            </div>
 
-            <div className="text-[30px] font-medium sm:text-5xl animate-slide-up">
+            <div className="leadership-heading text-[30px] font-medium sm:text-5xl animate-slide-up">
               <p>Bridging The Gap</p>
               <p>
                 Between <span className="text-[#ff6041]">Education</span> &{" "}
@@ -386,7 +721,7 @@ const AboutUs = () => {
             </div>
 
             {/* Animated content blocks */}
-            <div className="space-y-6">
+            <div className="leadership-content space-y-6">
               <div className="group p-4 rounded-2xl bg-white border border-[#EFEADF] shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#ff6041]/30">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-[#ff6041]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#ff6041] transition-colors duration-300">
@@ -450,13 +785,13 @@ const AboutUs = () => {
 
             {/* Animated stats */}
             <div className="flex flex-wrap gap-4 mt-4">
-              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
+              <div className="leadership-stat flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
                 <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
                   10+
                 </span>
                 <span className="text-sm font-medium">Years Experience</span>
               </div>
-              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
+              <div className="leadership-stat flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
                 <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
                   500+
                 </span>
@@ -464,7 +799,7 @@ const AboutUs = () => {
                   Professionals Trained
                 </span>
               </div>
-              <div className="flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
+              <div className="leadership-stat flex items-center gap-3 bg-[#EFEADF] rounded-2xl px-5 py-3 border border-[#EFEADF]/50 hover:bg-[#ff6041] hover:text-white transition-all duration-300 group cursor-default">
                 <span className="text-2xl font-bold text-[#ff6041] group-hover:text-white">
                   50+
                 </span>
@@ -476,7 +811,10 @@ const AboutUs = () => {
       </section>
 
       {/* ================= FAQ SECTION ================= */}
-      <section className="relative mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5">
+      <section
+        ref={faqRef}
+        className="relative mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5"
+      >
         <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9">
           {/* Background image using <picture> for AVIF/WebP/PNG */}
           <picture className="absolute inset-0 -z-10 w-full h-full">
@@ -495,14 +833,16 @@ const AboutUs = () => {
             />
           </picture>
           <div className="text-center">
-            <Bookmark
-              icon={
-                <span className="text-[#ff6041] font-bold text-sm">FAQ</span>
-              }
-              title="FREQUENTLY ASKED QUESTIONS"
-              className="bg-white/10 mx-auto w-fit border border-white/20 gap-3"
-            />
-            <div className="text-[30px] font-medium sm:text-5xl mt-6">
+            <div className="faq-bookmark">
+              <Bookmark
+                icon={
+                  <span className="text-[#ff6041] font-bold text-sm">FAQ</span>
+                }
+                title="FREQUENTLY ASKED QUESTIONS"
+                className="bg-white/10 mx-auto w-fit border border-white/20 gap-3"
+              />
+            </div>
+            <div className="faq-heading text-[30px] font-medium sm:text-5xl mt-6">
               <p>
                 Got Questions?{" "}
                 <span className="text-[#ff6041]">We Have Answers</span>
@@ -514,7 +854,7 @@ const AboutUs = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className={`rounded-2xl overflow-hidden transition-all duration-300 ${
+                className={`faq-item rounded-2xl overflow-hidden transition-all duration-300 ${
                   openFaq === index
                     ? "bg-[#ff6041]"
                     : "bg-white/5 border border-white/10"
@@ -549,7 +889,7 @@ const AboutUs = () => {
           </div>
 
           {/* Contact CTA */}
-          <div className="text-center mt-8 sm:mt-12">
+          <div className="faq-cta text-center mt-8 sm:mt-12">
             <p className="text-white/60 text-[14px] sm:text-[16px] mb-4">
               Still have questions?
             </p>
