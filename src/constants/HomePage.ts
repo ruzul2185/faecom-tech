@@ -151,12 +151,15 @@ export const TRAINING_INFO = [
 
 export const KEYWORD_LIST = [
   "Networking",
-  "Technology",
-  "Software",
-  "Digital",
-  "Consultation",
+  "Latest Technology",
+  "Custom Software Development",
+  "Digital Marketing",
+  "Quality Assurance",
+  "Amazon Ecosystem",
   "System Design",
   "Operation Systems",
+  "SalesForce",
+  "MVP",
 ];
 
 export const PORTFOLIO_INFO = [
