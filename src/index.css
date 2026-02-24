@@ -33,7 +33,7 @@ li:hover {
   color: #ff6041;
 }
 
-/* .bg {
+.bg {
   background-image: url("/bg.jpg");
 }
 
@@ -43,7 +43,7 @@ li:hover {
 
 .testimonial-bg {
   background-image: url("/testimonial-bg.png");
-} */
+}
 
 .clip-path-triangle {
   clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 10% 90%, 0 50%, 0 0);
