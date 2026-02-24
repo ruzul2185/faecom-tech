@@ -29,7 +29,7 @@ const SalesforceTraining = () => {
       </section>
 
       {/* ================= HERO IMAGE SECTION ================= */}
-      <section className="max-w-7xl mx-auto px-6 ">
+      <section className="max-w-7xl mx-auto overflow-hidden rounded-[25px]">
         <picture>
           <source
             srcSet={salesforceTrainingDetails.images.heroAvif}
@@ -42,7 +42,7 @@ const SalesforceTraining = () => {
           <img
             src={salesforceTrainingDetails.images.hero} // fallback (png/jpg)
             alt="Salesforce CRM Systems"
-            className="w-full h-full rounded-[25px] object-cover hover:scale-105 hover:rotate-2 transition-transform duration-300"
+            className="w-full h-full rounded-[25px] object-cover hover:scale-105 transition-transform duration-300"
           />
         </picture>
       </section>
@@ -64,7 +64,7 @@ const SalesforceTraining = () => {
       <section className="max-w-7xl mx-auto px-6">
         <div className="bg-linear-to-r from-gray-50 to-white rounded-3xl p-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-[25px]">
               <picture>
                 <source
                   srcSet={salesforceTrainingDetails.images.overviewAvif}
@@ -78,7 +78,7 @@ const SalesforceTraining = () => {
                   loading="lazy"
                   src={salesforceTrainingDetails.images.overview} // fallback
                   alt="Salesforce CRM Overview"
-                  className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
                 />
               </picture>
             </div>
@@ -126,7 +126,7 @@ const SalesforceTraining = () => {
                 )}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-[25px]">
               <picture>
                 <source
                   srcSet={salesforceTrainingDetails.images.learningOutcomesAvif}
@@ -140,7 +140,7 @@ const SalesforceTraining = () => {
                   loading="lazy"
                   src={salesforceTrainingDetails.images.learningOutcomes} // fallback (png/jpg)
                   alt="Learning Outcomes"
-                  className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
                 />
               </picture>
             </div>
@@ -266,7 +266,7 @@ const SalesforceTraining = () => {
               {salesforceTrainingDetails.practicalApproach.conclusion}
             </p>
           </div>
-          <div className="relative">
+          <div className="relative overflow-hidden rounded-[25px]">
             <picture>
               <source
                 srcSet={salesforceTrainingDetails.images.practicalApproachAvif}
@@ -280,7 +280,7 @@ const SalesforceTraining = () => {
                 loading="lazy"
                 src={salesforceTrainingDetails.images.practicalApproach} // fallback (png/jpg)
                 alt="Practical Training Approach"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </picture>
           </div>
@@ -290,7 +290,7 @@ const SalesforceTraining = () => {
       {/* ================= BUSINESS BENEFITS SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
+          <div className="relative overflow-hidden rounded-[25px]">
             <picture>
               <source
                 srcSet={salesforceTrainingDetails.images.benefitsAvif}
@@ -304,7 +304,7 @@ const SalesforceTraining = () => {
                 loading="lazy"
                 src={salesforceTrainingDetails.images.benefits} // fallback (png/jpg)
                 alt="Business Benefits"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </picture>
           </div>

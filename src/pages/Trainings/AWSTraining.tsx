@@ -29,12 +29,12 @@ const AWSTraining = () => {
       </section>
 
       {/* ================= HERO IMAGE SECTION ================= */}
-      <section className="max-w-7xl mx-auto px-6 ">
+      <section className="max-w-7xl mx-auto overflow-hidden rounded-[25px] ">
         <img
           loading="lazy"
           src={awsTrainingDetails.images.hero}
           alt="AWS Cloud Computing"
-          className="w-full h-full rounded-[25px] object-cover hover:scale-105 hover:rotate-2 transition-transform duration-300"
+          className="w-full h-full rounded-[25px] object-cover hover:scale-105 transition-transform duration-300"
         />
       </section>
 
@@ -87,7 +87,7 @@ const AWSTraining = () => {
       <section className="max-w-7xl mx-auto px-6">
         <div className="bg-linear-to-r from-gray-50 to-white rounded-3xl p-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-[25px]">
               <picture>
                 <source
                   srcSet={awsTrainingDetails.images.overviewAvif}
@@ -101,7 +101,7 @@ const AWSTraining = () => {
                   loading="lazy"
                   src={awsTrainingDetails.images.overview} // fallback (png/jpg)
                   alt="AWS Cloud Overview"
-                  className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
                 />
               </picture>
             </div>
@@ -147,7 +147,7 @@ const AWSTraining = () => {
                 ))}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-[25px]">
               <picture>
                 <source
                   srcSet={awsTrainingDetails.images.learningOutcomesAvif}
@@ -161,7 +161,7 @@ const AWSTraining = () => {
                   loading="lazy"
                   src={awsTrainingDetails.images.learningOutcomes} // fallback (png/jpg)
                   alt="Learning Outcomes"
-                  className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
                 />
               </picture>
             </div>
@@ -287,7 +287,7 @@ const AWSTraining = () => {
               {awsTrainingDetails.practicalApproach.conclusion}
             </p>
           </div>
-          <div className="relative">
+          <div className="relative overflow-hidden rounded-[25px]">
             <picture>
               <source
                 srcSet={awsTrainingDetails.images.practicalApproachAvif}
@@ -301,7 +301,7 @@ const AWSTraining = () => {
                 loading="lazy"
                 src={awsTrainingDetails.images.practicalApproach} // fallback (png/jpg)
                 alt="Practical Training Approach"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </picture>
           </div>
@@ -311,7 +311,7 @@ const AWSTraining = () => {
       {/* ================= BUSINESS BENEFITS SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
+          <div className="relative overflow-hidden rounded-[25px]">
             <picture>
               <source
                 srcSet={awsTrainingDetails.images.benefitsAvif}
@@ -325,7 +325,7 @@ const AWSTraining = () => {
                 loading="lazy"
                 src={awsTrainingDetails.images.benefits} // fallback (png/jpg)
                 alt="Business Benefits"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+                className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </picture>
           </div>
