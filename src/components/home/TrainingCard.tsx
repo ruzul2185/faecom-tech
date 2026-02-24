@@ -1,6 +1,4 @@
 import { IoArrowRedoSharp } from "react-icons/io5";
-import { Link } from "react-router";
-
 interface TrainingCardProps {
   title: string;
   link: string;
@@ -26,11 +24,11 @@ const TrainingCard = ({
       {/* Title */}
       <div className="absolute bottom-0 w-full p-4 z-10 h-30 flex justify-between items-center">
         <p className="text-lg sm:text-2xl font-medium">{title}</p>
-        <Link to={link}>
+        <a href={link}>
           <div className="bg-[#ff6041] size-12.5 rounded-full flex justify-center items-center cursor-pointer group-hover:bg-black">
             <IoArrowRedoSharp size={24} />
           </div>
-        </Link>
+        </a>
       </div>
     </div>
   );
