@@ -76,10 +76,6 @@ const Contact = () => {
         "Corporate Address:",
         "2nd Floor, Chandra Building IT Park Road, Nagpur 440022",
         "Maharashtra, India",
-        "__________________",
-        "Registered Address:",
-        "Plot No. 15, Pathan Layout, Datta Mandir Road, Rana Pratap",
-        "Nagar, Nagpur - 440022, Maharashtra, India",
       ],
       isOrange: false,
     },
@@ -298,7 +294,23 @@ const Contact = () => {
       </section>
 
       {/* ================= CONTACT FORM & MAP SECTION ================= */}
-      <section className="bg mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-16 text-white overflow-hidden relative">
+      <section className="mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-16 text-white overflow-hidden relative">
+        {/* Background image with AVIF/WebP/PNG fallback */}
+        <picture className="absolute inset-0 -z-10 w-full h-full">
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952313/hero-bg_jykw27.avif"
+            type="image/avif"
+          />
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952315/hero-bg_s8ctrj.webp"
+            type="image/webp"
+          />
+          <img
+            src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952314/hero-bg_ktb0ge.png"
+            alt="Hero Background"
+            className="w-full h-full object-cover rounded-[20px]"
+          />
+        </picture>
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#ff6041]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#FFC2A7]/10 rounded-full blur-3xl" />
