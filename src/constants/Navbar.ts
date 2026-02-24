@@ -1,5 +1,8 @@
 export const SERVICES = [
-  { name: "Custom Software Development/MVP", path: "/services/custom" },
+  {
+    name: "Custom Software Development/MVP",
+    path: "/services/custom-software-development/mvp",
+  },
   { name: "Game Development & Testing", path: "/services/unity" },
   { name: "Web Design & Development", path: "/services/web-dev" },
   { name: "Digital Marketing", path: "/services/digital-marketing" },
