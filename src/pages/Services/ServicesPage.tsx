@@ -10,8 +10,72 @@ import { IoArrowRedoSharp } from "react-icons/io5";
 import { MdDesignServices } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
 import { GrTechnology } from "react-icons/gr";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Services = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.firstName || !formData.email || !formData.message) {
+      toast.error("Please fill all required fields.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const loadingToast = toast.loading("Sending message...");
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzQem7mYsZYdcb_tSDD8lOAnJaraKE8kMpOekGr6CBzzWlOkS1UDryPOI1joE1w_9Mtxg/exec",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      toast.success("Message sent successfully! 🚀", { id: loadingToast });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again.", {
+        id: loadingToast,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-linear-to-b  py-16">
       {/* Hero Section */}
@@ -364,32 +428,50 @@ const Services = () => {
 
             {/* Right - Contact Form */}
             <div className="bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl">
-              <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <form
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
+                onSubmit={handleSubmit}
+              >
                 <input
                   type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
                   placeholder="First Name*"
                   className="col-span-1 bg-gray-700 text-white placeholder-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6041] transition-all duration-300"
                 />
                 <input
                   type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
                   placeholder="Last Name*"
                   className="col-span-1 bg-gray-700 text-white placeholder-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6041] transition-all duration-300"
                 />
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email Address*"
                   className="col-span-1 sm:col-span-2 bg-gray-700 text-white placeholder-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6041] transition-all duration-300"
                 />
                 <textarea
                   placeholder="Message*"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={4}
                   className="col-span-1 sm:col-span-2 bg-gray-700 text-white placeholder-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6041] transition-all duration-300 resize-none"
                 />
                 <button
                   type="submit"
-                  className="cursor-pointer col-span-1 sm:col-span-2 bg-[#ff6041] hover:bg-black text-white font-semibold py-4 rounded-lg transition-colors duration-300 transform hover:scale-105"
+                  disabled={isSubmitting}
+                  className={`cursor-pointer col-span-1 sm:col-span-2 bg-[#ff6041] hover:bg-black text-white font-semibold py-4 rounded-lg transition-colors duration-300 transform hover:scale-105 ${
+                    isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>

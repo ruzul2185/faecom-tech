@@ -119,7 +119,11 @@ const HomePage = () => {
 
       <TestimonialComponent />
 
-      <GalleryComponent />
+      <GalleryComponent
+        galleryConfig={{
+          mediaAssets: [{ tag: "gallery" }],
+        }}
+      />
 
       <NewsLetterComponent />
     </div>

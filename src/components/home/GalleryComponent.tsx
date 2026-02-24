@@ -1,40 +1,115 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const images = [
-  {
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
-    title: "Modern Open Workspace",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600&auto=format&fit=crop",
-    title: "Creative Meeting Room",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop",
-    title: "Team Collaboration Area",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1600&auto=format&fit=crop",
-    title: "Private Workstations",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
-    title: "Brainstorming Zone",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop",
-    title: "Reception & Lounge",
-  },
-];
+declare global {
+  interface Window {
+    cloudinary: any;
+  }
+}
 
-const GalleryComponent = () => {
-  const [selectedImage, setSelectedImage] = useState<{
-    src: string;
-    title: string;
-  } | null>(null);
+export interface MediaAsset {
+  tag: string;
+}
+
+export interface GalleryConfig {
+  mediaAssets: MediaAsset[];
+}
+
+export interface GalleryComponentProps {
+  galleryConfig: GalleryConfig;
+}
+
+const getColumns = (width: number) => {
+  if (width < 640) return 1;
+  if (width < 1024) return 2;
+  return 3;
+};
+
+const GalleryComponent = ({ galleryConfig }: GalleryComponentProps) => {
+  const galleryRef = useRef<HTMLDivElement>(null);
+  const widgetRef = useRef<any>(null);
+  const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME || "demo";
+  const [columns, setColumns] = useState(() => getColumns(window.innerWidth));
+
+  useEffect(() => {
+    const handleResize = () => {
+      const next = getColumns(window.innerWidth);
+      setColumns((prev) => (prev !== next ? next : prev));
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!galleryRef.current) return;
+
+    // Destroy previous widget instance before creating a new one
+    if (widgetRef.current) {
+      try {
+        widgetRef.current.destroy();
+      } catch (_) {}
+      widgetRef.current = null;
+    }
+
+    // Clear the container so the widget starts fresh
+    galleryRef.current.innerHTML = "";
+
+    widgetRef.current = window.cloudinary.galleryWidget({
+      container: galleryRef.current,
+      cloudName,
+      displayProps: {
+        mode: "expanded",
+        columns,
+        spacing: 15,
+      },
+      aspectRatio: "16:9",
+      transformation: { crop: "fill" },
+      bgColor: "transparent",
+      carouselOffset: 10,
+      navigation: "always",
+      thumbnailProps: {
+        mediaSymbolSize: 42,
+        spacing: 20,
+        width: 90,
+        height: 90,
+        navigationFloat: true,
+        navigationShape: "square",
+        navigationSize: 40,
+        navigationColor: "#000000",
+        selectedStyle: "border",
+        selectedBorderPosition: "bottom",
+        selectedBorderWidth: 4,
+        navigationIconColor: "#000000",
+      },
+      navigationButtonProps: {
+        iconColor: "#ffffff",
+        color: "#000",
+        size: 52,
+        navigationPosition: "offset",
+        navigationOffset: 12,
+      },
+      themeProps: {
+        primary: "#000000",
+        active: "#777777",
+      },
+      secureDistribution: "res-s.cloudinary.com",
+      ...galleryConfig,
+    });
+
+    widgetRef.current.render();
+
+    return () => {
+      if (widgetRef.current) {
+        try {
+          widgetRef.current.destroy();
+        } catch (_) {}
+        widgetRef.current = null;
+      }
+    };
+  }, [galleryConfig, columns, cloudName]);
 
   return (
-    <section className="w-[93%] max-w-442.5 mx-auto py-16">
+    <section className="w-full max-w-442.5 mx-auto py-16 px-4 sm:px-6 lg:px-8">
       {/* Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">Our Office Gallery</h2>
@@ -42,49 +117,7 @@ const GalleryComponent = () => {
           A glimpse into our workspace and environment
         </p>
       </div>
-
-      {/* Image Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
-            onClick={() => setSelectedImage(image)}
-          >
-            <img
-              src={image.src}
-              alt={image.title}
-              loading="lazy"
-              className="w-full h-65 object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-
-            {/* Overlay with Title */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-              <h3 className="text-white text-lg font-semibold">
-                {image.title}
-              </h3>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Lightbox Modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/80 flex flex-col items-center justify-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img
-            loading="lazy"
-            src={selectedImage.src}
-            alt={selectedImage.title}
-            className="max-h-[85vh] max-w-[95vw] rounded-xl shadow-2xl"
-          />
-          <p className="text-white mt-4 text-lg font-medium">
-            {selectedImage.title}
-          </p>
-        </div>
-      )}
+      <div ref={galleryRef} className="w-full min-h-100" />
     </section>
   );
 };

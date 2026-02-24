@@ -15,7 +15,7 @@ const Footer = () => {
               className="max-w-55 bg-white p-3 rounded-lg"
             />
 
-            <p className="text-[15px] text-gray-300 leading-relaxed">
+            <p className="text-[15px] text-gray-100 leading-relaxed">
               Delivering innovative IT solutions and training programs to
               empower businesses and individuals with cutting-edge technology.
             </p>
@@ -53,14 +53,14 @@ const Footer = () => {
 
             {/* Legal Highlighted Section */}
             <div className="flex flex-col gap-4">
-              <ul className="flex flex-col gap-3">
-                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300">
+              <ul className="flex flex-col gap-3 ">
+                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 px-0! text-[20px]">
                   FAQ
                 </li>
-                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300">
+                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 px-0! text-[20px]">
                   Terms & Conditions
                 </li>
-                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300">
+                <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 px-0! text-[20px]">
                   Privacy Policy
                 </li>
               </ul>
@@ -71,15 +71,15 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-[20px]">Get in Touch</h3>
 
-            <p className="text-gray-300 text-sm px-3.75">
+            <p className="text-gray-100 text-sm px-3.75">
               Email: support@yourcompany.com
             </p>
 
-            <p className="text-gray-300 text-sm px-3.75">
+            <p className="text-gray-100 text-sm px-3.75">
               Phone: +91 98765 43210
             </p>
 
-            <div className="text-gray-300 text-sm flex flex-col gap-3">
+            <div className="text-gray-100 text-sm flex flex-col gap-3">
               <p className="font-medium text-white">Coorporate Address:</p>
               <p className="px-3.75">
                 Chandra Trading Complex, 2nd Floor, Near NIT Garden, IT Park
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-600 mt-12 pt-6 text-left text-sm text-gray-400">
+        <div className="border-t border-gray-600 mt-12 pt-6 text-left text-sm text-gray-100">
           © {new Date().getFullYear()} Faecom Tech. All rights reserved.
         </div>
       </div>
@@ -119,7 +119,7 @@ const SocialIcon = ({ Icon, link }: SocialIconProps) => {
       rel="noopener noreferrer"
       className="transition-all duration-300 hover:scale-110 hover:text-primary"
     >
-      <Icon size={26} />
+      <Icon size={26} colors="white" />
     </a>
   );
 };
@@ -136,7 +136,7 @@ const FooterColumn = ({ title, links }: FooterColumnProps) => {
   return (
     <div className="flex flex-col gap-4">
       <h3 className="font-semibold text-[20px]">{title}</h3>
-      <ul className="flex flex-col gap-2 text-gray-300 text-sm">
+      <ul className="flex flex-col gap-2 text-gray-100 text-sm">
         {links.map((link, index) => (
           <a
             key={index}
