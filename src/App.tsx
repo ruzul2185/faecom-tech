@@ -20,6 +20,9 @@ import SAPTraining from "./pages/Trainings/SAPTraining";
 import ZohoTraining from "./pages/Trainings/ZohoTraining";
 import SalesforceTraining from "./pages/Trainings/SalesforceTraining";
 import NotFound from "./pages/NotFound";
+import FAQPage from "./pages/FAQPage";
+import Terms_ConditionPage from "./pages/Terms_ConditionPage";
+import Privacy_PolicyPage from "./pages/Privacy_PolicyPage";
 
 const App = () => {
   return (
@@ -56,6 +59,13 @@ const App = () => {
           <Route path="/trainings/sap-training" element={<SAPTraining />} />
           <Route path="/trainings/zoho-training" element={<ZohoTraining />} />
           {/* <Route path="/trainings" element={<Trainings />} /> */}
+
+          <Route path="/faq" element={<FAQPage />} />
+          <Route
+            path="/terms_and_conditions"
+            element={<Terms_ConditionPage />}
+          />
+          <Route path="/privacy_policy" element={<Privacy_PolicyPage />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

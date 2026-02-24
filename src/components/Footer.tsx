@@ -67,15 +67,24 @@ const Footer = () => {
             />
 
             <ul className="flex flex-col gap-3">
-              <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px]">
+              <a
+                href="/faq"
+                className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px] py-3.75"
+              >
                 FAQ
-              </li>
-              <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px]">
+              </a>
+              <a
+                href="/terms_and_conditions"
+                className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px] py-3.75"
+              >
                 Terms & Conditions
-              </li>
-              <li className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px]">
+              </a>
+              <a
+                href="/privacy_policy"
+                className="font-semibold text-white hover:text-primary cursor-pointer transition-colors duration-300 text-[20px] py-3.75"
+              >
                 Privacy Policy
-              </li>
+              </a>
             </ul>
           </div>
 

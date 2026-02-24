@@ -114,8 +114,8 @@ const GalleryComponent = ({ galleryConfig }: GalleryComponentProps) => {
       {/* Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">Our Office Gallery</h2>
-        <p className="text-gray-500 mt-3">
-          A glimpse into our workspace and environment
+        <p className="text-gray-500 mt-3 text-2xl">
+          Powered by passion, teamwork, and a little too much caffeine.
         </p>
       </div>
       <div ref={galleryRef} className="w-full min-h-100" />
