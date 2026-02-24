@@ -7,27 +7,46 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const TestimonialComponent = () => {
   return (
-    <section className="testimonialSwiper">
-      <div className="testimonial-bg max-w-442.5 mx-auto rounded-[50px] flex flex-col items-center h-160 justify-evenly">
-        <div className="text-2xl font-medium text-white flex items-center gap-4 ">
+    <section className="testimonialSwiper relative">
+      <div className="max-w-442.5 mx-auto rounded-[50px] flex flex-col items-center h-160 justify-evenly relative z-10">
+        {/* Background image with AVIF/WebP/PNG fallback */}
+        <picture className="absolute inset-0 -z-10 w-full h-full">
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953083/testimonial-bg_rz0gd6.jpg"
+            type="image/avif"
+          />
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952802/testimonial-bg_bopcky.webp"
+            type="image/webp"
+          />
+          <img
+            src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952983/testimonial-bg_e4jdmx.jpg"
+            alt="Testimonial Background"
+            className="w-full h-full object-cover rounded-[50px]"
+          />
+        </picture>
+        <div className="text-2xl font-medium text-white flex items-center gap-4">
           <HiArrowLongLeft />
           <p>TESTIMONIAL</p>
           <HiArrowLongRight />
         </div>
+
         <div className="text-white text-4xl lg:text-8xl font-medium">
           What our Client say
         </div>
+
         <div className="relative w-full sm:w-[75%]">
           {/* Left Arrow */}
           <button
             className="custom-prev hidden 2xl:flex absolute -left-15 top-1/2 -translate-y-1/2 z-10
-  w-12 h-12 items-center justify-center
-  rounded-full bg-transparent text-white border-2 border-white]
-  shadow-lg transition-colors duration-300
-  hover:bg-black hover:border-white cursor-pointer"
+        w-12 h-12 items-center justify-center
+        rounded-full bg-transparent text-white border-2 border-white
+        shadow-lg transition-colors duration-300
+        hover:bg-black hover:border-white cursor-pointer"
           >
             <HiArrowLongLeft size={22} className="text-white" />
           </button>
+
           <Swiper
             modules={[Autoplay, Navigation, Pagination]}
             slidesPerView={1}
@@ -64,18 +83,20 @@ const TestimonialComponent = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+
           {/* Right Arrow */}
           <button
             className="custom-next hidden 2xl:flex absolute -right-15 top-1/2 -translate-y-1/2 z-10 
-  w-12 h-12 items-center justify-center 
-  rounded-full bg-white text-[#ff6041] 
-  border-2 border-white shadow-lg
-  transition-all duration-300
-  hover:bg-transparent hover:text-white cursor-pointer"
+        w-12 h-12 items-center justify-center 
+        rounded-full bg-white text-[#ff6041] 
+        border-2 border-white shadow-lg
+        transition-all duration-300
+        hover:bg-transparent hover:text-white cursor-pointer"
           >
             <HiArrowLongRight size={22} />
           </button>
         </div>
+
         <div className="custom-pagination-testimonial mt-6 flex justify-center"></div>
       </div>
     </section>

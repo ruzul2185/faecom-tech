@@ -117,14 +117,34 @@ The training is designed to mirror real-world business scenarios, enabling learn
     "Career guidance & enterprise-ready skills",
   ],
   images: {
-    hero: "/zoho-business.png", // Zoho CRM image
+    heroAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771876986/Zoho_cbsf3d.avif",
+    heroWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771876987/Zoho_khtjzg.webp",
+    hero: "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771876988/Zoho_bhmt85.png", // Zoho CRM image
+    overviewAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771872391/Zoho_Training_Overview_xos79n.avif",
+    overviewWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771872392/Zoho_Training_Overview_wqutln.webp",
     overview:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center", // Business automation
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771872393/Zoho_Training_Overview_moxgky.png", // Business automation
+    learningOutcomesAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873957/What_Students_Will_Actually_Learn_bishxx.avif",
+    learningOutcomesWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873958/What_Students_Will_Actually_Learn_d87cxq.webp",
     learningOutcomes:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center", // Learning and students
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771873958/What_Students_Will_Actually_Learn_nddoos.png", // Learning and students
+    practicalApproachAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882250/Practical_Training_Approach_meeufr.avif",
+    practicalApproachWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882256/Practical_Training_Approach_dli8si.webp",
     practicalApproach:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop&crop=center", // Hands-on training
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882255/Practical_Training_Approach_wpeu5o.png", // Hands-on training
+    benefitsAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882433/Business_Benefits_of_Zoho_Training_bppqfr.avif",
+    benefitsWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882439/Business_Benefits_of_Zoho_Training_raukru.webp",
     benefits:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center", // Business benefits
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882436/Business_Benefits_of_Zoho_Training_gcubex.png", // Business benefits
   },
 };

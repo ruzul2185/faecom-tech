@@ -29,13 +29,55 @@ const ZohoTraining = () => {
       </section>
 
       {/* ================= HERO IMAGE SECTION ================= */}
-      <section className="max-w-7xl mx-auto px-6 ">
-        <img
-          loading="lazy"
-          src={zohoTrainingDetails.images.hero}
-          alt="Zoho Business Automation"
-          className="w-full h-full rounded-[25px] object-cover hover:scale-105 hover:rotate-2 transition-transform duration-300"
-        />
+      <section className="max-w-7xl mx-auto overflow-hidden rounded-[25px]">
+        <picture>
+          <source
+            srcSet={zohoTrainingDetails.images.heroAvif}
+            type="image/avif"
+          />
+          <source
+            srcSet={zohoTrainingDetails.images.heroWebp}
+            type="image/webp"
+          />
+          <img
+            loading="lazy"
+            src={zohoTrainingDetails.images.hero} // fallback (png/jpg)
+            alt="Zoho Business Automation"
+            className="w-full h-full rounded-[25px] object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </picture>
+      </section>
+
+      {/* ================= AUTHORIZED TRAINING PARTNER SECTION ================= */}
+      <section className="bg-[#ff6041] py-16">
+        <div className="max-w-7xl mx-auto px-6 text-center flex flex-col items-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Authorized Training Partner
+          </h2>
+          <p className="text-xl text-white max-w-3xl mx-auto mb-8">
+            Our company is an authorized training partner of{" "}
+            <a
+              href="https://www.zohocorp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-semibold hover:text-gray-200 transition-colors"
+            >
+              Zoho Corp
+            </a>
+            , ensuring you receive industry-recognized certifications and
+            expert-led training.
+          </p>
+          <a
+            href="https://www.zohocorp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PrimaryButton
+              title="Visit Zoho Corp"
+              classname="rounded-[25px] border border-black text-black hover:bg-gray-100"
+            />
+          </a>
+        </div>
       </section>
 
       {/* ================= SEPARATOR ================= */}
@@ -55,13 +97,23 @@ const ZohoTraining = () => {
       <section className="max-w-7xl mx-auto px-6">
         <div className="bg-linear-to-r from-gray-50 to-white rounded-3xl p-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img
-                loading="lazy"
-                src={zohoTrainingDetails.images.overview}
-                alt="Zoho Business Overview"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
-              />
+            <div className="relative overflow-hidden rounded-[25px]">
+              <picture>
+                <source
+                  srcSet={zohoTrainingDetails.images.overviewAvif}
+                  type="image/avif"
+                />
+                <source
+                  srcSet={zohoTrainingDetails.images.overviewWebp}
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src={zohoTrainingDetails.images.overview} // fallback (jpg/png)
+                  alt="Zoho Business Overview"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+                />
+              </picture>
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-8">
@@ -105,13 +157,23 @@ const ZohoTraining = () => {
                 ))}
               </div>
             </div>
-            <div className="relative">
-              <img
-                loading="lazy"
-                src={zohoTrainingDetails.images.learningOutcomes}
-                alt="Learning Outcomes"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
-              />
+            <div className="relative overflow-hidden rounded-[25px]">
+              <picture>
+                <source
+                  srcSet={zohoTrainingDetails.images.learningOutcomesAvif}
+                  type="image/avif"
+                />
+                <source
+                  srcSet={zohoTrainingDetails.images.learningOutcomesWebp}
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src={zohoTrainingDetails.images.learningOutcomes} // fallback (png/jpg)
+                  alt="Learning Outcomes"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -235,13 +297,23 @@ const ZohoTraining = () => {
               {zohoTrainingDetails.practicalApproach.conclusion}
             </p>
           </div>
-          <div className="relative">
-            <img
-              loading="lazy"
-              src={zohoTrainingDetails.images.practicalApproach}
-              alt="Practical Training Approach"
-              className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
-            />
+          <div className="relative overflow-hidden rounded-[25px]">
+            <picture>
+              <source
+                srcSet={zohoTrainingDetails.images.practicalApproachAvif}
+                type="image/avif"
+              />
+              <source
+                srcSet={zohoTrainingDetails.images.practicalApproachWebp}
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src={zohoTrainingDetails.images.practicalApproach} // fallback (png/jpg)
+                alt="Practical Training Approach"
+                className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -249,13 +321,23 @@ const ZohoTraining = () => {
       {/* ================= BUSINESS BENEFITS SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <img
-              loading="lazy"
-              src={zohoTrainingDetails.images.benefits}
-              alt="Business Benefits"
-              className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
-            />
+          <div className="relative overflow-hidden rounded-[25px]">
+            <picture>
+              <source
+                srcSet={zohoTrainingDetails.images.benefitsAvif}
+                type="image/avif"
+              />
+              <source
+                srcSet={zohoTrainingDetails.images.benefitsWebp}
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src={zohoTrainingDetails.images.benefits} // fallback (png/jpg)
+                alt="Business Benefits"
+                className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+              />
+            </picture>
           </div>
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-8">

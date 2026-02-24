@@ -29,12 +29,12 @@ const SAPTraining = () => {
       </section>
 
       {/* ================= HERO IMAGE SECTION ================= */}
-      <section className="max-w-7xl mx-auto px-6 ">
+      <section className="max-w-7xl mx-auto w-full h-full rounded-[25px] overflow-hidden">
         <img
           loading="lazy"
           src={sapTrainingDetails.images.hero}
           alt="SAP ERP Systems"
-          className="w-full h-full rounded-[25px] object-cover hover:scale-105 hover:rotate-2 transition-transform duration-300"
+          className="w-full h-full rounded-[25px] object-cover hover:scale-105 transition-transform duration-300"
         />
       </section>
 
@@ -84,13 +84,23 @@ const SAPTraining = () => {
       <section className="max-w-7xl mx-auto px-6">
         <div className="bg-linear-to-r from-gray-50 to-white rounded-3xl p-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img
-                loading="lazy"
-                src={sapTrainingDetails.images.overview}
-                alt="SAP ERP Overview"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
-              />
+            <div className="relative overflow-hidden rounded-[25px]">
+              <picture>
+                <source
+                  srcSet={sapTrainingDetails.images.overviewAvif}
+                  type="image/avif"
+                />
+                <source
+                  srcSet={sapTrainingDetails.images.overviewWebp}
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src={sapTrainingDetails.images.overview} // fallback (png/jpg)
+                  alt="SAP ERP Overview"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+                />
+              </picture>
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-8">
@@ -134,13 +144,23 @@ const SAPTraining = () => {
                 ))}
               </div>
             </div>
-            <div className="relative">
-              <img
-                loading="lazy"
-                src={sapTrainingDetails.images.learningOutcomes}
-                alt="Learning Outcomes"
-                className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
-              />
+            <div className="relative overflow-hidden rounded-[25px]">
+              <picture>
+                <source
+                  srcSet={sapTrainingDetails.images.learningOutcomesAvif}
+                  type="image/avif"
+                />
+                <source
+                  srcSet={sapTrainingDetails.images.learningOutcomesWebp}
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src={sapTrainingDetails.images.learningOutcomes} // fallback (png/jpg)
+                  alt="Learning Outcomes"
+                  className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -264,13 +284,23 @@ const SAPTraining = () => {
               {sapTrainingDetails.practicalApproach.conclusion}
             </p>
           </div>
-          <div className="relative">
-            <img
-              loading="lazy"
-              src={sapTrainingDetails.images.practicalApproach}
-              alt="Practical Training Approach"
-              className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
-            />
+          <div className="relative overflow-hidden rounded-[25px]">
+            <picture>
+              <source
+                srcSet={sapTrainingDetails.images.practicalApproachAvif}
+                type="image/avif"
+              />
+              <source
+                srcSet={sapTrainingDetails.images.practicalApproachWebp}
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src={sapTrainingDetails.images.practicalApproach} // fallback (png/jpg)
+                alt="Practical Training Approach"
+                className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -278,12 +308,12 @@ const SAPTraining = () => {
       {/* ================= BUSINESS BENEFITS SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
+          <div className="relative overflow-hidden rounded-[25px]">
             <img
               loading="lazy"
               src={sapTrainingDetails.images.benefits}
               alt="Business Benefits"
-              className="w-full rounded-2xl shadow-lg hover:scale-105 hover:rotate-2 transition-transform duration-300"
+              className="w-full rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div>

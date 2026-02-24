@@ -160,12 +160,24 @@ We focus on hands-on implementation, live project simulations, and scenario-base
   ],
   images: {
     hero: "/sap-bg.jpg", // SAP ERP image
+    overviewAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882747/SAP_Tranning_kblqq3.avif",
+    overviewWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882751/SAP_Tranning_krlqrj.webp",
     overview:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center", // ERP systems
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882750/SAP_Tranning_siusao.png", // ERP systems
+    learningOutcomesAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882823/What_Students_Will_Actually_Learn_SAP_h6gold.avif",
+    learningOutcomesWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882830/What_Students_Will_Actually_Learn_SAP_xrm66y.webp",
     learningOutcomes:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center", // Learning and students
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882827/What_Students_Will_Actually_Learn_SAP_z0hex4.png", // Learning and students
+    practicalApproachAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875784/Practical_Training_Approach_ts9qnt.avif",
+    practicalApproachWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875847/Practical_Training_Approach_bqkxzo.webp",
     practicalApproach:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop&crop=center", // Hands-on training
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771875787/Practical_Training_Approach_xkwnsj.png", // Hands-on training
     benefits:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center", // Business benefits
   },

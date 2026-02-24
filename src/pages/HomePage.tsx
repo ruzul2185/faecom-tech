@@ -20,7 +20,7 @@ const HomePage = () => {
       <section className="max-w-5xl mx-auto text-center flex flex-col gap-6.75 justify-center items-center">
         {/* Top badge / label */}
         <Bookmark
-          iconSrc="Sparkles.svg"
+          iconSrc="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953301/Sparkles_dlnthx.svg"
           title="Leading Tech, Education and Solutions"
           className="bg-white gap-3"
         />
@@ -54,11 +54,29 @@ const HomePage = () => {
       <ServiceComponent />
 
       {/* ================= SECOND SECTION (CAROUSEL + INFO) ================= */}
-      <section className="bg mx-auto min-w-86.25 w-[93%] rounded-[50px] py-12.5 text-white flex flex-col gap-12.5 max-w-442.5">
+      <section className="relative mx-auto min-w-86.25 w-[93%] rounded-[50px] py-12.5 text-white flex flex-col gap-12.5 max-w-442.5 overflow-hidden">
+        {/* Background image using <picture> for AVIF/WebP/PNG */}
+        <picture className="absolute inset-0 -z-10 w-full h-full">
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951641/bg_nqb1al.avif"
+            type="image/avif"
+          />
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951642/bg_j4qvnl.webp"
+            type="image/webp"
+          />
+          <img
+            src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952156/bg_d1vgqz.png"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </picture>
+
         {/* Infinite scrolling carousel component */}
-        <InfiniteCarousel className="bg-[#d9d9d9]/13" />
-        {/* -------- Business Integration Content -------- */}
-        <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9 sm:flex-row sm:justify-around sm:items-center">
+        <InfiniteCarousel className="bg-[#d9d9d9]/13 z-10" />
+
+        {/* Business Integration Content */}
+        <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9 sm:flex-row sm:justify-around sm:items-center z-10">
           {/* Text Content */}
           <div className="flex flex-col gap-9 md:w-[60%]">
             <div className="text-[30px] font-medium sm:text-5xl">
@@ -79,8 +97,8 @@ const HomePage = () => {
           </a>
         </div>
 
-        {/* -------- Statistics + Supporting Content -------- */}
-        <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9 lg:flex-row sm:justify-around sm:items-center">
+        {/* Statistics + Supporting Content */}
+        <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9 lg:flex-row sm:justify-around sm:items-center z-10">
           {/* Statistics Cards Grid */}
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
             {STATISTICS_CARD_INFO.map((item, index) => (
@@ -119,7 +137,11 @@ const HomePage = () => {
 
       <TestimonialComponent />
 
-      <GalleryComponent />
+      <GalleryComponent
+        galleryConfig={{
+          mediaAssets: [{ tag: "gallery" }],
+        }}
+      />
 
       <NewsLetterComponent />
     </div>

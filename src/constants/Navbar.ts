@@ -5,7 +5,7 @@ export const SERVICES = [
   { name: "Digital Marketing", path: "/services/digital-marketing" },
   { name: "QA Services", path: "/services/qa" },
   { name: "AWS", path: "/services/aws" },
-  { name: "Zoho Services", path: "/services/zoho" },
+  { name: "Zoho", path: "/services/zoho" },
   { name: "Salesforce", path: "/services/salesforce" },
   // { name: "SAP", path: "/services/sap" },
 ];
@@ -13,6 +13,6 @@ export const SERVICES = [
 export const TRAININGS = [
   { name: "SAP", path: "/trainings/sap-training" },
   { name: "AWS", path: "/trainings/aws-training" },
-  { name: "Zoho Services", path: "/trainings/zoho-training" },
+  { name: "Zoho", path: "/trainings/zoho-training" },
   { name: "Salesforce", path: "/trainings/salesforce-training" },
 ];

@@ -7,6 +7,7 @@ import {
   FaShieldAlt,
   FaCheckCircle,
   FaChartLine,
+  FaHandshake,
 } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { ZOHO_SERVICE_DATA } from "../../constants/ServicesDetails/ZohoConstants";
@@ -151,6 +152,40 @@ const ZohoService = () => {
         </div>
       </section>
 
+      {/* Implementation Partner Section */}
+      <section className="bg-linear-to-br from-gray-50 to-white py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center flex flex-col items-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3 justify-center">
+              <FaHandshake className="text-[#ff6041]" />
+              Our Implementation Partner
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              We proudly partner with Zoho Corp, a leading business automation
+              platform, to deliver world-class Zoho implementations. Their
+              comprehensive suite of tools and global expertise ensure seamless
+              integration and optimal performance for your business processes.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+              Together, we combine Zoho Corp's innovative solutions with our
+              specialized consulting to provide comprehensive, end-to-end
+              business automation services that drive productivity and
+              innovation.
+            </p>
+            <a
+              href="https://www.zohocorp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <PrimaryButton
+                title="Visit Zoho Corp"
+                classname="rounded-[25px]"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Services Core Features */}
       <section className="bg-gray-50 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,12 +287,22 @@ const ZohoService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/zoho-business.png"
-                  alt="Zoho Business Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879886/Business_Automation_lau0i1.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879897/Business_Automation_vgw0mb.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879897/Business_Automation_gznx1b.png" // fallback
+                    alt="Zoho Business Solutions"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Business
                 </div>
@@ -284,12 +329,22 @@ const ZohoService = () => {
 
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/zoho-analytics.png"
-                  alt="Zoho Analytics"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879685/Analytics___Reporting_sjnsmi.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879686/Analytics___Reporting_c6vngv.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879686/Analytics___Reporting_xoyznx.png" // fallback
+                    alt="Zoho Analytics"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Analytics
                 </div>

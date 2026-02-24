@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-
 interface BlogCardProps {
   title: string;
   date: string;
@@ -32,12 +30,12 @@ const BlogCard = ({ title, date, image, link }: BlogCardProps) => {
           <p className="text-lg text-black mb-2 font-medium">{date}</p>
         </div>
 
-        <Link
-          to={link}
+        <a
+          href={link}
           className="mt-4 font-medium text-black text-lg border-t-2 p-4"
         >
           Read More →
-        </Link>
+        </a>
       </div>
     </div>
   );

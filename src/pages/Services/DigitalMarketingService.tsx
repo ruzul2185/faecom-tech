@@ -84,16 +84,16 @@ const DigitalMarketingService = () => {
             <div className="relative">
               <picture>
                 <source
-                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568951/digital_marketing_npihno.avif"
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771878883/Digital_Marketing_mv3tky.avif"
                   type="image/avif"
                 />
                 <source
-                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568958/digital_marketing_klmu54.webp"
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771879160/Digital_Marketing_zdegcd.webp"
                   type="image/webp"
                 />
                 <img
                   loading="lazy"
-                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771568957/digital_marketing_edv5eq.png"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771878909/Digital_Marketing_iit7tp.png"
                   alt="Digital Marketing Services"
                   className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
                 />

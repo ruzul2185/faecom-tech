@@ -70,12 +70,22 @@ const CustomService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <img
-                loading="lazy"
-                src="/custom-bg.webp"
-                alt="Custom Software Development"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880776/software_service_sctc3x.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880778/software_service_cyyvjo.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880778/software_service_rrcfe6.png" // fallback
+                  alt="Custom Software Development"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
+                />
+              </picture>
             </div>
 
             {/* Right - Content */}
@@ -233,12 +243,22 @@ const CustomService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/custom-solution.png"
-                  alt="Enterprise Software Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881733/Enterprise_Solutions_vuultj.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881735/Enterprise_Solutions_qwaqpd.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881735/Enterprise_Solutions_clmyot.png" // fallback
+                    alt="Enterprise Software Solutions"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Enterprise
                 </div>
@@ -263,12 +283,22 @@ const CustomService = () => {
 
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/custom-adv.jfif"
-                  alt="Advanced Development Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881063/Advanced_Development_flcny9.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881065/Advanced_Development_kzpnd8.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771881063/Advanced_Development_flcny9.png" // fallback
+                    alt="Advanced Development Solutions"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Advanced
                 </div>

@@ -83,12 +83,22 @@ const UnityService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <img
-                loading="lazy"
-                src="/unity-bg.png"
-                alt="Unity Game Development"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880076/Unity_game_development_lhzcjo.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880078/Unity_game_development_hk4wzu.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880077/Unity_game_development_wz695e.png" // fallback
+                  alt="Unity Game Development"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-105 transition-all duration-500"
+                />
+              </picture>
             </div>
 
             {/* Right - Content */}
@@ -226,12 +236,22 @@ const UnityService = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="relative">
-              <img
-                loading="lazy"
-                src="/unity-particle.avif"
-                alt="Unity 3D Visual Effects"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880589/Stunning_3D_Effects___Visual_Excellence_toyl9b.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880593/Stunning_3D_Effects___Visual_Excellence_igbktb.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880592/Stunning_3D_Effects___Visual_Excellence_l5pnhv.png" // fallback
+                  alt="Unity 3D Visual Effects"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                />
+              </picture>
             </div>
 
             <div className="space-y-6">

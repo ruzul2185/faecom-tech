@@ -251,12 +251,22 @@ const SalesforceService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/salesforce-crm.webp"
-                  alt="Salesforce CRM Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880425/CRM_Solutions_i2rwoq.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880428/CRM_Solutions_uevq0h.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880427/CRM_Solutions_bxjmbe.png" // fallback
+                    alt="Salesforce CRM Solutions"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   CRM
                 </div>
@@ -284,12 +294,22 @@ const SalesforceService = () => {
 
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/salesforce-analytics.webp"
-                  alt="Salesforce Analytics"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880244/Analytics___Optimization_iotgmy.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880247/Analytics___Optimization_rdjeec.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771880245/Analytics___Optimization_lzmmmi.png" // fallback
+                    alt="Salesforce Analytics"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Analytics
                 </div>

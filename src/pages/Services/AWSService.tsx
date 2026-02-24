@@ -1,4 +1,10 @@
-import { FaAws, FaRocket, FaCheckCircle, FaServer } from "react-icons/fa";
+import {
+  FaAws,
+  FaRocket,
+  FaCheckCircle,
+  FaServer,
+  FaHandshake,
+} from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { AWS_SERVICE_DATA } from "../../constants/ServicesDetails/AWSConstants";
 import { Bookmark } from "../../components/Bookmark";
@@ -117,6 +123,41 @@ const AWSService = () => {
         </div>
       </section>
 
+      {/* Implementation Partner Section */}
+      <section className="bg-linear-to-br from-gray-50 to-white py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center flex flex-col items-center ">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3 justify-center">
+              <FaHandshake className="text-[#ff6041]" />
+              Our Implementation Partner
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              We proudly partner with Redington Group, a leading technology
+              solutions provider, to deliver world-class AWS implementations.
+              Their expertise in enterprise IT solutions and global reach
+              ensures seamless integration and optimal performance for your
+              cloud infrastructure.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+              Together, we combine Redington Group's industry-leading hardware
+              and software solutions with our specialized AWS consulting to
+              provide comprehensive, end-to-end cloud transformation services
+              that drive business growth and innovation.
+            </p>
+            <a
+              href="https://redingtongroup.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <PrimaryButton
+                title="Visit Redington Group"
+                classname="rounded-[25px]"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Services Core Features */}
       <section className="bg-gray-50 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,12 +218,22 @@ const AWSService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/aws-global.png"
-                  alt="AWS Infrastructure"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771878466/Infrastructure___Architecture_jidioh.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771878465/Infrastructure___Architecture_nodrni.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771878466/Infrastructure___Architecture_xozlqt.png" // fallback
+                    alt="AWS Infrastructure"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Infrastructure
                 </div>
@@ -209,12 +260,22 @@ const AWSService = () => {
 
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/aws-cloud.png"
-                  alt="AWS Cloud Campaigns"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771878177/Targeted_Cloud_Campaigns_ndhb0n.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771878177/Targeted_Cloud_Campaigns_ec5lat.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771878180/Targeted_Cloud_Campaigns_wo0grl.png" // fallback
+                    alt="AWS Cloud Campaigns"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Campaigns
                 </div>
