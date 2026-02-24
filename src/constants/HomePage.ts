@@ -101,23 +101,37 @@ export const AFFILIATE_LOGOS = [
 export const TRAINING_INFO = [
   {
     title: "Systems, Applications, and Products (SAP)",
-    backgroundImage: "/sap-bg.jpg",
+    backgroundImage:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946705/SAP_training_uqlsef.png",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946698/SAP_training_up13fr.webp",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946698/SAP_training_bz0tjl.avif",
     link: "/services/sap",
   },
   {
     title: "Amazon Web Services (AWS)",
     backgroundImage: "/aws-bg.png",
+    backgroundImageWebp: "",
+    backgroundImageAvif: "",
     link: "/services/aws",
   },
   {
     title: "Zoho",
     backgroundImage: "/zoho-bg.jpg",
     link: "/services/zoho",
+    backgroundImageWebp: "",
+    backgroundImageAvif: "",
   },
   {
     title: "Salesforce",
-    backgroundImage: "/salesforce-bg.webp",
+    backgroundImage:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946997/salesforce_training_opr1kg.png",
     link: "/services/salesforce",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946996/salesforce_training_kwpjz5.webp",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946993/salesforce_training_vv9e6x.avif",
   },
 ];
 
@@ -139,8 +153,12 @@ export const PORTFOLIO_INFO = [
     overview:
       "Customized Zoho Inventory setup to automate stock tracking,streamline warehouse operations, and improve order processing.",
     result: "Faster inventory workflow and real-time stock visibility.",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945966/sky_sports_hpmywp.avif",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945967/sky_sports_npe4vz.webp",
     backgroundImage:
-      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945967/sky_sports_nwnuxt.png",
     link: "https://skysportswear.com",
   },
   {
@@ -151,8 +169,12 @@ export const PORTFOLIO_INFO = [
       "Delivered a complete brand identity and eCommerce website solution — covering brand strategy, logo design, visual language, and responsive UI/UX development.",
     result:
       "Strong digital presence and a seamless online shopping experience for global customers.",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946104/shopgoro_p0edbs.avif",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946107/shopgoro_rjnht4.webp",
     backgroundImage:
-      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946106/shopgoro_kq2weo.png",
     link: "https://shopgooro.com",
   },
   {
@@ -162,8 +184,12 @@ export const PORTFOLIO_INFO = [
     overview:
       "We created a responsive, easy-to-use website for InnerMost Shift Coaching, featuring their ICF-accredited training programs. The layout ensures effortless navigation, mobile-friendliness, and improved engagement ",
     result: "strengthening their digital presence and client reach.",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946219/inner_most_kh1hhu.avif",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946233/inner_most_forrmr.webp",
     backgroundImage:
-      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946219/inner_most_wp3rw9.png",
     link: "https://skysportswear.com",
   },
   {
@@ -173,9 +199,29 @@ export const PORTFOLIO_INFO = [
     overview:
       "We designed a clean, responsive website for Priority Herbals to showcase their Ayurvedic products.",
     result: "boost credibility and online sales.",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945622/priority_herbals_rrh0zz.avif",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945623/priority_herbals_b8bypf.webp",
     backgroundImage:
-      "https://cdn.shopify.com/s/files/1/0299/9215/7283/files/Cybersecurity_certiprof.webp?v=1733832542",
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945623/priority_herbals_cfim5w.png",
     link: "https://skysportswear.com",
+  },
+  {
+    title: "Emphasis Engineering",
+    sevice: "Custom E-Learning Web Platform",
+    location: "Toronto, Canada",
+    overview:
+      "Custom e-learning platform for a Toronto client, inspired by Udemy, with responsive design and multimedia support.",
+    result:
+      "Delivered a scalable platform that boosted learner engagement, streamlined course management, and enabled secure payments.",
+    backgroundImageAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945622/priority_herbals_rrh0zz.avif",
+    backgroundImageWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945623/priority_herbals_b8bypf.webp",
+    backgroundImage:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771945623/priority_herbals_cfim5w.png",
+    link: "https://emphasisengineering.com/",
   },
 ];
 

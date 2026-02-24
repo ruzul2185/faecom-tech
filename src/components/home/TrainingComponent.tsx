@@ -34,6 +34,8 @@ const TrainingComponent = () => {
                 <TrainingCard
                   title={item.title}
                   backgroundImage={item.backgroundImage}
+                  backgroundImageWebp={item.backgroundImageWebp}
+                  backgroundImageAvif={item.backgroundImageAvif}
                   link={item.link}
                 />
               </SwiperSlide>

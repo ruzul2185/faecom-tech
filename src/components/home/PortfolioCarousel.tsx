@@ -66,6 +66,8 @@ const PortfolioCarousel = ({ prevRef, nextRef }: PortfolioCarouselProps) => {
             <PortfolioCard
               title={item.title}
               backgroundImage={item.backgroundImage}
+              backgroundImageAvif={item.backgroundImageAvif}
+              backgroundImageWebp={item.backgroundImageWebp}
               link={item.link}
               service={item.sevice}
               location={item.location}

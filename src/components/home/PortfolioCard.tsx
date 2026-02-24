@@ -7,6 +7,8 @@ interface PortfolioCardProps {
   overview: string;
   result: string;
   backgroundImage: string;
+  backgroundImageWebp: string;
+  backgroundImageAvif: string;
   link: string;
 }
 
@@ -18,16 +20,25 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   result,
   backgroundImage,
   link,
+  backgroundImageWebp,
+  backgroundImageAvif,
 }) => {
   return (
     <div className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:shadow-2xl">
       {/* Background Image */}
-      <img
-        src={backgroundImage}
-        alt=""
-        loading="lazy"
-        className="h-105 w-full object-cover transform transition-transform duration-700 group-hover:scale-110"
-      />
+      <picture>
+        {/* AVIF first, highest priority */}
+        <source srcSet={backgroundImageAvif} type="image/avif" />
+        {/* WebP fallback */}
+        <source srcSet={backgroundImageWebp} type="image/webp" />
+        {/* Fallback to original image */}
+        <img
+          src={backgroundImage} // e.g., /images/background.jpg
+          alt="Descriptive alt text"
+          loading="lazy"
+          className="h-105 w-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+        />
+      </picture>
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60 group-hover:bg-black/75 transition duration-500" />
 

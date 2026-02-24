@@ -73,29 +73,26 @@ const Contact = () => {
       icon: <FaLocationDot className="w-6 h-6 sm:w-7 sm:h-7 text-white" />,
       title: "Our Address",
       content: [
-        "Office Address: 2nd Floor, Chandra Building IT Park Road, Nagpur 440022",
+        "Corporate Address:",
+        "2nd Floor, Chandra Building IT Park Road, Nagpur 440022",
         "Maharashtra, India",
+        "__________________",
+        "Registered Address:",
+        "Plot No. 15, Pathan Layout, Datta Mandir Road, Rana Pratap",
+        "Nagar, Nagpur - 440022, Maharashtra, India",
       ],
       isOrange: false,
     },
     {
       icon: <FaPhone className="w-6 h-6 sm:w-7 sm:h-7 text-white" />,
       title: "Contact Us",
-      content: [
-        "Mobile: +91 88888 88888",
-        "Email: info@faecomtech.com",
-        "Support: support@faecomtech.com",
-      ],
+      content: ["Mobile: +91 99703 50188", "Email: info@faecomtech.com"],
       isOrange: false,
     },
     {
       icon: <FaClock className="w-6 h-6 sm:w-7 sm:h-7 text-white" />,
       title: "Open Hours",
-      content: [
-        "Mon - Sat: 9:00 - 18:00",
-        "Sunday: Closed",
-        "Support: 24/7 Available",
-      ],
+      content: ["Mon - Fri: 10:00 AM - 07:00 PM", "Support: 24/7 Available"],
       isOrange: false,
     },
   ];
