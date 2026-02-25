@@ -321,6 +321,7 @@ const Services = () => {
 
     try {
       const form = new FormData();
+      form.append("formType", "form1");
       form.append("firstName", formData.firstName);
       form.append("lastName", formData.lastName);
       form.append("email", formData.email);

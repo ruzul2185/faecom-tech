@@ -1,6 +1,6 @@
 import { useState, type FormEventHandler } from "react";
 import { Bookmark } from "../components/Bookmark";
-import { PrimaryButton } from "../components/Button";
+import { PrimaryButton, SubmitButton } from "../components/Button";
 import { FaLocationDot, FaPhone, FaClock, FaPaperPlane } from "react-icons/fa6";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
@@ -9,6 +9,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { toast } from "sonner";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,9 +28,6 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
 
   useGSAP(
     () => {
@@ -227,37 +225,45 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Google Sheets Web App URL - Replace with your actual Google Apps Script URL
     const GOOGLE_SHEETS_URL =
-      "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+      "https://script.google.com/macros/s/AKfycbzQem7mYsZYdcb_tSDD8lOAnJaraKE8kMpOekGr6CBzzWlOkS1UDryPOI1joE1w_9Mtxg/exec";
+
+    const loadingToast = toast.loading("Sending message...");
 
     try {
+      const form = new FormData();
+
+      form.append("formType", "contactForm");
+      form.append("fullName", formData.fullName);
+      form.append("email", formData.email);
+      form.append("phone", formData.phone);
+      form.append("option", formData.option);
+      form.append("message", formData.message);
+      form.append("timestamp", new Date().toISOString());
+
       const response = await fetch(GOOGLE_SHEETS_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-        }),
+        body: form,
       });
 
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({
-          fullName: "",
-          email: "",
-          phone: "",
-          option: "",
-          message: "",
-        });
-      } else {
-        setSubmitStatus("error");
+      if (!response.ok) {
+        throw new Error("Failed to submit");
       }
+
+      toast.success("Message sent successfully 🚀", { id: loadingToast });
+
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        option: "",
+        message: "",
+      });
     } catch (error) {
       console.error("Error submitting form:", error);
-      setSubmitStatus("error");
+      toast.error("Something went wrong. Please try again ❌", {
+        id: loadingToast,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -588,6 +594,7 @@ const Contact = () => {
                     placeholder="John Doe"
                   />
                 </div>
+
                 <div className="group">
                   <label className="block text-sm font-medium mb-2 text-white/80 group-focus-within:text-[#ff6041] transition-colors">
                     Email Address <span className="text-[#ff6041]">*</span>
@@ -619,6 +626,7 @@ const Contact = () => {
                     placeholder="+91 88888 88888"
                   />
                 </div>
+
                 <div className="group">
                   <label className="block text-sm font-medium mb-2 text-white/80 group-focus-within:text-[#ff6041] transition-colors">
                     Service Interested In
@@ -632,53 +640,42 @@ const Contact = () => {
                     <option value="" className="bg-[#1a1a1a]" disabled>
                       Select a Service
                     </option>
-
                     <option value="aws-services" className="bg-[#1a1a1a]">
                       AWS Services/Training
                     </option>
-
                     <option value="sap-services" className="bg-[#1a1a1a]">
                       SAP Services/Training
                     </option>
-
                     <option value="zoho-services" className="bg-[#1a1a1a]">
                       Zoho Services/Training
                     </option>
-
                     <option
                       value="salesforce-services"
                       className="bg-[#1a1a1a]"
                     >
                       Salesforce Services/Training
                     </option>
-
                     <option
                       value="software-development"
                       className="bg-[#1a1a1a]"
                     >
                       Software Development
                     </option>
-
                     <option value="web-development" className="bg-[#1a1a1a]">
                       Web Development
                     </option>
-
                     <option value="game-development" className="bg-[#1a1a1a]">
                       Game Development
                     </option>
-
                     <option value="digital-marketing" className="bg-[#1a1a1a]">
                       Digital Marketing
                     </option>
-
                     <option value="quality-analysis" className="bg-[#1a1a1a]">
                       Quality Analysis & Testing
                     </option>
-
                     <option value="training-programs" className="bg-[#1a1a1a]">
                       Professional Training Programs
                     </option>
-
                     <option value="other" className="bg-[#1a1a1a]">
                       Other
                     </option>
@@ -700,23 +697,11 @@ const Contact = () => {
                 />
               </div>
 
-              {submitStatus === "success" && (
-                <div className="bg-green-500/20 border border-green-500/50 rounded-xl p-4 text-green-400 flex items-center gap-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                  Thank you! Your message has been sent successfully.
-                </div>
-              )}
-              {submitStatus === "error" && (
-                <div className="bg-red-500/20 border border-red-500/50 rounded-xl p-4 text-red-400 flex items-center gap-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full" />
-                  Something went wrong. Please try again later.
-                </div>
-              )}
-
               <div className="form-button">
-                <PrimaryButton
+                <SubmitButton
                   title={isSubmitting ? "Sending..." : "Send Message"}
-                  classname="rounded-full w-full sm:w-auto px-10"
+                  disabled={isSubmitting}
+                  classname="rounded-full mx-auto px-10"
                 />
               </div>
             </form>
