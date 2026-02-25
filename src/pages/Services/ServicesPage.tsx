@@ -317,16 +317,21 @@ const Services = () => {
     }
 
     setIsSubmitting(true);
-
     const loadingToast = toast.loading("Sending message...");
 
     try {
+      const form = new FormData();
+      form.append("formType", "form1");
+      form.append("firstName", formData.firstName);
+      form.append("lastName", formData.lastName);
+      form.append("email", formData.email);
+      form.append("message", formData.message);
+
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbzQem7mYsZYdcb_tSDD8lOAnJaraKE8kMpOekGr6CBzzWlOkS1UDryPOI1joE1w_9Mtxg/exec",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          body: form,
         },
       );
 

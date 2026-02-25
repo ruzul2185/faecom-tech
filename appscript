@@ -1,0 +1,49 @@
+function doPost(e) {
+  try {
+    const formType = e.parameter.formType || "form1";
+    const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    let sheet;
+
+    // ===== ROUTE TO CORRECT SHEET =====
+    if (formType === "contactForm") {
+      sheet = spreadsheet.getSheetByName("Sheet2");
+
+      const fullName = e.parameter.fullName || "";
+      const email = e.parameter.email || "";
+      const phone = e.parameter.phone || "";
+      const option = e.parameter.option || "";
+      const message = e.parameter.message || "";
+      const timestamp = e.parameter.timestamp || new Date();
+
+      sheet.appendRow([
+        new Date(timestamp),
+        fullName,
+        email,
+        phone,
+        option,
+        message,
+      ]);
+    } else {
+      // Default = First Form → Sheet1
+      sheet = spreadsheet.getSheetByName("Sheet1");
+
+      const firstName = e.parameter.firstName || "";
+      const lastName = e.parameter.lastName || "";
+      const email = e.parameter.email || "";
+      const message = e.parameter.message || "";
+
+      sheet.appendRow([new Date(), firstName, lastName, email, message]);
+    }
+
+    return ContentService.createTextOutput(
+      JSON.stringify({ status: "success" }),
+    ).setMimeType(ContentService.MimeType.JSON);
+  } catch (error) {
+    return ContentService.createTextOutput(
+      JSON.stringify({
+        status: "error",
+        message: error.toString(),
+      }),
+    ).setMimeType(ContentService.MimeType.JSON);
+  }
+}
