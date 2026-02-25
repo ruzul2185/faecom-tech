@@ -425,11 +425,11 @@ const FAQPage = () => {
             </p>
             <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact">
-                <PrimaryButton title="Contact Us" classname="rounded-[25px]" />
+                <PrimaryButton title="Contact Us" classname="rounded-[25px] mx-auto" />
               </a>
               <a
                 href="#faq-sections"
-                className="bg-white border-2 border-[#ff6041] text-[#ff6041] hover:bg-[#ff6041] hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center"
+                className="bg-white mx-auto md:mx-0 border-2 border-[#ff6041] text-[#ff6041] hover:bg-[#ff6041] hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center"
               >
                 Browse FAQs
               </a>
@@ -573,14 +573,14 @@ const FAQPage = () => {
             <div className="cta-buttons flex flex-col sm:flex-row gap-4 justify-center">
               <PrimaryButton
                 title="Contact Our Team"
-                classname="rounded-[25px]"
+                classname="rounded-[25px] mx-auto md:mx-0"
               />
               <a
                 href="tel:+919876543210"
                 className="bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-4 px-8 rounded-lg transition-colors duration-300 inline-flex items-center justify-center gap-2"
               >
                 <FaRocket className="w-5 h-5" />
-                Call Now: +91 98765 43210
+                Call Now: +91 99703 50188
               </a>
             </div>
           </div>

@@ -361,7 +361,7 @@ const Privacy_PolicyPage = () => {
             </p>
             <div className="hero-button flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact">
-                <PrimaryButton title="Contact Us" classname="rounded-[25px]" />
+                <PrimaryButton title="Contact Us" classname="rounded-[25px] mx-auto md:mx-0" />
               </a>
             </div>
           </div>
@@ -455,7 +455,7 @@ const Privacy_PolicyPage = () => {
               <a href="/contact">
                 <PrimaryButton
                   title="Contact Privacy Team"
-                  classname="rounded-[25px]"
+                  classname="rounded-[25px] mx-auto md:mx-0"
                 />
               </a>
             </div>
