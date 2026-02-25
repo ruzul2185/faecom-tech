@@ -1,0 +1,36 @@
+function doPost(e) {
+  try {
+    // Get form fields from multipart/form-data
+    const firstName = e.parameter.firstName || "";
+    const lastName  = e.parameter.lastName || "";
+    const email     = e.parameter.email || "";
+    const message   = e.parameter.message || "";
+
+    // Open the Google Sheet
+    const sheet = SpreadsheetApp
+      .getActiveSpreadsheet()
+      .getSheetByName("Sheet1"); // change if needed
+
+    // Append row to sheet
+    sheet.appendRow([
+      new Date(),
+      firstName,
+      lastName,
+      email,
+      message
+    ]);
+
+    // Success response
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: "success" }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (error) {
+    return ContentService
+      .createTextOutput(JSON.stringify({
+        status: "error",
+        message: error.toString()
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
