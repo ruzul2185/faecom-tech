@@ -1,10 +1,33 @@
 import { useState } from "react";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton } from "../components/Button";
-import { FaShieldHalved, FaUserShield, FaDatabase, FaCookie, FaEye, FaLock, FaChevronDown, FaEnvelope } from "react-icons/fa6";
+import {
+  FaShieldHalved,
+  FaUserShield,
+  FaDatabase,
+  FaCookie,
+  FaEye,
+  FaLock,
+  FaChevronDown,
+  FaEnvelope,
+} from "react-icons/fa6";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Privacy_PolicyPage = () => {
-  const [activeSection, setActiveSection] = useState<string | null>("introduction");
+  const heroRef = useRef<HTMLDivElement>(null);
+  const lastUpdatedRef = useRef<HTMLDivElement>(null);
+  const privacySectionsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>(null);
+
+  const [activeSection, setActiveSection] = useState<string | null>(
+    "introduction",
+  );
 
   const sections = [
     {
@@ -12,22 +35,24 @@ const Privacy_PolicyPage = () => {
       title: "Introduction",
       icon: <FaShieldHalved className="w-5 h-5" />,
       content: {
-        description: "FaecomTech's commitment to protecting your privacy and personal information.",
+        description:
+          "FaecomTech's commitment to protecting your privacy and personal information.",
         points: [
           "This Privacy Policy explains how FaecomTech collects, uses, and protects your information.",
           "It applies to our website, services, training programs, and all interactions with our company.",
           "We are committed to transparency and compliance with global data protection regulations.",
           "By using our services, you consent to the practices described in this policy.",
-          "This policy is regularly updated to reflect changes in our practices and legal requirements."
-        ]
-      }
+          "This policy is regularly updated to reflect changes in our practices and legal requirements.",
+        ],
+      },
     },
     {
       id: "information",
       title: "Information We Collect",
       icon: <FaDatabase className="w-5 h-5" />,
       content: {
-        description: "Types of personal and business information we collect to provide our services.",
+        description:
+          "Types of personal and business information we collect to provide our services.",
         points: [
           "Personal Information: Name, email address, phone number, job title, and company details.",
           "Contact Information: Physical addresses, billing addresses, and communication preferences.",
@@ -35,16 +60,17 @@ const Privacy_PolicyPage = () => {
           "Training Data: Course enrollment, progress, assessment results, and certification details.",
           "Service Usage Data: Login history, feature usage, and interaction patterns.",
           "Technical Data: IP address, browser type, device information, and cookies data.",
-          "Payment Information: Billing details, transaction history, and payment method preferences."
-        ]
-      }
+          "Payment Information: Billing details, transaction history, and payment method preferences.",
+        ],
+      },
     },
     {
       id: "usage",
       title: "How We Use Your Information",
       icon: <FaEye className="w-5 h-5" />,
       content: {
-        description: "The purposes for which we collect and process your information.",
+        description:
+          "The purposes for which we collect and process your information.",
         points: [
           "Service Delivery: To provide IT consulting, training, and technical support services.",
           "Communication: To respond to inquiries, send updates, and provide customer support.",
@@ -53,16 +79,17 @@ const Privacy_PolicyPage = () => {
           "Service Improvement: To analyze usage patterns and enhance our service offerings.",
           "Marketing: To inform about new services, special offers, and relevant updates.",
           "Legal Compliance: To meet regulatory requirements and protect legal interests.",
-          "Security: To monitor for fraud, prevent abuse, and ensure platform security."
-        ]
-      }
+          "Security: To monitor for fraud, prevent abuse, and ensure platform security.",
+        ],
+      },
     },
     {
       id: "sharing",
       title: "Information Sharing",
       icon: <FaUserShield className="w-5 h-5" />,
       content: {
-        description: "How and when we share your information with third parties.",
+        description:
+          "How and when we share your information with third parties.",
         points: [
           "Service Providers: With trusted partners for cloud services (AWS, SAP, Zoho, Salesforce).",
           "Payment Processors: With financial institutions for payment processing and verification.",
@@ -71,16 +98,17 @@ const Privacy_PolicyPage = () => {
           "Business Transfers: In case of mergers, acquisitions, or business asset sales.",
           "Analytics Providers: With Google Analytics and similar tools for website optimization.",
           "We never sell your personal information to third parties for marketing purposes.",
-          "All third-party processors are carefully vetted and bound by confidentiality agreements."
-        ]
-      }
+          "All third-party processors are carefully vetted and bound by confidentiality agreements.",
+        ],
+      },
     },
     {
       id: "cookies",
       title: "Cookies and Tracking",
       icon: <FaCookie className="w-5 h-5" />,
       content: {
-        description: "How we use cookies and similar technologies on our website.",
+        description:
+          "How we use cookies and similar technologies on our website.",
         points: [
           "Essential Cookies: Required for basic website functionality and security.",
           "Performance Cookies: Help us understand how visitors interact with our website.",
@@ -89,9 +117,9 @@ const Privacy_PolicyPage = () => {
           "Analytics Cookies: Help us analyze traffic and improve user experience.",
           "You can control cookies through your browser settings.",
           "Disabling cookies may affect some features and functionality of our website.",
-          "We provide clear cookie consent options for all visitors."
-        ]
-      }
+          "We provide clear cookie consent options for all visitors.",
+        ],
+      },
     },
     {
       id: "security",
@@ -107,16 +135,17 @@ const Privacy_PolicyPage = () => {
           "Employee Training: Regular privacy and security training for all staff members.",
           "Incident Response: Established procedures for handling security breaches.",
           "Data Minimization: We collect only information necessary for our services.",
-          "Regular Updates: Continuous improvement of security measures and practices."
-        ]
-      }
+          "Regular Updates: Continuous improvement of security measures and practices.",
+        ],
+      },
     },
     {
       id: "rights",
       title: "Your Rights",
       icon: <FaUserShield className="w-5 h-5" />,
       content: {
-        description: "Your rights regarding your personal information and how to exercise them.",
+        description:
+          "Your rights regarding your personal information and how to exercise them.",
         points: [
           "Access: Request a copy of the personal information we hold about you.",
           "Correction: Request correction of inaccurate or incomplete information.",
@@ -125,9 +154,9 @@ const Privacy_PolicyPage = () => {
           "Restriction: Request limitation of how we process your information.",
           "Objection: Object to certain types of processing, such as direct marketing.",
           "Withdraw Consent: Revoke consent for processing where consent is the legal basis.",
-          "Complaint: File a complaint with relevant data protection authorities."
-        ]
-      }
+          "Complaint: File a complaint with relevant data protection authorities.",
+        ],
+      },
     },
     {
       id: "retention",
@@ -143,9 +172,9 @@ const Privacy_PolicyPage = () => {
           "Communication Records: Email and support interactions kept for 3 years.",
           "Analytics Data: Website usage data anonymized after 26 months.",
           "Automatic Deletion: Information automatically deleted when no longer needed.",
-          "User Control: You can request deletion of your account and associated data."
-        ]
-      }
+          "User Control: You can request deletion of your account and associated data.",
+        ],
+      },
     },
     {
       id: "international",
@@ -161,9 +190,9 @@ const Privacy_PolicyPage = () => {
           "Local Storage: Whenever possible, data is stored in your geographic region.",
           "Consent: We obtain explicit consent for international data transfers.",
           "Transparency: You will be informed about international data processing.",
-          "Security: All international transfers maintain the same security standards."
-        ]
-      }
+          "Security: All international transfers maintain the same security standards.",
+        ],
+      },
     },
     {
       id: "children",
@@ -179,34 +208,158 @@ const Privacy_PolicyPage = () => {
           "Immediate Deletion: If we discover we have collected a minor's data, we delete it.",
           "Educational Services: Additional protections for student information in training programs.",
           "Parental Access: Parents can access, review, and delete their children's information.",
-          "Compliance: We comply with COPPA and other child protection regulations."
-        ]
-      }
-    }
+          "Compliance: We comply with COPPA and other child protection regulations.",
+        ],
+      },
+    },
   ];
 
   const toggleSection = (sectionId: string) => {
     setActiveSection(activeSection === sectionId ? null : sectionId);
   };
 
+  useGSAP(
+    () => {
+      // ================= HERO TIMELINE =================
+      const tl = gsap.timeline();
+
+      tl.from(".hero-bookmark", {
+        y: -40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      })
+        .from(
+          ".hero-title",
+          {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.4",
+        )
+        .from(
+          ".hero-description",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        )
+        .from(
+          ".hero-button",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        );
+
+      // ================= LAST UPDATED SECTION =================
+      gsap.from(".last-updated", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: lastUpdatedRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= PRIVACY SECTIONS =================
+      gsap.from(".privacy-section", {
+        opacity: 0,
+        y: 60,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: privacySectionsRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= CONTACT SECTION =================
+      gsap.from(".contact-icon", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-description", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-button", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+    },
+    { scope: container },
+  );
+
   return (
-    <div className="min-h-screen">
+    <div ref={container} className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32">
+      <section ref={heroRef} className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Bookmark
-              icon={<FaShieldHalved className="w-6 h-6 text-[#ff6041]" />}
-              title="Privacy"
-              className="bg-white mx-auto w-fit gap-3 mb-8"
-            />
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <div className="hero-bookmark">
+              <Bookmark
+                icon={<FaShieldHalved className="w-6 h-6 text-[#ff6041]" />}
+                title="Privacy"
+                className="bg-white mx-auto w-fit gap-3 mb-8"
+              />
+            </div>
+            <h1 className="hero-title text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Privacy Policy
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Your privacy is important to us. Learn how we collect, use, and protect your information.
+            <p className="hero-description text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Your privacy is important to us. Learn how we collect, use, and
+              protect your information.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="hero-button flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact">
                 <PrimaryButton title="Contact Us" classname="rounded-[25px]" />
               </a>
@@ -216,24 +369,29 @@ const Privacy_PolicyPage = () => {
       </section>
 
       {/* Last Updated Notice */}
-      <section className="bg-[#ff6041] py-6">
+      <section ref={lastUpdatedRef} className="bg-[#ff6041] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-white">
+          <div className="last-updated text-center text-white">
             <p className="text-sm font-medium">
-              Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              Last Updated:{" "}
+              {new Date().toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
             </p>
           </div>
         </div>
       </section>
 
       {/* Privacy Sections */}
-      <section className="py-16">
+      <section ref={privacySectionsRef} className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-3">
             {sections.map((section) => (
               <div
                 key={section.id}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200"
+                className="privacy-section bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200"
               >
                 <button
                   onClick={() => toggleSection(section.id)}
@@ -258,7 +416,7 @@ const Privacy_PolicyPage = () => {
                     }`}
                   />
                 </button>
-                
+
                 {activeSection === section.id && (
                   <div className="px-6 pb-6 sm:px-8 sm:pb-8 border-t border-gray-100">
                     <ul className="mt-6 space-y-3">
@@ -280,24 +438,26 @@ const Privacy_PolicyPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-gray-900 py-16">
+      <section ref={contactRef} className="bg-gray-900 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl">
-            <div className="w-16 h-16 bg-[#ff6041] rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="contact-icon w-16 h-16 bg-[#ff6041] rounded-2xl flex items-center justify-center mx-auto mb-6">
               <FaEnvelope className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="contact-heading text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Privacy Questions?
             </h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              If you have any questions about our Privacy Policy or want to exercise your data rights, 
-              please contact our privacy team.
+            <p className="contact-description text-gray-600 mb-8 max-w-2xl mx-auto">
+              If you have any questions about our Privacy Policy or want to
+              exercise your data rights, please contact our privacy team.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="contact-button flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact">
-                <PrimaryButton title="Contact Privacy Team" classname="rounded-[25px]" />
+                <PrimaryButton
+                  title="Contact Privacy Team"
+                  classname="rounded-[25px]"
+                />
               </a>
-              
             </div>
           </div>
         </div>
