@@ -64,12 +64,22 @@ const SAPService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <img
-                loading="lazy"
-                src="/sap-service.png"
-                alt="SAP ERP Services"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037064/sap-service_v4hgku.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037065/sap-service_chv6lo.webp"
+                  type="image/webp"
+                />
+                <img
+                  loading="lazy"
+                  src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037066/sap-service_bzc5w4.png"
+                  alt="SAP ERP Services"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                />
+              </picture>
               {/* <div className="absolute bottom-6 left-6 bg-[#ff6041] rounded-2xl p-6 text-white max-w-xs shadow-xl">
                 <div className="flex items-center mb-3">
                   <FaCheckCircle className="w-5 h-5 mr-2" />
@@ -240,12 +250,22 @@ const SAPService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/sap-erp.png"
-                  alt="SAP ERP Solutions"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037285/ERP_Implementation_iqlahf.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037286/ERP_Implementation_gxqai7.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037288/ERP_Implementation_vr9udo.png"
+                    alt="SAP ERP Solutions"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   ERP
                 </div>
@@ -273,12 +293,22 @@ const SAPService = () => {
 
             <div className="space-y-8">
               <div className="relative mb-6">
-                <img
-                  loading="lazy"
-                  src="/sap-analytics.jpg"
-                  alt="SAP Analytics"
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
-                />
+                <picture>
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037415/Analytics_Optimization_vigg7a.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037416/Analytics_Optimization_qq8ubq.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1772037417/Analytics_Optimization_iusdwu.png"
+                    alt="SAP Analytics"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-video"
+                  />
+                </picture>
                 <div className="absolute top-4 right-4 bg-[#ff6041] text-white px-3 py-1 rounded-full text-xs font-bold">
                   Analytics
                 </div>
