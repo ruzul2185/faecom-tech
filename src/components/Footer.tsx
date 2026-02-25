@@ -93,11 +93,11 @@ const Footer = () => {
             <h3 className="font-semibold text-[20px]">Get in Touch</h3>
 
             <p className="text-gray-100 text-sm px-3.75">
-              Email: support@yourcompany.com
+              Email: info@faecomtech.com
             </p>
 
             <p className="text-gray-100 text-sm px-3.75">
-              Phone: +91 98765 43210
+              Phone: +91 99703 50188
             </p>
 
             <div className="text-gray-100 text-sm flex flex-col gap-3">
