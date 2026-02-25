@@ -138,7 +138,6 @@ const Services = () => {
         opacity: 0,
         scale: 0.9,
         y: 60,
-        stagger: 0.15,
         duration: 0.8,
         ease: "power3.out",
         scrollTrigger: {
@@ -239,7 +238,6 @@ const Services = () => {
         opacity: 0,
         scale: 0.8,
         y: 60,
-        stagger: 0.1,
         duration: 0.6,
         ease: "power3.out",
         scrollTrigger: {

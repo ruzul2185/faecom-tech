@@ -76,7 +76,7 @@ const Trainings = () => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: statsRef.current,
-          markers: true,
+
           start: "top 80%",
           toggleActions: "play none none none",
         },

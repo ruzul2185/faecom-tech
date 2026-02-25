@@ -114,7 +114,7 @@ const HomePage = () => {
       gsap.from(".stat-card", {
         opacity: 0,
         y: 60,
-        stagger: 0.2,
+        // stagger: 0.2,
         duration: 0.8,
         ease: "power3.out",
         scrollTrigger: {
