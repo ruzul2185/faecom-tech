@@ -15,8 +15,536 @@ import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { BiSolidBusiness } from "react-icons/bi";
 import { GrTechnology } from "react-icons/gr";
 import { PrimaryButton } from "../../components/Button";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ZohoService = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const mainContentRef = useRef<HTMLDivElement>(null);
+  const partnerRef = useRef<HTMLDivElement>(null);
+  const servicesFeaturesRef = useRef<HTMLDivElement>(null);
+  const coreFeaturesRef = useRef<HTMLDivElement>(null);
+  const solutionsRef = useRef<HTMLDivElement>(null);
+  const techStackRef = useRef<HTMLDivElement>(null);
+  const processRef = useRef<HTMLDivElement>(null);
+  const benefitsRef = useRef<HTMLDivElement>(null);
+  const technologiesRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      // ================= HERO TIMELINE =================
+      const tl = gsap.timeline();
+
+      tl.from(".hero-bookmark", {
+        y: -40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      })
+        .from(
+          ".hero-heading",
+          {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.4",
+        )
+        .from(
+          ".hero-subtext",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        )
+        .from(
+          ".hero-button",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        );
+
+      // ================= MAIN CONTENT SECTION =================
+      gsap.from(".main-content-image", {
+        opacity: 0,
+        x: -100,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: mainContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".main-content-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: mainContentRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".main-content-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: mainContentRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".main-content-text", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: mainContentRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".main-content-feature", {
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: mainContentRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= PARTNER SECTION =================
+      gsap.from(".partner-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".partner-text", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".partner-button", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= SERVICES FEATURES SECTION =================
+      gsap.from(".services-features-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: servicesFeaturesRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".services-features-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: servicesFeaturesRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".services-features-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: servicesFeaturesRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".services-feature-card", {
+        opacity: 0,
+        scale: 0.9,
+        y: 60,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: servicesFeaturesRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= CORE FEATURES SECTION =================
+      gsap.from(".core-features-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreFeaturesRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".core-features-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreFeaturesRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".core-feature-card", {
+        opacity: 0,
+        scale: 0.9,
+        y: 60,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreFeaturesRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= SOLUTIONS SECTION =================
+      gsap.from(".solutions-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: solutionsRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".solutions-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: solutionsRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".solutions-left", {
+        opacity: 0,
+        x: -80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: solutionsRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".solutions-right", {
+        opacity: 0,
+        x: 80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: solutionsRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".solution-item", {
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: solutionsRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= TECH STACK SECTION =================
+      gsap.from(".tech-stack-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: techStackRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".tech-stack-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: techStackRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".tech-stack-card", {
+        opacity: 0,
+        scale: 0.9,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: techStackRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= PROCESS SECTION =================
+      gsap.from(".process-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: processRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".process-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: processRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".process-step", {
+        opacity: 0,
+        scale: 0.8,
+        y: 60,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: processRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= BENEFITS SECTION =================
+      gsap.from(".benefits-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: benefitsRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".benefits-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: benefitsRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".benefits-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: benefitsRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".benefit-card", {
+        opacity: 0,
+        scale: 0.9,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: benefitsRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= TECHNOLOGIES SECTION =================
+      gsap.from(".technologies-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: technologiesRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".technologies-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: technologiesRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".technologies-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: technologiesRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".tech-tag", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: technologiesRef.current,
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= CTA SECTION =================
+      gsap.from(".cta-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ctaRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".cta-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ctaRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".cta-button", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ctaRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+    },
+    { scope: container },
+  );
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "cloud":
@@ -37,34 +565,41 @@ const ZohoService = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div ref={container} className="min-h-screen">
       {/* Hero Section */}
-      <section className="mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 items-center my-20">
-        <Bookmark
-          icon={<BiSolidBusiness />}
-          title="Zoho Services"
-          className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
-        />
-        <h1 className="text-4xl text-center md:text-6xl font-bold text-gray-900 mt-8 mb-6">
+      <section
+        ref={heroRef}
+        className="mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 items-center my-20"
+      >
+        <div className="hero-bookmark">
+          <Bookmark
+            icon={<BiSolidBusiness />}
+            title="Zoho Services"
+            className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
+          />
+        </div>
+        <h1 className="hero-heading text-4xl text-center md:text-6xl font-bold text-gray-900 mt-8 mb-6">
           {ZOHO_SERVICE_DATA.hero.title}
         </h1>
-        <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
+        <p className="hero-subtext text-xl text-center text-gray-600 max-w-442.5 mx-auto">
           {ZOHO_SERVICE_DATA.hero.subtitle}
         </p>
-        <p className="text-xl text-center text-gray-600 max-w-442.5 mx-auto">
+        <p className="hero-subtext text-xl text-center text-gray-600 max-w-442.5 mx-auto">
           {ZOHO_SERVICE_DATA.hero.description}
         </p>
-        <a href="/contact">
-          <PrimaryButton title="Get Started" classname="rounded-[25px]" />
-        </a>
+        <div className="hero-button">
+          <a href="/contact">
+            <PrimaryButton title="Get Started" classname="rounded-[25px]" />
+          </a>
+        </div>
       </section>
 
       {/* Main Content Section */}
-      <section className="py-20 lg:py-32">
+      <section ref={mainContentRef} className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
-            <div className="relative">
+            <div className="main-content-image relative">
               <picture>
                 <source
                   srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771569790/zoho_lq54eu.avif"
@@ -100,25 +635,27 @@ const ZohoService = () => {
                 <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
                   Zoho Services
                 </span> */}
-                <Bookmark
-                  title="Zoho Services"
-                  icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                  className="bg-white text-[#ff6041] gap-3"
-                />
+                <div className="main-content-bookmark">
+                  <Bookmark
+                    title="Zoho Services"
+                    icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
+                    className="bg-white text-[#ff6041] gap-3"
+                  />
+                </div>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="main-content-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                 Innovative Business Automation Strategies
               </h2>
 
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="main-content-text text-lg text-gray-600 mb-8 leading-relaxed">
                 This approach encompasses Zoho setup, implementation, and
                 business automation, offering customized solutions to drive
                 impactful results and long-term success in business process
                 optimization.
               </p>
 
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="main-content-text text-lg text-gray-600 mb-8 leading-relaxed">
                 A full suite of services designed to enhance business
                 operations, boost productivity, and implement creative
                 strategies tailored to meet the unique needs of your
@@ -139,7 +676,10 @@ const ZohoService = () => {
                   "Sales automation workflows",
                   "Custom sales dashboards",
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                  <div
+                    key={index}
+                    className="main-content-feature flex items-start gap-3"
+                  >
                     <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
                     <span className="text-gray-700 leading-relaxed">
                       {feature}
@@ -153,41 +693,46 @@ const ZohoService = () => {
       </section>
 
       {/* Implementation Partner Section */}
-      <section className="bg-linear-to-br from-gray-50 to-white py-20 lg:py-32">
+      <section
+        ref={partnerRef}
+        className="bg-linear-to-br from-gray-50 to-white py-20 lg:py-32"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center flex flex-col items-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3 justify-center">
+            <h2 className="partner-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3 justify-center">
               <FaHandshake className="text-[#ff6041]" />
               Our Implementation Partner
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="partner-text text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               We proudly partner with Zoho Corp, a leading business automation
               platform, to deliver world-class Zoho implementations. Their
               comprehensive suite of tools and global expertise ensure seamless
               integration and optimal performance for your business processes.
             </p>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+            <p className="partner-text text-lg text-gray-600 max-w-3xl mx-auto mb-12">
               Together, we combine Zoho Corp's innovative solutions with our
               specialized consulting to provide comprehensive, end-to-end
               business automation services that drive productivity and
               innovation.
             </p>
-            <a
-              href="https://www.zohocorp.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <PrimaryButton
-                title="Visit Zoho Corp"
-                classname="rounded-[25px]"
-              />
-            </a>
+            <div className="partner-button">
+              <a
+                href="https://www.zohocorp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <PrimaryButton
+                  title="Visit Zoho Corp"
+                  classname="rounded-[25px]"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services Core Features */}
-      <section className="bg-gray-50 py-20 lg:py-32">
+      <section ref={servicesFeaturesRef} className="bg-gray-50 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
@@ -196,16 +741,18 @@ const ZohoService = () => {
                 Services Core Features
               </span>
               <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
-              <Bookmark
-                title="Services Core Features"
-                icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
-                className="text-[#ff6041] bg-white border gap-3"
-              />
+              <div className="services-features-bookmark">
+                <Bookmark
+                  title="Services Core Features"
+                  icon={<MdOutlineMiscellaneousServices color="#ff6041" />}
+                  className="text-[#ff6041] bg-white border gap-3"
+                />
+              </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="services-features-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Your Partner in Business Automation Success
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="services-features-subtext text-xl text-gray-600 max-w-3xl mx-auto">
               Our services go beyond traditional business solutions—offering
               innovative, data-driven, and tailored strategies to help your
               business thrive in the digital automation landscape.
@@ -216,7 +763,7 @@ const ZohoService = () => {
             {ZOHO_SERVICE_DATA.servicesFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="services-feature-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {feature.title}
@@ -231,13 +778,13 @@ const ZohoService = () => {
       </section>
 
       {/* Core Features Grid */}
-      <section className="py-20 lg:py-32">
+      <section ref={coreFeaturesRef} className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="core-features-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Comprehensive Zoho Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="core-features-subtext text-xl text-gray-600 max-w-3xl mx-auto">
               We provide end-to-end Zoho services covering all aspects of
               business automation and optimization.
             </p>
@@ -247,7 +794,7 @@ const ZohoService = () => {
             {ZOHO_SERVICE_DATA.coreFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="core-feature-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-16 h-16 bg-[#ff6041] rounded-xl flex items-center justify-center mb-6">
                   <div className="text-white text-2xl">
@@ -272,20 +819,20 @@ const ZohoService = () => {
       </section>
 
       {/* Comprehensive Solutions Section */}
-      <section className="py-20 lg:py-32">
+      <section ref={solutionsRef} className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="solutions-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Comprehensive Zoho Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="solutions-subtext text-xl text-gray-600 max-w-3xl mx-auto">
               We provide end-to-end Zoho services covering all aspects of
               business automation and optimization.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
+            <div className="solutions-left space-y-8">
               <div className="relative mb-6">
                 <picture>
                   <source
@@ -320,14 +867,17 @@ const ZohoService = () => {
                 "Inventory management systems",
                 "Customer support ticketing solutions",
               ].map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
+                <div
+                  key={index}
+                  className="solution-item flex items-start gap-3"
+                >
                   <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
                   <span className="text-gray-700 leading-relaxed">{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="space-y-8">
+            <div className="solutions-right space-y-8">
               <div className="relative mb-6">
                 <picture>
                   <source
@@ -362,7 +912,10 @@ const ZohoService = () => {
                 "Predictive analytics implementation",
                 "ROI measurement and improvement",
               ].map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
+                <div
+                  key={index}
+                  className="solution-item flex items-start gap-3"
+                >
                   <FaCheckCircle className="w-4 h-4 text-[#ff6041] shrink-0 mt-1" />
                   <span className="text-gray-700 leading-relaxed">{item}</span>
                 </div>
@@ -373,13 +926,13 @@ const ZohoService = () => {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="bg-gray-900 py-20 lg:py-32">
+      <section ref={techStackRef} className="bg-gray-900 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="tech-stack-heading text-3xl md:text-4xl font-bold text-white mb-6">
               Zoho Products Covered
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="tech-stack-subtext text-xl text-gray-300 max-w-3xl mx-auto">
               We leverage the full power of Zoho ecosystem to deliver
               comprehensive business automation solutions.
             </p>
@@ -389,7 +942,7 @@ const ZohoService = () => {
             {ZOHO_SERVICE_DATA.techStack.map((tech, index) => (
               <div
                 key={index}
-                className="bg-gray-800 rounded-xl p-6 text-white"
+                className="tech-stack-card bg-gray-800 rounded-xl p-6 text-white"
               >
                 <h3 className="text-lg font-bold mb-3">{tech}</h3>
                 <p className="text-gray-300 text-sm">
@@ -403,13 +956,13 @@ const ZohoService = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 lg:py-32">
+      <section ref={processRef} className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="process-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Our Implementation Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="process-subtext text-xl text-gray-600 max-w-3xl mx-auto">
               We follow a structured approach to ensure successful Zoho
               implementation and automation.
             </p>
@@ -417,7 +970,7 @@ const ZohoService = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ZOHO_SERVICE_DATA.processSteps.map((item, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="process-step text-center">
                 <div className="w-20 h-20 bg-[#ff6041] rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                   {item.step}
                 </div>
@@ -432,7 +985,7 @@ const ZohoService = () => {
       </section>
 
       {/* Business Benefits Section */}
-      <section className="bg-gray-50 py-20 lg:py-32">
+      <section ref={benefitsRef} className="bg-gray-50 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
@@ -441,16 +994,18 @@ const ZohoService = () => {
                 Business Benefits
               </span>
               <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
-              <Bookmark
-                title="Business Benefits"
-                icon={<BiSolidBusiness color="#ff6041" />}
-                className="text-[#ff6041] bg-white border gap-3"
-              />
+              <div className="benefits-bookmark">
+                <Bookmark
+                  title="Business Benefits"
+                  icon={<BiSolidBusiness color="#ff6041" />}
+                  className="text-[#ff6041] bg-white border gap-3"
+                />
+              </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="benefits-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Transform Your Business with Zoho
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="benefits-subtext text-xl text-gray-600 max-w-3xl mx-auto">
               Drive growth and efficiency with our comprehensive Zoho automation
               solutions.
             </p>
@@ -460,7 +1015,7 @@ const ZohoService = () => {
             {ZOHO_SERVICE_DATA.businessBenefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="benefit-card flex items-center gap-3 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <FaCheckCircle className="w-5 h-5 text-[#ff6041] shrink-0" />
                 <span className="text-gray-800 font-medium">{benefit}</span>
@@ -471,7 +1026,7 @@ const ZohoService = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 lg:py-32">
+      <section ref={technologiesRef} className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 mb-6 justify-center">
@@ -480,16 +1035,18 @@ const ZohoService = () => {
                 Technologies
               </span>
               <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
-              <Bookmark
-                title="Technologies"
-                icon={<GrTechnology color="#ff6041" />}
-                className="text-[#ff6041] bg-white border gap-3"
-              />
+              <div className="technologies-bookmark">
+                <Bookmark
+                  title="Technologies"
+                  icon={<GrTechnology color="#ff6041" />}
+                  className="text-[#ff6041] bg-white border gap-3"
+                />
+              </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="technologies-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Zoho Technologies We Work With
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="technologies-subtext text-xl text-gray-600 max-w-3xl mx-auto">
               We leverage the full power of Zoho ecosystem to deliver
               comprehensive business automation solutions.
             </p>
@@ -499,7 +1056,7 @@ const ZohoService = () => {
             {ZOHO_SERVICE_DATA.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-6 py-3 bg-gray-100 text-gray-800 rounded-full font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300"
+                className="tech-tag px-6 py-3 bg-gray-100 text-gray-800 rounded-full font-medium hover:bg-[#ff6041] hover:text-white transition-all duration-300"
               >
                 {tech}
               </span>
@@ -509,13 +1066,13 @@ const ZohoService = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gray-900 py-20 lg:py-32">
+      <section ref={ctaRef} className="bg-gray-900 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="cta-heading text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with Zoho?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="cta-subtext text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Let's discuss how we can help you leverage the power of Zoho to
               accelerate your business growth and achieve your automation
               objectives.
@@ -523,14 +1080,14 @@ const ZohoService = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-[#ff6041] hover:bg-[#e55a3d] text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-300 inline-flex items-center justify-center gap-2"
+                className="cta-button bg-[#ff6041] hover:bg-[#e55a3d] text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-300 inline-flex items-center justify-center gap-2"
               >
                 Start Your Zoho Journey
                 <IoArrowRedoSharp size={20} />
               </a>
               <a
                 href="/services"
-                className="border-2 border-[#ff6041] text-[#ff6041] hover:bg-[#ff6041] hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center"
+                className="cta-button border-2 border-[#ff6041] text-[#ff6041] hover:bg-[#ff6041] hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center"
               >
                 View All Services
               </a>

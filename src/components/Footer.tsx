@@ -116,10 +116,20 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-600 mt-12 pt-6 text-left text-sm text-gray-100 relative z-10">
-          © {new Date().getFullYear()} Faecom Tech. All rights reserved.
+        <section className=" py-8 border-t border-gray-200 mt-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-gray-100">
+            <p className="text-sm">
+              © {new Date().getFullYear()} FaecomTech. All rights reserved. | 
+              <a href="/privacy_policy" className="text-[#ff6041] hover:underline ml-1">Privacy Policy</a> | 
+              <a href="/terms_and_conditions" className="text-[#ff6041] hover:underline ml-1">Terms & Conditions</a>
+            </p>
+            <p className="text-xs mt-2">
+              FaecomTech is an affiliate of Faecom Engineering Pvt. Ltd.
+            </p>
+          </div>
         </div>
+      </section>
       </div>
     </footer>
   );

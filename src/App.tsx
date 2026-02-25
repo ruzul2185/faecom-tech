@@ -41,8 +41,8 @@ const App = () => {
           <Route path="/services/sap" element={<SAPService />} />
           <Route path="/services/zoho" element={<ZohoService />} />
           <Route path="/services/qa" element={<QAService />} />
-          <Route path="/services/custom" element={<CustomService />} />
-          <Route path="/services/unity" element={<UnityService />} />
+          <Route path="/services/custom-software-development/mvp" element={<CustomService />} />
+          <Route path="/services/game-development-testing" element={<UnityService />} />
           <Route path="/services/web-dev" element={<WebDevService />} />
           <Route
             path="/services/digital-marketing"
@@ -58,7 +58,6 @@ const App = () => {
           />
           <Route path="/trainings/sap-training" element={<SAPTraining />} />
           <Route path="/trainings/zoho-training" element={<ZohoTraining />} />
-          {/* <Route path="/trainings" element={<Trainings />} /> */}
 
           <Route path="/faq" element={<FAQPage />} />
           <Route

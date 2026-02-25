@@ -69,7 +69,7 @@ export const SERVICE_CARD_INFO = [
   {
     title: "Unity Game Development",
     desc: "A robust real-time rendering and game development engine supporting C# scripting, advanced physics, animation systems, and multi-platform publishing for mobile, PC, console, AR, and VR applications.",
-    link: "/services/unity",
+    link: "/services/game-development-testing",
     svgLink:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953528/unity-w_xjkl0f.svg",
   },
@@ -90,7 +90,7 @@ export const SERVICE_CARD_INFO = [
   {
     title: "Software Development",
     desc: "We design and develop secure, scalable, and high-performance software tailored to your business needs. From enterprise systems to automation tools, our solutions streamline operations and drive digital transformation.",
-    link: "/services/custom",
+    link: "/services/custom-software-development/mvp",
     svgLink:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771953528/software_vdkgfr.svg",
   },
@@ -151,12 +151,15 @@ export const TRAINING_INFO = [
 
 export const KEYWORD_LIST = [
   "Networking",
-  "Technology",
-  "Software",
-  "Digital",
-  "Consultation",
+  "Latest Technology",
+  "Custom Software Development",
+  "Digital Marketing",
+  "Quality Assurance",
+  "Amazon Ecosystem",
   "System Design",
   "Operation Systems",
+  "SalesForce",
+  "MVP",
 ];
 
 export const PORTFOLIO_INFO = [

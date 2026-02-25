@@ -13,7 +13,21 @@ import { GrTechnology } from "react-icons/gr";
 import { useState } from "react";
 import { toast } from "sonner";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Services = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const partnerRef = useRef<HTMLDivElement>(null);
+  const coreRef = useRef<HTMLDivElement>(null);
+  const featuresRef = useRef<HTMLDivElement>(null);
+  const facilitiesRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -22,6 +36,268 @@ const Services = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      // ================= HERO TIMELINE =================
+      const tl = gsap.timeline();
+
+      tl.from(".hero-bookmark", {
+        y: -40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      })
+        .from(
+          ".hero-heading",
+          {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.4",
+        )
+        .from(
+          ".hero-subtext",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        );
+
+      // ================= PARTNER SERVICES SECTION =================
+      gsap.from(".partner-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".partner-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".partner-card", {
+        opacity: 0,
+        y: 60,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: partnerRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= CORE SERVICES SECTION =================
+      gsap.from(".core-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".core-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".core-service-card", {
+        opacity: 0,
+        scale: 0.9,
+        y: 60,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: coreRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= FEATURES SECTION =================
+      gsap.from(".features-left", {
+        opacity: 0,
+        x: -100,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".features-right", {
+        opacity: 0,
+        x: 100,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".features-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".features-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".features-item", {
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= FACILITIES SECTION =================
+      gsap.from(".facilities-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: facilitiesRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".facilities-subtext", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: facilitiesRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".facility-card", {
+        opacity: 0,
+        scale: 0.8,
+        y: 60,
+        duration: 0.6,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: facilitiesRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // ================= CONTACT SECTION =================
+      gsap.from(".contact-bookmark", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-heading", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-left", {
+        opacity: 0,
+        x: -80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      gsap.from(".contact-form", {
+        opacity: 0,
+        x: 80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+    },
+    { scope: container },
+  );
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -77,19 +353,25 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-b  py-16">
+    <div ref={container} className="min-h-screen bg-linear-to-b  py-16">
       {/* Hero Section */}
-      <section className="mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 mb-20">
+      <section
+        ref={heroRef}
+        className="mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 mb-20"
+      >
         <div className="text-center">
-          <Bookmark
-            icon={<FaGear />}
-            title="Our Services"
-            className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
-          />
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6">
+          <div className="hero-bookmark">
+            <Bookmark
+              icon={<FaGear />}
+              title="Our Services"
+              className="bg-white text-[#ff6041] mx-auto w-fit gap-3"
+            />
+          </div>
+
+          <h1 className="hero-heading text-4xl md:text-6xl font-bold text-gray-900 mt-8 mb-6">
             Comprehensive Technology Solutions
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="hero-subtext text-xl text-gray-600 max-w-3xl mx-auto">
             From enterprise consulting to custom development, we provide
             end-to-end solutions to transform your business with cutting-edge
             technology.
@@ -98,14 +380,19 @@ const Services = () => {
       </section>
 
       {/* Partner Services Section */}
-      <section className="bg-white mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 mb-20">
+      <section
+        ref={partnerRef}
+        className="bg-white mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 mb-20"
+      >
         <div className="text-center mb-12">
-          <Bookmark
-            icon={<FaHandshake className="mr-2 md:mr-0" />}
-            title="Certified Solutions & Training Specialist"
-            className="bg-[#ff6041] text-white mx-auto w-fit text-2xl"
-          />
-          <h2 className="text-3xl md:text-4xl font-bold text-black mt-6 mb-4">
+          <div className="partner-bookmark">
+            <Bookmark
+              icon={<FaHandshake className="mr-2 md:mr-0" />}
+              title="Certified Solutions & Training Specialist"
+              className="bg-[#ff6041] text-white mx-auto w-fit text-2xl"
+            />
+          </div>
+          <h2 className="partner-heading text-3xl md:text-4xl font-bold text-black mt-6 mb-4">
             for SAP, AWS, Zoho and Salesforce
           </h2>
         </div>
@@ -114,7 +401,7 @@ const Services = () => {
           {PARTNER_SERVICES.map((partner, index) => (
             <div
               key={index}
-              className="bg-[#efeadf] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 relative group"
+              className="partner-card bg-[#efeadf] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 relative group"
             >
               <div className="flex items-start gap-6">
                 <div className="shrink-0">
@@ -152,12 +439,30 @@ const Services = () => {
       </section>
 
       {/* Core Services Section */}
-      <section className="hero-bg mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 mb-20">
+      <section
+        ref={coreRef}
+        className="relative mx-auto min-w-86.25 w-full rounded-[50px] overflow-hidden flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5 mb-20"
+      >
+        <picture className="absolute inset-0 -z-10 w-full h-full">
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951641/bg_nqb1al.avif"
+            type="image/avif"
+          />
+          <source
+            srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771951642/bg_j4qvnl.webp"
+            type="image/webp"
+          />
+          <img
+            src="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771952156/bg_d1vgqz.png"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </picture>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="core-heading text-3xl md:text-4xl font-bold text-white mb-4">
             Our Core Services
           </h2>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="core-subtext text-xl text-gray-200 max-w-3xl mx-auto">
             We specialize in delivering innovative solutions that drive business
             growth and digital transformation.
           </p>
@@ -168,7 +473,7 @@ const Services = () => {
             <a
               href={service.link}
               key={index}
-              className="relative group overflow-hidden bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="core-service-card relative group overflow-hidden bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               {/* Expanding Circle Background */}
               <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -219,11 +524,11 @@ const Services = () => {
       </section>
 
       {/* Services Features Section */}
-      <section className="py-16 lg:py-20">
+      <section ref={featuresRef} className="py-16 lg:py-20">
         <div className="mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left - Image with Overlay */}
-            <div className="relative">
+            <div className="features-left relative">
               <picture>
                 <source
                   srcSet="https://res.cloudinary.com/dlvjnevcw/image/upload/v1771877512/Supercharge_Your_Business_Growth_with_Our_Cutting_Edge_IT_Solutions_izgkr9.avif"
@@ -253,20 +558,18 @@ const Services = () => {
             </div>
 
             {/* Right - Content */}
-            <div>
+            <div className="features-right">
               <div className="flex items-center gap-2 mb-6">
-                {/* <div className="w-12 h-0.5 bg-[#ff6041]"></div> */}
-                {/* <span className="text-[#ff6041] text-lg font-semibold tracking-wide">
-                  Services Features
-                </span> */}
-                <Bookmark
-                  title="Services Features"
-                  icon={<MdDesignServices color="#ff6041" size={30} />}
-                  className="bg-white text-[#ff6041] gap-3"
-                />
+                <div className="features-bookmark">
+                  <Bookmark
+                    title="Services Features"
+                    icon={<MdDesignServices color="#ff6041" size={30} />}
+                    className="bg-white text-[#ff6041] gap-3"
+                  />
+                </div>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="features-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                 Supercharge Your Business Growth with Our Cutting-Edge IT
                 Solutions
               </h2>
@@ -278,7 +581,7 @@ const Services = () => {
               </p>
 
               <div className="space-y-6">
-                <div className="flex gap-4">
+                <div className="features-item flex gap-4">
                   <div className="w-12 h-12 bg-[#ff6041] rounded-lg flex items-center justify-center shrink-0">
                     <GrTechnology className="w-6 h-6 text-white" />
                   </div>
@@ -293,7 +596,7 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="features-item flex gap-4">
                   <div className="w-12 h-12 bg-[#ff6041] rounded-lg flex items-center justify-center shrink-0">
                     <BiSupport className="w-6 h-6 text-white" />
                   </div>
@@ -308,7 +611,7 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="features-item flex gap-4">
                   <div className="w-12 h-12 bg-[#ff6041] rounded-lg flex items-center justify-center shrink-0">
                     <FaBalanceScale className="w-6 h-6 text-white" />
                   </div>
@@ -329,13 +632,13 @@ const Services = () => {
       </section>
 
       {/* Key Facilities Section */}
-      <section className=" py-20">
+      <section ref={facilitiesRef} className=" py-20">
         <div className="bg-[#ff6041] mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="facilities-heading text-3xl md:text-4xl font-bold text-white mb-4">
               Our Key Facilities
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="facilities-subtext text-xl text-white/90 max-w-3xl mx-auto">
               We provide comprehensive support and resources to ensure your
               success.
             </p>
@@ -345,7 +648,7 @@ const Services = () => {
             {KEY_FACILITIES.map((facility, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-300 relative group hover:-translate-y-1"
+                className="facility-card bg-white rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-300 relative group hover:-translate-y-1"
               >
                 <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff6041] rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                   <facility.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
@@ -365,19 +668,21 @@ const Services = () => {
       </section>
 
       {/* Contact Us Section */}
-      <section className="py-16 lg:py-20">
+      <section ref={contactRef} className="py-16 lg:py-20">
         <div className="bg-white mx-auto min-w-86.25 w-full rounded-[50px] flex flex-col gap-4 py-12.5 lg:w-[93%] px-5 sm:px-16 max-w-442.5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left - Contact Info */}
-            <div className="text-gray-900">
+            <div className="contact-left text-gray-900">
               <div className="flex items-center gap-2 mb-6">
-                <Bookmark
-                  icon={<FaHandshake />}
-                  title="Get In Touch"
-                  className="bg-[#ff6041] text-white w-fit gap-3"
-                />
+                <div className="contact-bookmark">
+                  <Bookmark
+                    icon={<FaHandshake />}
+                    title="Get In Touch"
+                    className="bg-[#ff6041] text-white w-fit gap-3"
+                  />
+                </div>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+              <h2 className="contact-heading text-3xl md:text-4xl font-bold mb-8 leading-tight">
                 Secure Your Business. Reach Out To Our Team Member.
               </h2>
 
@@ -427,7 +732,7 @@ const Services = () => {
             </div>
 
             {/* Right - Contact Form */}
-            <div className="bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl">
+            <div className="contact-form bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl">
               <form
                 className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
                 onSubmit={handleSubmit}
