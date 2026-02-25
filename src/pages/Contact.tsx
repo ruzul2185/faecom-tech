@@ -1,6 +1,6 @@
 import { useState, type FormEventHandler } from "react";
 import { Bookmark } from "../components/Bookmark";
-import { PrimaryButton, SubmitButton } from "../components/Button";
+import { SubmitButton } from "../components/Button";
 import { FaLocationDot, FaPhone, FaClock, FaPaperPlane } from "react-icons/fa6";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
