@@ -543,12 +543,27 @@ const SAPTraining = () => {
         ref={heroImageRef}
         className="max-w-7xl mx-auto w-full h-full rounded-[25px] overflow-hidden"
       >
-        <img
-          loading="lazy"
-          src={sapTrainingDetails.images.hero}
-          alt="SAP ERP Systems"
-          className="hero-image w-full h-full rounded-[25px] object-cover hover:scale-105 transition-transform duration-300"
-        />
+        <picture>
+          {/* AVIF (best compression, modern browsers) */}
+          <source
+            srcSet={sapTrainingDetails.images.heroAvif}
+            type="image/avif"
+          />
+
+          {/* WebP (widely supported modern format) */}
+          <source
+            srcSet={sapTrainingDetails.images.heroWebp}
+            type="image/webp"
+          />
+
+          {/* Fallback (jpg/png) */}
+          <img
+            loading="lazy"
+            src={sapTrainingDetails.images.hero}
+            alt="SAP ERP Systems"
+            className="hero-image w-full h-full rounded-[25px] object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </picture>
       </section>
 
       {/* ================= COLLABORATION SECTION ================= */}
@@ -907,14 +922,18 @@ const SAPTraining = () => {
           with our industry-leading SAP training program.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <PrimaryButton
-            title="Start Your SAP Journey"
-            classname="cta-button rounded-[25px]"
-          />
-          <SecondaryButton
-            title="Contact Our Experts"
-            classname="cta-button rounded-[25px]"
-          />
+          <a href="/contact">
+            <PrimaryButton
+              title="Start Your SAP Journey"
+              classname="cta-button rounded-[25px]"
+            />
+          </a>
+          <a href="/contact">
+            <SecondaryButton
+              title="Contact Our Experts"
+              classname="cta-button rounded-[25px]"
+            />
+          </a>
         </div>
       </section>
     </div>

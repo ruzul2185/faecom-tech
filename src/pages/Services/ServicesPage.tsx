@@ -321,19 +321,16 @@ const Services = () => {
 
     try {
       const form = new FormData();
-      form.append("formType", "form1");
+      form.append("formType", "serviceForm");
       form.append("firstName", formData.firstName);
       form.append("lastName", formData.lastName);
       form.append("email", formData.email);
       form.append("message", formData.message);
 
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzQem7mYsZYdcb_tSDD8lOAnJaraKE8kMpOekGr6CBzzWlOkS1UDryPOI1joE1w_9Mtxg/exec",
-        {
-          method: "POST",
-          body: form,
-        },
-      );
+      const response = await fetch(import.meta.env.VITE_GOOGLESHEET_URL, {
+        method: "POST",
+        body: form,
+      });
 
       if (!response.ok) {
         throw new Error("Failed to send message");

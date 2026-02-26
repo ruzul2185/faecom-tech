@@ -92,7 +92,7 @@ export const CORE_SERVICES = [
       "Integration Services",
       "Maintenance & Support",
     ],
-    link: "/services/custom",
+    link: "/services/custom-software-development/mvp",
   },
   {
     title: "Quality Assurance (QA) Services",
@@ -122,7 +122,7 @@ export const CORE_SERVICES = [
       "Game Optimization",
       "Cross-Platform Deployment",
     ],
-    link: "/services/unity",
+    link: "/services/game-development-testing",
   },
   {
     title: "Digital Marketing Services",

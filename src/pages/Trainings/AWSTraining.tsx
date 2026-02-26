@@ -543,12 +543,27 @@ const AWSTraining = () => {
         ref={heroImageRef}
         className="max-w-7xl mx-auto overflow-hidden rounded-[25px] "
       >
-        <img
-          loading="lazy"
-          src={awsTrainingDetails.images.hero}
-          alt="AWS Cloud Computing"
-          className="hero-image w-full h-full rounded-[25px] object-cover hover:scale-105 transition-transform duration-300"
-        />
+        <picture>
+          {/* AVIF */}
+          <source
+            srcSet={awsTrainingDetails.images.heroAvif}
+            type="image/avif"
+          />
+
+          {/* WebP */}
+          <source
+            srcSet={awsTrainingDetails.images.heroWebp}
+            type="image/webp"
+          />
+
+          {/* Fallback (jpg/png) */}
+          <img
+            loading="lazy"
+            src={awsTrainingDetails.images.hero}
+            alt="AWS Cloud Computing"
+            className="hero-image w-full h-full rounded-[25px] object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </picture>
       </section>
 
       {/* ================= AUTHORIZED TRAINING PARTNER SECTION ================= */}
@@ -917,14 +932,18 @@ const AWSTraining = () => {
           with our industry-leading AWS training program.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <PrimaryButton
-            title="Start Your AWS Journey"
-            classname="cta-button rounded-[25px]"
-          />
-          <SecondaryButton
-            title="Contact Our Experts"
-            classname="cta-button rounded-[25px]"
-          />
+          <a href="/contact">
+            <PrimaryButton
+              title="Start Your AWS Journey"
+              classname="cta-button rounded-[25px]"
+            />
+          </a>
+          <a href="/contact">
+            <SecondaryButton
+              title="Contact Our Experts"
+              classname="cta-button rounded-[25px]"
+            />
+          </a>
         </div>
       </section>
     </div>

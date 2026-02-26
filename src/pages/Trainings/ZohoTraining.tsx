@@ -925,14 +925,18 @@ const ZohoTraining = () => {
           with our industry-leading Zoho training program.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <PrimaryButton
-            title="Start Your Zoho Journey"
-            classname="cta-button rounded-[25px]"
-          />
-          <SecondaryButton
-            title="Contact Our Experts"
-            classname="cta-button rounded-[25px]"
-          />
+          <a href="/contact">
+            <PrimaryButton
+              title="Start Your Zoho Journey"
+              classname="cta-button rounded-[25px]"
+            />
+          </a>
+          <a href="/contact">
+            <SecondaryButton
+              title="Contact Our Experts"
+              classname="cta-button rounded-[25px]"
+            />
+          </a>
         </div>
       </section>
     </div>

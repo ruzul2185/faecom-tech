@@ -493,11 +493,12 @@ const Trainings = () => {
                   classname="rounded-[25px]"
                 />
               </a>
-
-              <PrimaryButton
-                title="Enroll in SAP Program"
-                classname="rounded-[25px]"
-              />
+              <a href="/trainings/sap-training">
+                <PrimaryButton
+                  title="Enroll in SAP Program"
+                  classname="rounded-[25px]"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -547,7 +548,7 @@ const Trainings = () => {
 
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   {[
-                    "S/4HANA – ERP Suite",
+                    "S/4HANA - ERP Suite",
                     "FICO (Finance & Controlling)",
                     "SD (Sales & Distribution)",
                     "MM (Material Management)",
@@ -594,10 +595,12 @@ const Trainings = () => {
                 confidently handle SAP projects across industries.
               </p>
 
-              <PrimaryButton
-                title="Explore SAP Modules"
-                classname="rounded-[25px]"
-              />
+              <a href="/trainings/sap-training">
+                <PrimaryButton
+                  title="Explore SAP Modules"
+                  classname="rounded-[25px]"
+                />
+              </a>
             </div>
           </div>
 
@@ -647,10 +650,13 @@ const Trainings = () => {
                 demands.
               </p>
 
-              <PrimaryButton
-                title="Explore AWS Program"
-                classname="rounded-[25px]"
-              />
+              <a href="/trainings/aws-training">
+                {" "}
+                <PrimaryButton
+                  title="Explore AWS Program"
+                  classname="rounded-[25px]"
+                />
+              </a>
             </div>
 
             <img
@@ -707,10 +713,12 @@ const Trainings = () => {
                 smart automation strategies tailored to business needs.
               </p>
 
-              <PrimaryButton
-                title="Explore Zoho Program"
-                classname="rounded-[25px]"
-              />
+              <a href="/trainings/zoho-training">
+                <PrimaryButton
+                  title="Explore Zoho Program"
+                  classname="rounded-[25px]"
+                />
+              </a>
             </div>
           </div>
 
@@ -752,10 +760,12 @@ const Trainings = () => {
                 ))}
               </div>
 
-              <PrimaryButton
-                title="Explore Salesforce Program"
-                classname="rounded-[25px]"
-              />
+              <a href="/trainings/salesforce-training">
+                <PrimaryButton
+                  title="Explore Salesforce Program"
+                  classname="rounded-[25px]"
+                />
+              </a>
             </div>
 
             <img
@@ -898,10 +908,12 @@ const Trainings = () => {
           implementation-driven training.
         </p>
         <div className="cta-button flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <SecondaryButton
-            title="Start Learning Today"
-            classname="rounded-[25px]"
-          />
+          <a href="/contact">
+            <SecondaryButton
+              title="Start Learning Today"
+              classname="rounded-[25px]"
+            />
+          </a>
         </div>
       </section>
     </div>

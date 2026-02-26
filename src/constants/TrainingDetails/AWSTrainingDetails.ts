@@ -1,9 +1,9 @@
 export const awsTrainingDetails = {
   title: "AWS Training & Certification Program",
   subtitle: "Master Cloud with Industry-Focused AWS Training",
-  description: `In today’s digital-first world, cloud computing is no longer optional, it’s essential. Our AWS (Amazon Web Services) Training Program is designed to equip professionals, corporate teams, and aspiring cloud engineers with hands-on expertise in real-world cloud architecture, deployment, security, and DevOps practices.
+  description: `In today's digital-first world, cloud computing is no longer optional, it's essential. Our AWS (Amazon Web Services) Training Program is designed to equip professionals, corporate teams, and aspiring cloud engineers with hands-on expertise in real-world cloud architecture, deployment, security, and DevOps practices.
 
-We don’t just teach theory, we provide practical, job-ready AWS training aligned with enterprise use cases and modern cloud infrastructure demands.`,
+We don't just teach theory, we provide practical, job-ready AWS training aligned with enterprise use cases and modern cloud infrastructure demands.`,
   seoMetaTitle:
     "AWS Training & Certification | Cloud, DevOps & Migration Course",
   seoMetaDescription:
@@ -148,7 +148,11 @@ We simulate real business scenarios so learners understand how companies actuall
     "Expert instructors with live deployment experience",
   ],
   images: {
-    hero: "/aws-training.jpg", // Cloud computing image
+    heroAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1772130613/aws-training_eqzumv.avif",
+    heroWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1772130613/aws-training_zeagwo.webp",
+    hero: "https://res.cloudinary.com/dlvjnevcw/image/upload/v1772130614/aws-training_zfaz5p.jpg", // Cloud computing image
     overviewAvif:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771883200/AWS_Tranning_s8zjic.avif",
     overviewWebp:

@@ -439,10 +439,12 @@ const AboutUs = () => {
                 that empower businesses to thrive in fast changing digital
                 world. With over a decade of experience.
               </p>
-              <PrimaryButton
-                title="Know More Us"
-                classname="rounded-[25px] w-full sm:w-auto"
-              />
+              <a href="#vision">
+                <PrimaryButton
+                  title="Know More Us"
+                  classname="rounded-[25px] w-full sm:w-auto"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -572,6 +574,7 @@ const AboutUs = () => {
       {/* ================= VISION & MISSION SECTION ================= */}
       <section
         ref={visionRef}
+        id="vision"
         className="max-w-442.5 mx-auto w-[93%]  text-center flex flex-col gap-6.75 justify-center items-center"
       >
         <div className="vision-bookmark">
@@ -893,10 +896,12 @@ const AboutUs = () => {
             <p className="text-white/60 text-[14px] sm:text-[16px] mb-4">
               Still have questions?
             </p>
-            <PrimaryButton
-              title="Contact Us"
-              classname="rounded-[25px] mx-auto"
-            />
+            <a href="/contact">
+              <PrimaryButton
+                title="Contact Us"
+                classname="rounded-[25px] mx-auto"
+              />
+            </a>
           </div>
         </div>
       </section>
