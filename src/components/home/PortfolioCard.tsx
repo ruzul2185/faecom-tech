@@ -24,7 +24,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   backgroundImageAvif,
 }) => {
   return (
-    <div className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:shadow-2xl">
+    <div className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-500 hover:shadow-2xl">
       {/* Background Image */}
       <picture>
         {/* AVIF first, highest priority */}

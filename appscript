@@ -1,42 +1,84 @@
 function doPost(e) {
   try {
-    const formType = e.parameter.formType || "form1";
+    const formType = e.parameter.formType || "";
     const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
     let sheet;
 
-    // ===== ROUTE TO CORRECT SHEET =====
-    if (formType === "contactForm") {
-      sheet = spreadsheet.getSheetByName("Sheet2");
+    switch (formType) {
+      // ===============================
+      // NEWSLETTER FORM → Newsletter Sheet
+      // Fields: email
+      // ===============================
+      case "newsletterForm":
+        sheet = spreadsheet.getSheetByName("Newsletter");
 
-      const fullName = e.parameter.fullName || "";
-      const email = e.parameter.email || "";
-      const phone = e.parameter.phone || "";
-      const option = e.parameter.option || "";
-      const message = e.parameter.message || "";
-      const timestamp = e.parameter.timestamp || new Date();
+        const newsletterEmail = e.parameter.email || "";
 
-      sheet.appendRow([
-        new Date(timestamp),
-        fullName,
-        email,
-        phone,
-        option,
-        message,
-      ]);
-    } else {
-      // Default = First Form → Sheet1
-      sheet = spreadsheet.getSheetByName("Sheet1");
+        sheet.appendRow([new Date(), newsletterEmail]);
+        break;
 
-      const firstName = e.parameter.firstName || "";
-      const lastName = e.parameter.lastName || "";
-      const email = e.parameter.email || "";
-      const message = e.parameter.message || "";
+      // ===============================
+      // SERVICE FORM → Service Sheet
+      // Fields: firstName, lastName, email, message
+      // ===============================
+      case "serviceForm":
+        sheet = spreadsheet.getSheetByName("Service");
 
-      sheet.appendRow([new Date(), firstName, lastName, email, message]);
+        const firstName = e.parameter.firstName || "";
+        const lastName = e.parameter.lastName || "";
+        const serviceEmail = e.parameter.email || "";
+        const serviceMessage = e.parameter.message || "";
+
+        sheet.appendRow([
+          new Date(),
+          firstName,
+          lastName,
+          serviceEmail,
+          serviceMessage,
+        ]);
+        break;
+
+      // ===============================
+      // CONTACT FORM → Contact Sheet
+      // Fields: fullName, email, phone, option, message, timestamp
+      // ===============================
+      case "contactForm":
+        sheet = spreadsheet.getSheetByName("Contact");
+
+        const fullName = e.parameter.fullName || "";
+        const contactEmail = e.parameter.email || "";
+        const phone = e.parameter.phone || "";
+        const option = e.parameter.option || "";
+        const contactMessage = e.parameter.message || "";
+        const timestamp = e.parameter.timestamp || new Date();
+
+        sheet.appendRow([
+          new Date(timestamp),
+          fullName,
+          contactEmail,
+          phone,
+          option,
+          contactMessage,
+        ]);
+        break;
+
+      // ===============================
+      // DEFAULT (Invalid formType)
+      // ===============================
+      default:
+        return ContentService.createTextOutput(
+          JSON.stringify({
+            status: "error",
+            message: "Invalid formType",
+          }),
+        ).setMimeType(ContentService.MimeType.JSON);
     }
 
+    // ✅ Success Response
     return ContentService.createTextOutput(
-      JSON.stringify({ status: "success" }),
+      JSON.stringify({
+        status: "success",
+      }),
     ).setMimeType(ContentService.MimeType.JSON);
   } catch (error) {
     return ContentService.createTextOutput(

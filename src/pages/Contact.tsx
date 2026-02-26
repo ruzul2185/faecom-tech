@@ -225,8 +225,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const GOOGLE_SHEETS_URL =
-      "https://script.google.com/macros/s/AKfycbzQem7mYsZYdcb_tSDD8lOAnJaraKE8kMpOekGr6CBzzWlOkS1UDryPOI1joE1w_9Mtxg/exec";
+    const GOOGLE_SHEETS_URL = import.meta.env.VITE_GOOGLESHEET_URL;
 
     const loadingToast = toast.loading("Sending message...");
 
@@ -298,7 +297,7 @@ const Contact = () => {
     { name: "Los Angeles", country: "USA", lat: 34.0522, lng: -118.2437 },
     { name: "Leidschendam", country: "Netherlands", lat: 52.077, lng: 4.3974 },
     { name: "Mumbai", country: "India", lat: 19.076, lng: 72.8777 },
-    { name: "Toronto", country: "Canada", lat: 43.65107, lng: -79.347015},
+    { name: "Toronto", country: "Canada", lat: 43.65107, lng: -79.347015 },
   ];
 
   return (

@@ -159,7 +159,11 @@ We focus on hands-on implementation, live project simulations, and scenario-base
     "Experienced SAP-certified instructors",
   ],
   images: {
-    hero: "/sap-bg.jpg", // SAP ERP image
+    heroAvif:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1772130343/sap-bg_w7bubq.avif",
+    heroWebp:
+      "https://res.cloudinary.com/dlvjnevcw/image/upload/v1772130343/sap-bg_og1x0t.webp",
+    hero: "https://res.cloudinary.com/dlvjnevcw/image/upload/v1772130343/sap-bg_pynv8e.jpg", // SAP ERP image
     overviewAvif:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771882747/SAP_Tranning_kblqq3.avif",
     overviewWebp:

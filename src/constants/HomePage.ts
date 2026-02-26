@@ -115,7 +115,7 @@ export const TRAINING_INFO = [
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946698/SAP_training_up13fr.webp",
     backgroundImageAvif:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946698/SAP_training_bz0tjl.avif",
-    link: "/services/sap",
+    link: "/trainings/sap-training",
   },
   {
     title: "Amazon Web Services (AWS)",
@@ -125,13 +125,13 @@ export const TRAINING_INFO = [
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950938/aws_training_xhqg8y.webp",
     backgroundImageAvif:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950938/aws_training_tfvjga.avif",
-    link: "/services/aws",
+    link: "/trainings/aws-training",
   },
   {
     title: "Zoho",
     backgroundImage:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950856/zoho_training_wgksff.png",
-    link: "/services/zoho",
+    link: "/trainings/zoho-training",
     backgroundImageWebp:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771950855/zoho_training_lr37ml.webp",
     backgroundImageAvif:
@@ -141,7 +141,7 @@ export const TRAINING_INFO = [
     title: "Salesforce",
     backgroundImage:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946997/salesforce_training_opr1kg.png",
-    link: "/services/salesforce",
+    link: "/trainings/salesforce-training",
     backgroundImageWebp:
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771946996/salesforce_training_kwpjz5.webp",
     backgroundImageAvif:
