@@ -902,12 +902,20 @@ const ZohoTraining = () => {
           {zohoTrainingDetails.whyChooseUs.map((reason, index) => (
             <div
               key={index}
-              className="why-card flex items-start gap-4 p-6 rounded-2xl bg-[#ff6041] border border-white border-opacity-20 transition-transform transform hover:scale-105 cursor-pointer"
+              className="group flex items-start gap-4 p-6 rounded-2xl 
+                         bg-[#ff6041] border border-white border-opacity-20 
+                         transition-all duration-300 ease-in-out 
+                         transform hover:-translate-y-3 hover:scale-105
+                         hover:shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.8)]"
             >
-              <div className="w-12 h-12 shrink-0 rounded-full bg-white flex items-center justify-center text-[#ff6041] font-bold text-xl transition-transform duration-300 group-hover:scale-110">
+              <div className="w-12 h-12 shrink-0 rounded-full bg-white 
+                              flex items-center justify-center 
+                              text-[#ff6041] font-bold text-xl 
+                              transition-transform duration-300 
+                              group-hover:scale-110">
                 ✓
               </div>
-              <p className="text-white text-lg leading-relaxed hover:underline">
+              <p className="text-white text-lg leading-relaxed">
                 {reason}
               </p>
             </div>
