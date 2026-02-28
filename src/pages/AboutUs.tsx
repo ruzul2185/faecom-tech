@@ -337,7 +337,7 @@ const AboutUs = () => {
     {
       question: "What is FaecomTech's global presence?",
       answer:
-        "We have a strong presence across the US, Canada, the UK, the Middle East, and other regions, allowing us to combine global expertise with personalized local support for our clients.",
+        "We have a strong presence across the US, Canada, the UK, the Middle East, Europe, Asia and other regions, allowing us to combine global expertise with personalized local support for our clients.",
     },
     {
       question: "How does FaecomTech ensure project success?",
@@ -565,6 +565,14 @@ const AboutUs = () => {
                 <span className="text-xs sm:text-sm font-medium">
                   Middle East
                 </span>
+              </div>
+              <div className="company-tag flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
+                <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
+                <span className="text-xs sm:text-sm font-medium">Europe</span>
+              </div>
+              <div className="company-tag flex items-center gap-2 bg-white/10 rounded-full px-3 py-2 sm:px-4">
+                <span className="w-2 h-2 bg-[#ff6041] rounded-full" />
+                <span className="text-xs sm:text-sm font-medium">Asia</span>
               </div>
             </div>
           </div>
