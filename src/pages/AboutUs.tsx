@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton } from "../components/Button";
 import { FaGlobe, FaUsers, FaRocket, FaChevronDown } from "react-icons/fa6";
-import AffiliationBanner from "../components/home/AffiliationBanner";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -824,7 +823,7 @@ const AboutUs = () => {
       {/* ================= FAQ SECTION ================= */}
       <section
         ref={faqRef}
-        className="relative mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] py-12.5 text-white flex flex-col gap-12.5"
+        className="relative mx-auto min-w-86.25 w-[93%] max-w-442.5 rounded-[50px] overflow-hidden py-12.5 text-white flex flex-col gap-12.5"
       >
         <div className="py-12.5 w-[90%] mx-auto flex flex-col gap-9">
           {/* Background image using <picture> for AVIF/WebP/PNG */}
@@ -913,8 +912,6 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-
-      <AffiliationBanner />
     </div>
   );
 };

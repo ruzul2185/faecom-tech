@@ -1,4 +1,4 @@
-import AffiliationBanner from "../components/home/AffiliationBanner";
+
 import { Bookmark } from "../components/Bookmark";
 import { PrimaryButton, SecondaryButton } from "../components/Button";
 import KeywordBanner from "../components/home/KeywordBanner";
@@ -260,10 +260,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <div className="section-animate">
-        <AffiliationBanner />
-      </div>
 
       <div className="section-animate">
         <TrainingComponent />
