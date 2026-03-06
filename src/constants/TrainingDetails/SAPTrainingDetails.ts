@@ -154,7 +154,6 @@ We focus on hands-on implementation, live project simulations, and scenario-base
     "Live projects & real ERP scenarios",
     "Collaboration with Skill.in for quality training",
     "Role-specific learning for SAP modules",
-    "Capstone project implementation",
     "Career guidance & interview preparation",
     "Experienced SAP-certified instructors",
   ],
