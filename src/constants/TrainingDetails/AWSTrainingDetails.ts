@@ -183,3 +183,90 @@ We simulate real business scenarios so learners understand how companies actuall
       "https://res.cloudinary.com/dlvjnevcw/image/upload/v1771883439/Business_Benefits_of_AWS_Training_anq76e.png", // Business benefits
   },
 };
+
+export const COURSES = [
+    {
+      title: "DevOps - Beginner",
+      days: [
+        "Introduction to DevOps, SDLC, Agile, CI/CD concepts",
+        "Linux fundamentals, commands, scripting basics",
+        "Git & GitHub (branching, merging, workflows)",
+        "CI/CD with GitHub Actions",
+        "Docker basics",
+        "Kubernetes introduction",
+        "Mini Project deployment",
+      ],
+    },
+    {
+      title: "DevOps - Intermediate",
+      days: [
+        "Advanced Git strategies",
+        "Docker advanced",
+        "Kubernetes architecture",
+        "CI/CD advanced",
+        "Terraform basics",
+        "Monitoring tools",
+        "Microservices deployment",
+      ],
+    },
+    {
+      title: "DevOps - Advanced",
+      days: [
+        "Kubernetes advanced",
+        "GitOps (ArgoCD)",
+        "DevSecOps",
+        "AWS DevOps (EKS)",
+        "Logging & observability",
+        "Scaling & HA",
+        "Enterprise project",
+      ],
+    },
+    {
+      title: "AWS Cloud Administrator - Beginner",
+      days: [
+        "AWS basics & IAM",
+        "EC2 & networking",
+        "S3 storage",
+        "RDS databases",
+        "Load balancing",
+        "CloudWatch",
+        "Mini project",
+      ],
+    },
+    {
+      title: "AWS Cloud Administrator - Intermediate",
+      days: [
+        "VPC deep dive",
+        "Security & IAM",
+        "ECS containers",
+        "Lambda serverless",
+        "Terraform",
+        "Backup & DR",
+        "HA architecture",
+      ],
+    },
+    {
+      title: "AWS Cloud Administrator - Advanced",
+      days: [
+        "EKS setup",
+        "Private networking",
+        "Security services",
+        "Cost optimization",
+        "Multi-region",
+        "Automation",
+        "Enterprise deployment",
+      ],
+    },
+    {
+      title: "AI Prompt Engineer - Beginner",
+      days: [
+        "AI & LLM intro",
+        "Prompt basics",
+        "Advanced prompting",
+        "AI for dev",
+        "AI for business",
+        "AI workflows",
+        "Capstone project",
+      ],
+    },
+  ];
