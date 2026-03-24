@@ -7,6 +7,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import CourseCatalog from "../../components/CourseCatalog";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -889,6 +890,10 @@ const AWSTraining = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <CourseCatalog />
       </section>
 
       {/* ================= WHY CHOOSE US SECTION (Modern on Solid Orange) ================= */}
