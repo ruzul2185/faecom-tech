@@ -701,7 +701,7 @@ const Services = () => {
                     Nagar, Nagpur, Maharashtra 440022
                   </p>
                   <p className="text-gray-700 mt-2">support@faecomtech.com</p>
-                  <p className="text-[#ff6041] font-medium">+91 98765 43210</p>
+                  <p className="text-[#ff6041] font-medium">+91 99703 50188</p>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-3">Registered Address</h3>
@@ -713,7 +713,7 @@ const Services = () => {
                   </p>
                   <p className="text-gray-700">440022, Maharashtra, India</p>
                   <p className="text-gray-700 mt-2">info@faecomtech.com</p>
-                  <p className="text-[#ff6041] font-medium">+91 98765 43210</p>
+                  <p className="text-[#ff6041] font-medium">+91 99703 50188</p>
                 </div>
               </div>
 
